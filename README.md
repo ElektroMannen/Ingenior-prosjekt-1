@@ -24,3 +24,6 @@
 |Zuzanna Kalawska|      |
 |Ottar Rolfsrud|        |
 
+## Bruk av gitgub
+- Projects er vår kanban/Fremgangs oppfølgings metode.
+- Koden vi lager blir bassert på forskjellige esp32er og dermed vil trenge egene filer.
