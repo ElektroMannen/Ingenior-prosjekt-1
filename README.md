@@ -9,9 +9,9 @@
 
 ## Ressurser
 
-- **Rapport:**
+- **Rapport:** [ Prosjekt_rapport.tex](https://www.overleaf.com/3524624722xnnfcykfcyht#74726a)
 - **Design:**
-- **Oppgave text:** [Oppgave_text.md](https://github.com/ElektroMannen/Ingenior-prosjekt-1/blob/main/Oppgave_text.md)
+- **Oppgave text:** [ Oppgave_text.md](https://github.com/ElektroMannen/Ingenior-prosjekt-1/blob/main/Oppgave_text.md)
 
 ------------------
 
