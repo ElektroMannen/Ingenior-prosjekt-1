@@ -1,9 +1,22 @@
 # Ingeniør prosjekt 1
+
 ----------------------
 
+## Problemstilling
+
+
+-----------------
+
+## Ressurser
+
+- **Rapport:**
+- **Design:**
+- **Oppgave text:** [Oppgave_text.md](https://github.com/ElektroMannen/Ingenior-prosjekt-1/blob/main/Oppgave_text.md)
+
+------------------
 
 ## Ansvarsfordeling
-|**Person**|**Ansvar**|
+|**Person**|**Modul/Del**|
 |------------|---------:|
 |He Yu Ma|              |
 |Eirin Iversen|         | 
