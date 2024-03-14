@@ -27,3 +27,4 @@
 ## Bruk av gitgub
 - Projects er vår kanban/Fremgangs oppfølgings metode.
 - Koden vi lager blir bassert på forskjellige esp32er og dermed vil trenge egene filer.
+- Ideer blir lagt i discussions, slik at vi kan diskutere og stemme opp idene som er verdt å utvikle
