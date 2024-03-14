@@ -16,13 +16,13 @@
 ------------------
 
 ## Ansvarsfordeling
-|**Person**|**Modul/Del**|
-|------------|---------:|
-|He Yu Ma|              |
-|Eirin Iversen|         | 
-|Olav André Telneset|   |
-|Zuzanna Kalawska|      |
-|Ottar Rolfsrud|        |
+|**Person**|**Ansvar**|**Modul/Del**|
+|------------|--------|---------:|
+|He Yu Ma|            |          |
+|Eirin Iversen|       |          | 
+|Olav André Telneset| |          |
+|Zuzanna Kalawska|    |          |
+|Ottar Rolfsrud|      |          |
 
 ## Bruk av github
 - Projects er vår kanban/Fremgangs oppfølgings metode.
