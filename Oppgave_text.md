@@ -8,7 +8,7 @@
 - For å kunne dekke bilparkens behov for ladekraft i en overgangsfase mens man bygger ut kraftforsyningen i stort tempo, ønsker bystyret å fokusere på bl.a. kjøremønsteret til bileierne, men de ønsker også andre løsninger velkommen. Løsninger som har med privatbilisme eller kollektivtransport å gjøre. Dersom det lar seg gjøre å utvikle også andre produkter eller løsninger som reduserer ladebehovet, så kan utbyggingstakten og -ambisjonen dempes noe.
 - Altså tiltak som kan redusere presset på lade-infrastrukturen reduseres. Hvordan kan dette i så fall foregå? Her er det full kreativ og innovativ frihet.
 
-** Løsningsrammen for prosjektet er delvis drevet av byens vedtatte Smart City-prosjekt (her vil det ligge ved et bystyrevedtak som forklarer nærmere hva byen anser som aktuelle smart city målsettinger og teknologiske løsninger, pluss etiske grenseoppganger som man må forholde seg til). Det hele koker ned til følgende punkter: **
+**Løsningsrammen for prosjektet er delvis drevet av byens vedtatte Smart City-prosjekt (her vil det ligge ved et bystyrevedtak som forklarer nærmere hva byen anser som aktuelle smart city målsettinger og teknologiske løsninger, pluss etiske grenseoppganger som man må forholde seg til). Det hele koker ned til følgende punkter:**
 
 - Utfordringen skal i størst mulig grad løses teknologisk, men løsningene kan også inneholde enkelte tvangsmidler som f.eks. dyrere strøm ved lading av biler som har logget et uhensiktsmessig kjøremønster
 - Bystyret ønsker en oversikt over den totale bilparkens kjøremønster til enhver tid
