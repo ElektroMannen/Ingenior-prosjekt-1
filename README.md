@@ -5,6 +5,12 @@
 ## Problemstilling
 
 
+----------------
+
+## Frister
+
+**Innlevering senest 7.juni**
+
 -----------------
 
 ## Ressurser
