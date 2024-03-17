@@ -8,10 +8,10 @@
 ----------------
 
 ## Frister (Tentativ)
-**Ideskapning** 5.April
-**Ferdigstille prosjekter** 20.Mai
-**Ferdigstille innlevering** 31.Mai
-**Innlevering senest** 6.Juni
+- **Ideskapning** 5.April
+- **Ferdigstille prosjekter** 20.Mai
+- **Ferdigstille innlevering** 31.Mai
+- **Innlevering senest** 6.Juni
 
 -----------------
 
