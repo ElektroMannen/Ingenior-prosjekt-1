@@ -28,11 +28,11 @@
 |Eirin Iversen|       |          | 
 |Olav André Telneset| |          |
 |Zuzanna Kalawska|    |          |
-|Ottar Rolfsrud|      |          |
+|Ottar Rolfsrud|Github vedlikehold|          |
 
 -----------------------------------
 
 ## Bruk av github
-- Projects er vår kanban/Fremgangs oppfølgings metode.
+- Issues er vår kanban/Fremgangs oppfølgings metode. Hvor vi legger moduler som vi jobber på og status på hvor i løypen den ligger.
 - Koden vi lager blir bassert på forskjellige esp32er og dermed vil trenge egene filer.
 - Ideer blir lagt i discussions, slik at vi kan diskutere og stemme opp idene som er verdt å utvikle
