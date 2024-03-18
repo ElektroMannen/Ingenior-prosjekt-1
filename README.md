@@ -5,7 +5,7 @@
 ## Problemstilling (utkast)
 
 Vi har fått et oppdrag av bystyret til å lage en IOT løsning for å hjelpe med å gjøre byen grønnere. Bystyret ønsker å ha insentiver til å skape grønne vaner hos byen's innbyggere.
-Styret ønsker også å redusert last på strømnettet, løsningen på dette er opp til oss. 
+De ønsker også å redusert last på strømnettet, løsningen på dette er opp til oss. 
 
 -------------------
 
