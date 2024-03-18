@@ -17,7 +17,6 @@
 ## Ressurser
 
 - **Refleksjons notat:** [Refleksjons notat.tex](https://www.overleaf.com/3524624722xnnfcykfcyht#74726a)
-- **Bærekraftig **
 - **Design:**
 - **Ideer** [Diskusjons forum i github](https://github.com/ElektroMannen/Ingenior-prosjekt-1/discussions)
 - **Oppgave text:** [ Oppgave_text.md](https://github.com/ElektroMannen/Ingenior-prosjekt-1/blob/main/Oppgave_text.md)
