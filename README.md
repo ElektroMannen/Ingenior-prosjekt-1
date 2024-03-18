@@ -1,13 +1,12 @@
 # Ingeniør prosjekt 1
 
-----------------------
-
-## Problemstilling
-
-
 ----------------
 
-## Frister (Tentativ)
+## Problemstilling (utkast)
+
+-------------------
+
+## Frister
 - **Ideskapning** 5.April
 - **Ferdigstille prosjekter** 20.Mai
 - **Ferdigstille innlevering** 31.Mai
@@ -17,8 +16,10 @@
 
 ## Ressurser
 
-- **Rapport:** [ Prosjekt_rapport.tex](https://www.overleaf.com/3524624722xnnfcykfcyht#74726a)
+- **Refleksjons notat:** [Refleksjons notat.tex](https://www.overleaf.com/3524624722xnnfcykfcyht#74726a)
+- **Bærekraftig **
 - **Design:**
+- **Ideer** [Diskusjons forum i github](https://github.com/ElektroMannen/Ingenior-prosjekt-1/discussions)
 - **Oppgave text:** [ Oppgave_text.md](https://github.com/ElektroMannen/Ingenior-prosjekt-1/blob/main/Oppgave_text.md)
 
 ------------------
