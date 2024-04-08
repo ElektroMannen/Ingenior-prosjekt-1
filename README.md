@@ -29,11 +29,11 @@ De ønsker også å redusert last på strømnettet, løsningen på dette er opp 
 ## Ansvarsfordeling
 |**Person**|**Ansvar**|**Modul/Del**|
 |------------|--------|---------:|
-|He You Ma|            |          |
+|He You Ma|Kommunikasjons dev|          |
 |Eirin Iversen|       |          | 
-|Olav André Telneset| |          |
-|Zuzanna Kalawska|    |          |
-|Ottar Rolfsrud|Github vedlikehold|          |
+|Olav André Telneset|Database dev|          |
+|Zuzanna Kalawska|Design ansvarlig|          |
+|Ottar Rolfsrud|Bil dev|          |
 
 -----------------------------------
 
