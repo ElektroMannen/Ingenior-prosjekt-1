@@ -29,7 +29,7 @@ De ønsker også å redusert last på strømnettet, løsningen på dette er opp 
 ## Ansvarsfordeling
 |**Person**|**Ansvar**|**Modul/Del**|
 |------------|--------|---------:|
-|He Yu Ma|            |          |
+|He You Ma|            |          |
 |Eirin Iversen|       |          | 
 |Olav André Telneset| |          |
 |Zuzanna Kalawska|    |          |
