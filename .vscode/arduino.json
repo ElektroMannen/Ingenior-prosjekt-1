@@ -2,5 +2,5 @@
     "board": "arduino:avr:uno",
     "programmer": "avrisp",
     "output": ".arduino/output",
-    "sketch": "Koding/WirelessCommunicationModule/WirelessCommunicationModule.ino"
+    "sketch": "Code/CommsStandard/CommsStandard.ino"
 }
