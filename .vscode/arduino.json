@@ -2,5 +2,5 @@
     "board": "arduino:avr:uno",
     "programmer": "avrisp",
     "output": ".arduino/output",
-    "sketch": "Code/CommsStandard/CommsStandard.ino"
+    "sketch": "Code/ESPComms/ESPComms.ino"
 }
