@@ -8,7 +8,7 @@ However, there might be an extra module created to suit the needs of mobile netw
 
 # How does the ESP-Now protocol work?
 
-The ESP-Now protocol is a built in protocol provided by Espressif for the ESP32. It boasts a maximum range of 200 meters in open air and a low latency of 2ms, which is ideal for our use case.
+The ESP-Now protocol is a built in protocol provided by Espressif for the ESP32. It boasts a maximum range of 200 meters in open air and a low latency of 2ms, which is ideal for our use case. It communicates through the 2.4GHz frequency band, and acts like a low power WiFi connection. Not to mention that the connection is persistent, and will reconnect automatically if the connection is lost.
 
 # What will it be used for?
 
