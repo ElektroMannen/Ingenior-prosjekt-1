@@ -1,3 +1,4 @@
+#include <Wire.h>
 #include <Zumo32U4.h>
 #include <Zumo32U4Buttons.h>
 #include <Zumo32U4Buzzer.h>
@@ -16,6 +17,8 @@ Zumo32U4ButtonA buttonA;
 Zumo32U4ButtonB buttonB;
 Zumo32U4ButtonC buttonC;
 Zumo32U4OLED display;
+
+#define NODE_ADDRESS 2
 
 int warning = 0;
 

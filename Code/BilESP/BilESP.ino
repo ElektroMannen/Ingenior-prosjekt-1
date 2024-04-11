@@ -1,9 +1,10 @@
 #include <PubSubClient.h>
 #include <WIFI.h>
+#include <Wire.h>
 
+#define NODE_ADDRESS 1
 const char ssid[] = "NTNU-IOT";
 const char passord[] = "";
-
 
 void wifiConnect(){
 // Connect to Wi-Fi network with SSID and password
@@ -22,6 +23,9 @@ void wifiConnect(){
   server.begin();
 }
 
+void
+
+//--------------------------------------------------------
 void setup(){
     wifiConnect();
 }
