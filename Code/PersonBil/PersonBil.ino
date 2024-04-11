@@ -18,6 +18,7 @@ Zumo32U4ButtonC buttonC;
 Zumo32U4OLED display;
 
 int warning = 0;
+int disp = 0;
 
 /*Takes inn direction of which way the car will drive. The diretion is based on norms for keyboard for movement.
 Diredtions avalible are W for forwards, S for backwards, A for turn right, D for turn left, Q for curve towards left, E for curve towards right*/
@@ -56,7 +57,7 @@ void drive(char direction){
 }
 
 //Gets data form I2C buss 
-int getControlls(){
+int getI2C_Data(){
     drive("L");
 }
 
