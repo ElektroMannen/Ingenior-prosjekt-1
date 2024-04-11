@@ -1,6 +1,0 @@
-{
-    "board": "arduino:avr:uno",
-    "programmer": "avrisp",
-    "output": ".arduino/output",
-    "sketch": "Code/BilESP/BilESP.ino"
-}
