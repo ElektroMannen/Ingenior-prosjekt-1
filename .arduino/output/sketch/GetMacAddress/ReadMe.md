@@ -1,2 +1,0 @@
-#line 1 "C:\\Users\\golde\\Documents\\NTNU\\ESI\\IELS2012\\Prosjekt\\Ingenior-prosjekt-1\\Code\\ESPComms\\GetMacAddress\\ReadMe.md"
-# Use this code to get the MAC address of the ESP32's used in your project
