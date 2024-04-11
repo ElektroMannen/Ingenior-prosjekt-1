@@ -42,45 +42,28 @@ De ønsker også å redusert last på strømnettet, løsningen på dette er opp 
 - Koden vi lager blir bassert på forskjellige esp32er og dermed vil trenge egene filer.
 - Ideer blir lagt i discussions, slik at vi kan diskutere og stemme opp idene som er verdt å utvikle
 
-MMMMMMMMMMMMMMMMMMMMMMMMWWWWWMWWNKkoc:;,;;:lx0XWMMMMMMWMMMMWMMMMMMMMMWWWWWWWMWWWMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMWWWMWN0dlc;,,,,,,,,,,;;:clxk0NMMWMMWWMWN0kdolccccclodkKWWMMMMMMWMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMWKd:,,;:ccllcc:ccccccc:;,',:okXWNKkoc;,,,;:cccc::;,,;cxKWMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMW0l,,:ccccccccccccccccccccccc:,,;c:;,,:cccccccccccccccc;,,dXMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMWMMMMKl,,:cccccccccccccccccccccccccccc:,,:clcc:cccccccccccccccc;':0WWWMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMWMNx,,:cccccccccccc:::::::::::::cccccc::;:cccccccccccccccccccccc';0WMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMWKl':lccccccccc:::;::::::::::::;;;;::cc:;:ccccccccccccccccccccccc'lNWMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMW0:,:ccccc:cc:;;:::cccccccccccccccc:::;::;;;;;;;;;;;;;;;;;;;;;;;;:.'d0NWMMMMMMMMMMM
-MMMMMMMMMMMMMMMMWO;':cc:cccccc::ccccccccccccccccccccccccc:;,,;::::c:::ccc::::::::;:;,,;:ld0NMMMMMMMM
-MMMMMMMMMMMMMMMWO;'cccccccccccccccccccccccccc::::::::::::::;;;;:cccccccccccccccccccccccc:,,:xXWMMMMM
-MMMMMMMMMMMMMMM0;'ccccccccccccccccccccccc:;;::;;;;;;;;;;;::::;;;;:cccc:::;;;;;::;;;:::;;;::,.;kXWMMM
-MMMMMMMMMMWWXOd;':ccccccccccccccccccc::;;:::;;;:::::::::::::::::;;,;::;;;,;;;;:::;:::;;;;;;;;,,;dXWM
-MMMMWWMWWXxc:;'';lc:cccccccccccc::::;;;;;;::::cccllcccccccccc:::::;;;:::;;:::cccclc:::::::;::::'.oXW
-MMMMMWWNx;,:cc;;:ccccccccccccc::;::::;;::::cccccccccc::::cccccllooc::cccccc:::ccclc::::codxool:;'';O
-MWMMWWKl';cccc;;ccccccccccc:;;;::;:::ccccccccc:cclllcccccodk0XXXNXXkc;clodxkOOOko,.'....,ckXNXKOkl.o
-MMMMWK:':ccccc;:ccccccccccc:;;;:::::cc:cclodxkOko;;co:.   .'l0WWWWWKxkKXWWWWMWO,  ;l.     .c0WWWWXl:
-MWWMK:':cccccc:ccccccccccccc:::;::;;lkOKXNWWWWK:.  .:;. .,'  .dNWWN00WWWWWWWMK;   ..  ;d;   cXWWNOcl
-MMMK:':ccccccccccccccccccccccccccccc:cdOXNWWWNl     ..  ;Oo.  .dKOooOXXNWWWWMk.  .;'  ,l,   .dOxl,oX
-MMXc.:cccccccccccccccccccccccccccc::;;::coxk00:     ',  .......;c:;,:lodddxxxl....'.....''',;;,,;xWW
-WXc':ccccccccccccccccccccccccccccccc:;;;:;;;::;;,,,,,,,;;;;::::;;;;:cccccccccc:c:cc::ccccccc,,o0NWWM
-Nd.;cccccccccccccccccccccccccccccccccccc::;::;;:;;;;:;;::;;;;::;::cccccccccccccclccccccc::,,c0WWWMMM
-0;'cccc:ccccccccccccccccccccccccccccccccccccccccccccccc:::;;:ccccccccc:::ccccccccccccc;,,;o0WWMWMMMM
-d.;lcccccccccccccccccccccccccccccccccccccccccccccc:::;;;;:::ccccccccc::;;;;;;:::;::::;..lKWMMMMMMMMM
-l.:cccccccccccccccccccccccccccccccccccccccccc:::;;;;;::cccccccccccccccccc:;;;:::::ccccc;'cOWWWMWMMMM
-;'ccccccccccccccccccccccccccccccccccccccccccccc::cccccccccccccccccccccccccccccccc:ccccccc,,dXWWWWMMM
-,'lccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc:'lXMWMMMM
-',lcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc;'oNMMMMM
-.,cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccl,,0MMMMM
-',cccccccccccccccccccccccccccc:;;;;;;;;;;::::::ccccccccccccccccccccccccccccccccccccccccccc::,.cKWMMM
-',cccccccccccccccccccccccccc:;;;:::::::::;;;;;;;;;;;:::::::cccccccccccccccccccccccccc::::;;;;;.:KMMM
-,'lccccccccccccccccccccccc:;;:::::::::::::::::::::::::;;;;;;;;;;;::::::::;;;;;;;;;;;;;;;;:c:::.:XMMM
-:'c:cc:ccccccccccccccccccc;,;:::::;;;;;;;;;;;;;;;:::::ccc::::::::;;;;;;;;;;;;;;;;::::::::::;',oKWMMM
-l.:ccccccccccccccccccccccc;;;::::::ccccc:::;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::;;;;;;;;,.'dKWMMMMM
-d';cccccccccccccccccccc::cc:;;;;;;;;;;;;;;;::::::::cc::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::',OMWWMMMM
-0,'cc:ccccccccccccccccc;;:ccccc::::::::::::;;;;;;;;;;;:::::::::::::ccccccccccccc:::ccc:::,'lXMWWMMMM
-WO;':lcccccccccccccccccc::;;::cccccccccccccccccc:::::::::;;;;;;;;;;;;;::;;;;;;;;;;,,'',,;lONMMMMMMMM
-WW0l;,;:cccccccc:ccccccccc::::cccccccccccccccccccccccccccccccccccccccccc::::::::,',lxkOKNWMMMMMMMMMM
-WWMWKxl:,'';:ccc:ccccccccccccccccccccccccccccccccccccccccccccccccccccc:ccccc:;,,cxXWWWWMMMMMMMMMMMMM
-WWMMWWWNKkoc:,'',,:ccccccccccccccccccccccccccccccccccccccccccccccccccccc:;',:lxKWWMMMMWWMMMMMMMMMMMM
-WMMWWMWWMMMMWKOxolc:;,,,,,;::ccccccccccccccccccccccccccccccccccccc:;,,,;:ldOXWWWWWMMWMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMWNX0Oxolc:::;,,,'',,,,,''',,,'',,,,'''',,,,'''',:coxOKNMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMWWNXKOkxddolccc:::;;;,,,,''',,;;:clllodOXWMWWWMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMWWWMWWWXOdolc:;::cloxO0XMMWX0kxooddddOXWMWWMMMMMMMM
+MMMMMMMMMWMWWW0dc:;:cccccccc::::ldooc:;;::cc:;::o0WMMMMMMMMM
+MMMMMMMMMMMWKd::cccccc:::::::cccl:,;cc:ccccccccc::kWMMMMMMMM
+MMMMMMMMMWWOc;:cccc:::::::::::::cc:::::c::::::::c;c0WMMMMMMM
+MMMMMMMMMNk:;clccc::ccccccccccccc::;;;::::::::::::;cdkKNWMMM
+MMMMMMMMWk::cccccccccccccc::::::::::;;:ccccc:::::::::;:lONWM
+MMMMMWX0d;;cccccccccc:::;;;;::::::::::;;;;;;;;;:::;;;;;,;l0W
+MMMM0dc:;:cccccccc::::::::cccccccccclllc::::::cclc;;:lolc;;k
+MMW0c;c:::cccccc::;:::::cclooc:::,;lxKXXOddkkO0x;,,..,o0XKol
+MWO:;cc::cccccccc::::cxO0KX0:..'' ''.oXNXKNMWWK; ...:' cKNOd
+W0:;cccccccccccccccc::cok0Kl.  ...;;..loldkk00d.....;,.,clo0
+Kc;ccccccccccccccccccc:;::::,,',;;,';:::::cccc::::::cc;;o0NM
+o;cccccccccccccccccccccccccc:::::::;::ccccccccccccc;;coOWMMM
+:;cccccccccccccccccccccccccc::::::::cccccc::::::::::,l0NWMMM
+;:ccccccccccccccccccccccccccccccccccccccccccccccccccc::xNMMM
+;ccccccccccccccccccccccccccccccccccccccccccccccccccccc::kWMM
+;ccccccccccccccccc::::::::cccccccccccccccccccccccccclcc,:0WM
+,:cccccccccccccc::::::::::::::::::::::ccc::::::::::::;::,lNW
+;:ccccccccccccc:;:c:;;:::;;;;;;;;:::::::::::::::::::::;;cOWW
+c;lcccccccccccc:::::;;::;;;;;;;;;;;;;;::;;:::;;;:;;::;,oXWMM
+d,:ccc:cccccc::::::::::::::::::::::::::;;;;;:::;::;;;;l0WMMM
+Xx:;::cclcccccc:::cccccccccccccccc:::::::::::::;;:odx0NWMMMM
+MWX0xlc;;;::cccccccccccccccccccccccccccccccc:;coxXWWWMWWMMMM
+MMMMMMNKOkdolcc:;;;;;::::::::::::::::;;;:lloxOXWWWWWMMMMMMMM
+MMMMMMMMMMMMWX0kxdlc:::;;;,,,,,,,;;;:::lxKNMMMMMMMMMMMMMMMMM
