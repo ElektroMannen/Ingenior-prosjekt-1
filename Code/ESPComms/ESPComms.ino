@@ -5,5 +5,3 @@ void setup(){
 void loop(){
 //Put some code here
 }
-
-//Does this work?
