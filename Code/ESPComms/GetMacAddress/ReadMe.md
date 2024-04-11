@@ -1,0 +1,1 @@
+# Use this code to get the MAC address of the ESP32's used in your project
