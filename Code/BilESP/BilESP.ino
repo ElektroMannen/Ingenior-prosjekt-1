@@ -23,7 +23,7 @@ void wifiConnect(){
   server.begin();
 }
 
-void
+void send_data()
 
 //--------------------------------------------------------
 void setup(){

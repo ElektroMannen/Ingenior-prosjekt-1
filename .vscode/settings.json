@@ -1,3 +1,4 @@
 {
-    "arduino.analyzeOnSettingChange": true
+  "C_Cpp_Runner.msvcBatchPath": "",
+  "arduino.analyzeOnSettingChange": true
 }
