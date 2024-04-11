@@ -1,2 +1,17 @@
+<<<<<<< HEAD
 /.arduino
 /.vscode
+=======
+.arduino/output/.last-used
+.arduino/output/build.options.json
+.arduino/output/compile_commands.json
+.arduino/output/sketch/BilESP.ino.cpp
+.arduino/output/includes.cache
+.arduino/output/libraries.cache
+.arduino/output/preproc/ctags_target_for_gcc_minus_e.cpp
+.arduino/output/sketch/ESPComms.ino.cpp
+.arduino/output/sketch/ESPComms.ino.cpp.d
+.arduino/output/sketch/ESPComms.ino.cpp.o
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+>>>>>>> 6a8fabd (changes)
