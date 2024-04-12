@@ -19,7 +19,6 @@ services:
       - ./.docker/nodered_data:/data
     environment:
       - NODE_RED_ENABLE_PROJECTS=true
-      - NODE_RED_GITHUB_PAT=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
     depends_on:
       - mqtt
       - mariadb
