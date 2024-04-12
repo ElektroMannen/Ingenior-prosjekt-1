@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  mqtt:
+    image: eclipse-mosquitto:latest
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./.docker/mosquitto_data:/mosquitto/data
+      - ./.docker/mosquitto_config:/mosquitto/config
+      - ./.docker/mosquitto_log:/mosquitto/log
+
+  nodered:
+    image: nodered/node-red:latest
+    ports:
+      - "1880:1880"
+    volumes:
+      - ./.docker/nodered_data:/data
+    environment:
+      - NODE_RED_ENABLE_PROJECTS=true
+      - NODE_RED_GITHUB_PAT=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
+    depends_on:
+      - mqtt
+      - mariadb
+
+  mariadb:
+    image: yobasystems/alpine-mariadb
+    env_file:
+      - ./.docker/mariadb_config/db.env
+    volumes:
+      - ./.docker/mariadb_data:/var/lib/mysql
+      - ./.docker/mariadb_config/initdb.sql:/docker-entrypoint-initdb.d/initdb.sql
+    ports:
+      - "3306:3306"
+
+volumes:
+  mosquitto_data:
+  mosquitto_config:
+  mosquitto_log:
+  nodered_data:
+  mariadb_data:

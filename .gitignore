@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 /.arduino
 /.vscode
-=======
 .arduino/output/.last-used
 .arduino/output/build.options.json
 .arduino/output/compile_commands.json
@@ -14,4 +12,4 @@
 .arduino/output/sketch/ESPComms.ino.cpp.o
 .vscode/c_cpp_properties.json
 .vscode/launch.json
->>>>>>> 6a8fabd (changes)
+Code/Server/.docker/
