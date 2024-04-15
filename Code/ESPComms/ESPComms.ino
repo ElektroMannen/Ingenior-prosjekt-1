@@ -1,14 +1,9 @@
-/*
-  Rui Santos
-  Complete project details at https://RandomNerdTutorials.com/esp-mesh-esp32-esp8266-painlessmesh/
-  
-  This is a simple example that uses the painlessMesh library: https://github.com/gmag11/painlessMesh/blob/master/examples/basic/basic.ino
-*/
+//Avoid using delay as this will mess with the timing of the mesh network
 
 #include "painlessMesh.h"
 
-#define   MESH_PREFIX     "whateverYouLike"
-#define   MESH_PASSWORD   "somethingSneaky"
+#define   MESH_PREFIX     "Gruppe1-MESH"
+#define   MESH_PASSWORD   "PassordGruppeEN"
 #define   MESH_PORT       5555
 
 Scheduler userScheduler; // to control your personal task
