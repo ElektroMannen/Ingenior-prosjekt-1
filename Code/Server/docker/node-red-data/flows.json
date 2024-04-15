@@ -2,33 +2,30 @@
     {
         "id": "d974087eb4410441",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "DB",
         "disabled": false,
         "info": "",
         "env": []
     },
     {
-        "id": "ceede2f20210d649",
-        "type": "group",
-        "z": "d974087eb4410441",
-        "name": "DB",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "7990dc354a738d5b",
-            "fad8b9ec333779f3",
-            "41f66b13af6e1ee2",
-            "dbf573f1be114c43",
-            "d5b808832e3458f5",
-            "49ac945123b5fd9f",
-            "a8962c15f7d4c160",
-            "9cd91ee4a34e6b45"
-        ],
-        "x": 14,
-        "y": 399,
-        "w": 732,
-        "h": 282
+        "id": "9c23ead5f4cd17b6",
+        "type": "tab",
+        "label": "something-else",
+        "disabled": false,
+        "info": "This is for anything else",
+        "env": []
+    },
+    {
+        "id": "1292ba0fe2f33fc4",
+        "type": "subflow",
+        "name": "Subflow 1",
+        "info": "",
+        "category": "",
+        "in": [],
+        "out": [],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
     },
     {
         "id": "f2952bbb2ad433e2",
@@ -219,7 +216,6 @@
         "id": "7990dc354a738d5b",
         "type": "mysql",
         "z": "d974087eb4410441",
-        "g": "ceede2f20210d649",
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
         "x": 480,
@@ -234,7 +230,6 @@
         "id": "fad8b9ec333779f3",
         "type": "inject",
         "z": "d974087eb4410441",
-        "g": "ceede2f20210d649",
         "name": "",
         "props": [
             {
@@ -264,7 +259,6 @@
         "id": "41f66b13af6e1ee2",
         "type": "function",
         "z": "d974087eb4410441",
-        "g": "ceede2f20210d649",
         "name": "GET_USERS",
         "func": "msg.topic = \"SELECT * FROM users;\"\nreturn msg;",
         "outputs": 1,
@@ -274,7 +268,7 @@
         "finalize": "",
         "libs": [],
         "x": 290,
-        "y": 440,
+        "y": 480,
         "wires": [
             [
                 "7990dc354a738d5b"
@@ -285,7 +279,6 @@
         "id": "dbf573f1be114c43",
         "type": "debug",
         "z": "d974087eb4410441",
-        "g": "ceede2f20210d649",
         "name": "debug 4",
         "active": true,
         "tosidebar": true,
@@ -303,7 +296,6 @@
         "id": "d5b808832e3458f5",
         "type": "mysql",
         "z": "d974087eb4410441",
-        "g": "ceede2f20210d649",
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
         "x": 480,
@@ -318,7 +310,6 @@
         "id": "49ac945123b5fd9f",
         "type": "function",
         "z": "d974087eb4410441",
-        "g": "ceede2f20210d649",
         "name": "GET_USERS",
         "func": "msg.topic = \"SELECT * FROM users;\"\nreturn msg;",
         "outputs": 1,
@@ -339,7 +330,6 @@
         "id": "a8962c15f7d4c160",
         "type": "inject",
         "z": "d974087eb4410441",
-        "g": "ceede2f20210d649",
         "name": "",
         "props": [
             {
@@ -369,7 +359,6 @@
         "id": "9cd91ee4a34e6b45",
         "type": "debug",
         "z": "d974087eb4410441",
-        "g": "ceede2f20210d649",
         "name": "debug 5",
         "active": true,
         "tosidebar": true,
@@ -381,6 +370,51 @@
         "statusType": "auto",
         "x": 640,
         "y": 620,
+        "wires": []
+    },
+    {
+        "id": "e33df8dd9f71fde2",
+        "type": "inject",
+        "z": "9c23ead5f4cd17b6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 120,
+        "wires": [
+            [
+                "fe61373c9ba90950"
+            ]
+        ]
+    },
+    {
+        "id": "fe61373c9ba90950",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 120,
         "wires": []
     }
 ]
