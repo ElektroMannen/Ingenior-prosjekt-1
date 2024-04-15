@@ -37,8 +37,6 @@
         "host": "${DB_HOST}",
         "port": "${DB_PORT}",
         "db": "testdb",
-        "user": "${DB_USER}",
-        "password": "${DB_PASSWORD}",
         "tz": "",
         "charset": "UTF8"
     },
@@ -225,7 +223,7 @@
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
         "x": 480,
-        "y": 560,
+        "y": 500,
         "wires": [
             [
                 "dbf573f1be114c43"
