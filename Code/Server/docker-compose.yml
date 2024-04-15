@@ -39,3 +39,4 @@ volumes:
   mosquitto_log:
   nodered_data:
   mariadb_data:
+  
