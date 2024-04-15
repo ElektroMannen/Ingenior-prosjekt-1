@@ -7,18 +7,18 @@ services:
       - "1883:1883"
       - "9001:9001"
     volumes:
-      - ./.docker/mosquitto_data:/mosquitto/data
-      - ./.docker/mosquitto_config:/mosquitto/config
-      - ./.docker/mosquitto_log:/mosquitto/log
+      - ./docker/mqtt-data:/mosquitto/data
+      - ./docker/mqtt-config:/mosquitto/config
+      - ./docker/mqtt-log:/mosquitto/log
 
   nodered:
     image: nodered/node-red:latest
     ports:
       - "1880:1880"
     volumes:
-      - ./.docker/nodered_data:/data
+      - ./docker/nodered_data:/data
     environment:
-      - NODE_RED_ENABLE_PROJECTS=true
+      - TZ=Europe/Oslo
     depends_on:
       - mqtt
       - mariadb
@@ -26,10 +26,10 @@ services:
   mariadb:
     image: yobasystems/alpine-mariadb
     env_file:
-      - ./.docker/mariadb_config/db.env
+      - ./docker/mariadb-config/db.env
     volumes:
-      - ./.docker/mariadb_data:/var/lib/mysql
-      - ./.docker/mariadb_config/initdb.sql:/docker-entrypoint-initdb.d/initdb.sql
+      - ./docker/mariadb-data:/var/lib/mysql
+      - ./docker/mariadb-config/initdb.sql:/docker-entrypoint-initdb.d/initdb.sql
     ports:
       - "3306:3306"
 
