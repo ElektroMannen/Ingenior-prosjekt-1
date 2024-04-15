@@ -33,3 +33,11 @@ cd Code/Server
 ```
 docker-compose up -d
 ```
+
+# Lokal bruk av MariaDB
+
+1. Installer mysql
+
+```
+mysql -h 127.0.0.1 -P 3306 -u root -p
+```
