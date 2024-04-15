@@ -57,6 +57,8 @@ docker-compose up -d
 
 # Lokal bruk av MariaDB
 
+Om nødvendig kan man undersøke databasen fra mysql-programvare på raspberry pi.
+
 1. Installer mysql
 ```
 sudo apt install default-mysql-client
