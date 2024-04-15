@@ -19,12 +19,16 @@
             "7990dc354a738d5b",
             "fad8b9ec333779f3",
             "41f66b13af6e1ee2",
-            "dbf573f1be114c43"
+            "dbf573f1be114c43",
+            "d5b808832e3458f5",
+            "49ac945123b5fd9f",
+            "a8962c15f7d4c160",
+            "9cd91ee4a34e6b45"
         ],
-        "x": 34,
+        "x": 14,
         "y": 399,
-        "w": 712,
-        "h": 162
+        "w": 732,
+        "h": 282
     },
     {
         "id": "f2952bbb2ad433e2",
@@ -249,7 +253,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 140,
-        "y": 520,
+        "y": 440,
         "wires": [
             [
                 "41f66b13af6e1ee2"
@@ -269,7 +273,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
+        "x": 290,
         "y": 440,
         "wires": [
             [
@@ -292,7 +296,91 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 640,
-        "y": 460,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "d5b808832e3458f5",
+        "type": "mysql",
+        "z": "d974087eb4410441",
+        "g": "ceede2f20210d649",
+        "mydb": "f2952bbb2ad433e2",
+        "name": "mdb-test",
+        "x": 480,
+        "y": 640,
+        "wires": [
+            [
+                "9cd91ee4a34e6b45"
+            ]
+        ]
+    },
+    {
+        "id": "49ac945123b5fd9f",
+        "type": "function",
+        "z": "d974087eb4410441",
+        "g": "ceede2f20210d649",
+        "name": "GET_USERS",
+        "func": "msg.topic = \"SELECT * FROM users;\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 640,
+        "wires": [
+            [
+                "d5b808832e3458f5"
+            ]
+        ]
+    },
+    {
+        "id": "a8962c15f7d4c160",
+        "type": "inject",
+        "z": "d974087eb4410441",
+        "g": "ceede2f20210d649",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 580,
+        "wires": [
+            [
+                "49ac945123b5fd9f"
+            ]
+        ]
+    },
+    {
+        "id": "9cd91ee4a34e6b45",
+        "type": "debug",
+        "z": "d974087eb4410441",
+        "g": "ceede2f20210d649",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 620,
         "wires": []
     }
 ]
