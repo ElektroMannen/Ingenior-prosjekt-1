@@ -24,6 +24,10 @@ services:
       - ./docker/node-red-data:/data
     environment:
       - TZ=Europe/Oslo
+      - DB_USER=root
+      - DB_PASSWORD=testroot
+      - DB_HOST=mariadb
+      - DB_PORT=3306
     depends_on:
       - mqtt
       - mariadb
