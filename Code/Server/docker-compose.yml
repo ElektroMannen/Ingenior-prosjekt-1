@@ -16,7 +16,7 @@ services:
     ports:
       - "1880:1880"
     volumes:
-      - ./docker/nodered_data:/data
+      - ./docker/node-red-data:/data
     environment:
       - TZ=Europe/Oslo
     depends_on:
