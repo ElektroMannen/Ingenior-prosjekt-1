@@ -1,0 +1,1 @@
+Kun for at git skal laste opp mappen.
