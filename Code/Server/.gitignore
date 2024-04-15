@@ -3,6 +3,7 @@ docker/node-red-data/*
 docker/mosquitto-log/*
 docker/mosquitto-data/*
 !docker/node-red-data/flows.json
+!docker/node-red-data/flow_cred.json
 !docker/node-red-data/settings.js
 !docker/node-red-data/package.json
 !docker/mqtt-log/README.md

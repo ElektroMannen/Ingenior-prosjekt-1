@@ -223,7 +223,7 @@
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
         "x": 480,
-        "y": 500,
+        "y": 480,
         "wires": [
             [
                 "dbf573f1be114c43"
