@@ -37,6 +37,8 @@
         "host": "${DB_HOST}",
         "port": "${DB_PORT}",
         "db": "testdb",
+        "user": "${DB_USER}",
+        "password": "${DB_PASSWORD}",
         "tz": "",
         "charset": "UTF8"
     },
