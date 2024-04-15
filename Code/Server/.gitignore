@@ -5,7 +5,6 @@ docker/mosquitto-data/*
 !docker/node-red-data/flows.json
 !docker/node-red-data/settings.js
 !docker/node-red-data/package.json
-!docker/node-red-data/flows_cred.json
 !docker/mqtt-log/README.md
 !docker/mqtt-data/README.md
 !docker/mariadb-data/README.md
