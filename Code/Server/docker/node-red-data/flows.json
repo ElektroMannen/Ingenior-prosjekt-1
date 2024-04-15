@@ -30,7 +30,7 @@
         "id": "f2952bbb2ad433e2",
         "type": "MySQLdatabase",
         "name": "TestDB",
-        "host": "node-red-net",
+        "host": "mariadb",
         "port": "3306",
         "db": "testdb",
         "tz": "",
@@ -219,7 +219,7 @@
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
         "x": 480,
-        "y": 500,
+        "y": 520,
         "wires": [
             [
                 "dbf573f1be114c43"

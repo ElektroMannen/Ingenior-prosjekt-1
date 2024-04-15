@@ -14,7 +14,8 @@ services:
       - ./docker/mqtt-log:/mosquitto/log
 
   node-red:
-    image: nodered/node-red:latest
+    build: ./docker/node-red/
+    image: node-red-mysql/node-red:latest
     networks:
       - node-red-net
     ports:

@@ -2,7 +2,7 @@
 
 Docker tillater utviklere å sette opp et felles utviklermiljø. 
 
-Ved å bruke en plugin som heter `compose` oppretter man et miljø som består av flere "konteinere" alt fra samme fil.
+Ved å bruke `compose` oppretter man et miljø som består av flere "konteinere" som kommuniserer sammen.
 
 # Guide
 1. Installer docker og docker-compose
@@ -27,6 +27,27 @@ docker compose version
 ```
 cd Code/Server
 ```
+
+Sørg for at du ikke har andre tjenester som kjører på portene `3036`, `1883` eller `1880`.
+
+Dette kan gjøres ved å avinstallere mosquitto og mosquitto-clients. Følgende steg kan tas:
+
+```
+sudo apt remove mosquitto mosquitto-clients
+```
+
+
+```
+sudo apt autoremove
+```
+
+Sjekk at portene er ledig med
+
+```
+sudo netstat -tulpn | grep -E '1880|1883|3036'
+```
+
+Om ingenting kommer opp skal alt være i orden.
 
 4. Kjør kommandoen
 
