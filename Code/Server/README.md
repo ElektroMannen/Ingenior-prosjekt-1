@@ -37,7 +37,12 @@ docker-compose up -d
 # Lokal bruk av MariaDB
 
 1. Installer mysql
-
+```
+sudo apt install default-mysql-client
+```
+2. Logg inn
 ```
 mysql -h 127.0.0.1 -P 3306 -u root -p
+
+
 ```
