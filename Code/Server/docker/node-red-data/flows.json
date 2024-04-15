@@ -8,6 +8,35 @@
         "env": []
     },
     {
+        "id": "ceede2f20210d649",
+        "type": "group",
+        "z": "d974087eb4410441",
+        "name": "DB",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "7990dc354a738d5b",
+            "fad8b9ec333779f3",
+            "41f66b13af6e1ee2",
+            "dbf573f1be114c43"
+        ],
+        "x": 34,
+        "y": 399,
+        "w": 712,
+        "h": 162
+    },
+    {
+        "id": "f2952bbb2ad433e2",
+        "type": "MySQLdatabase",
+        "name": "TestDB",
+        "host": "node-red-net",
+        "port": "3306",
+        "db": "testdb",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
         "id": "362c8eb1df4a411b",
         "type": "inject",
         "z": "d974087eb4410441",
@@ -180,6 +209,90 @@
         "statusType": "auto",
         "x": 460,
         "y": 260,
+        "wires": []
+    },
+    {
+        "id": "7990dc354a738d5b",
+        "type": "mysql",
+        "z": "d974087eb4410441",
+        "g": "ceede2f20210d649",
+        "mydb": "f2952bbb2ad433e2",
+        "name": "mdb-test",
+        "x": 480,
+        "y": 500,
+        "wires": [
+            [
+                "dbf573f1be114c43"
+            ]
+        ]
+    },
+    {
+        "id": "fad8b9ec333779f3",
+        "type": "inject",
+        "z": "d974087eb4410441",
+        "g": "ceede2f20210d649",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 520,
+        "wires": [
+            [
+                "41f66b13af6e1ee2"
+            ]
+        ]
+    },
+    {
+        "id": "41f66b13af6e1ee2",
+        "type": "function",
+        "z": "d974087eb4410441",
+        "g": "ceede2f20210d649",
+        "name": "GET_USERS",
+        "func": "msg.topic = \"SELECT * FROM users;\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 440,
+        "wires": [
+            [
+                "7990dc354a738d5b"
+            ]
+        ]
+    },
+    {
+        "id": "dbf573f1be114c43",
+        "type": "debug",
+        "z": "d974087eb4410441",
+        "g": "ceede2f20210d649",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 460,
         "wires": []
     }
 ]

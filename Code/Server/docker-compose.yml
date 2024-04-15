@@ -3,6 +3,8 @@ version: '3.8'
 services:
   mqtt:
     image: eclipse-mosquitto:latest
+    networks:
+      - node-red-net
     ports:
       - "1883:1883"
       - "9001:9001"
@@ -11,8 +13,10 @@ services:
       - ./docker/mqtt-config:/mosquitto/config
       - ./docker/mqtt-log:/mosquitto/log
 
-  nodered:
+  node-red:
     image: nodered/node-red:latest
+    networks:
+      - node-red-net
     ports:
       - "1880:1880"
     volumes:
@@ -30,8 +34,13 @@ services:
     volumes:
       - ./docker/mariadb-data:/var/lib/mysql
       - ./docker/mariadb-config/initdb.sql:/docker-entrypoint-initdb.d/initdb.sql
+    networks:
+      - node-red-net
     ports:
       - "3306:3306"
+
+networks:
+  node-red-net:
 
 volumes:
   mosquitto_data:
