@@ -34,8 +34,8 @@
         "id": "f2952bbb2ad433e2",
         "type": "MySQLdatabase",
         "name": "TestDB",
-        "host": "mariadb",
-        "port": "3306",
+        "host": "${DB_HOST}",
+        "port": "${DB_PORT}",
         "db": "testdb",
         "tz": "",
         "charset": "UTF8"
@@ -223,7 +223,7 @@
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
         "x": 480,
-        "y": 520,
+        "y": 560,
         "wires": [
             [
                 "dbf573f1be114c43"
