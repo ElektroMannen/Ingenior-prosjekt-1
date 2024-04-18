@@ -10,3 +10,4 @@ docker/mosquitto-data/*
 !docker/mqtt-data/README.md
 !docker/mariadb-data/README.md
 !docker/node-red-data/README.md
+uml/.$*
