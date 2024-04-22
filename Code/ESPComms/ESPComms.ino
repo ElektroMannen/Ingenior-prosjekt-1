@@ -6,6 +6,10 @@
 #define   MESH_PASSWORD   "PassordGruppeEN"
 #define   MESH_PORT       5555
 
+bool Charging = true;
+bool Discharging = false;
+bool ChargingComplete = false;
+
 Scheduler userScheduler; // to control your personal task
 painlessMesh  mesh;
 
@@ -15,15 +19,15 @@ void sendMessage() ; // Prototype so PlatformIO doesn't complain
 Task taskSendMessage( TASK_SECOND * 1 , TASK_FOREVER, &sendMessage );
 
 void sendMessage() {
-  String msg = "Hi ";
+  String msg = "The weather is nice today!";
   msg += mesh.getNodeId();
   mesh.sendBroadcast( msg );
   taskSendMessage.setInterval( random( TASK_SECOND * 1, TASK_SECOND * 5 ));
 }
 
-// Needed for painless library
+// Needed for painless library, be careful changing these parameters!
 void receivedCallback( uint32_t from, String &msg ) {
-  Serial.printf("Information: Received from %u msg=%s\n", from, msg.c_str());
+  Serial.printf("Information: Received from %u msg = %s\n Charging = %d\n", from, msg.c_str(), Charging);
 }
 
 void newConnectionCallback(uint32_t nodeId) {
