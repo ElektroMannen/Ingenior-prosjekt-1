@@ -79,3 +79,27 @@ Sørg for at rotmappen er Server-mappen før du kjører kommandoen under.
 ```
 rm -rf docker/mariadb-data/*
 ```
+
+# Python-MQTT-kommunikasjon
+
+I mappen `Serial` er det et enkelt python script som håndterer kommunikasjon mellom UART og MQTT.
+
+## Bruk av scriptet
+
+1. Sett opp .venv
+
+```
+python -m venv .venv
+```
+
+2. Aktiver venv
+
+```
+source .venv/bin/activate
+```
+
+3. Installer avhengigheter i virtuelt miljø
+
+```
+pip install -r requirements.txt
+```
