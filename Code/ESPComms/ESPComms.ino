@@ -57,7 +57,4 @@ void setup() {
 void loop() {
   // it will run the user scheduler as well
   mesh.update();
-  if (Serial.available()) {
-    String msg = Serial.readString();
-  }
 }
