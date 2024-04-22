@@ -55,6 +55,8 @@ Om ingenting kommer opp skal alt være i orden.
 docker-compose up -d
 ```
 
+Fjern `-d` for debugging.
+
 # Lokal bruk av MariaDB
 
 Om nødvendig kan man undersøke databasen fra mysql-programvare på raspberry pi.
@@ -66,4 +68,14 @@ sudo apt install default-mysql-client
 2. Logg inn
 ```
 mysql -h 127.0.0.1 -P 3306 -u root -p
+```
+
+# Gjenbygge database
+
+Fjern alle filer fra `mariadb-data`-mappen.
+
+Sørg for at rotmappen er Server-mappen før du kjører kommandoen under.
+
+```
+rm -rf docker/mariadb-data/*
 ```
