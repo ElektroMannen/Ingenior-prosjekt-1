@@ -15,7 +15,7 @@ void sendMessage() ; // Prototype so PlatformIO doesn't complain
 Task taskSendMessage( TASK_SECOND * 1 , TASK_FOREVER, &sendMessage );
 
 void sendMessage() {
-  String msg = "Hi from node 2";
+  String msg = "Hi ";
   msg += mesh.getNodeId();
   mesh.sendBroadcast( msg );
   taskSendMessage.setInterval( random( TASK_SECOND * 1, TASK_SECOND * 5 ));
@@ -23,7 +23,7 @@ void sendMessage() {
 
 // Needed for painless library
 void receivedCallback( uint32_t from, String &msg ) {
-  Serial.printf("startHere: Received from %u msg=%s\n", from, msg.c_str());
+  Serial.printf("Information: Received from %u msg=%s\n", from, msg.c_str());
 }
 
 void newConnectionCallback(uint32_t nodeId) {
