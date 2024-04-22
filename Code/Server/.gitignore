@@ -11,3 +11,4 @@ docker/mosquitto-data/*
 !docker/mariadb-data/README.md
 !docker/node-red-data/README.md
 uml/.$*
+Serial/.venv
