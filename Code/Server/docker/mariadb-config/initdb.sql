@@ -41,6 +41,17 @@ CREATE TABLE rentrecords (
       ON UPDATE RESTRICT
 ) ENGINE=InnoDB;
 
+CREATE TABLE ecoscore (
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	td TIMESTAMP,
+	total_impact_score FLOAT,
+	user_id INT UNSIGNED,
+    CONSTRAINT `fk_ecoscore_users`
+      FOREIGN KEY (user_id) REFERENCES users (id)
+      ON DELETE SET NULL
+      ON UPDATE CASCADE
+) ENGINE=InnoDB;
+
 INSERT INTO users (name, email, address) VALUES
 	('Arne Midjo', 'arne.midjo@mail.no', 'ntnubakken 12C'),
 	('Mrne Aidjo', 'mrne@gmail.com', 'utnudalen 18C');
@@ -61,5 +72,9 @@ INSERT INTO rentrecords (start_date, average_score, user_id)
 SELECT '2024-03-21', AVG(score), 1 
 FROM drivescores
 WHERE user_id = 1;
+
+
+INSERT INTO ecoscore (total_impact_score, user_id) VALUES (124451.1, 1)
+
 
 
