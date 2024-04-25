@@ -921,31 +921,11 @@
         "links": [
             "414f9ce98347a63b"
         ],
-        "x": 165,
-        "y": 980,
+        "x": 85,
+        "y": 960,
         "wires": [
             [
-                "9246e799f65f6422"
-            ]
-        ]
-    },
-    {
-        "id": "9246e799f65f6422",
-        "type": "function",
-        "z": "d974087eb4410441",
-        "name": "INSERT_INTO",
-        "func": "let json = msg.payload;\n\nvar score = json['d_score'];\n\nvar temp = score.toString();\nvar name = \"arne19\";\nvar email = \"arn4@gmail.no\";\nvar address = \"arnebakken\";\n\nmsg.topic=\"INSERT INTO users(name, email, address, tlf) VALUES('\"+name+\"','\"+email+\"','\"+address+\"','\"+score+\"');\";\n\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 340,
-        "y": 1020,
-        "wires": [
-            [
-                "cbc77b34d7b89224"
+                "0b3e6df4fe188922"
             ]
         ]
     },
@@ -972,11 +952,31 @@
         "z": "d974087eb4410441",
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
-        "x": 520,
-        "y": 960,
+        "x": 480,
+        "y": 980,
         "wires": [
             [
                 "cb643570aee91a84"
+            ]
+        ]
+    },
+    {
+        "id": "0b3e6df4fe188922",
+        "type": "function",
+        "z": "d974087eb4410441",
+        "name": "INSERT_INTO_EXAMPLE",
+        "func": "let json = msg.payload;\n\nvar score = json['d_score'];\n\nmsg.payload={}\n\n\nmsg.payload.tlf = score.toString();\nmsg.payload.name = \"arne29\";\nmsg.payload.email = \"arn12@gmail.no\";\nmsg.payload.address = \"arnebakken\";\n\nmsg.topic=\"INSERT INTO users(`name`, `email`, `address`, `tlf`) VALUES(:name,:email,:address,:tlf);\"\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 250,
+        "y": 1060,
+        "wires": [
+            [
+                "cbc77b34d7b89224"
             ]
         ]
     },
