@@ -1,10 +1,10 @@
 [
     {
-        "id": "d974087eb4410441",
+        "id": "c7015bd55ac9c57d",
         "type": "tab",
-        "label": "DB",
+        "label": "Communication",
         "disabled": false,
-        "info": "",
+        "info": "Various communication with devices",
         "env": []
     },
     {
@@ -13,6 +13,14 @@
         "label": "Dashboard",
         "disabled": false,
         "info": "For displaying various info",
+        "env": []
+    },
+    {
+        "id": "d974087eb4410441",
+        "type": "tab",
+        "label": "DB",
+        "disabled": false,
+        "info": "",
         "env": []
     },
     {
@@ -44,7 +52,7 @@
             "name": "theme-light",
             "lightTheme": {
                 "default": "#0094CE",
-                "baseColor": "#0094CE",
+                "baseColor": "#768fa1",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
                 "edited": true,
                 "reset": false
@@ -66,11 +74,11 @@
             "themeState": {
                 "base-color": {
                     "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
+                    "value": "#768fa1",
+                    "edited": true
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
+                    "value": "#768fa1",
                     "edited": false
                 },
                 "page-backgroundColor": {
@@ -82,7 +90,7 @@
                     "edited": false
                 },
                 "group-textColor": {
-                    "value": "#1bbfff",
+                    "value": "#a3b4c0",
                     "edited": false
                 },
                 "group-borderColor": {
@@ -98,7 +106,7 @@
                     "edited": false
                 },
                 "widget-backgroundColor": {
-                    "value": "#0094ce",
+                    "value": "#768fa1",
                     "edited": false
                 },
                 "widget-borderColor": {
@@ -269,6 +277,464 @@
         "willMsg": {},
         "userProps": "",
         "sessionExpiry": ""
+    },
+    {
+        "id": "1184fa1d91ac2538",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "9bccee99e8427849",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9bccee99e8427849",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "34ec71f2417a3909",
+        "type": "ui_template",
+        "z": "c7015bd55ac9c57d",
+        "group": "1184fa1d91ac2538",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<script>\n    (function($scope) {\n\n    let keys = {};\n\n    document.addEventListener('keydown', (event) => {\n    keys[event.key] = true;\n    let msg = {\"payload\": keys, \"topic\": \"keydown\"};\n    $scope.send(msg);\n    });\n    \n\n    document.addEventListener('keyup', (event) => {\n    var keyName = event.key;\n    var keyCode = event.code;\n    delete keys[event.key];\n\n    let msg = {\"payload\": keys, \"topic\": \"keyup\"};\n    $scope.send(msg);\n    });\n    \n    //document.onkeydown = function (e) {\n    //    let msg = {\"payload\": e.key,  \"topic\": \"keydown\"};\n    //    $scope.send(msg);\n    //};\n    \n    //document.onkeyup = function (e) {\n    //    let msg = {\"payload\": e.key, \"topic\": \"keyup\"};\n    //    $scope.send(msg);\n    //};\n\n    // attaching addEventListener for keypress\n\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 120,
+        "y": 160,
+        "wires": [
+            [
+                "bb8e501cbe7d5d9d"
+            ]
+        ]
+    },
+    {
+        "id": "4fb6dce76372faf6",
+        "type": "ui_text",
+        "z": "c7015bd55ac9c57d",
+        "group": "1184fa1d91ac2538",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 530,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "bb8e501cbe7d5d9d",
+        "type": "function",
+        "z": "c7015bd55ac9c57d",
+        "name": "Keypress",
+        "func": "var txt = flow.get(\"text\") || \"\";\ntxt = msg.payload\nmsg.payload = txt\nflow.set(\"text\", txt)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 160,
+        "wires": [
+            [
+                "4fb6dce76372faf6",
+                "e4f62c1015b6a187",
+                "e5c5cf0d6bb917c5"
+            ]
+        ]
+    },
+    {
+        "id": "e4f62c1015b6a187",
+        "type": "debug",
+        "z": "c7015bd55ac9c57d",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "e5c5cf0d6bb917c5",
+        "type": "mqtt out",
+        "z": "c7015bd55ac9c57d",
+        "name": "",
+        "topic": "car/control",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "dc20097875203fb9",
+        "x": 550,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "e33df8dd9f71fde2",
+        "type": "inject",
+        "z": "9c23ead5f4cd17b6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 80,
+        "wires": [
+            [
+                "fe61373c9ba90950"
+            ]
+        ]
+    },
+    {
+        "id": "fe61373c9ba90950",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "164294998b95d982",
+        "type": "link in",
+        "z": "9c23ead5f4cd17b6",
+        "name": "link in 1",
+        "links": [
+            "715a363715462c6f"
+        ],
+        "x": 295,
+        "y": 220,
+        "wires": [
+            [
+                "befb8d61f627e759"
+            ]
+        ]
+    },
+    {
+        "id": "befb8d61f627e759",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "62f700f75f965751",
+        "type": "ui_form",
+        "z": "9c23ead5f4cd17b6",
+        "name": "formstest",
+        "label": "usercreate",
+        "group": "7b305681c9766457",
+        "order": 1,
+        "width": "4",
+        "height": "5",
+        "options": [
+            {
+                "label": "name",
+                "value": "obj_name",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "phone",
+                "value": "obj_phone",
+                "type": "number",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "obj_name": "",
+            "obj_phone": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 160,
+        "y": 380,
+        "wires": [
+            [
+                "fdfcbcc970d4c7d4"
+            ]
+        ]
+    },
+    {
+        "id": "fdfcbcc970d4c7d4",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "bf074b7896696e01",
+        "type": "ui_text_input",
+        "z": "9c23ead5f4cd17b6",
+        "name": "input_something",
+        "label": "input_text",
+        "tooltip": "Input any text you want",
+        "group": "d4fd718081934519",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 130,
+        "y": 460,
+        "wires": [
+            [
+                "5a5f13eb11156755"
+            ]
+        ]
+    },
+    {
+        "id": "5a5f13eb11156755",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "be9e9c5fa290f04c",
+        "type": "ui_numeric",
+        "z": "9c23ead5f4cd17b6",
+        "name": "",
+        "label": "numeric",
+        "tooltip": "fire-fa",
+        "group": "2781c1b55976c214",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 140,
+        "y": 540,
+        "wires": [
+            [
+                "ec7ab97861493094"
+            ]
+        ]
+    },
+    {
+        "id": "ec7ab97861493094",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "9579f25dc153e7a7",
+        "type": "ui_button",
+        "z": "9c23ead5f4cd17b6",
+        "name": "",
+        "group": "24fdc3d7188423ba",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "press_for_enable",
+        "tooltip": "",
+        "color": "orange",
+        "bgcolor": "black",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 620,
+        "wires": [
+            [
+                "bb37b16bfd7500b4"
+            ]
+        ]
+    },
+    {
+        "id": "bb37b16bfd7500b4",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "5e65310d229c6a63",
+        "type": "ui_dropdown",
+        "z": "9c23ead5f4cd17b6",
+        "name": "",
+        "label": "huh",
+        "tooltip": "",
+        "place": "Something",
+        "group": "92edd0319969dc32",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": true,
+        "options": [
+            {
+                "label": "score_msg",
+                "value": "Score",
+                "type": "str"
+            },
+            {
+                "label": "a_alternative",
+                "value": "A",
+                "type": "str"
+            },
+            {
+                "label": "b_alternative",
+                "value": "B",
+                "type": "str"
+            },
+            {
+                "label": "c_alternative",
+                "value": "C",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 150,
+        "y": 720,
+        "wires": [
+            [
+                "25577ae0275879a3"
+            ]
+        ]
+    },
+    {
+        "id": "25577ae0275879a3",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 720,
+        "wires": []
     },
     {
         "id": "362c8eb1df4a411b",
@@ -700,344 +1166,6 @@
         "broker": "dc20097875203fb9",
         "x": 420,
         "y": 880,
-        "wires": []
-    },
-    {
-        "id": "e33df8dd9f71fde2",
-        "type": "inject",
-        "z": "9c23ead5f4cd17b6",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 180,
-        "y": 80,
-        "wires": [
-            [
-                "fe61373c9ba90950"
-            ]
-        ]
-    },
-    {
-        "id": "fe61373c9ba90950",
-        "type": "debug",
-        "z": "9c23ead5f4cd17b6",
-        "name": "debug 6",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 500,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "164294998b95d982",
-        "type": "link in",
-        "z": "9c23ead5f4cd17b6",
-        "name": "link in 1",
-        "links": [
-            "715a363715462c6f"
-        ],
-        "x": 295,
-        "y": 220,
-        "wires": [
-            [
-                "befb8d61f627e759"
-            ]
-        ]
-    },
-    {
-        "id": "befb8d61f627e759",
-        "type": "debug",
-        "z": "9c23ead5f4cd17b6",
-        "name": "debug 7",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 480,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "62f700f75f965751",
-        "type": "ui_form",
-        "z": "9c23ead5f4cd17b6",
-        "name": "formstest",
-        "label": "usercreate",
-        "group": "7b305681c9766457",
-        "order": 1,
-        "width": "4",
-        "height": "5",
-        "options": [
-            {
-                "label": "name",
-                "value": "obj_name",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "phone",
-                "value": "obj_phone",
-                "type": "number",
-                "required": false,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "obj_name": "",
-            "obj_phone": ""
-        },
-        "payload": "",
-        "submit": "submit",
-        "cancel": "cancel",
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": "",
-        "className": "",
-        "x": 160,
-        "y": 380,
-        "wires": [
-            [
-                "fdfcbcc970d4c7d4"
-            ]
-        ]
-    },
-    {
-        "id": "fdfcbcc970d4c7d4",
-        "type": "debug",
-        "z": "9c23ead5f4cd17b6",
-        "name": "debug 8",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 360,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "bf074b7896696e01",
-        "type": "ui_text_input",
-        "z": "9c23ead5f4cd17b6",
-        "name": "input_something",
-        "label": "input_text",
-        "tooltip": "Input any text you want",
-        "group": "d4fd718081934519",
-        "order": 1,
-        "width": "0",
-        "height": "0",
-        "passthru": true,
-        "mode": "text",
-        "delay": "0",
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 130,
-        "y": 460,
-        "wires": [
-            [
-                "5a5f13eb11156755"
-            ]
-        ]
-    },
-    {
-        "id": "5a5f13eb11156755",
-        "type": "debug",
-        "z": "9c23ead5f4cd17b6",
-        "name": "debug 9",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 360,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "be9e9c5fa290f04c",
-        "type": "ui_numeric",
-        "z": "9c23ead5f4cd17b6",
-        "name": "",
-        "label": "numeric",
-        "tooltip": "fire-fa",
-        "group": "2781c1b55976c214",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "wrap": false,
-        "passthru": true,
-        "topic": "topic",
-        "topicType": "msg",
-        "format": "{{value}}",
-        "min": 0,
-        "max": 10,
-        "step": 1,
-        "className": "",
-        "x": 140,
-        "y": 540,
-        "wires": [
-            [
-                "ec7ab97861493094"
-            ]
-        ]
-    },
-    {
-        "id": "ec7ab97861493094",
-        "type": "debug",
-        "z": "9c23ead5f4cd17b6",
-        "name": "debug 10",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 320,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "9579f25dc153e7a7",
-        "type": "ui_button",
-        "z": "9c23ead5f4cd17b6",
-        "name": "",
-        "group": "24fdc3d7188423ba",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "press_for_enable",
-        "tooltip": "",
-        "color": "orange",
-        "bgcolor": "black",
-        "className": "",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 170,
-        "y": 620,
-        "wires": [
-            [
-                "bb37b16bfd7500b4"
-            ]
-        ]
-    },
-    {
-        "id": "bb37b16bfd7500b4",
-        "type": "debug",
-        "z": "9c23ead5f4cd17b6",
-        "name": "debug 11",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 360,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "5e65310d229c6a63",
-        "type": "ui_dropdown",
-        "z": "9c23ead5f4cd17b6",
-        "name": "",
-        "label": "huh",
-        "tooltip": "",
-        "place": "Something",
-        "group": "92edd0319969dc32",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "multiple": true,
-        "options": [
-            {
-                "label": "score_msg",
-                "value": "Score",
-                "type": "str"
-            },
-            {
-                "label": "a_alternative",
-                "value": "A",
-                "type": "str"
-            },
-            {
-                "label": "b_alternative",
-                "value": "B",
-                "type": "str"
-            },
-            {
-                "label": "c_alternative",
-                "value": "C",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 150,
-        "y": 720,
-        "wires": [
-            [
-                "25577ae0275879a3"
-            ]
-        ]
-    },
-    {
-        "id": "25577ae0275879a3",
-        "type": "debug",
-        "z": "9c23ead5f4cd17b6",
-        "name": "debug 12",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 420,
-        "y": 720,
         "wires": []
     }
 ]
