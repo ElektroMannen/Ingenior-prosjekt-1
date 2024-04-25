@@ -8,19 +8,19 @@
         "env": []
     },
     {
-        "id": "9c23ead5f4cd17b6",
-        "type": "tab",
-        "label": "Dashboard",
-        "disabled": false,
-        "info": "For displaying various info",
-        "env": []
-    },
-    {
         "id": "d974087eb4410441",
         "type": "tab",
         "label": "DB",
         "disabled": false,
         "info": "",
+        "env": []
+    },
+    {
+        "id": "9c23ead5f4cd17b6",
+        "type": "tab",
+        "label": "Dashboard",
+        "disabled": false,
+        "info": "For displaying various info",
         "env": []
     },
     {
@@ -34,6 +34,26 @@
         "env": [],
         "meta": {},
         "color": "#DDAA99"
+    },
+    {
+        "id": "dff9176621056133",
+        "type": "group",
+        "z": "c7015bd55ac9c57d",
+        "name": "Control Cat",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "34ec71f2417a3909",
+            "4fb6dce76372faf6",
+            "bb8e501cbe7d5d9d",
+            "e4f62c1015b6a187",
+            "e5c5cf0d6bb917c5"
+        ],
+        "x": 34,
+        "y": 79,
+        "w": 612,
+        "h": 202
     },
     {
         "id": "f2952bbb2ad433e2",
@@ -301,6 +321,7 @@
         "id": "34ec71f2417a3909",
         "type": "ui_template",
         "z": "c7015bd55ac9c57d",
+        "g": "dff9176621056133",
         "group": "1184fa1d91ac2538",
         "name": "",
         "order": 1,
@@ -324,6 +345,7 @@
         "id": "4fb6dce76372faf6",
         "type": "ui_text",
         "z": "c7015bd55ac9c57d",
+        "g": "dff9176621056133",
         "group": "1184fa1d91ac2538",
         "order": 2,
         "width": "0",
@@ -345,6 +367,7 @@
         "id": "bb8e501cbe7d5d9d",
         "type": "function",
         "z": "c7015bd55ac9c57d",
+        "g": "dff9176621056133",
         "name": "Keypress",
         "func": "var txt = flow.get(\"text\") || \"\";\ntxt = msg.payload\nmsg.payload = txt\nflow.set(\"text\", txt)\nreturn msg;",
         "outputs": 1,
@@ -367,6 +390,7 @@
         "id": "e4f62c1015b6a187",
         "type": "debug",
         "z": "c7015bd55ac9c57d",
+        "g": "dff9176621056133",
         "name": "debug 15",
         "active": true,
         "tosidebar": true,
@@ -384,6 +408,7 @@
         "id": "e5c5cf0d6bb917c5",
         "type": "mqtt out",
         "z": "c7015bd55ac9c57d",
+        "g": "dff9176621056133",
         "name": "",
         "topic": "car/control",
         "qos": "",
@@ -399,10 +424,10 @@
         "wires": []
     },
     {
-        "id": "e33df8dd9f71fde2",
+        "id": "5631cd8e37f10e5f",
         "type": "inject",
-        "z": "9c23ead5f4cd17b6",
-        "name": "",
+        "z": "c7015bd55ac9c57d",
+        "name": "insert_user",
         "props": [
             {
                 "p": "payload"
@@ -416,324 +441,44 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 180,
-        "y": 80,
-        "wires": [
-            [
-                "fe61373c9ba90950"
-            ]
-        ]
-    },
-    {
-        "id": "fe61373c9ba90950",
-        "type": "debug",
-        "z": "9c23ead5f4cd17b6",
-        "name": "debug 6",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 500,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "164294998b95d982",
-        "type": "link in",
-        "z": "9c23ead5f4cd17b6",
-        "name": "link in 1",
-        "links": [
-            "715a363715462c6f"
-        ],
-        "x": 295,
-        "y": 220,
-        "wires": [
-            [
-                "befb8d61f627e759"
-            ]
-        ]
-    },
-    {
-        "id": "befb8d61f627e759",
-        "type": "debug",
-        "z": "9c23ead5f4cd17b6",
-        "name": "debug 7",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 480,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "62f700f75f965751",
-        "type": "ui_form",
-        "z": "9c23ead5f4cd17b6",
-        "name": "formstest",
-        "label": "usercreate",
-        "group": "7b305681c9766457",
-        "order": 1,
-        "width": "4",
-        "height": "5",
-        "options": [
-            {
-                "label": "name",
-                "value": "obj_name",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "phone",
-                "value": "obj_phone",
-                "type": "number",
-                "required": false,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "obj_name": "",
-            "obj_phone": ""
-        },
-        "payload": "",
-        "submit": "submit",
-        "cancel": "cancel",
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": "",
-        "className": "",
-        "x": 160,
-        "y": 380,
-        "wires": [
-            [
-                "fdfcbcc970d4c7d4"
-            ]
-        ]
-    },
-    {
-        "id": "fdfcbcc970d4c7d4",
-        "type": "debug",
-        "z": "9c23ead5f4cd17b6",
-        "name": "debug 8",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 360,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "bf074b7896696e01",
-        "type": "ui_text_input",
-        "z": "9c23ead5f4cd17b6",
-        "name": "input_something",
-        "label": "input_text",
-        "tooltip": "Input any text you want",
-        "group": "d4fd718081934519",
-        "order": 1,
-        "width": "0",
-        "height": "0",
-        "passthru": true,
-        "mode": "text",
-        "delay": "0",
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 130,
-        "y": 460,
-        "wires": [
-            [
-                "5a5f13eb11156755"
-            ]
-        ]
-    },
-    {
-        "id": "5a5f13eb11156755",
-        "type": "debug",
-        "z": "9c23ead5f4cd17b6",
-        "name": "debug 9",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 360,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "be9e9c5fa290f04c",
-        "type": "ui_numeric",
-        "z": "9c23ead5f4cd17b6",
-        "name": "",
-        "label": "numeric",
-        "tooltip": "fire-fa",
-        "group": "2781c1b55976c214",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "wrap": false,
-        "passthru": true,
-        "topic": "topic",
-        "topicType": "msg",
-        "format": "{{value}}",
-        "min": 0,
-        "max": 10,
-        "step": 1,
-        "className": "",
+        "topic": "insert",
+        "payload": "{\"d_score\":194}",
+        "payloadType": "json",
         "x": 140,
-        "y": 540,
+        "y": 400,
         "wires": [
             [
-                "ec7ab97861493094"
+                "6eb947dff35c7a58"
             ]
         ]
     },
     {
-        "id": "ec7ab97861493094",
-        "type": "debug",
-        "z": "9c23ead5f4cd17b6",
-        "name": "debug 10",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 320,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "9579f25dc153e7a7",
-        "type": "ui_button",
-        "z": "9c23ead5f4cd17b6",
+        "id": "6eb947dff35c7a58",
+        "type": "json",
+        "z": "c7015bd55ac9c57d",
         "name": "",
-        "group": "24fdc3d7188423ba",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "press_for_enable",
-        "tooltip": "",
-        "color": "orange",
-        "bgcolor": "black",
-        "className": "",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 170,
-        "y": 620,
+        "property": "payload",
+        "action": "obj",
+        "pretty": true,
+        "x": 310,
+        "y": 340,
         "wires": [
             [
-                "bb37b16bfd7500b4"
+                "414f9ce98347a63b"
             ]
         ]
     },
     {
-        "id": "bb37b16bfd7500b4",
-        "type": "debug",
-        "z": "9c23ead5f4cd17b6",
-        "name": "debug 11",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 360,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "5e65310d229c6a63",
-        "type": "ui_dropdown",
-        "z": "9c23ead5f4cd17b6",
-        "name": "",
-        "label": "huh",
-        "tooltip": "",
-        "place": "Something",
-        "group": "92edd0319969dc32",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "multiple": true,
-        "options": [
-            {
-                "label": "score_msg",
-                "value": "Score",
-                "type": "str"
-            },
-            {
-                "label": "a_alternative",
-                "value": "A",
-                "type": "str"
-            },
-            {
-                "label": "b_alternative",
-                "value": "B",
-                "type": "str"
-            },
-            {
-                "label": "c_alternative",
-                "value": "C",
-                "type": "str"
-            }
+        "id": "414f9ce98347a63b",
+        "type": "link out",
+        "z": "c7015bd55ac9c57d",
+        "name": "link out 2",
+        "mode": "link",
+        "links": [
+            "34ea1d322de1ddc2"
         ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 150,
-        "y": 720,
-        "wires": [
-            [
-                "25577ae0275879a3"
-            ]
-        ]
-    },
-    {
-        "id": "25577ae0275879a3",
-        "type": "debug",
-        "z": "9c23ead5f4cd17b6",
-        "name": "debug 12",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 420,
-        "y": 720,
+        "x": 455,
+        "y": 380,
         "wires": []
     },
     {
@@ -757,8 +502,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 120,
-        "y": 120,
+        "x": 140,
+        "y": 60,
         "wires": [
             [
                 "a61369b962f8c714"
@@ -777,8 +522,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 280,
-        "y": 120,
+        "x": 300,
+        "y": 100,
         "wires": [
             [
                 "25d0fcd267a2c8ef"
@@ -797,8 +542,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 440,
-        "y": 120,
+        "x": 500,
+        "y": 100,
         "wires": []
     },
     {
@@ -1166,6 +911,411 @@
         "broker": "dc20097875203fb9",
         "x": 420,
         "y": 880,
+        "wires": []
+    },
+    {
+        "id": "34ea1d322de1ddc2",
+        "type": "link in",
+        "z": "d974087eb4410441",
+        "name": "link in 2",
+        "links": [
+            "414f9ce98347a63b"
+        ],
+        "x": 165,
+        "y": 980,
+        "wires": [
+            [
+                "9246e799f65f6422"
+            ]
+        ]
+    },
+    {
+        "id": "9246e799f65f6422",
+        "type": "function",
+        "z": "d974087eb4410441",
+        "name": "INSERT_INTO",
+        "func": "let json = msg.payload;\n\nvar score = json['d_score'];\n\nvar temp = score.toString();\nvar name = \"arne19\";\nvar email = \"arn4@gmail.no\";\nvar address = \"arnebakken\";\n\nmsg.topic=\"INSERT INTO users(name, email, address, tlf) VALUES('\"+name+\"','\"+email+\"','\"+address+\"','\"+score+\"');\";\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 1020,
+        "wires": [
+            [
+                "cbc77b34d7b89224"
+            ]
+        ]
+    },
+    {
+        "id": "cb643570aee91a84",
+        "type": "debug",
+        "z": "d974087eb4410441",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "cbc77b34d7b89224",
+        "type": "mysql",
+        "z": "d974087eb4410441",
+        "mydb": "f2952bbb2ad433e2",
+        "name": "mdb-test",
+        "x": 520,
+        "y": 960,
+        "wires": [
+            [
+                "cb643570aee91a84"
+            ]
+        ]
+    },
+    {
+        "id": "e33df8dd9f71fde2",
+        "type": "inject",
+        "z": "9c23ead5f4cd17b6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 80,
+        "wires": [
+            [
+                "fe61373c9ba90950"
+            ]
+        ]
+    },
+    {
+        "id": "fe61373c9ba90950",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "164294998b95d982",
+        "type": "link in",
+        "z": "9c23ead5f4cd17b6",
+        "name": "link in 1",
+        "links": [
+            "715a363715462c6f"
+        ],
+        "x": 295,
+        "y": 220,
+        "wires": [
+            [
+                "befb8d61f627e759"
+            ]
+        ]
+    },
+    {
+        "id": "befb8d61f627e759",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "62f700f75f965751",
+        "type": "ui_form",
+        "z": "9c23ead5f4cd17b6",
+        "name": "formstest",
+        "label": "usercreate",
+        "group": "7b305681c9766457",
+        "order": 1,
+        "width": "4",
+        "height": "5",
+        "options": [
+            {
+                "label": "name",
+                "value": "obj_name",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "phone",
+                "value": "obj_phone",
+                "type": "number",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "obj_name": "",
+            "obj_phone": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 160,
+        "y": 380,
+        "wires": [
+            [
+                "fdfcbcc970d4c7d4"
+            ]
+        ]
+    },
+    {
+        "id": "fdfcbcc970d4c7d4",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "bf074b7896696e01",
+        "type": "ui_text_input",
+        "z": "9c23ead5f4cd17b6",
+        "name": "input_something",
+        "label": "input_text",
+        "tooltip": "Input any text you want",
+        "group": "d4fd718081934519",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 130,
+        "y": 460,
+        "wires": [
+            [
+                "5a5f13eb11156755"
+            ]
+        ]
+    },
+    {
+        "id": "5a5f13eb11156755",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "be9e9c5fa290f04c",
+        "type": "ui_numeric",
+        "z": "9c23ead5f4cd17b6",
+        "name": "",
+        "label": "numeric",
+        "tooltip": "fire-fa",
+        "group": "2781c1b55976c214",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 140,
+        "y": 540,
+        "wires": [
+            [
+                "ec7ab97861493094"
+            ]
+        ]
+    },
+    {
+        "id": "ec7ab97861493094",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "9579f25dc153e7a7",
+        "type": "ui_button",
+        "z": "9c23ead5f4cd17b6",
+        "name": "",
+        "group": "24fdc3d7188423ba",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "press_for_enable",
+        "tooltip": "",
+        "color": "orange",
+        "bgcolor": "black",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 620,
+        "wires": [
+            [
+                "bb37b16bfd7500b4"
+            ]
+        ]
+    },
+    {
+        "id": "bb37b16bfd7500b4",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "5e65310d229c6a63",
+        "type": "ui_dropdown",
+        "z": "9c23ead5f4cd17b6",
+        "name": "",
+        "label": "huh",
+        "tooltip": "",
+        "place": "Something",
+        "group": "92edd0319969dc32",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": true,
+        "options": [
+            {
+                "label": "score_msg",
+                "value": "Score",
+                "type": "str"
+            },
+            {
+                "label": "a_alternative",
+                "value": "A",
+                "type": "str"
+            },
+            {
+                "label": "b_alternative",
+                "value": "B",
+                "type": "str"
+            },
+            {
+                "label": "c_alternative",
+                "value": "C",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 150,
+        "y": 720,
+        "wires": [
+            [
+                "25577ae0275879a3"
+            ]
+        ]
+    },
+    {
+        "id": "25577ae0275879a3",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 720,
         "wires": []
     }
 ]
