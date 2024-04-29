@@ -1,21 +1,32 @@
-//#include <MQTTClient.h>
-//#include <WIFI.h>
+#include <PubSubClient.h>
+#include <WiFi.h>
 #include <Wire.h>
 
+WiFiClient espClient;
+PubSubClient client(espClient);
 
-/*
 const char ssid[] = "NTNU-IOT";
-const char passord[] = "";
+const char password[] = "";
 
+unsigned long oldMillis = 0;
 
-const char MQTT_BROKER_ADRRESS[] = "test.mosquitto.org";  // CHANGE TO MQTT BROKER'S ADDRESS
+const char MQTT_BROKER_ADRRESS[] = "10.25.18.156";  // CHANGE TO MQTT BROKER'S ADDRESS
 const int MQTT_PORT = 1883;
 const char MQTT_CLIENT_ID[] = "Person-Bil";  // CHANGE IT AS YOU DESIRE
 const char MQTT_USERNAME[] = "";                        // CHANGE IT IF REQUIRED, empty if not required
 const char MQTT_PASSWORD[] = "";  
 
 const char PUBLISH_TOPIC[] = "Kjøremønster-1";    //Data publish
-const char SUBSCRIBE_TOPIC[] = "Person-bil-controller";  //Zumo kontroller
+//const char SUBSCRIBE_TOPIC = "car/control";  //Zumo kontroller
+
+
+//Car data struct
+struct data{
+  int32_t drive, driverLevel, driverScore;
+  bool warning;
+};
+data transmittData;
+data mqttData;
 
 void wifiConnect(){
 // Connect to Wi-Fi network with SSID and password
@@ -31,39 +42,51 @@ void wifiConnect(){
   Serial.println("WiFi connected.");
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
-  server.begin();
+}
+
+void setupMQTT() {
+  client.setServer(MQTT_BROKER_ADRRESS, MQTT_PORT);
+  client.setCallback(callback);
 }
 
 void connectToMQTT() {
-  // Connect to the MQTT broker
-  mqtt.begin(MQTT_BROKER_ADRRESS, MQTT_PORT, network);
+   // Loop until we're reconnected
+  while (!client.connected()) {
+    Serial.print("Attempting MQTT connection...");
+    // Attempt to connect
+    if (client.connect(MQTT_CLIENT_ID)) {
+      Serial.println("connected");
+      // Subscribe
+      client.subscribe("car/control");
+    } else {
+      Serial.print("failed, rc=");
+      Serial.print(client.state());
+      Serial.println(" try again in 5 seconds");
+      // Wait 5 seconds before retrying
+      delay(5000);
+    }
+  }
+}
 
-  // Create a handler for incoming messages
-  mqtt.onMessage(messageHandler);
-
-  Serial.print("ESP32 - Connecting to MQTT broker");
-
-  while (!mqtt.connect(MQTT_CLIENT_ID, MQTT_USERNAME, MQTT_PASSWORD)) {
-    Serial.print(".");
-    delay(100);
+void callback(char* topic, byte* message, unsigned int length) {
+  Serial.print("Message arrived on topic: ");
+  Serial.print(topic);
+  String messageTemp;
+  
+  for (int i = 0; i < length; i++) {
+    messageTemp += (char)message[i];
   }
   Serial.println();
 
-  if (!mqtt.connected()) {
-    Serial.println("ESP32 - MQTT broker Timeout!");
-    return;
+  // Feel free to add more if statements to control more GPIOs with MQTT
+  // If a message is received on the topic esp32/output, you check if the message is either "on" or "off". 
+  // Changes the output state according to the message
+  if (String(topic) == "car/control") {
+    Serial.print(messageTemp);
+    //Gets input from MQTT
+    transmittData.drive = int(messageTemp.charAt(2));
   }
-
-  // Subscribe to a topic, the incoming messages are processed by messageHandler() function
-  if (mqtt.subscribe(SUBSCRIBE_TOPIC))
-    Serial.print("ESP32 - Subscribed to the topic: ");
-  else
-    Serial.print("ESP32 - Failed to subscribe to the topic: ");
-
-  Serial.println(SUBSCRIBE_TOPIC);
-  Serial.println("ESP32 - MQTT broker Connected!");
 }
-*/
 
 //Recieves int data
 int getInt(){
@@ -73,40 +96,43 @@ int getInt(){
     }
 }
 
-//initilasing features
+//Test function for prototype testing of Zumo driving
+void serialController(){
+   if(Serial.available()){
+      transmittData.drive = Serial.read();
+      Serial.println(transmittData.drive);
+    }
+}
 
-struct TransmitData
-{
-  int32_t drive;
-  int32_t driverLevel;
-  int32_t driverScore;
-  bool warning;
+void sendToMqtt(){
+  
+}
 
-};
 
-TransmitData data;
 //-----------------------------------------------------------------------------------------
 void setup(){
-  //wifiConnect();
-  //connectToMQTT();
-  Serial.begin(9600);
+  Serial.begin(115200);
+  wifiConnect();
+  setupMQTT();
   Wire.begin(0);
- 
-  data.drive = 0;
-  data.driverLevel = 3;
-  data.driverScore = 66;
-  data.warning = true;
+  transmittData.drive = 0;
+  transmittData.driverLevel = 3;
+  transmittData.driverScore = 66;
+  transmittData.warning = true;
   Wire.onRequest(sendI2C_Data);
 }
 
 void loop(){
-    if(Serial.available()){
-      data.drive = Serial.read();
-      Serial.println(data.drive);
-    }
-    delay(10);
+  connectToMQTT();
+  serialController();
+  millis();
+  if((millis() - oldMillis) > 1000){
+    client.loop();
+    oldMillis = millis();
+  }
+  delay(10);
 }
 
 void sendI2C_Data(){
-        Wire.write((byte*)&data, sizeof(data)); // Les hele structen fra I2C-bussen
+  Wire.write((byte*)&transmittData, sizeof(transmittData)); // Les hele structen fra I2C-bussen
 }
