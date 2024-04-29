@@ -72,20 +72,15 @@ int getInt(){
       return Wire.read();
     }
 }
-//Recieve string data
-String getString(){
-  
-}
-//Sends data based on  
-void sendData(){
-  Serial.print("test");
-}
+
 //initilasing features
 
 struct TransmitData
 {
-  int32_t a;
-  int32_t b;
+  int32_t drive;
+  int32_t driverLevel;
+  int32_t driverScore;
+  bool warning;
 
 };
 
@@ -94,15 +89,24 @@ TransmitData data;
 void setup(){
   //wifiConnect();
   //connectToMQTT();
+  Serial.begin(9600);
   Wire.begin(0);
  
-  data.a = 32;
-  data.b = 25;
-}
-void loop(){
-    Wire.beginTransmission(1);  // Transmit to device number 44 (0x2C)
-    Wire.write(data);             // Sends value byte
-    Wire.endTransmission();
-    delay(500);
+  data.drive = 0;
+  data.driverLevel = 3;
+  data.driverScore = 66;
+  data.warning = true;
+  Wire.onRequest(sendI2C_Data);
 }
 
+void loop(){
+    if(Serial.available()){
+      data.drive = Serial.read();
+      Serial.println(data.drive);
+    }
+    delay(10);
+}
+
+void sendI2C_Data(){
+        Wire.write((byte*)&data, sizeof(data)); // Les hele structen fra I2C-bussen
+}

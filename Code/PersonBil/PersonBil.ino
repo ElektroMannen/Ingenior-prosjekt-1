@@ -108,7 +108,7 @@ void loop(){
   display.print("Driver score: ");
   display.print(data.driverScore);
   drive(data.drive);
-  delay(50);
+  delay(100);
   
 }
 
