@@ -7,7 +7,20 @@ Referanse for diverse topics
 Brukerkontroll av bil
 
 ```
+**Struct oppgygging til bil data**
+
+struct data{
+  int32_t drive, driverLevel, driverScore;
+  bool warning;
+};
+
+MQTT topics
+Kontroll:
 car/control
+Data:
+car/driverLevel
+car/driverScore
+car/warning
 ```
 
 ### Eksempel på data sendt fra server
