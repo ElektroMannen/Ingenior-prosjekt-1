@@ -1,17 +1,20 @@
-#include <MQTTClient.h>
-#include <WIFI.h>
+//#include <MQTTClient.h>
+//#include <WIFI.h>
+#include <Wire.h>
 
+
+/*
 const char ssid[] = "NTNU-IOT";
 const char passord[] = "";
 
 
 const char MQTT_BROKER_ADRRESS[] = "test.mosquitto.org";  // CHANGE TO MQTT BROKER'S ADDRESS
 const int MQTT_PORT = 1883;
-const char MQTT_CLIENT_ID[] = "YOUR-NAME-esp32-001";  // CHANGE IT AS YOU DESIRE
+const char MQTT_CLIENT_ID[] = "Person-Bil";  // CHANGE IT AS YOU DESIRE
 const char MQTT_USERNAME[] = "";                        // CHANGE IT IF REQUIRED, empty if not required
 const char MQTT_PASSWORD[] = "";  
 
-const char PUBLISH_TOPIC[] = "Kjøredata-1";    //Data publish
+const char PUBLISH_TOPIC[] = "Kjøremønster-1";    //Data publish
 const char SUBSCRIBE_TOPIC[] = "Person-bil-controller";  //Zumo kontroller
 
 void wifiConnect(){
@@ -60,11 +63,46 @@ void connectToMQTT() {
   Serial.println(SUBSCRIBE_TOPIC);
   Serial.println("ESP32 - MQTT broker Connected!");
 }
+*/
+
+//Recieves int data
+int getInt(){
+  Wire.requestFrom(1,2);
+    if(Wire.available() == 2){
+      return Wire.read();
+    }
+}
+//Recieve string data
+String getString(){
+  
+}
+//Sends data based on  
+void sendData(){
+  Serial.print("test");
+}
+//initilasing features
+
+struct TransmitData
+{
+  int32_t a;
+  int32_t b;
+
+};
+
+TransmitData data;
 //-----------------------------------------------------------------------------------------
 void setup(){
-  wifiConnect();
-  connectToMQTT();
+  //wifiConnect();
+  //connectToMQTT();
+  Wire.begin(0);
+ 
+  data.a = 32;
+  data.b = 25;
 }
 void loop(){
-
+    Wire.beginTransmission(1);  // Transmit to device number 44 (0x2C)
+    Wire.write(data);             // Sends value byte
+    Wire.endTransmission();
+    delay(500);
 }
+
