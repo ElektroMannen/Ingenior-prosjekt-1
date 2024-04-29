@@ -13,16 +13,12 @@ bool ChargingComplete = false;
 Scheduler userScheduler; // to control your personal task
 painlessMesh mesh;
 
-// User stub
-void sendMessage() ; // Prototype so PlatformIO doesn't complain
-
-Task taskSendMessage( TASK_SECOND * 1 , TASK_FOREVER, &sendMessage );
-
 void sendMessage() {
   String msg = "The weather is nice today!";
   mesh.sendBroadcast( msg );
-  taskSendMessage.setInterval( random( TASK_SECOND * 1, TASK_SECOND * 5 ));
 }
+
+Task taskSendMessage( TASK_SECOND * 5 , TASK_FOREVER, &sendMessage );
 
 // Needed for painless library, be careful changing these parameters!
 void receivedCallback( uint32_t from, String &msg ) {
