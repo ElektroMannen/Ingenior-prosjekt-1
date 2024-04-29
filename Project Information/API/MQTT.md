@@ -7,7 +7,7 @@ Referanse for diverse topics
 Brukerkontroll av bil
 
 ```
-**Struct oppgygging til bil data**
+Struct oppgygging til bil data
 
 struct data{
   int32_t drive, driverLevel, driverScore;
@@ -15,8 +15,10 @@ struct data{
 };
 
 MQTT topics
+
 Kontroll:
 car/control
+
 Data:
 car/driverLevel
 car/driverScore
