@@ -18,7 +18,7 @@ const char MQTT_PASSWORD[] = "";
 
 const char PUBLISH_TOPIC[] = "Kjøremønster-1";    //Data publish
 //const char SUBSCRIBE_TOPIC = "car/control";  //Zumo kontroller
-
+int32_t mqttDelay = 50;
 
 //Car data struct
 struct data{
@@ -28,6 +28,7 @@ struct data{
 data transmittData;
 data mqttData;
 
+//Connects to wifi
 void wifiConnect(){
 // Connect to Wi-Fi network with SSID and password
   Serial.print("Connecting to ");
@@ -44,11 +45,13 @@ void wifiConnect(){
   Serial.println(WiFi.localIP());
 }
 
+//Mqtt setup
 void setupMQTT() {
   client.setServer(MQTT_BROKER_ADRRESS, MQTT_PORT);
   client.setCallback(callback);
 }
 
+//Connects to mqtt and subscribes to topics
 void connectToMQTT() {
    // Loop until we're reconnected
   while (!client.connected()) {
@@ -68,6 +71,7 @@ void connectToMQTT() {
   }
 }
 
+//Recieves and handle subscrie data
 void callback(char* topic, byte* message, unsigned int length) {
   Serial.print("Message arrived on topic: ");
   Serial.print(topic);
@@ -115,10 +119,8 @@ void setup(){
   wifiConnect();
   setupMQTT();
   Wire.begin(0);
-  transmittData.drive = 0;
-  transmittData.driverLevel = 3;
-  transmittData.driverScore = 66;
-  transmittData.warning = true;
+  transmittData.driverScore = 67;
+  transmittData.warning = false;
   Wire.onRequest(sendI2C_Data);
 }
 
@@ -126,7 +128,8 @@ void loop(){
   connectToMQTT();
   serialController();
   millis();
-  if((millis() - oldMillis) > 1000){
+
+  if((millis() - oldMillis) > mqttDelay){
     client.loop();
     oldMillis = millis();
   }

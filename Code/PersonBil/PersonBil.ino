@@ -13,9 +13,12 @@ const int interruptPin = 17;
 
 int warning = 0;
 int disp = 0;
+int32_t speed = 100;
 
 int32_t oldDrive = 0, oldDriverLevel = 0, oldDriverScore = 0;
 bool oldWarning = false;
+
+unsigned long aksMillis = 0;
 
 struct RecievedData{
   int32_t drive, driverLevel, driverScore;
@@ -55,7 +58,7 @@ void uiHandler(){
   }
   display.gotoXY(0, 3);
   display.print("Driver Level: ");
-  display.print(data.driverLevel);
+  display.print(data.driverScore/33);
   display.gotoXY(0, 4);
   display.print("Driver score: ");
   display.print(data.driverScore);
@@ -71,35 +74,48 @@ void uiHandler(){
 /*Takes inn direction of which way the car will drive. The diretion is based on norms for keyboard for movement.
 Diredtions avalible are W for forwards, S for backwards, A for turn right, D for turn left, Q for curve towards left, E for curve towards right*/
 void drive(int32_t direction){
-
     switch (direction){
         //Goes forward
         case 87:
-            motors.setSpeeds(100,100);
+            motors.setSpeeds(speed,speed);
+            if((millis() - aksMillis) > 500 && (speed < 200)){
+              speed += 25;
+              aksMillis = millis();
+            }
             break;
         //Goes Backwards
         case 83:
-            motors.setSpeeds(-100,-100);
+            motors.setSpeeds(-1*speed,-1*speed);
+            if((millis() - aksMillis) > 500 && (speed < 200)){
+              speed += 25;
+              aksMillis = millis();
+            }
             break;
         //Turn right
         case 65:
-            motors.setSpeeds(0,200);
+            motors.setSpeeds(-100,100);
+            aksMillis = millis();
             break;
         //Turns left
         case 68:
-            motors.setSpeeds(200,0);
+            motors.setSpeeds(100,-100);
+            aksMillis = millis();
             break;
         //Curves left
         case 81:
             motors.setSpeeds(100,200);
+            aksMillis = millis();
             break;
         //Curves right
         case 69:
             motors.setSpeeds(200,100);
+            aksMillis = millis();
             break;
         //Stops the car when no input
         default:
             motors.setSpeeds(0,0);
+            aksMillis = millis();
+            speed = 100;
             break;
     }
 }
@@ -123,6 +139,7 @@ void setup(){
 }
 
 void loop(){
+  millis();
   getI2C_Data();
   uiHandler();
   drive(data.drive);
