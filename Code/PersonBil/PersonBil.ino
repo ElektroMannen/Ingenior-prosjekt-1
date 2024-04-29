@@ -14,7 +14,18 @@ const int interruptPin = 17;
 int warning = 0;
 int disp = 0;
 
+int32_t oldDrive = 0, oldDriverLevel = 0, oldDriverScore = 0;
+bool oldWarning = false;
 
+struct RecievedData{
+  int32_t drive, driverLevel, driverScore;
+  bool warning;
+
+};
+
+RecievedData data;
+
+//Function to display startup message
 void startDisp(){
   display.setLayout11x4();
   display.clear();
@@ -26,6 +37,37 @@ void startDisp(){
   display.setLayout21x8();
 }
 
+
+//Display handler. Screen is updated only when data changes
+void uiHandler(){
+  if((data.drive != oldDrive) || (data.driverLevel != oldDriverLevel) || (data.driverScore != oldDriverScore) || (data.warning != oldWarning)){
+  display.clear();
+  display.gotoXY(0, 1);
+  display.print("Drive: ");
+  display.print(char(data.drive));
+  display.gotoXY(0, 2);
+  display.print("Warning: ");
+  if(data.warning){
+  display.print("True");
+  }
+  else{
+  display.print("False");
+  }
+  display.gotoXY(0, 3);
+  display.print("Driver Level: ");
+  display.print(data.driverLevel);
+  display.gotoXY(0, 4);
+  display.print("Driver score: ");
+  display.print(data.driverScore);
+  oldDrive = data.drive;
+  oldDriverLevel = data.driverLevel;
+  oldDriverScore = data.driverScore;
+  oldWarning = data.warning;
+  }
+}
+
+
+
 /*Takes inn direction of which way the car will drive. The diretion is based on norms for keyboard for movement.
 Diredtions avalible are W for forwards, S for backwards, A for turn right, D for turn left, Q for curve towards left, E for curve towards right*/
 void drive(int32_t direction){
@@ -33,11 +75,11 @@ void drive(int32_t direction){
     switch (direction){
         //Goes forward
         case 87:
-            motors.setSpeeds(200,200);
+            motors.setSpeeds(100,100);
             break;
         //Goes Backwards
         case 83:
-            motors.setSpeeds(-200,-200);
+            motors.setSpeeds(-100,-100);
             break;
         //Turn right
         case 65:
@@ -62,16 +104,6 @@ void drive(int32_t direction){
     }
 }
 
-struct RecievedData{
-  int32_t drive;
-  int32_t driverLevel;
-  int32_t driverScore;
-  bool warning;
-
-};
-
-RecievedData data;
-
 //Gets data form I2C buss 
 void getI2C_Data(){
     if (Wire.requestFrom(0, sizeof(data))) {
@@ -86,32 +118,17 @@ void setup(){
   Wire.begin(1);
   startDisp();
   delay(2000);
-}
-void loop(){
-  getI2C_Data();
   display.clear();
-  display.gotoXY(0, 1);
-  display.print("Drive: ");
-  display.print(char(data.drive));
-  display.gotoXY(0, 2);
-  display.print("Warning: ");
-  if(data.warning){
-  display.print("True");
-  }
-  else{
-  display.print("False");
-  }
-  display.gotoXY(0, 3);
-  display.print("Driver Level: ");
-  display.print(data.driverLevel);
-  display.gotoXY(0, 4);
-  display.print("Driver score: ");
-  display.print(data.driverScore);
-  drive(data.drive);
-  delay(100);
   
 }
 
+void loop(){
+  getI2C_Data();
+  uiHandler();
+  drive(data.drive);
+  delay(10);
+  
+}
 
 
 
