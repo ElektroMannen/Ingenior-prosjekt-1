@@ -48,12 +48,13 @@
             "4fb6dce76372faf6",
             "bb8e501cbe7d5d9d",
             "e4f62c1015b6a187",
-            "e5c5cf0d6bb917c5"
+            "e5c5cf0d6bb917c5",
+            "bbd793f95ec63c3e"
         ],
         "x": 34,
         "y": 79,
         "w": 612,
-        "h": 202
+        "h": 222
     },
     {
         "id": "f2952bbb2ad433e2",
@@ -149,7 +150,7 @@
             "name": "Overview",
             "hideToolbar": "false",
             "allowSwipe": "false",
-            "lockMenu": "false",
+            "lockMenu": "true",
             "allowTempTheme": "false",
             "dateFormat": "DD/MM/YYYY",
             "sizes": {
@@ -169,7 +170,7 @@
         "type": "ui_tab",
         "name": "InputUser",
         "icon": "dashboard",
-        "order": 1,
+        "order": 2,
         "disabled": false,
         "hidden": false
     },
@@ -187,9 +188,9 @@
     {
         "id": "09eba29fa3fc2ae7",
         "type": "ui_tab",
-        "name": "DisplayData",
-        "icon": "fa-fire",
-        "order": 2,
+        "name": "Home",
+        "icon": "fa-home",
+        "order": 1,
         "disabled": false,
         "hidden": false
     },
@@ -206,7 +207,7 @@
     {
         "id": "2781c1b55976c214",
         "type": "ui_group",
-        "name": "InputField",
+        "name": "Info",
         "tab": "09eba29fa3fc2ae7",
         "order": 1,
         "disp": true,
@@ -220,17 +221,6 @@
         "name": "Numerics",
         "tab": "09eba29fa3fc2ae7",
         "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "24fdc3d7188423ba",
-        "type": "ui_group",
-        "name": "PressForEnable",
-        "tab": "09eba29fa3fc2ae7",
-        "order": 3,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -312,8 +302,9 @@
     {
         "id": "9bccee99e8427849",
         "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
+        "name": "Control",
+        "icon": "fa-gamepad",
+        "order": 3,
         "disabled": false,
         "hidden": false
     },
@@ -327,17 +318,18 @@
         "order": 1,
         "width": 0,
         "height": 0,
-        "format": "<script>\n    (function($scope) {\n\n    let keys = {};\n\n    document.addEventListener('keydown', (event) => {\n    keys[event.key] = true;\n    let msg = {\"payload\": keys, \"topic\": \"keydown\"};\n    $scope.send(msg);\n    });\n    \n\n    document.addEventListener('keyup', (event) => {\n    var keyName = event.key;\n    var keyCode = event.code;\n    delete keys[event.key];\n\n    let msg = {\"payload\": keys, \"topic\": \"keyup\"};\n    $scope.send(msg);\n    });\n    \n    //document.onkeydown = function (e) {\n    //    let msg = {\"payload\": e.key,  \"topic\": \"keydown\"};\n    //    $scope.send(msg);\n    //};\n    \n    //document.onkeyup = function (e) {\n    //    let msg = {\"payload\": e.key, \"topic\": \"keyup\"};\n    //    $scope.send(msg);\n    //};\n\n    // attaching addEventListener for keypress\n\n})(scope);\n</script>",
+        "format": "<script>\n\n    \n    (function($scope) {\n    \n \n    console.log('Hello');\n\n    let keys = {};\n\n    document.addEventListener('keydown', (event) => {\n    if (event.repeat) return;\n    \n    if (event.key != \"CapsLock\") {\n        keys[event.key] = true;\n        let msg = {\"payload\": keys, \"topic\": \"keydown\"};\n        $scope.send(msg);\n    }\n    });\n\n    document.addEventListener('keyup', (event) => {\n    var keyName = event.key;\n    var keyCode = event.code;\n    delete keys[event.key];\n    let msg = {\"payload\": keys, \"topic\": \"keyup\"};\n    $scope.send(msg);\n\n    },{capture: true});\n    })(scope);\n</script>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
         "x": 120,
-        "y": 160,
+        "y": 220,
         "wires": [
             [
-                "bb8e501cbe7d5d9d"
+                "bb8e501cbe7d5d9d",
+                "bbd793f95ec63c3e"
             ]
         ]
     },
@@ -376,8 +368,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 300,
-        "y": 160,
+        "x": 280,
+        "y": 180,
         "wires": [
             [
                 "4fb6dce76372faf6",
@@ -390,6 +382,7 @@
         "id": "e4f62c1015b6a187",
         "type": "debug",
         "z": "c7015bd55ac9c57d",
+        "d": true,
         "g": "dff9176621056133",
         "name": "debug 15",
         "active": true,
@@ -401,7 +394,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 540,
-        "y": 240,
+        "y": 260,
         "wires": []
     },
     {
@@ -409,17 +402,17 @@
         "type": "mqtt out",
         "z": "c7015bd55ac9c57d",
         "g": "dff9176621056133",
-        "name": "",
+        "name": "control",
         "topic": "car/control",
-        "qos": "",
-        "retain": "",
+        "qos": "0",
+        "retain": "true",
         "respTopic": "",
         "contentType": "",
         "userProps": "",
         "correl": "",
         "expiry": "",
         "broker": "dc20097875203fb9",
-        "x": 550,
+        "x": 530,
         "y": 180,
         "wires": []
     },
@@ -461,7 +454,7 @@
         "action": "obj",
         "pretty": true,
         "x": 310,
-        "y": 340,
+        "y": 460,
         "wires": [
             [
                 "414f9ce98347a63b"
@@ -479,6 +472,24 @@
         ],
         "x": 455,
         "y": 380,
+        "wires": []
+    },
+    {
+        "id": "bbd793f95ec63c3e",
+        "type": "debug",
+        "z": "c7015bd55ac9c57d",
+        "g": "dff9176621056133",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 310,
+        "y": 260,
         "wires": []
     },
     {
@@ -522,7 +533,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 300,
+        "x": 340,
         "y": 100,
         "wires": [
             [
@@ -942,8 +953,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 740,
-        "y": 1000,
+        "x": 660,
+        "y": 920,
         "wires": []
     },
     {
@@ -965,7 +976,7 @@
         "type": "function",
         "z": "d974087eb4410441",
         "name": "INSERT_INTO_EXAMPLE",
-        "func": "let json = msg.payload;\n\nvar score = json['d_score'];\n\nmsg.payload={}\n\n\nmsg.payload.tlf = score.toString();\nmsg.payload.name = \"arne29\";\nmsg.payload.email = \"arn12@gmail.no\";\nmsg.payload.address = \"arnebakken\";\n\nmsg.topic=\"INSERT INTO users(`name`, `email`, `address`, `tlf`) VALUES(:name,:email,:address,:tlf);\"\n\n\nreturn msg;",
+        "func": "let json = msg.payload;\n\nvar score = json['d_score'];\n\nmsg.payload={}\n\n\nmsg.payload.tlf = json['d_score'].toString();\nmsg.payload.name = \"arne29\";\nmsg.payload.email = \"arn12@gmail.no\";\nmsg.payload.address = \"arnebakken\";\n\nmsg.topic=\"INSERT INTO users(`name`, `email`, `address`, `tlf`) VALUES(:name,:email,:address,:tlf);\"\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -973,12 +984,92 @@
         "finalize": "",
         "libs": [],
         "x": 250,
-        "y": 1060,
+        "y": 960,
         "wires": [
             [
                 "cbc77b34d7b89224"
             ]
         ]
+    },
+    {
+        "id": "77ef07ddbc346c22",
+        "type": "mysql",
+        "z": "d974087eb4410441",
+        "mydb": "f2952bbb2ad433e2",
+        "name": "mdb-test",
+        "x": 340,
+        "y": 1120,
+        "wires": [
+            [
+                "a5837349ffd6fca1",
+                "31c1372dfa15a0ca"
+            ]
+        ]
+    },
+    {
+        "id": "22308172980d6de6",
+        "type": "function",
+        "z": "d974087eb4410441",
+        "name": "getUsers",
+        "func": "msg.topic=\"SELECT * FROM users\"\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 200,
+        "y": 1140,
+        "wires": [
+            [
+                "77ef07ddbc346c22"
+            ]
+        ]
+    },
+    {
+        "id": "a5837349ffd6fca1",
+        "type": "link out",
+        "z": "d974087eb4410441",
+        "name": "link out 3",
+        "mode": "link",
+        "links": [
+            "34c826ae05784e1f"
+        ],
+        "x": 495,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "2bd950a05a93757a",
+        "type": "link in",
+        "z": "d974087eb4410441",
+        "name": "link in 4",
+        "links": [
+            "624afad07d47625d"
+        ],
+        "x": 95,
+        "y": 1140,
+        "wires": [
+            [
+                "22308172980d6de6"
+            ]
+        ]
+    },
+    {
+        "id": "31c1372dfa15a0ca",
+        "type": "debug",
+        "z": "d974087eb4410441",
+        "name": "debug 17",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 1200,
+        "wires": []
     },
     {
         "id": "e33df8dd9f71fde2",
@@ -1096,7 +1187,7 @@
         "splitLayout": "",
         "className": "",
         "x": 160,
-        "y": 380,
+        "y": 360,
         "wires": [
             [
                 "fdfcbcc970d4c7d4"
@@ -1138,8 +1229,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 130,
-        "y": 460,
+        "x": 250,
+        "y": 440,
         "wires": [
             [
                 "5a5f13eb11156755"
@@ -1159,7 +1250,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 360,
+        "x": 500,
         "y": 440,
         "wires": []
     },
@@ -1167,6 +1258,7 @@
         "id": "be9e9c5fa290f04c",
         "type": "ui_numeric",
         "z": "9c23ead5f4cd17b6",
+        "d": true,
         "name": "",
         "label": "numeric",
         "tooltip": "fire-fa",
@@ -1195,6 +1287,7 @@
         "id": "ec7ab97861493094",
         "type": "debug",
         "z": "9c23ead5f4cd17b6",
+        "d": true,
         "name": "debug 10",
         "active": true,
         "tosidebar": true,
@@ -1213,26 +1306,27 @@
         "type": "ui_button",
         "z": "9c23ead5f4cd17b6",
         "name": "",
-        "group": "24fdc3d7188423ba",
+        "group": "2781c1b55976c214",
         "order": 0,
         "width": 0,
         "height": 0,
         "passthru": false,
-        "label": "press_for_enable",
+        "label": "Update",
         "tooltip": "",
-        "color": "orange",
-        "bgcolor": "black",
+        "color": "white",
+        "bgcolor": "blue",
         "className": "",
         "icon": "",
         "payload": "true",
         "payloadType": "bool",
         "topic": "topic",
         "topicType": "msg",
-        "x": 170,
-        "y": 620,
+        "x": 120,
+        "y": 1280,
         "wires": [
             [
-                "bb37b16bfd7500b4"
+                "bb37b16bfd7500b4",
+                "624afad07d47625d"
             ]
         ]
     },
@@ -1249,8 +1343,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 360,
-        "y": 640,
+        "x": 320,
+        "y": 1360,
         "wires": []
     },
     {
@@ -1293,8 +1387,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 150,
-        "y": 720,
+        "x": 250,
+        "y": 500,
         "wires": [
             [
                 "25577ae0275879a3"
@@ -1314,8 +1408,259 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 420,
-        "y": 720,
+        "x": 440,
+        "y": 500,
         "wires": []
+    },
+    {
+        "id": "4e9c25b004dd1548",
+        "type": "ui_text",
+        "z": "9c23ead5f4cd17b6",
+        "d": true,
+        "group": "2781c1b55976c214",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Monitor",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 400,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "343fc6c38339d982",
+        "type": "link in",
+        "z": "9c23ead5f4cd17b6",
+        "d": true,
+        "name": "link in 3",
+        "links": [],
+        "x": 125,
+        "y": 820,
+        "wires": [
+            [
+                "4e9c25b004dd1548",
+                "1bc9dd36670db8d2"
+            ]
+        ]
+    },
+    {
+        "id": "98c1b9a077cbc948",
+        "type": "ui_template",
+        "z": "9c23ead5f4cd17b6",
+        "d": true,
+        "group": "2781c1b55976c214",
+        "name": "show-info",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<div layout=\"row\" layout-align=\"start center\">\n    <span flex>RPM Min</span>\n    <span flex>RPM Max</span>\n    <span flex>Failure Prob</span>\n    <span flex>Machine type</span>\n</div>\n<div layout=\"row\" layout-align=\"start center\" ng-repeat=\"machine in msg.payload.factory\">\n    <span flex style=\"color: green\">{{machine.min}}</span>\n    <span flex style=\"color: red\">{{machine.max}}</span>\n    <span flex style=\"color: black\">{{machine.failProb}}%</span>\n    <span flex style=\"color: black\">{{machine.name}}</span>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 580,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1bc9dd36670db8d2",
+        "type": "function",
+        "z": "9c23ead5f4cd17b6",
+        "d": true,
+        "name": "function 3",
+        "func": "let min = Math.round(Math.random()*1000);\nlet max = Math.round((Math.random()*10000)+1000);\n\nmsg.payload = {\n  factory: {\n    machine00: {\n      min: min,\n      max: max,\n      failProb: 20,\n      name: \"GE 5200\"\n    },\n    machine01: {\n      min: min*5,\n      max: max*2,\n      failProb: 10,\n      name: \"BB SQ100\"\n    },\n    machine02: {\n      min: min*5,\n      max: max*2,\n      failProb: 10,\n      name: \"BB AI937\"\n    }\n  }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 920,
+        "wires": [
+            [
+                "98c1b9a077cbc948"
+            ]
+        ]
+    },
+    {
+        "id": "4df1df9210828181",
+        "type": "inject",
+        "z": "9c23ead5f4cd17b6",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 920,
+        "wires": [
+            [
+                "1bc9dd36670db8d2"
+            ]
+        ]
+    },
+    {
+        "id": "34c826ae05784e1f",
+        "type": "link in",
+        "z": "9c23ead5f4cd17b6",
+        "name": "display_users",
+        "links": [
+            "a5837349ffd6fca1"
+        ],
+        "x": 105,
+        "y": 1040,
+        "wires": [
+            [
+                "a53bc7abb7f5b15f"
+            ]
+        ]
+    },
+    {
+        "id": "61c6718187c0daad",
+        "type": "ui_template",
+        "z": "9c23ead5f4cd17b6",
+        "d": true,
+        "group": "2781c1b55976c214",
+        "name": "show-info",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<input type=\"text\" id=\"search\" onkeyup=\"myFunction()\" placeholder=\"Search for names..\">\n\n<div layout=\"row\" layout-align=\"start center\">\n    <span flex>RPM Min</span>\n    <span flex>RPM Max</span>\n    <span flex>Failure Prob</span>\n    <span flex>Machine type</span>\n</div>\n\n<div layout=\"row\" id=\"info-panel\" layout-align=\"start center\" ng-repeat=\"user in msg.payload\">\n    <span flex style=\"color: green\">{{user.id}}</span>\n    <span flex style=\"color: red\">{{user.name}}</span>\n    <span flex style=\"color: black\">{{user.address}}</span>\n    <span flex style=\"color: black\">{{user.tlf}}</span>\n</div>\n\n<table id=\"myTable\">\n    <tr class=\"header\">\n        <th style=\"width:60%;\">Name</th>\n        <th style=\"width:40%;\">Country</th>\n    </tr>\n    <tr>\n        <td>Alfreds Futterkiste</td>\n        <td>Germany</td>\n    </tr>\n    <tr>\n        <td>Berglunds snabbkop</td>\n        <td>Sweden</td>\n    </tr>\n    <tr>\n        <td>Island Trading</td>\n        <td>UK</td>\n    </tr>\n    <tr>\n        <td>Koniglich Essen</td>\n        <td>Germany</td>\n    </tr>\n</table>\n\n    <h1 style=\"color: green;\">\n        GeeksforGeeks\n    </h1>\n    \n    <!-- Define the span elements \n                  with text content -->\n    <div id=\"container\">\n        <span> Span 1 </span>\n        <span> Span 2 </span>\n        <span> Span 3 </span>\n        <span> Span 4 </span>\n        <span> Span 5 </span>\n        <span> Span 6 </span>\n    </div>\n\n\n<button onclick=\"getInfo()\" style=\"margin-top: 20px;\">\n        Get Text \n    </button>\n\n<h4>\n    Text of only <span> elements \n        inside division: \n</h4> \n      \n<ul id=\"output\"></ul> \n\n<script>\n\nlet getInfo = () => {\n    // Get the division inside which the\n    // spans have to be found\n    let container = document.getElementById(\"info-panel\");\n    //console.log(container)\n    let spans = container.getElementsByTagName(\"span\");\n    console.log(spans)\n    // Get output element\n    let outputP = document.getElementById(\"output\");\n    \n    // Iterate over spans\n    //for (let span of spans) {\n    //    // Create a new list element\n    //    // with the data\n    //    let listElem = document.createElement(\"li\");\n    //    listElem.textContent = span.textContent;\n    //        \n    //        // Insert text content of span\n    //        // inside output html element\n    //    outputP.appendChild(listElem);\n    //}\n};\n\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 680,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a53bc7abb7f5b15f",
+        "type": "function",
+        "z": "9c23ead5f4cd17b6",
+        "name": "maybeUseless",
+        "func": "let min = Math.round(Math.random()*1000);\nlet max = Math.round((Math.random()*10000)+1000);\n\nlet a = msg.payload\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 1080,
+        "wires": [
+            [
+                "61c6718187c0daad",
+                "4eac0e0794c4133c",
+                "fea0a607c5a7aaf8"
+            ]
+        ]
+    },
+    {
+        "id": "a294cf43e56ed1f8",
+        "type": "inject",
+        "z": "9c23ead5f4cd17b6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 1140,
+        "wires": [
+            [
+                "a53bc7abb7f5b15f"
+            ]
+        ]
+    },
+    {
+        "id": "624afad07d47625d",
+        "type": "link out",
+        "z": "9c23ead5f4cd17b6",
+        "name": "update_button",
+        "mode": "link",
+        "links": [
+            "2bd950a05a93757a"
+        ],
+        "x": 275,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "4eac0e0794c4133c",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "fea0a607c5a7aaf8",
+        "type": "ui_template",
+        "z": "9c23ead5f4cd17b6",
+        "group": "2781c1b55976c214",
+        "name": "",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "format": "<div ng-bind-html=\"msg.payload\"></div>\n\n<script>\nconst data = [\n{ name: 'Rahul', age: 25, city: 'New Delhi' },\n{ name: 'Vijay', age: 30, city: 'Muzaffarpur' },\n{ name: 'Gaurav', age: 22, city: 'Noida' },\n];\n\nfunction createTableWithInnerHTML() {\nlet tableHTML = '<table border=\"1\">\n    <tr>';\n\n        Object.keys(data[0]).forEach(key => {\n        tableHTML += `<th>${key}</th>`;\n        });\n\n        tableHTML += '</tr>';\n\n    data.forEach(item => {\n    tableHTML += '<tr>';\n        Object.values(item).forEach(value => {\n        tableHTML += `<td>${value}</td>`;\n        });\n        tableHTML += '</tr>';\n    });\n\n    tableHTML += '\n</table>';\n\ndocument.body.innerHTML += tableHTML;\n}\n\ncreateTableWithInnerHTML();\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 600,
+        "y": 1100,
+        "wires": [
+            []
+        ]
     }
 ]
