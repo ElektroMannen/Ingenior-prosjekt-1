@@ -10,7 +10,7 @@ bool Charging = true;
 bool Discharging = false;
 bool ChargingComplete = false;
 
-Scheduler userScheduler; // to control your personal task
+Scheduler userScheduler;
 painlessMesh mesh;
 
 void sendMessage() {
@@ -53,6 +53,5 @@ void setup() {
 }
 
 void loop() {
-  // it will run the user scheduler as well
   mesh.update();
 }
