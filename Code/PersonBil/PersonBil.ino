@@ -1,14 +1,6 @@
+#include <Wire.h>
 #include <Zumo32U4.h>
-#include <Zumo32U4Buttons.h>
-#include <Zumo32U4Buzzer.h>
-#include <Zumo32U4Encoders.h>
-#include <Zumo32U4IMU.h>
-#include <Zumo32U4IRPulses.h>
-#include <Zumo32U4LCD.h>
-#include <Zumo32U4LineSensors.h>
-#include <Zumo32U4Motors.h>
-#include <Zumo32U4OLED.h>
-#include <Zumo32U4ProximitySensors.h>
+
 
 Zumo32U4Motors motors;
 Zumo32U4Encoders encoders;
@@ -17,12 +9,26 @@ Zumo32U4ButtonB buttonB;
 Zumo32U4ButtonC buttonC;
 Zumo32U4OLED display;
 
+const int interruptPin = 17;
+
 int warning = 0;
 int disp = 0;
 
+
+void startDisp(){
+  display.setLayout11x4();
+  display.clear();
+  display.print("|--------|");
+  display.gotoXY(0, 1);
+  display.print("|Starting|");
+  display.gotoXY(0, 2);
+  display.print("|--------|");
+  display.setLayout21x8();
+}
+
 /*Takes inn direction of which way the car will drive. The diretion is based on norms for keyboard for movement.
 Diredtions avalible are W for forwards, S for backwards, A for turn right, D for turn left, Q for curve towards left, E for curve towards right*/
-void drive(char direction){
+void drive(int32_t direction){
 
     switch (direction){
         //Goes forward
@@ -56,17 +62,56 @@ void drive(char direction){
     }
 }
 
+struct RecievedData{
+  int32_t drive;
+  int32_t driverLevel;
+  int32_t driverScore;
+  bool warning;
+
+};
+
+RecievedData data;
+
 //Gets data form I2C buss 
-int getI2C_Data(){
-    drive("L");
+void getI2C_Data(){
+    if (Wire.requestFrom(0, sizeof(data))) {
+        Wire.readBytes((byte*)&data, sizeof(data)); // Les hele structen fra I2C-bussen
+    }
 }
 
 /*Code executon starts
 |--------------------------------------------------------------------------------|*/
 
 void setup(){
-
+  Wire.begin(1);
+  startDisp();
+  delay(2000);
 }
 void loop(){
-
+  getI2C_Data();
+  display.clear();
+  display.gotoXY(0, 1);
+  display.print("Drive: ");
+  display.print(char(data.drive));
+  display.gotoXY(0, 2);
+  display.print("Warning: ");
+  if(data.warning){
+  display.print("True");
+  }
+  else{
+  display.print("False");
+  }
+  display.gotoXY(0, 3);
+  display.print("Driver Level: ");
+  display.print(data.driverLevel);
+  display.gotoXY(0, 4);
+  display.print("Driver score: ");
+  display.print(data.driverScore);
+  drive(data.drive);
+  delay(50);
+  
 }
+
+
+
+
