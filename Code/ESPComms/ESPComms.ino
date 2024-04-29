@@ -11,7 +11,7 @@ bool Discharging = false;
 bool ChargingComplete = false;
 
 Scheduler userScheduler; // to control your personal task
-painlessMesh  mesh;
+painlessMesh mesh;
 
 // User stub
 void sendMessage() ; // Prototype so PlatformIO doesn't complain
