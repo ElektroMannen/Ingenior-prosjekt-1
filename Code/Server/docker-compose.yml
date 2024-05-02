@@ -22,6 +22,7 @@ services:
       - "1880:1880"
     volumes:
       - ./docker/node-red-data:/data
+      - ./docker/node-red-data/node_modules:/data/node_modules
     environment:
       - TZ=Europe/Oslo
       - DB_USER=root
