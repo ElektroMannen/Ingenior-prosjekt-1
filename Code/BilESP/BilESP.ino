@@ -27,7 +27,7 @@ struct data{
 };
 data transmittData;
 data mqttData;
-
+/*
 //Connects to wifi
 void wifiConnect(){
 // Connect to Wi-Fi network with SSID and password
@@ -70,6 +70,7 @@ void connectToMQTT() {
     }
   }
 }
+*/
 
 //Recieves and handle subscrie data
 void callback(char* topic, byte* message, unsigned int length) {
@@ -116,8 +117,8 @@ void sendToMqtt(){
 //-----------------------------------------------------------------------------------------
 void setup(){
   Serial.begin(115200);
-  wifiConnect();
-  setupMQTT();
+  //wifiConnect();
+  //setupMQTT();
   Wire.begin(0);
   transmittData.driverScore = 67;
   transmittData.warning = false;
@@ -125,15 +126,16 @@ void setup(){
 }
 
 void loop(){
-  connectToMQTT();
+  //connectToMQTT();
   serialController();
   millis();
 
-  if((millis() - oldMillis) > mqttDelay){
+  /*if((millis() - oldMillis) > mqttDelay){
     client.loop();
     oldMillis = millis();
   }
   delay(10);
+*/
 }
 
 void sendI2C_Data(){
