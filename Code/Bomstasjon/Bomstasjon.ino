@@ -11,5 +11,5 @@ void setup(){
     pinMode(echoPin, INPUT);
 }
 void loop(){
-    
+    Serial.println("Bomstasjon");
 }
