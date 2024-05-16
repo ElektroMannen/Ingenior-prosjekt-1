@@ -44,19 +44,17 @@
             "label": true
         },
         "nodes": [
+            "34ec71f2417a3909",
+            "4fb6dce76372faf6",
             "bb8e501cbe7d5d9d",
             "e4f62c1015b6a187",
             "e5c5cf0d6bb917c5",
-            "bbd793f95ec63c3e",
-            "b7af9e519ca5b9d7",
-            "a2dec35c0fe9842d",
-            "308f248214133e70",
-            "8955a8be5e602442"
+            "bbd793f95ec63c3e"
         ],
         "x": 34,
         "y": 79,
         "w": 612,
-        "h": 262
+        "h": 222
     },
     {
         "id": "f2952bbb2ad433e2",
@@ -67,6 +65,125 @@
         "db": "testdb",
         "tz": "",
         "charset": "UTF8"
+    },
+    {
+        "id": "06759f242ec509fe",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#768fa1",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#768fa1",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#768fa1",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#a3b4c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#768fa1",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Overview",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "true",
+            "allowTempTheme": "false",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "09eba29fa3fc2ae7",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "fa-home",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "2781c1b55976c214",
+        "type": "ui_group",
+        "name": "Info",
+        "tab": "09eba29fa3fc2ae7",
+        "order": 1,
+        "disp": true,
+        "width": "9",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "dc20097875203fb9",
@@ -100,76 +217,71 @@
         "sessionExpiry": ""
     },
     {
-        "id": "ed3a4854fa1b4db8",
-        "type": "ui-base",
-        "name": "Dashboard",
-        "path": "/dashboard",
-        "includeClientData": true,
-        "acceptsClientConfig": [
-            "ui-notification",
-            "ui-control"
-        ],
-        "showPathInSidebar": false,
-        "navigationStyle": "default"
+        "id": "1184fa1d91ac2538",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "9bccee99e8427849",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
     },
     {
-        "id": "91be7011842be941",
-        "type": "ui-theme",
-        "name": "Default Theme",
-        "colors": {
-            "surface": "#ffffff",
-            "primary": "#5c8192",
-            "bgPage": "#eeeeee",
-            "groupBg": "#ffffff",
-            "groupOutline": "#cccccc"
-        },
-        "sizes": {
-            "pagePadding": "12px",
-            "groupGap": "12px",
-            "groupBorderRadius": "4px",
-            "widgetGap": "12px"
-        }
-    },
-    {
-        "id": "a20dc435c727eb9b",
-        "type": "ui-page",
-        "name": "Home",
-        "ui": "ed3a4854fa1b4db8",
-        "path": "/home",
-        "icon": "home",
-        "layout": "grid",
-        "theme": "91be7011842be941",
-        "order": -1,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
-        "id": "78b509623ddc3923",
-        "type": "ui-group",
+        "id": "9bccee99e8427849",
+        "type": "ui_tab",
         "name": "Control",
-        "page": "a20dc435c727eb9b",
-        "width": "6",
-        "height": "1",
-        "order": -1,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
+        "icon": "fa-gamepad",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
     },
     {
-        "id": "4880197e99519344",
-        "type": "ui-page",
-        "name": "Contact",
-        "ui": "ed3a4854fa1b4db8",
-        "path": "/contact",
-        "icon": "home",
-        "layout": "grid",
-        "theme": "91be7011842be941",
-        "order": -1,
+        "id": "34ec71f2417a3909",
+        "type": "ui_template",
+        "z": "c7015bd55ac9c57d",
+        "g": "dff9176621056133",
+        "group": "1184fa1d91ac2538",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<script>\n\n    \n    (function($scope) {\n    \n \n    console.log('Hello');\n\n    let keys = {};\n\n    document.addEventListener('keydown', (event) => {\n    if (event.repeat) return;\n    \n    if (event.key != \"CapsLock\") {\n        keys[event.key] = true;\n        let msg = {\"payload\": keys, \"topic\": \"keydown\"};\n        $scope.send(msg);\n    }\n    });\n\n    document.addEventListener('keyup', (event) => {\n    var keyName = event.key;\n    var keyCode = event.code;\n    delete keys[event.key];\n    let msg = {\"payload\": keys, \"topic\": \"keyup\"};\n    $scope.send(msg);\n\n    },{capture: true});\n    })(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
         "className": "",
-        "visible": "true",
-        "disabled": "false"
+        "x": 120,
+        "y": 220,
+        "wires": [
+            [
+                "bb8e501cbe7d5d9d",
+                "bbd793f95ec63c3e"
+            ]
+        ]
+    },
+    {
+        "id": "4fb6dce76372faf6",
+        "type": "ui_text",
+        "z": "c7015bd55ac9c57d",
+        "g": "dff9176621056133",
+        "group": "1184fa1d91ac2538",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 530,
+        "y": 120,
+        "wires": []
     },
     {
         "id": "bb8e501cbe7d5d9d",
@@ -184,13 +296,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 360,
+        "x": 280,
         "y": 180,
         "wires": [
             [
+                "4fb6dce76372faf6",
                 "e4f62c1015b6a187",
-                "e5c5cf0d6bb917c5",
-                "8955a8be5e602442"
+                "e5c5cf0d6bb917c5"
             ]
         ]
     },
@@ -198,6 +310,7 @@
         "id": "e4f62c1015b6a187",
         "type": "debug",
         "z": "c7015bd55ac9c57d",
+        "d": true,
         "g": "dff9176621056133",
         "name": "debug 15",
         "active": true,
@@ -303,80 +416,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 340,
+        "x": 310,
         "y": 260,
-        "wires": []
-    },
-    {
-        "id": "b7af9e519ca5b9d7",
-        "type": "comment",
-        "z": "c7015bd55ac9c57d",
-        "g": "dff9176621056133",
-        "name": "",
-        "info": "<script>\n\n    \n    (function($scope) {\n    \n \n    console.log('Hello');\n\n    let keys = {};\n\n    document.addEventListener('keydown', (event) => {\n    if (event.repeat) return;\n    \n    if (event.key != \"CapsLock\") {\n        keys[event.key] = true;\n        let msg = {\"payload\": keys, \"topic\": \"keydown\"};\n        $scope.send(msg);\n    }\n    });\n\n    document.addEventListener('keyup', (event) => {\n    var keyName = event.key;\n    var keyCode = event.code;\n    delete keys[event.key];\n    let msg = {\"payload\": keys, \"topic\": \"keyup\"};\n    $scope.send(msg);\n\n    },{capture: true});\n    })(scope);\n</script>",
-        "x": 120,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "a2dec35c0fe9842d",
-        "type": "comment",
-        "z": "c7015bd55ac9c57d",
-        "g": "dff9176621056133",
-        "name": "",
-        "info": "display here with \n\n{{msg.payload}}\n\nui_text",
-        "x": 340,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "308f248214133e70",
-        "type": "ui-template",
-        "z": "c7015bd55ac9c57d",
-        "g": "dff9176621056133",
-        "group": "78b509623ddc3923",
-        "page": "",
-        "ui": "",
-        "name": "get_events",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "head": "",
-        "format": "<script>\n\n    \n    //(function($scope) {\n    \n \n    console.log('Hello');\n\n    let keys = {};\n\n    document.addEventListener('keydown', (event) => {\n    if (event.repeat) return;\n    \n    if (event.key != \"CapsLock\") {\n        keys[event.key] = true;\n        let msg = {\"payload\": keys, \"topic\": \"keydown\"};\n        //send(msg);\n        console.log(msg)\n    }\n    });\n\n    document.addEventListener('keyup', (event) => {\n    var keyName = event.key;\n    var keyCode = event.code;\n    delete keys[event.key];\n    let msg = {\"payload\": keys, \"topic\": \"keyup\"};\n    console.log(msg)\n\n    },{capture: true});\n    //})(scope);\n</script>",
-        "storeOutMessages": true,
-        "passthru": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 130,
-        "y": 180,
-        "wires": [
-            [
-                "bb8e501cbe7d5d9d",
-                "bbd793f95ec63c3e"
-            ]
-        ]
-    },
-    {
-        "id": "8955a8be5e602442",
-        "type": "ui-text",
-        "z": "c7015bd55ac9c57d",
-        "g": "dff9176621056133",
-        "group": "78b509623ddc3923",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "name": "show_input",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "className": "{{msg.payload}}",
-        "x": 530,
-        "y": 120,
         "wires": []
     },
     {
@@ -530,8 +571,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 300,
-        "y": 400,
+        "x": 320,
+        "y": 380,
         "wires": [
             [
                 "c42c7b32ce0235f1"
@@ -561,7 +602,7 @@
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
         "x": 500,
-        "y": 440,
+        "y": 460,
         "wires": [
             [
                 "dbf573f1be114c43"
@@ -609,8 +650,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
-        "y": 440,
+        "x": 330,
+        "y": 420,
         "wires": [
             [
                 "7990dc354a738d5b"
@@ -661,7 +702,7 @@
         "finalize": "",
         "libs": [],
         "x": 310,
-        "y": 480,
+        "y": 460,
         "wires": [
             [
                 "d5b808832e3458f5"
@@ -994,6 +1035,35 @@
         "wires": []
     },
     {
+        "id": "9579f25dc153e7a7",
+        "type": "ui_button",
+        "z": "9c23ead5f4cd17b6",
+        "name": "",
+        "group": "2781c1b55976c214",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Update",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "blue",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 120,
+        "y": 1280,
+        "wires": [
+            [
+                "bb37b16bfd7500b4",
+                "624afad07d47625d"
+            ]
+        ]
+    },
+    {
         "id": "bb37b16bfd7500b4",
         "type": "debug",
         "z": "9c23ead5f4cd17b6",
@@ -1006,8 +1076,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 400,
-        "y": 840,
+        "x": 320,
+        "y": 1360,
         "wires": []
     },
     {
@@ -1018,8 +1088,8 @@
         "links": [
             "a5837349ffd6fca1"
         ],
-        "x": 165,
-        "y": 500,
+        "x": 105,
+        "y": 1040,
         "wires": [
             [
                 "a53bc7abb7f5b15f"
@@ -1038,11 +1108,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 400,
-        "y": 540,
+        "x": 360,
+        "y": 1080,
         "wires": [
             [
-                "4eac0e0794c4133c"
+                "4eac0e0794c4133c",
+                "fea0a607c5a7aaf8"
             ]
         ]
     },
@@ -1067,8 +1138,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 180,
-        "y": 600,
+        "x": 120,
+        "y": 1140,
         "wires": [
             [
                 "a53bc7abb7f5b15f"
@@ -1084,8 +1155,8 @@
         "links": [
             "2bd950a05a93757a"
         ],
-        "x": 345,
-        "y": 700,
+        "x": 285,
+        "y": 1240,
         "wires": []
     },
     {
@@ -1101,38 +1172,29 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
+        "x": 560,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "fea0a607c5a7aaf8",
+        "type": "ui_template",
+        "z": "9c23ead5f4cd17b6",
+        "group": "2781c1b55976c214",
+        "name": "display",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "format": "<script>\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
         "x": 620,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "bf0f52c3edf63924",
-        "type": "comment",
-        "z": "9c23ead5f4cd17b6",
-        "name": "",
-        "info": "put update button here?",
-        "x": 180,
-        "y": 760,
-        "wires": []
-    },
-    {
-        "id": "fd31fef1e40bc24f",
-        "type": "function",
-        "z": "9c23ead5f4cd17b6",
-        "name": "update_button",
-        "func": "\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 230,
-        "y": 720,
+        "y": 1100,
         "wires": [
-            [
-                "624afad07d47625d"
-            ]
+            []
         ]
     }
-]
+] 
