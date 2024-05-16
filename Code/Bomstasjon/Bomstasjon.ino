@@ -1,4 +1,6 @@
-#include <AsyncDelay.h>
+#include <ESP32PWM.h>
+#include <ESP32Servo.h>
+#include <elapsedMillis.h>
 
 const int trigPin = 18;
 const int echoPin = 19;
@@ -11,5 +13,5 @@ void setup(){
     pinMode(echoPin, INPUT);
 }
 void loop(){
-    Serial.println("Bomstasjon");
+    
 }
