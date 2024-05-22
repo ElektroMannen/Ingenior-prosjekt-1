@@ -5,18 +5,30 @@
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SH110X.h>
+#include <IRremote.h>
 
+//Definitions for IR
+#include "PinDefinitionsAndMore.h"
+#define DECODE_NEC
+#define IRLED 4
+
+//Definitions for OLED screen
 #define i2c_Address 0x3C
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
 #define OLED_RESET    -1
 Adafruit_SH1106G display = Adafruit_SH1106G(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
+//Definitions for ultrasonic sensor
 const int trigPin = 18;
 const int echoPin = 19;
+
+//Definitions for RGB LED
 const int redPin = 12;
 const int bluePin = 14;
 const int greenPin = 27;
+
+//Definitions for pricing and reputation
 int electricPrice = 0; // These prices will be pulled from the database
 int nonElectricPrice = 0; // These prices will be pulled from the database
 int truckPrice = 0; // These prices will be pulled from the database
