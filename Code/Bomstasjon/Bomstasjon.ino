@@ -17,6 +17,10 @@ const int echoPin = 19;
 const int redPin = 12;
 const int bluePin = 14;
 const int greenPin = 27;
+int electricPrice = 0;
+int nonElectricPrice = 0;
+int truckPrice = 0; // These prices will be pulled from the database
+int carReputation = 0;
 
 float duration, distance;
 
@@ -30,6 +34,14 @@ void setup(){
     pinMode(redPin, OUTPUT);
     pinMode(bluePin, OUTPUT);
     pinMode(greenPin, OUTPUT);
+    display.begin(i2c_Address, true);
+    display.clearDisplay();
+    display.setRotation(2);
+    display.setTextSize(1);
+    display.setTextColor(SH110X_WHITE);
+    display.setCursor(0, 0);
+    display.println("Bomstasjon");
+    display.display();
 }
 void loop(){
     digitalWrite(trigPin, LOW);
