@@ -59,6 +59,23 @@
         "h": 302
     },
     {
+        "id": "0591b57e8f20d00d",
+        "type": "group",
+        "z": "9c23ead5f4cd17b6",
+        "name": "Styling",
+        "style": {
+            "label": true,
+            "stroke": "#a4a4a4"
+        },
+        "nodes": [
+            "dc1d7aadb5cf6f36"
+        ],
+        "x": 34,
+        "y": 19,
+        "w": 212,
+        "h": 82
+    },
+    {
         "id": "f2952bbb2ad433e2",
         "type": "MySQLdatabase",
         "name": "TestDB",
@@ -167,6 +184,19 @@
         "layout": "grid",
         "theme": "91be7011842be941",
         "order": -1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "d68e6862685d10df",
+        "type": "ui-group",
+        "name": "Ratings",
+        "page": "4880197e99519344",
+        "width": "6",
+        "height": "1",
+        "order": -1,
+        "showTitle": true,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -342,7 +372,7 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n    <div>\n        <h2>Counter - loaded: {{ loaded }}</h2>\n        <p>Current Count: {{ count }}</p>\n        <p class=\"my-class\">Formatted Count: {{ formattedCount }}</p>\n        <!-- <v-btn @click=\"increase()\">Increment</v-btn> -->\n        <input @keyup.enter=\"increase\" />\n    </div>\n</template>\n\n<script>\n    export default {\n        data() {\n            // define variables available component-wide\n            // (in <template> and component functions)\n            return {\n                loaded: false,\n                count: 0\n            }\n        },\n        watch: {\n            // watch for any changes of \"count\"\n            count: function () {\n                if (this.count % 5 === 0) {\n                    this.send({payload: 'Multiple of 5'})\n                }\n            }\n        },\n        computed: {\n            // automatically compute this variable\n            // whenever VueJS deems appropriate\n            formattedCount: function () {\n                return `${this.count} Apples`\n            }\n        },\n        methods: {\n            // expose a method to our <template> and Vue Application\n            increase: function () {\n                this.count++\n            },\n\n            onKeydown( event ) {\n                if (event.key === \"Escape\") {       \n                    console.log('hello esc ')\n                    this.increase()\n                }\n                if (event.key === \"w\") {\n                    console.log(\"w\")\n                }\n            }\n        },\n        mounted() {\n            // code here when the component is first loaded\n            document.addEventListener( \"keydown\", this.onKeydown );\n            this.loaded = true\n        },\n        unmounted() {\n            // code here when the component is removed from the Dashboard\n            // i.e. when the user navigates away from the page\n        }\n    }\n</script>\n<style>\n    /* define any styles here - supports raw CSS */\n    .my-class {\n        color: red;\n    }\n</style>",
+        "format": "<template>\n    <div>\n        <h2>Counter - loaded: {{ loaded }}</h2>\n        <p>Current Count: {{ count }}</p>\n        <p class=\"my-class\">Formatted Count: {{ formattedCount }}</p>\n        <!-- <v-btn @click=\"increase()\">Increment</v-btn> -->\n        <!-- <input @keyup.enter=\"increase\" /> -->\n    </div>\n</template>\n\n<script>\n    export default {\n        data() {\n            // define variables available component-wide\n            // (in <template> and component functions)\n            return {\n                loaded: false,\n                count: 0\n            }\n        },\n        watch: {\n            // watch for any changes of \"count\"\n            count: function () {\n                if (this.count % 5 === 0) {\n                    this.send({payload: 'Multiple of 5'})\n                }\n            }\n        },\n        computed: {\n            // automatically compute this variable\n            // whenever VueJS deems appropriate\n            formattedCount: function () {\n                return `${this.count} Apples`\n            }\n        },\n        methods: {\n            // expose a method to our <template> and Vue Application\n            increase: function () {\n                this.count++\n            },\n\n            onKeydown( event ) {\n                if (event.key === \"Escape\") {       \n                    console.log('hello esc ')\n                    this.increase()\n                }\n                if (event.key === \"w\") {\n                    console.log(\"w\")\n                    this.count++\n                }\n            }\n        },\n        mounted() {\n            // code here when the component is first loaded\n            document.addEventListener( \"keydown\", this.onKeydown );\n            this.loaded = true\n        },\n        unmounted() {\n            // code here when the component is removed from the Dashboard\n            // i.e. when the user navigates away from the page\n        }\n    }\n</script>\n<style>\n    /* define any styles here - supports raw CSS */\n    .my-class {\n        color: red;\n    }\n</style>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
@@ -378,6 +408,349 @@
         "x": 530,
         "y": 120,
         "wires": []
+    },
+    {
+        "id": "29614505de526e3e",
+        "type": "ui-template",
+        "z": "c7015bd55ac9c57d",
+        "group": "d68e6862685d10df",
+        "page": "",
+        "ui": "",
+        "name": "star_rating",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n  <div class=\"text-center\">\n    <v-rating\n      hover :length=\"5\" :size=\"32\"\n      v-model=\"value\"\n      active-color=\"primary\"\n      @update:model-value=\"send({payload: value})\"\n    ></v-rating>\n  </div>\n</template>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 310,
+        "y": 720,
+        "wires": [
+            [
+                "7bb2d1e517ee8d24"
+            ]
+        ]
+    },
+    {
+        "id": "7bb2d1e517ee8d24",
+        "type": "debug",
+        "z": "c7015bd55ac9c57d",
+        "name": "debugstar",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "0dd2fd9545bda4ca",
+        "type": "ui-template",
+        "z": "c7015bd55ac9c57d",
+        "group": "d68e6862685d10df",
+        "page": "",
+        "ui": "",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n  <div>\n    <v-progress-linear\n      color=\"yellow-darken-2\"\n      indeterminate\n    ></v-progress-linear>\n    <br>\n    <v-progress-linear\n      color=\"green\"\n      indeterminate\n    ></v-progress-linear>\n    <br>\n    <v-progress-linear\n      color=\"teal\"\n      indeterminate\n    ></v-progress-linear>\n    <br>\n    <v-progress-linear\n      color=\"cyan\"\n      indeterminate\n    ></v-progress-linear>\n  </div>\n</template>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 220,
+        "y": 820,
+        "wires": [
+            [
+                "0817f2202b3f46a9"
+            ]
+        ]
+    },
+    {
+        "id": "0817f2202b3f46a9",
+        "type": "debug",
+        "z": "c7015bd55ac9c57d",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "4485a75d1a0f656c",
+        "type": "ui-template",
+        "z": "c7015bd55ac9c57d",
+        "group": "78b509623ddc3923",
+        "page": "",
+        "ui": "",
+        "name": "displaymsg",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n    <div>\n        <h2>Latest <code>msg</code> received:</h2>\n        <pre>{{ msg }}</pre>\n    </div>\n</template>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 370,
+        "y": 920,
+        "wires": [
+            [
+                "f7f0e15a2aa36350"
+            ]
+        ]
+    },
+    {
+        "id": "f7f0e15a2aa36350",
+        "type": "debug",
+        "z": "c7015bd55ac9c57d",
+        "name": "debug 21",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "7caeb28ac2a0cba9",
+        "type": "inject",
+        "z": "c7015bd55ac9c57d",
+        "name": "insert_user",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "insert",
+        "payload": "{\"d_score\":194}",
+        "payloadType": "json",
+        "x": 140,
+        "y": 980,
+        "wires": [
+            [
+                "4485a75d1a0f656c"
+            ]
+        ]
+    },
+    {
+        "id": "32d91f45c0238651",
+        "type": "ui-template",
+        "z": "c7015bd55ac9c57d",
+        "group": "78b509623ddc3923",
+        "page": "",
+        "ui": "",
+        "name": "custom_event",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n\n<v-btn @click=\"$socket.emit('ui-event', '3d103008e2349583', msg)\">Send Custom Event</v-btn>\n\n</template>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 360,
+        "y": 1100,
+        "wires": [
+            [
+                "d56752421e229ef8"
+            ]
+        ]
+    },
+    {
+        "id": "d56752421e229ef8",
+        "type": "debug",
+        "z": "c7015bd55ac9c57d",
+        "name": "debug 22",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "1d9c3b808be68e07",
+        "type": "ui-template",
+        "z": "c7015bd55ac9c57d",
+        "group": "78b509623ddc3923",
+        "page": "",
+        "ui": "",
+        "name": "socket_listen",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n    <!-- Any HTML can go here -->\n    <button class=\"my-class2\" onclick=\"onClick()\">My Button</button>\n</template>\n\n<script>\n    /* Write any JavaScript here */\n    // add our onClick function to the window object to make it accessible by the HTML <button>\n    window.onClick = function () {\n        alert('Button has been clicked')\n    }\n\n    // Use send() function to pass on data back into Node-RED:\n    this.send('Component has loaded')\n\n    // Subscribe to the incoming msg's\n    this.$socket.on('msg-input:' + this.id, function(msg) {\n        // do stuff with the message\n        alert('message received: ' + msg.payload + 'from' + this.id)\n    })\n</script>\n\n<style>\n    /* define any styles here - supports raw CSS */\n    .my-class2 {\n        color: green;\n    }\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 330,
+        "y": 1240,
+        "wires": [
+            [
+                "d64de82239fb1bbd"
+            ]
+        ]
+    },
+    {
+        "id": "d64de82239fb1bbd",
+        "type": "debug",
+        "z": "c7015bd55ac9c57d",
+        "name": "debug 23",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "9089e3c94b2ce382",
+        "type": "ui-template",
+        "z": "c7015bd55ac9c57d",
+        "group": "",
+        "page": "4880197e99519344",
+        "ui": "",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n    <div>\n        <p>Query Parameter: {{ $route.query }}</p>\n    </div>\n</template>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "widget:page",
+        "className": "",
+        "x": 360,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0c4411c448ac4caa",
+        "type": "inject",
+        "z": "c7015bd55ac9c57d",
+        "name": "insert_user",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "insert",
+        "payload": "{\"d_score\":194}",
+        "payloadType": "json",
+        "x": 160,
+        "y": 1160,
+        "wires": [
+            [
+                "1d9c3b808be68e07"
+            ]
+        ]
+    },
+    {
+        "id": "3d103008e2349583",
+        "type": "ui-event",
+        "z": "c7015bd55ac9c57d",
+        "ui": "ed3a4854fa1b4db8",
+        "name": "eventtest",
+        "x": 160,
+        "y": 1420,
+        "wires": [
+            [
+                "f8a76b7828d0e5a8"
+            ]
+        ]
+    },
+    {
+        "id": "f8a76b7828d0e5a8",
+        "type": "debug",
+        "z": "c7015bd55ac9c57d",
+        "name": "debug 24",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "899bd7a9f2ce31ab",
+        "type": "function",
+        "z": "c7015bd55ac9c57d",
+        "name": "function 3",
+        "func": "msg.payload = 'hi'\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 120,
+        "y": 1060,
+        "wires": [
+            [
+                "32d91f45c0238651"
+            ]
+        ]
     },
     {
         "id": "362c8eb1df4a411b",
@@ -967,8 +1340,8 @@
         "links": [
             "715a363715462c6f"
         ],
-        "x": 225,
-        "y": 220,
+        "x": 585,
+        "y": 260,
         "wires": [
             [
                 "befb8d61f627e759"
@@ -989,25 +1362,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 480,
+        "x": 720,
         "y": 300,
-        "wires": []
-    },
-    {
-        "id": "bb37b16bfd7500b4",
-        "type": "debug",
-        "z": "9c23ead5f4cd17b6",
-        "name": "debug 11",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 400,
-        "y": 840,
         "wires": []
     },
     {
@@ -1133,6 +1489,102 @@
             [
                 "624afad07d47625d"
             ]
+        ]
+    },
+    {
+        "id": "ea5ff2cd0cdfe128",
+        "type": "ui-template",
+        "z": "9c23ead5f4cd17b6",
+        "group": "d68e6862685d10df",
+        "page": "",
+        "ui": "",
+        "name": "display_users",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n    <!-- Provide an input text box to search the content -->\n    <v-text-field v-model=\"search\" label=\"Search\" prepend-inner-icon=\"mdi-magnify\" single-line variant=\"outlined\"\n    hide-details></v-text-field>\n    <v-data-table v-model:search=\"search\" :items=\"msg?.payload\">\n      <template v-slot:header.current>\n        <!-- Override how we render the header for the \"current\" column -->\n        <div class=\"text-center\">Center-Aligned</div>\n      </template>\n\n      <template v-slot:item.target=\"{ item }\">\n        <!-- Add a custom suffix to the value for the \"target\" column -->\n        {{ item.target }}°C\n      </template>\n\n      <template v-slot:item.current=\"{ item }\">\n        <!-- Render a Linear Progress Bar for the \"current\" column -->\n        <v-progress-linear v-model=\"item.current\" min=\"15\" max=\"25\" height=\"25\" :color=\"getColor(item)\">\n          <template v-slot:default=\"{ value }\">\n            <strong>{{ item.current }}°C</strong>\n          </template>\n        </v-progress-linear>\n      </template>\n    \n    </v-data-table>\n</template>\n\n<script>\n    export default {\n    data () {\n      return {\n        search: ''\n      }\n    },\n    methods: {\n        // add a function to determine the color of the progress bar given the row's item\n      getColor: function (item) {\n        if (item.current > item.target) {\n          return 'red'\n        } else {\n          return 'green'\n        }\n      }\n    }\n  }\n</script>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 360,
+        "y": 980,
+        "wires": [
+            [
+                "48dc7ec4a79bb3a1"
+            ]
+        ]
+    },
+    {
+        "id": "48dc7ec4a79bb3a1",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "5c9ea1d66c64c31a",
+        "type": "inject",
+        "z": "9c23ead5f4cd17b6",
+        "name": "insert_user",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "insert",
+        "payload": "[{\"room\":\"Living Room\",\"id\":\"1234\",\"target\":18.1,\"current\":20},{\"room\":\"Bathroom Room\",\"id\":\"5678\",\"target\":19.5,\"current\":18},{\"room\":\"Kitchen Room\",\"id\":\"9101\",\"target\":18.1,\"current\":17.6}]",
+        "payloadType": "json",
+        "x": 160,
+        "y": 940,
+        "wires": [
+            [
+                "ea5ff2cd0cdfe128"
+            ]
+        ]
+    },
+    {
+        "id": "dc1d7aadb5cf6f36",
+        "type": "ui-template",
+        "z": "9c23ead5f4cd17b6",
+        "g": "0591b57e8f20d00d",
+        "group": "",
+        "page": "",
+        "ui": "ed3a4854fa1b4db8",
+        "name": "css_all_pages",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "\n\nbody {\n    font-family: monospace;\n}\n\n\n.v-main {\n    background-image: url(\"\thttps://www.transparenttextures.com/patterns/batthern.png\");\n    background-repeat: repeat;\n}\n\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "site:style",
+        "className": "",
+        "x": 140,
+        "y": 60,
+        "wires": [
+            []
         ]
     }
 ]
