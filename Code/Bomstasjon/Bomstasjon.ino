@@ -17,10 +17,10 @@ const int echoPin = 19;
 const int redPin = 12;
 const int bluePin = 14;
 const int greenPin = 27;
-int electricPrice = 0;
-int nonElectricPrice = 0;
+int electricPrice = 0; // These prices will be pulled from the database
+int nonElectricPrice = 0; // These prices will be pulled from the database
 int truckPrice = 0; // These prices will be pulled from the database
-int carReputation = 0;
+int carReputation = 0; // These reputations will be pulled from the database
 
 float duration, distance;
 
@@ -36,7 +36,7 @@ void setup(){
     pinMode(greenPin, OUTPUT);
     display.begin(i2c_Address, true);
     display.clearDisplay();
-    display.setRotation(2);
+    display.setRotation(2); //This is to flip the rotation of the display, delete if needed
     display.setTextSize(1);
     display.setTextColor(SH110X_WHITE);
     display.setCursor(0, 0);
