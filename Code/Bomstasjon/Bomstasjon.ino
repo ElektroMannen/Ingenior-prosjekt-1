@@ -11,6 +11,7 @@
 #include "PinDefinitionsAndMore.h"
 #define DECODE_NEC
 #define IRLED 4
+IRsend irsend;
 
 //Definitions for OLED screen
 #define i2c_Address 0x3C
@@ -55,6 +56,7 @@ void setup(){
     display.println("Bomstasjon");
     display.display();
 }
+
 void loop(){
     digitalWrite(trigPin, LOW);
     if (offTimer >= 2){
@@ -73,6 +75,7 @@ void loop(){
         digitalWrite(redPin, HIGH);
         digitalWrite(bluePin, LOW);
         digitalWrite(greenPin, LOW);
+        irsend.sendNEC(0xFD906F, 32);
     }
     else{
         digitalWrite(redPin, LOW);
