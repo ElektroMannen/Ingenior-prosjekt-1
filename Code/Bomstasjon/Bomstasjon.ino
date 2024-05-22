@@ -1,6 +1,16 @@
 #include <ESP32PWM.h>
 #include <ESP32Servo.h>
 #include <elapsedMillis.h>
+#include <SPI.h>
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SH110X.h>
+
+#define i2c_Address 0x3C
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+#define OLED_RESET    -1
+Adafruit_SH1106G display = Adafruit_SH1106G(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 const int trigPin = 18;
 const int echoPin = 19;
