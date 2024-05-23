@@ -47,7 +47,6 @@
             "bb8e501cbe7d5d9d",
             "e4f62c1015b6a187",
             "e5c5cf0d6bb917c5",
-            "bbd793f95ec63c3e",
             "b7af9e519ca5b9d7",
             "a2dec35c0fe9842d",
             "308f248214133e70",
@@ -74,6 +73,96 @@
         "y": 19,
         "w": 212,
         "h": 82
+    },
+    {
+        "id": "c9965334e0b36a0b",
+        "type": "group",
+        "z": "d974087eb4410441",
+        "name": "Car",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "1236e3bf163b4142",
+            "eb6d2cad886648e8",
+            "e893b7685905402d",
+            "6f161c9edf33ba3d",
+            "fbb060fd70043410",
+            "8f11c965debd450e"
+        ],
+        "x": 134,
+        "y": 1319,
+        "w": 312,
+        "h": 202
+    },
+    {
+        "id": "30665a9e1110e356",
+        "type": "group",
+        "z": "c7015bd55ac9c57d",
+        "name": "Test",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "0dd2fd9545bda4ca",
+            "0817f2202b3f46a9",
+            "4485a75d1a0f656c",
+            "f7f0e15a2aa36350",
+            "7caeb28ac2a0cba9",
+            "32d91f45c0238651",
+            "d56752421e229ef8",
+            "1d9c3b808be68e07",
+            "d64de82239fb1bbd",
+            "9089e3c94b2ce382",
+            "0c4411c448ac4caa",
+            "899bd7a9f2ce31ab"
+        ],
+        "x": 34,
+        "y": 779,
+        "w": 642,
+        "h": 482
+    },
+    {
+        "id": "113b862a748abc98",
+        "type": "group",
+        "z": "c7015bd55ac9c57d",
+        "name": "Car",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "f118c9cde3adfa79",
+            "6abf56e4a87d6a49",
+            "a2d3c7c1ccc6f567",
+            "038b288f4ba869de",
+            "2f4b2f43ca14af61",
+            "b27aeb6f7cd37378"
+        ],
+        "x": 74,
+        "y": 1319,
+        "w": 292,
+        "h": 202
+    },
+    {
+        "id": "b03bf1e7be948107",
+        "type": "group",
+        "z": "d974087eb4410441",
+        "name": "Toll station",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "c474f6c5110a4ac8",
+            "546f4b38681f29a8",
+            "1e867b2ce9aef699",
+            "8dc28ac377cc4693",
+            "3fc88b5ace36de81",
+            "515912c81dd80a39"
+        ],
+        "x": 134,
+        "y": 1599,
+        "w": 462,
+        "h": 222
     },
     {
         "id": "f2952bbb2ad433e2",
@@ -154,9 +243,9 @@
         "ui": "ed3a4854fa1b4db8",
         "path": "/home",
         "icon": "home",
-        "layout": "grid",
+        "layout": "notebook",
         "theme": "91be7011842be941",
-        "order": -1,
+        "order": 1,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -180,10 +269,10 @@
         "name": "Contact",
         "ui": "ed3a4854fa1b4db8",
         "path": "/contact",
-        "icon": "home",
+        "icon": "information",
         "layout": "grid",
         "theme": "91be7011842be941",
-        "order": -1,
+        "order": 4,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -193,6 +282,60 @@
         "type": "ui-group",
         "name": "Ratings",
         "page": "4880197e99519344",
+        "width": "6",
+        "height": "1",
+        "order": -1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "a29bbf123578a015",
+        "type": "ui-page",
+        "name": "Users",
+        "ui": "ed3a4854fa1b4db8",
+        "path": "/users",
+        "icon": "table-account",
+        "layout": "notebook",
+        "theme": "91be7011842be941",
+        "order": 3,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "8e8e755dd05b63ae",
+        "type": "ui-page",
+        "name": "Overview",
+        "ui": "ed3a4854fa1b4db8",
+        "path": "/overview",
+        "icon": "view-dashboard",
+        "layout": "grid",
+        "theme": "91be7011842be941",
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "e6a3eaaef97c58a0",
+        "type": "ui-group",
+        "name": "All users",
+        "page": "a29bbf123578a015",
+        "width": "6",
+        "height": "1",
+        "order": -1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "f4b408f314ea8fb3",
+        "type": "ui-group",
+        "name": "My Group",
+        "page": "8e8e755dd05b63ae",
         "width": "6",
         "height": "1",
         "order": -1,
@@ -238,7 +381,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 540,
+        "x": 580,
         "y": 260,
         "wires": []
     },
@@ -282,8 +425,8 @@
         "topic": "insert",
         "payload": "{\"d_score\":194}",
         "payloadType": "json",
-        "x": 140,
-        "y": 500,
+        "x": 180,
+        "y": 440,
         "wires": [
             [
                 "6eb947dff35c7a58"
@@ -298,8 +441,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": true,
-        "x": 290,
-        "y": 600,
+        "x": 330,
+        "y": 540,
         "wires": [
             [
                 "414f9ce98347a63b"
@@ -315,26 +458,8 @@
         "links": [
             "34ea1d322de1ddc2"
         ],
-        "x": 415,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "bbd793f95ec63c3e",
-        "type": "debug",
-        "z": "c7015bd55ac9c57d",
-        "g": "dff9176621056133",
-        "name": "debug_keypress",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 360,
-        "y": 320,
+        "x": 455,
+        "y": 460,
         "wires": []
     },
     {
@@ -382,8 +507,7 @@
         "y": 180,
         "wires": [
             [
-                "bb8e501cbe7d5d9d",
-                "bbd793f95ec63c3e"
+                "bb8e501cbe7d5d9d"
             ]
         ]
     },
@@ -410,57 +534,124 @@
         "wires": []
     },
     {
-        "id": "29614505de526e3e",
-        "type": "ui-template",
+        "id": "f118c9cde3adfa79",
+        "type": "mqtt in",
         "z": "c7015bd55ac9c57d",
-        "group": "d68e6862685d10df",
-        "page": "",
-        "ui": "",
-        "name": "star_rating",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "head": "",
-        "format": "<template>\n  <div class=\"text-center\">\n    <v-rating\n      hover :length=\"5\" :size=\"32\"\n      v-model=\"value\"\n      active-color=\"primary\"\n      @update:model-value=\"send({payload: value})\"\n    ></v-rating>\n  </div>\n</template>",
-        "storeOutMessages": true,
-        "passthru": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 310,
-        "y": 720,
+        "g": "113b862a748abc98",
+        "name": "",
+        "topic": "car/distance",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "dc20097875203fb9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 1360,
         "wires": [
             [
-                "7bb2d1e517ee8d24"
+                "038b288f4ba869de"
             ]
         ]
     },
     {
-        "id": "7bb2d1e517ee8d24",
-        "type": "debug",
+        "id": "6abf56e4a87d6a49",
+        "type": "mqtt in",
         "z": "c7015bd55ac9c57d",
-        "name": "debugstar",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 700,
+        "g": "113b862a748abc98",
+        "name": "",
+        "topic": "car/speed",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "dc20097875203fb9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 1420,
+        "wires": [
+            [
+                "2f4b2f43ca14af61"
+            ]
+        ]
+    },
+    {
+        "id": "a2d3c7c1ccc6f567",
+        "type": "mqtt in",
+        "z": "c7015bd55ac9c57d",
+        "g": "113b862a748abc98",
+        "name": "",
+        "topic": "car/score",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "dc20097875203fb9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 1480,
+        "wires": [
+            [
+                "b27aeb6f7cd37378"
+            ]
+        ]
+    },
+    {
+        "id": "038b288f4ba869de",
+        "type": "link out",
+        "z": "c7015bd55ac9c57d",
+        "g": "113b862a748abc98",
+        "name": "distance",
+        "mode": "link",
+        "links": [
+            "1236e3bf163b4142"
+        ],
+        "x": 325,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "2f4b2f43ca14af61",
+        "type": "link out",
+        "z": "c7015bd55ac9c57d",
+        "g": "113b862a748abc98",
+        "name": "speed",
+        "mode": "link",
+        "links": [
+            "eb6d2cad886648e8"
+        ],
+        "x": 325,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "b27aeb6f7cd37378",
+        "type": "link out",
+        "z": "c7015bd55ac9c57d",
+        "g": "113b862a748abc98",
+        "name": "score",
+        "mode": "link",
+        "links": [
+            "e893b7685905402d"
+        ],
+        "x": 325,
+        "y": 1480,
         "wires": []
     },
     {
         "id": "0dd2fd9545bda4ca",
         "type": "ui-template",
         "z": "c7015bd55ac9c57d",
+        "d": true,
+        "g": "30665a9e1110e356",
         "group": "d68e6862685d10df",
         "page": "",
         "ui": "",
         "name": "",
-        "order": 0,
+        "order": 2,
         "width": 0,
         "height": 0,
         "head": "",
@@ -482,6 +673,8 @@
         "id": "0817f2202b3f46a9",
         "type": "debug",
         "z": "c7015bd55ac9c57d",
+        "d": true,
+        "g": "30665a9e1110e356",
         "name": "debug 19",
         "active": true,
         "tosidebar": true,
@@ -498,6 +691,8 @@
         "id": "4485a75d1a0f656c",
         "type": "ui-template",
         "z": "c7015bd55ac9c57d",
+        "d": true,
+        "g": "30665a9e1110e356",
         "group": "78b509623ddc3923",
         "page": "",
         "ui": "",
@@ -524,6 +719,8 @@
         "id": "f7f0e15a2aa36350",
         "type": "debug",
         "z": "c7015bd55ac9c57d",
+        "d": true,
+        "g": "30665a9e1110e356",
         "name": "debug 21",
         "active": true,
         "tosidebar": true,
@@ -540,6 +737,8 @@
         "id": "7caeb28ac2a0cba9",
         "type": "inject",
         "z": "c7015bd55ac9c57d",
+        "d": true,
+        "g": "30665a9e1110e356",
         "name": "insert_user",
         "props": [
             {
@@ -569,6 +768,8 @@
         "id": "32d91f45c0238651",
         "type": "ui-template",
         "z": "c7015bd55ac9c57d",
+        "d": true,
+        "g": "30665a9e1110e356",
         "group": "78b509623ddc3923",
         "page": "",
         "ui": "",
@@ -577,7 +778,7 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n\n<v-btn @click=\"$socket.emit('ui-event', '3d103008e2349583', msg)\">Send Custom Event</v-btn>\n\n</template>",
+        "format": "<template>\n\n<v-btn @click=\"$socket.emit('ui-event', 'ed2de3066e8f442a', msg)\">Send Custom Event</v-btn>\n\n</template>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
@@ -595,6 +796,8 @@
         "id": "d56752421e229ef8",
         "type": "debug",
         "z": "c7015bd55ac9c57d",
+        "d": true,
+        "g": "30665a9e1110e356",
         "name": "debug 22",
         "active": true,
         "tosidebar": true,
@@ -611,6 +814,8 @@
         "id": "1d9c3b808be68e07",
         "type": "ui-template",
         "z": "c7015bd55ac9c57d",
+        "d": true,
+        "g": "30665a9e1110e356",
         "group": "78b509623ddc3923",
         "page": "",
         "ui": "",
@@ -625,8 +830,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 330,
-        "y": 1240,
+        "x": 350,
+        "y": 1220,
         "wires": [
             [
                 "d64de82239fb1bbd"
@@ -637,6 +842,8 @@
         "id": "d64de82239fb1bbd",
         "type": "debug",
         "z": "c7015bd55ac9c57d",
+        "d": true,
+        "g": "30665a9e1110e356",
         "name": "debug 23",
         "active": true,
         "tosidebar": true,
@@ -645,14 +852,16 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 580,
-        "y": 1180,
+        "x": 540,
+        "y": 1160,
         "wires": []
     },
     {
         "id": "9089e3c94b2ce382",
         "type": "ui-template",
         "z": "c7015bd55ac9c57d",
+        "d": true,
+        "g": "30665a9e1110e356",
         "group": "",
         "page": "4880197e99519344",
         "ui": "",
@@ -667,7 +876,7 @@
         "resendOnRefresh": true,
         "templateScope": "widget:page",
         "className": "",
-        "x": 360,
+        "x": 320,
         "y": 1000,
         "wires": [
             []
@@ -677,6 +886,8 @@
         "id": "0c4411c448ac4caa",
         "type": "inject",
         "z": "c7015bd55ac9c57d",
+        "d": true,
+        "g": "30665a9e1110e356",
         "name": "insert_user",
         "props": [
             {
@@ -703,39 +914,11 @@
         ]
     },
     {
-        "id": "3d103008e2349583",
-        "type": "ui-event",
-        "z": "c7015bd55ac9c57d",
-        "ui": "ed3a4854fa1b4db8",
-        "name": "eventtest",
-        "x": 160,
-        "y": 1420,
-        "wires": [
-            [
-                "f8a76b7828d0e5a8"
-            ]
-        ]
-    },
-    {
-        "id": "f8a76b7828d0e5a8",
-        "type": "debug",
-        "z": "c7015bd55ac9c57d",
-        "name": "debug 24",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 460,
-        "y": 1460,
-        "wires": []
-    },
-    {
         "id": "899bd7a9f2ce31ab",
         "type": "function",
         "z": "c7015bd55ac9c57d",
+        "d": true,
+        "g": "30665a9e1110e356",
         "name": "function 3",
         "func": "msg.payload = 'hi'\nreturn msg;",
         "outputs": 1,
@@ -1096,8 +1279,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 160,
-        "y": 640,
+        "x": 180,
+        "y": 680,
         "wires": [
             [
                 "bb93e4ee023dabaa"
@@ -1116,7 +1299,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 560,
+        "x": 740,
         "y": 680,
         "wires": []
     },
@@ -1141,7 +1324,7 @@
         "topic": "",
         "payload": "hello from nodered",
         "payloadType": "str",
-        "x": 160,
+        "x": 500,
         "y": 800,
         "wires": [
             [
@@ -1162,7 +1345,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 420,
+        "x": 700,
         "y": 780,
         "wires": []
     },
@@ -1180,8 +1363,8 @@
         "correl": "",
         "expiry": "",
         "broker": "dc20097875203fb9",
-        "x": 420,
-        "y": 880,
+        "x": 700,
+        "y": 820,
         "wires": []
     },
     {
@@ -1192,8 +1375,8 @@
         "links": [
             "414f9ce98347a63b"
         ],
-        "x": 85,
-        "y": 960,
+        "x": 115,
+        "y": 940,
         "wires": [
             [
                 "0b3e6df4fe188922"
@@ -1213,8 +1396,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 660,
-        "y": 920,
+        "x": 640,
+        "y": 940,
         "wires": []
     },
     {
@@ -1224,7 +1407,7 @@
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
         "x": 480,
-        "y": 980,
+        "y": 940,
         "wires": [
             [
                 "cb643570aee91a84"
@@ -1243,8 +1426,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 250,
-        "y": 1020,
+        "x": 270,
+        "y": 940,
         "wires": [
             [
                 "cbc77b34d7b89224"
@@ -1257,12 +1440,11 @@
         "z": "d974087eb4410441",
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
-        "x": 340,
-        "y": 1120,
+        "x": 400,
+        "y": 1100,
         "wires": [
             [
-                "a5837349ffd6fca1",
-                "31c1372dfa15a0ca"
+                "a5837349ffd6fca1"
             ]
         ]
     },
@@ -1271,15 +1453,15 @@
         "type": "function",
         "z": "d974087eb4410441",
         "name": "getUsers",
-        "func": "msg.topic=\"SELECT * FROM users\"\n\nreturn msg;",
+        "func": "msg.topic = \"SELECT u.id, u.name, u.email, u.address, u.tlf, e.total_impact_score FROM users u LEFT JOIN ecoscore e ON u.id = e.user_id;\"\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 200,
-        "y": 1140,
+        "x": 240,
+        "y": 1100,
         "wires": [
             [
                 "77ef07ddbc346c22"
@@ -1290,25 +1472,25 @@
         "id": "a5837349ffd6fca1",
         "type": "link out",
         "z": "d974087eb4410441",
-        "name": "link out 3",
+        "name": "db.output.getusers",
         "mode": "link",
         "links": [
-            "34c826ae05784e1f"
+            "33998569dd15990e"
         ],
-        "x": 495,
-        "y": 1080,
+        "x": 515,
+        "y": 1100,
         "wires": []
     },
     {
         "id": "2bd950a05a93757a",
         "type": "link in",
         "z": "d974087eb4410441",
-        "name": "link in 4",
+        "name": "db.input.getusers",
         "links": [
-            "624afad07d47625d"
+            "f088635e3f42d421"
         ],
-        "x": 95,
-        "y": 1140,
+        "x": 115,
+        "y": 1100,
         "wires": [
             [
                 "22308172980d6de6"
@@ -1316,10 +1498,144 @@
         ]
     },
     {
-        "id": "31c1372dfa15a0ca",
+        "id": "1236e3bf163b4142",
+        "type": "link in",
+        "z": "d974087eb4410441",
+        "d": true,
+        "g": "c9965334e0b36a0b",
+        "name": "link in 5",
+        "links": [
+            "038b288f4ba869de"
+        ],
+        "x": 175,
+        "y": 1360,
+        "wires": [
+            [
+                "6f161c9edf33ba3d"
+            ]
+        ]
+    },
+    {
+        "id": "eb6d2cad886648e8",
+        "type": "link in",
+        "z": "d974087eb4410441",
+        "d": true,
+        "g": "c9965334e0b36a0b",
+        "name": "link in 6",
+        "links": [
+            "2f4b2f43ca14af61"
+        ],
+        "x": 175,
+        "y": 1420,
+        "wires": [
+            [
+                "fbb060fd70043410"
+            ]
+        ]
+    },
+    {
+        "id": "e893b7685905402d",
+        "type": "link in",
+        "z": "d974087eb4410441",
+        "d": true,
+        "g": "c9965334e0b36a0b",
+        "name": "link in 7",
+        "links": [
+            "b27aeb6f7cd37378"
+        ],
+        "x": 175,
+        "y": 1480,
+        "wires": [
+            [
+                "8f11c965debd450e"
+            ]
+        ]
+    },
+    {
+        "id": "6f161c9edf33ba3d",
         "type": "debug",
         "z": "d974087eb4410441",
-        "name": "debug 17",
+        "d": true,
+        "g": "c9965334e0b36a0b",
+        "name": "distance",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "fbb060fd70043410",
+        "type": "debug",
+        "z": "d974087eb4410441",
+        "d": true,
+        "g": "c9965334e0b36a0b",
+        "name": "speed",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 330,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "8f11c965debd450e",
+        "type": "debug",
+        "z": "d974087eb4410441",
+        "d": true,
+        "g": "c9965334e0b36a0b",
+        "name": "score",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 330,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "c474f6c5110a4ac8",
+        "type": "mqtt in",
+        "z": "d974087eb4410441",
+        "g": "b03bf1e7be948107",
+        "name": "",
+        "topic": "Toll-station",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "dc20097875203fb9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 1660,
+        "wires": [
+            [
+                "546f4b38681f29a8"
+            ]
+        ]
+    },
+    {
+        "id": "546f4b38681f29a8",
+        "type": "debug",
+        "z": "d974087eb4410441",
+        "g": "b03bf1e7be948107",
+        "name": "debug 26",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -1327,9 +1643,97 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 520,
-        "y": 1200,
+        "x": 490,
+        "y": 1640,
         "wires": []
+    },
+    {
+        "id": "1e867b2ce9aef699",
+        "type": "mqtt in",
+        "z": "d974087eb4410441",
+        "g": "b03bf1e7be948107",
+        "name": "",
+        "topic": "electricPrice",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "dc20097875203fb9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 230,
+        "y": 1720,
+        "wires": [
+            [
+                "8dc28ac377cc4693"
+            ]
+        ]
+    },
+    {
+        "id": "8dc28ac377cc4693",
+        "type": "debug",
+        "z": "d974087eb4410441",
+        "g": "b03bf1e7be948107",
+        "name": "debug 28",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "3fc88b5ace36de81",
+        "type": "mqtt out",
+        "z": "d974087eb4410441",
+        "g": "b03bf1e7be948107",
+        "name": "",
+        "topic": "electricPrice",
+        "qos": "2",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "dc20097875203fb9",
+        "x": 470,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "515912c81dd80a39",
+        "type": "inject",
+        "z": "d974087eb4410441",
+        "g": "b03bf1e7be948107",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "40132",
+        "payloadType": "num",
+        "x": 230,
+        "y": 1780,
+        "wires": [
+            [
+                "3fc88b5ace36de81"
+            ]
+        ]
     },
     {
         "id": "164294998b95d982",
@@ -1340,8 +1744,8 @@
         "links": [
             "715a363715462c6f"
         ],
-        "x": 585,
-        "y": 260,
+        "x": 555,
+        "y": 60,
         "wires": [
             [
                 "befb8d61f627e759"
@@ -1362,20 +1766,19 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 720,
-        "y": 300,
+        "x": 700,
+        "y": 60,
         "wires": []
     },
     {
         "id": "34c826ae05784e1f",
         "type": "link in",
         "z": "9c23ead5f4cd17b6",
+        "d": true,
         "name": "display_users",
-        "links": [
-            "a5837349ffd6fca1"
-        ],
-        "x": 165,
-        "y": 500,
+        "links": [],
+        "x": 185,
+        "y": 200,
         "wires": [
             [
                 "a53bc7abb7f5b15f"
@@ -1386,6 +1789,7 @@
         "id": "a53bc7abb7f5b15f",
         "type": "function",
         "z": "9c23ead5f4cd17b6",
+        "d": true,
         "name": "maybeUseless",
         "func": "let min = Math.round(Math.random()*1000);\nlet max = Math.round((Math.random()*10000)+1000);\n\nlet a = msg.payload\n\n\nreturn msg;",
         "outputs": 1,
@@ -1394,8 +1798,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 400,
-        "y": 540,
+        "x": 420,
+        "y": 240,
         "wires": [
             [
                 "4eac0e0794c4133c"
@@ -1406,6 +1810,7 @@
         "id": "a294cf43e56ed1f8",
         "type": "inject",
         "z": "9c23ead5f4cd17b6",
+        "d": true,
         "name": "",
         "props": [
             {
@@ -1423,8 +1828,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 180,
-        "y": 600,
+        "x": 200,
+        "y": 280,
         "wires": [
             [
                 "a53bc7abb7f5b15f"
@@ -1435,19 +1840,19 @@
         "id": "624afad07d47625d",
         "type": "link out",
         "z": "9c23ead5f4cd17b6",
+        "d": true,
         "name": "update_button",
         "mode": "link",
-        "links": [
-            "2bd950a05a93757a"
-        ],
-        "x": 345,
-        "y": 700,
+        "links": [],
+        "x": 595,
+        "y": 360,
         "wires": []
     },
     {
         "id": "4eac0e0794c4133c",
         "type": "debug",
         "z": "9c23ead5f4cd17b6",
+        "d": true,
         "name": "debug 18",
         "active": true,
         "tosidebar": true,
@@ -1457,24 +1862,15 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 620,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "bf0f52c3edf63924",
-        "type": "comment",
-        "z": "9c23ead5f4cd17b6",
-        "name": "",
-        "info": "put update button here?",
-        "x": 180,
-        "y": 760,
+        "x": 640,
+        "y": 180,
         "wires": []
     },
     {
         "id": "fd31fef1e40bc24f",
         "type": "function",
         "z": "9c23ead5f4cd17b6",
+        "d": true,
         "name": "update_button",
         "func": "\nreturn msg;",
         "outputs": 1,
@@ -1483,8 +1879,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 230,
-        "y": 720,
+        "x": 440,
+        "y": 320,
         "wires": [
             [
                 "624afad07d47625d"
@@ -1495,71 +1891,24 @@
         "id": "ea5ff2cd0cdfe128",
         "type": "ui-template",
         "z": "9c23ead5f4cd17b6",
-        "group": "d68e6862685d10df",
+        "group": "e6a3eaaef97c58a0",
         "page": "",
         "ui": "",
         "name": "display_users",
-        "order": 0,
+        "order": 3,
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n    <!-- Provide an input text box to search the content -->\n    <v-text-field v-model=\"search\" label=\"Search\" prepend-inner-icon=\"mdi-magnify\" single-line variant=\"outlined\"\n    hide-details></v-text-field>\n    <v-data-table v-model:search=\"search\" :items=\"msg?.payload\">\n      <template v-slot:header.current>\n        <!-- Override how we render the header for the \"current\" column -->\n        <div class=\"text-center\">Center-Aligned</div>\n      </template>\n\n      <template v-slot:item.target=\"{ item }\">\n        <!-- Add a custom suffix to the value for the \"target\" column -->\n        {{ item.target }}°C\n      </template>\n\n      <template v-slot:item.current=\"{ item }\">\n        <!-- Render a Linear Progress Bar for the \"current\" column -->\n        <v-progress-linear v-model=\"item.current\" min=\"15\" max=\"25\" height=\"25\" :color=\"getColor(item)\">\n          <template v-slot:default=\"{ value }\">\n            <strong>{{ item.current }}°C</strong>\n          </template>\n        </v-progress-linear>\n      </template>\n    \n    </v-data-table>\n</template>\n\n<script>\n    export default {\n    data () {\n      return {\n        search: ''\n      }\n    },\n    methods: {\n        // add a function to determine the color of the progress bar given the row's item\n      getColor: function (item) {\n        if (item.current > item.target) {\n          return 'red'\n        } else {\n          return 'green'\n        }\n      }\n    }\n  }\n</script>",
+        "format": "<template>\n    <!-- Provide an input text box to search the content -->\n    <v-text-field v-model=\"search\" label=\"Search\" prepend-inner-icon=\"mdi-magnify\" single-line variant=\"outlined\"\n    hide-details></v-text-field>\n    <v-data-table v-model:search=\"search\" :items=\"msg?.payload\">\n\n      <template v-slot:header.total_impact_score>\n        <!-- Override how we render the header for the \"current\" column -->\n        <div class=\"text-center\">Score</div>\n      </template>\n\n      <template v-slot:item.name=\"{ item }\">\n        <!-- Add a custom suffix to the value for the \"target\" column -->\n        {{ item.name }}°C\n      </template>\n\n      <template v-slot:item.total_impact_score=\"{ item }\">\n        <!-- Render a Linear Progress Bar for the \"current\" column -->\n        <v-progress-linear v-model=\"item.total_impact_score\" min=\"15\" max=\"200000\" height=\"25\" :color=\"getColor(item)\">\n          <template v-slot:default=\"{ value }\">\n            <strong>{{ item.total_impact_score }}</strong>\n          </template>\n        </v-progress-linear>\n      </template>\n\n    </v-data-table>\n</template>\n\n<script>\n    export default {\n    data () {\n      return {\n        search: ''\n      }\n    },\n    methods: {\n      getColor: function (item) {\n        if (item.total_impact_score > 50) {\n          return 'red'\n        } else {\n          return 'green'\n        }\n      }\n        // add a function to determine the color of the progress bar given the row's item\n    }\n  }\n</script>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 360,
-        "y": 980,
+        "x": 580,
+        "y": 760,
         "wires": [
-            [
-                "48dc7ec4a79bb3a1"
-            ]
-        ]
-    },
-    {
-        "id": "48dc7ec4a79bb3a1",
-        "type": "debug",
-        "z": "9c23ead5f4cd17b6",
-        "name": "debug 20",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 570,
-        "y": 940,
-        "wires": []
-    },
-    {
-        "id": "5c9ea1d66c64c31a",
-        "type": "inject",
-        "z": "9c23ead5f4cd17b6",
-        "name": "insert_user",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "insert",
-        "payload": "[{\"room\":\"Living Room\",\"id\":\"1234\",\"target\":18.1,\"current\":20},{\"room\":\"Bathroom Room\",\"id\":\"5678\",\"target\":19.5,\"current\":18},{\"room\":\"Kitchen Room\",\"id\":\"9101\",\"target\":18.1,\"current\":17.6}]",
-        "payloadType": "json",
-        "x": 160,
-        "y": 940,
-        "wires": [
-            [
-                "ea5ff2cd0cdfe128"
-            ]
+            []
         ]
     },
     {
@@ -1586,5 +1935,229 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "723dda3faa263f6c",
+        "type": "function",
+        "z": "9c23ead5f4cd17b6",
+        "name": "function 4",
+        "func": "//if (msg.payload == \"Loaded\") {\n//    msg.payload = [{ \"room\": \"Living Room\", \"id\": \"1234\", \"target\": 18.1, \"current\": 20 }, { \"room\": \"Bathroom Room\", \"id\": \"5678\", \"target\": 19.5, \"current\": 18 }, { \"room\": \"Kitchen Room\", \"id\": \"9101\", \"target\": 18.1, \"current\": 17.6 }]\n//    msg.topic = \"input\"\n//} else {\n//    msg.payload = \"in home folder\"\n//    msg.topic = \"input\"\n//}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 840,
+        "wires": [
+            [
+                "070400a13d344993",
+                "ea5ff2cd0cdfe128"
+            ]
+        ]
+    },
+    {
+        "id": "070400a13d344993",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "name": "debug 24",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "ec77049af9dae0ab",
+        "type": "ui-control",
+        "z": "9c23ead5f4cd17b6",
+        "name": "",
+        "ui": "ed3a4854fa1b4db8",
+        "events": "all",
+        "x": 340,
+        "y": 1260,
+        "wires": [
+            [
+                "1bf8e1c16c995ae6"
+            ]
+        ]
+    },
+    {
+        "id": "1bf8e1c16c995ae6",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "name": "debug 27",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "c1964b765cb6e87e",
+        "type": "inject",
+        "z": "9c23ead5f4cd17b6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Contact",
+        "payloadType": "str",
+        "x": 130,
+        "y": 1260,
+        "wires": [
+            [
+                "ec77049af9dae0ab"
+            ]
+        ]
+    },
+    {
+        "id": "a71d16685af96a6c",
+        "type": "ui-button",
+        "z": "9c23ead5f4cd17b6",
+        "group": "78b509623ddc3923",
+        "name": "button.contact",
+        "label": "Contact button",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "Contact",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 160,
+        "y": 1300,
+        "wires": [
+            [
+                "ec77049af9dae0ab"
+            ]
+        ]
+    },
+    {
+        "id": "856de6d3ce3eff89",
+        "type": "ui-template",
+        "z": "9c23ead5f4cd17b6",
+        "group": "e6a3eaaef97c58a0",
+        "page": "",
+        "ui": "",
+        "name": "users.pageload",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<!--<template></template>-->\n\n<script>\n    export default {\n    data () {\n\n    },\n    methods: {\n        // add a function\n    },\n    mounted() {\n      // code here when the component is first loaded\n      this.loaded = true\n      this.send(\"Loaded\")\n    },\n    unmounted() {\n      this.loaded = false\n      // code here when the component is removed from the Dashboard\n      // i.e. when the user navigates away from the page\n    }\n  }\n</script>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 160,
+        "y": 760,
+        "wires": [
+            [
+                "f088635e3f42d421"
+            ]
+        ]
+    },
+    {
+        "id": "f088635e3f42d421",
+        "type": "link out",
+        "z": "9c23ead5f4cd17b6",
+        "name": "dashbaord.output.getusers",
+        "mode": "link",
+        "links": [
+            "2bd950a05a93757a"
+        ],
+        "x": 405,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "33998569dd15990e",
+        "type": "link in",
+        "z": "9c23ead5f4cd17b6",
+        "name": "dashboard.input.getusers",
+        "links": [
+            "a5837349ffd6fca1"
+        ],
+        "x": 95,
+        "y": 840,
+        "wires": [
+            [
+                "723dda3faa263f6c"
+            ]
+        ]
+    },
+    {
+        "id": "29614505de526e3e",
+        "type": "ui-template",
+        "z": "9c23ead5f4cd17b6",
+        "group": "d68e6862685d10df",
+        "page": "",
+        "ui": "",
+        "name": "star_rating",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n  <div class=\"text-center\">\n    <v-rating\n      hover :length=\"5\" :size=\"32\"\n      v-model=\"value\"\n      active-color=\"primary\"\n      @update:model-value=\"send({payload: value})\"\n    ></v-rating>\n  </div>\n</template>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 150,
+        "y": 620,
+        "wires": [
+            [
+                "7bb2d1e517ee8d24"
+            ]
+        ]
+    },
+    {
+        "id": "7bb2d1e517ee8d24",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "name": "debugstar",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 370,
+        "y": 620,
+        "wires": []
     }
 ]
