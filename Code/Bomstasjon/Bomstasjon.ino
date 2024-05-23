@@ -1,3 +1,4 @@
+//Libraries that are needed for this code
 #include <ESP32PWM.h>
 #include <ESP32Servo.h>
 #include <elapsedMillis.h>
@@ -6,6 +7,19 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SH110X.h>
 #include <IRremote.h>
+#include <PubSubClient.h>
+#include <WiFi.h>
+
+//Definitions for MQTT
+WiFiClient espClient;
+PubSubClient client(espClient);
+const char ssid[] = "NTNU-IOT";
+const char password[] = ""; //Leave blank if no password is needed
+const char MQTT_BROKER_ADRRESS[] = "10.25.18.156"; // CHANGE TO MQTT BROKER'S ADDRESS
+const int MQTT_PORT = 1883; // CHANGE TO MQTT BROKER'S PORT
+const char MQTT_CLIENT_ID[] = "Toll-station"; // CHANGE IT AS YOU DESIRE
+const char MQTT_USERNAME[] = ""; // CHANGE IT IF REQUIRED, empty if not required
+const char MQTT_PASSWORD[] = "";  
 
 //Definitions for IR
 #include "PinDefinitionsAndMore.h"
@@ -23,6 +37,7 @@ Adafruit_SH1106G display = Adafruit_SH1106G(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, 
 //Definitions for ultrasonic sensor
 const int trigPin = 18;
 const int echoPin = 19;
+float duration, distance;
 
 //Definitions for RGB LED
 const int redPin = 12;
@@ -35,10 +50,7 @@ int nonElectricPrice = 0; // These prices will be pulled from the database
 int truckPrice = 0; // These prices will be pulled from the database
 int carReputation = 0; // These reputations will be pulled from the database
 
-float duration, distance;
-
-elapsedMicros offTimer;
-elapsedMicros onTimer;
+elapsedMillis WiFiReconnectTimer;
 
 void setup(){
     Serial.begin(115200);
@@ -47,24 +59,38 @@ void setup(){
     pinMode(redPin, OUTPUT);
     pinMode(bluePin, OUTPUT);
     pinMode(greenPin, OUTPUT);
+    //OLED screen setup
     display.begin(i2c_Address, true);
     display.clearDisplay();
     display.setRotation(2); //This is to flip the rotation of the display, delete if needed
     display.setTextSize(1);
     display.setTextColor(SH110X_WHITE);
     display.setCursor(0, 0);
-    display.println("Bomstasjon");
+    display.println("Loading...");
     display.display();
+    //WiFi setup
+    WiFiReconnectTimer=500;
+    while (WiFi.status() != WL_CONNECTED){
+        if (WiFiReconnectTimer > 500){
+            WiFiReconnectTimer = 0;
+            WiFi.begin(ssid, password);
+        }
+        
+    }
 }
+
+//Timers
+elapsedMicros offTimer;
+elapsedMicros onTimer;
 
 void loop(){
     digitalWrite(trigPin, LOW);
     if (offTimer >= 2){
-        offTimer -= 2;
+        offTimer = 0;
         digitalWrite(trigPin, HIGH);
     }
     if (onTimer >= 12){
-        onTimer -= 12;
+        onTimer = 0;
         digitalWrite(trigPin, LOW);
     }
     duration = pulseIn(echoPin, HIGH);
