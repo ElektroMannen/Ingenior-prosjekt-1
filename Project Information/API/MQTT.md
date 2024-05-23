@@ -19,10 +19,15 @@ MQTT topics
 Kontroll:
 car/control
 
-Data:
+Data som bilen får:
 car/driverLevel
 car/driverScore
 car/warning
+
+Mqtt topics som zumo sender til
+"car/distance"
+"car/score"
+"car/speed"
 ```
 
 ### Eksempel på data sendt fra server
