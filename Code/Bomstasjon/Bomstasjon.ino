@@ -11,15 +11,15 @@
 #include <WiFi.h>
 
 //Definitions for MQTT
-WiFiClient espClient;
-PubSubClient client(espClient);
 const char ssid[] = "NTNU-IOT";
 const char password[] = ""; //Leave blank if no password is needed
 const char MQTT_BROKER_ADRRESS[] = "10.25.18.156"; // CHANGE TO MQTT BROKER'S ADDRESS
 const int MQTT_PORT = 1883; // CHANGE TO MQTT BROKER'S PORT
-const char MQTT_CLIENT_ID[] = "Toll-station"; // CHANGE IT AS YOU DESIRE
 const char MQTT_USERNAME[] = ""; // CHANGE IT IF REQUIRED, empty if not required
 const char MQTT_PASSWORD[] = "";  
+const char MQTT_TOPIC[] = "Toll-station"; // CHANGE IT AS YOU DESIRE
+WiFiClient espClient;
+PubSubClient client(espClient);
 
 //Definitions for IR
 #include "PinDefinitionsAndMore.h"
@@ -51,6 +51,7 @@ int truckPrice = 0; // These prices will be pulled from the database
 int carReputation = 0; // These reputations will be pulled from the database
 
 elapsedMillis WiFiReconnectTimer;
+elapsedMillis MQTTReconnectTimer;
 
 void setup(){
     Serial.begin(115200);
@@ -77,6 +78,41 @@ void setup(){
         }
         
     }
+    //MQTT setup
+    client.setServer(MQTT_BROKER_ADRRESS, MQTT_PORT);
+    client.setCallback(callback);
+    while (!client.connected()){
+        String client_id = "Toll-station"; // CHANGE IT AS YOU DESIRE
+        client_id += String(WiFi.macAddress());
+        Serial.printf("The client %s connects to the public MQTT broker\n", client_id.c_str());
+        if (client.connect(client_id.c_str(), MQTT_USERNAME, MQTT_PASSWORD)){
+            Serial.println("Connected to MQTT broker");
+        }
+        else{
+            Serial.print("Failed to connect to MQTT broker, state: ");
+            Serial.print(client.state());
+            while (true){
+                if (MQTTReconnectTimer > 2000){
+                    MQTTReconnectTimer = 0;
+                    break;
+                }
+            }
+        }
+    }
+    client.publish(MQTT_TOPIC, "Toll-station is online!");
+    client.subscribe(MQTT_TOPIC);
+}
+
+//Callback function for MQTT, to receive messages
+void callback(char *topic, byte *payload, unsigned int length) {
+    Serial.print("Message arrived in topic: ");
+    Serial.println(topic);
+    Serial.print("Message:");
+    for (int i = 0; i < length; i++) {
+        Serial.print((char) payload[i]);
+    }
+    Serial.println();
+    Serial.println("-----------------------");
 }
 
 //Timers
