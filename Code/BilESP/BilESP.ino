@@ -16,18 +16,25 @@ const char MQTT_CLIENT_ID[] = "Person-Bil";  // CHANGE IT AS YOU DESIRE
 const char MQTT_USERNAME[] = "";                        // CHANGE IT IF REQUIRED, empty if not required
 const char MQTT_PASSWORD[] = "";  
 
-const char PUBLISH_TOPIC[] = "Kjøremønster-1";    //Data publish
+const char PUBLISH_TOPIC[] = "Car/data";    //Data publish
 //const char SUBSCRIBE_TOPIC = "car/control";  //Zumo kontroller
-int32_t mqttDelay = 50;
+int16_t mqttDelay = 50;
+int16_t wireDelay = 1000; 
 
 //Car data struct
 struct data{
-  int32_t drive, driverLevel, driverScore;
+  int32_t drive, driverScore;
   bool warning;
 };
+
+struct RecievedData{
+  int32_t maxSpeed, batteryHealth, batteryVoltage, driverScore, distance;
+  float speed;
+};
+
 data transmittData;
-data mqttData;
-/*
+RecievedData mqttData;
+
 //Connects to wifi
 void wifiConnect(){
 // Connect to Wi-Fi network with SSID and password
@@ -70,7 +77,7 @@ void connectToMQTT() {
     }
   }
 }
-*/
+
 
 //Recieves and handle subscrie data
 void callback(char* topic, byte* message, unsigned int length) {
@@ -83,7 +90,6 @@ void callback(char* topic, byte* message, unsigned int length) {
   }
   Serial.println();
 
-  // Feel free to add more if statements to control more GPIOs with MQTT
   // If a message is received on the topic esp32/output, you check if the message is either "on" or "off". 
   // Changes the output state according to the message
   if (String(topic) == "car/control") {
@@ -93,13 +99,13 @@ void callback(char* topic, byte* message, unsigned int length) {
   }
 }
 
-//Recieves int data
-int getInt(){
-  Wire.requestFrom(1,2);
-    if(Wire.available() == 2){
-      return Wire.read();
+//Gets data form I2C buss 
+void getI2C_Data(){
+    if (Wire.requestFrom(1, sizeof(mqttData))) {
+        Wire.readBytes((byte*)&mqttData, sizeof(mqttData)); // Les hele structen fra I2C-bussen
     }
 }
+
 
 //Test function for prototype testing of Zumo driving
 void serialController(){
@@ -110,7 +116,11 @@ void serialController(){
 }
 
 void sendToMqtt(){
-  
+    if (Wire.requestFrom(1, sizeof(mqttData))) {
+      Wire.readBytes((byte*)&mqttData, sizeof(mqttData)); // Les hele structen fra I2C-bussen
+    }
+ // client.publish("Driver-Score", byte(transmittData.driverScore), sizeof(transmittData.driverScore));
+
 }
 
 
@@ -129,13 +139,14 @@ void loop(){
   //connectToMQTT();
   serialController();
   millis();
-
-  /*if((millis() - oldMillis) > mqttDelay){
-    client.loop();
+  client.loop();
+  
+  if((millis() - oldMillis) > wireDelay){
+    getI2C_Data;
     oldMillis = millis();
   }
   delay(10);
-*/
+
 }
 
 void sendI2C_Data(){

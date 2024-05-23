@@ -46,7 +46,7 @@ unsigned long oldUiTime = 0;
 unsigned long speedMillis = 0;
 
 struct RecievedData{
-  int32_t drive, driverLevel, driverScore;
+  int32_t drive, driverScore;
   bool warning;
 };
 
@@ -171,6 +171,7 @@ void getI2C_Data(){
     }
 }
 
+//Gets sensor data
 void getData(){
   //Get pitch
   if(imu.gyroDataReady()){
@@ -185,7 +186,7 @@ void getData(){
   distanceL = distanceL + encoders.getCountsAndResetLeft();
   distanceR = distanceR + encoders.getCountsAndResetRight();
   sensorData.distance =  round((((((distanceL + distanceR)/2))/909.7))*10);
-
+  //Gets speed
   if((millis() - speedMillis) > 200){
     sensorData.speed = ((sensorData.distance - oldDistance)/0.2);
     oldDistance = sensorData.distance;
