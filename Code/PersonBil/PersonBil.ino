@@ -2,14 +2,15 @@
 TO DO:
 - Legge inn score
 - Legge inn IR kommuniksajon
-- Sende data opp til mqtt 
 DONE:
 - Legge inn fart
+- Sende data opp til mqtt 
 */
 
 
 #include <Wire.h>
 #include <Zumo32U4.h>
+#include <Zumo32u4IRsender.h>
 
 
 Zumo32U4Motors motors;
@@ -20,13 +21,11 @@ Zumo32U4ButtonC buttonC;
 Zumo32U4OLED display;
 Zumo32U4Buzzer buzzer;
 Zumo32U4IMU imu;
-Zumo32U4IRPulses IR;
-
-
+Zumo32U4IRsender ZumoIrSender(0x01, RIGHT_IR);
 
 int warning = 0;
 int disp = 0;
-int32_t speed = 100;
+int32_t speed = 200;
 int32_t speedMulti = 0;
 int32_t messureSpeed;
 int32_t pitch, pitchCalibrate;
@@ -51,7 +50,7 @@ struct RecievedData{
 };
 
 struct TransmittData{
-  int32_t maxSpeed, batteryHealth, batteryVoltage, driverScore, distance;
+  int32_t maxSpeed, batteryVoltage, driverScore, distance;
   float speed;
 };
 
@@ -68,11 +67,12 @@ void startDisp(){
   display.gotoXY(0, 2);
   display.print("|--------|");
   display.setLayout21x8();
-  /*buzzer.playNote(NOTE_E(4),200,10);
+  buzzer.playNote(NOTE_E(4),200,10);
   delay(100);
   buzzer.playNote(NOTE_G(4),200,10);
   delay(100);
-  buzzer.playNote(NOTE_G(5),200,10);*/
+  buzzer.playNote(NOTE_G(5),200,10);
+
 }
 
 
@@ -199,10 +199,6 @@ void getData(){
 
 void setup(){
   Wire.begin(1);
-  imu.init();
-  imu.enableDefault();
-  imu.readGyro();
-  pitchCalibrate = imu.g.y;
   Wire.onRequest(sendI2C_Data);
   startDisp();
   delay(2000);

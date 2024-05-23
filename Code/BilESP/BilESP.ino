@@ -19,7 +19,7 @@ const char MQTT_PASSWORD[] = "";
 const char PUBLISH_TOPIC[] = "Car/data";    //Data publish
 //const char SUBSCRIBE_TOPIC = "car/control";  //Zumo kontroller
 int16_t mqttDelay = 50;
-int16_t wireDelay = 1000; 
+int16_t wireDelay = 10000; 
 
 //Car data struct
 struct data{
@@ -28,7 +28,7 @@ struct data{
 };
 
 struct RecievedData{
-  int32_t maxSpeed, batteryHealth, batteryVoltage, driverScore, distance;
+  int32_t maxSpeed, batteryVoltage, driverScore, distance;
   float speed;
 };
 
@@ -99,13 +99,6 @@ void callback(char* topic, byte* message, unsigned int length) {
   }
 }
 
-//Gets data form I2C buss 
-void getI2C_Data(){
-    if (Wire.requestFrom(1, sizeof(mqttData))) {
-        Wire.readBytes((byte*)&mqttData, sizeof(mqttData)); // Les hele structen fra I2C-bussen
-    }
-}
-
 
 //Test function for prototype testing of Zumo driving
 void serialController(){
@@ -115,38 +108,43 @@ void serialController(){
     }
 }
 
+// Gets data from Zumo and sends it to mqtt topics
 void sendToMqtt(){
     if (Wire.requestFrom(1, sizeof(mqttData))) {
       Wire.readBytes((byte*)&mqttData, sizeof(mqttData)); // Les hele structen fra I2C-bussen
     }
- // client.publish("Driver-Score", byte(transmittData.driverScore), sizeof(transmittData.driverScore));
+  //Converts data to 
+  mqttData.driverScore = 76;
+  char scoreString[8];
+  dtostrf(mqttData.driverScore, 1, 2, scoreString);
+  client.publish("car/score", scoreString);
 
+
+  char distanceString[8];
+  dtostrf(mqttData.distance, 1, 2, distanceString);
+  client.publish("car/distance", scoreString);
 }
-
 
 //-----------------------------------------------------------------------------------------
 void setup(){
   Serial.begin(115200);
-  //wifiConnect();
-  //setupMQTT();
+  wifiConnect();
+  setupMQTT();
   Wire.begin(0);
-  transmittData.driverScore = 67;
-  transmittData.warning = false;
   Wire.onRequest(sendI2C_Data);
 }
 
 void loop(){
-  //connectToMQTT();
+  connectToMQTT();
   serialController();
   millis();
   client.loop();
   
   if((millis() - oldMillis) > wireDelay){
-    getI2C_Data;
+    sendToMqtt();
     oldMillis = millis();
   }
   delay(10);
-
 }
 
 void sendI2C_Data(){
