@@ -9,6 +9,8 @@
 #include <IRremote.h>
 #include <PubSubClient.h>
 #include <WiFi.h>
+#include <ESP32PWM.h>
+#include <ESP32Servo.h>
 
 //Definitions for MQTT
 const char ssid[] = "NTNU-IOT";
@@ -44,6 +46,8 @@ const int redPin = 12;
 const int bluePin = 14;
 const int greenPin = 27;
 
+//Definitions for servo motor
+
 //Definitions for pricing and reputation
 int electricPrice = 0; // These prices will be pulled from the database
 int nonElectricPrice = 0; // These prices will be pulled from the database
@@ -67,17 +71,16 @@ void setup(){
     display.setTextSize(1);
     display.setTextColor(SH110X_WHITE);
     display.setCursor(0, 0);
-    display.println("Loading...");
+    display.print("Loading...");
     display.display();
     //WiFi setup
     WiFiReconnectTimer=500;
+    WiFi.begin(ssid, password);
     while (WiFi.status() != WL_CONNECTED){
-        if (WiFiReconnectTimer > 500){
-            WiFiReconnectTimer = 0;
-            WiFi.begin(ssid, password);
-        }
-        
+        delay(500);
+        Serial.println("Connecting to WiFi..."); 
     }
+
     //MQTT setup
     client.setServer(MQTT_BROKER_ADRRESS, MQTT_PORT);
     client.setCallback(callback);
@@ -101,6 +104,7 @@ void setup(){
     }
     client.publish(MQTT_TOPIC, "Toll-station is online!");
     client.subscribe(MQTT_TOPIC);
+    client.subscribe("electricPrice");
 }
 
 //Callback function for MQTT, to receive messages
@@ -120,12 +124,13 @@ elapsedMicros offTimer;
 elapsedMicros onTimer;
 
 void loop(){
+    client.loop();
     digitalWrite(trigPin, LOW);
     if (offTimer >= 2){
         offTimer = 0;
         digitalWrite(trigPin, HIGH);
     }
-    if (onTimer >= 12){
+    else if (onTimer >= 12){
         onTimer = 0;
         digitalWrite(trigPin, LOW);
     }
@@ -133,7 +138,7 @@ void loop(){
     if (duration != 0){
         distance = (duration/2) / 29.1;
     }
-    if (distance < 5){
+    if (distance < 10){
         digitalWrite(redPin, HIGH);
         digitalWrite(bluePin, LOW);
         digitalWrite(greenPin, LOW);
@@ -144,6 +149,12 @@ void loop(){
         digitalWrite(bluePin, LOW);
         digitalWrite(greenPin, HIGH);
     }
-    Serial.print("Distance: ");
-    Serial.println(distance);
+    display.clearDisplay();
+    display.setRotation(2); //This is to flip the rotation of the display, delete if needed
+    display.setTextSize(1);
+    display.setTextColor(SH110X_WHITE);
+    display.setCursor(0, 0);
+    display.print("Distance: ");
+    display.print(distance);
+    display.display();
 }
