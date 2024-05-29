@@ -52,6 +52,50 @@ CREATE TABLE ecoscore (
       ON UPDATE CASCADE
 ) ENGINE=InnoDB;
 
+CREATE TABLE transactions (
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	amount FLOAT,
+	recorded_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	user_id INT UNSIGNED,
+    CONSTRAINT `fk_transactions_users`
+      FOREIGN KEY (user_id) REFERENCES users (id)
+      ON DELETE SET NULL
+      ON UPDATE CASCADE
+) ENGINE=InnoDB;
+
+CREATE TABLE toll (
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	info VARCHAR(255),
+	recorded_date TIMESTAMP,
+	car_id INT UNSIGNED,
+    CONSTRAINT `fk_toll_vehicles`
+      FOREIGN KEY (car_id) REFERENCES vehicles (id)
+      ON DELETE SET NULL
+      ON UPDATE CASCADE
+) ENGINE=InnoDB;
+
+CREATE TABLE powerprices (
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	price FLOAT
+) ENGINE=InnoDB;
+
+CREATE TABLE coupling (
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	tr_id INT UNSIGNED,
+	toll_id INT UNSIGNED,
+	pcost_id INT UNSIGNED,
+	CONSTRAINT FOREIGN KEY (tr_id) REFERENCES transactions(id)
+	  ON DELETE SET NULL
+      ON UPDATE CASCADE,
+    CONSTRAINT FOREIGN KEY (toll_id) REFERENCES toll(id)
+      ON DELETE SET NULL
+      ON UPDATE CASCADE,
+    CONSTRAINT FOREIGN KEY (pcost_id) REFERENCES powerprices(id)
+) ENGINE=InnoDB;
+
+
+
 INSERT INTO users (name, email, address) VALUES
 	('Arne Midjo', 'arne.midjo@mail.no', 'ntnubakken 12C'),
 	('Mrne Aidjo', 'mrne@gmail.com', 'utnudalen 18C');
@@ -74,7 +118,24 @@ FROM drivescores
 WHERE user_id = 1;
 
 
-INSERT INTO ecoscore (total_impact_score, user_id) VALUES (124451.1, 1)
+INSERT INTO ecoscore (total_impact_score, user_id) VALUES (124451.1, 1);
+
+INSERT INTO transactions (amount, user_id) VALUES (165, 1);
+
+SELECT * FROM transactions t;
+
+SELECT * FROM toll t;
+
+INSERT INTO toll (info, car_id) VALUES ("it went good", 1);
+
+INSERT INTO powerprices (price) VALUES (193.33);
+
+SELECT * FROM powerprices p LEFT JOIN coupling c ON p.id = c.pcost_id;
+
+INSERT INTO coupling (tr_id, toll_id, pcost_id) VALUES 
+	(1, NULL, 1),
+	(1, 1, NULL),
+	(1, NULL, NULL);
 
 
-
+SELECT * FROM coupling c;
