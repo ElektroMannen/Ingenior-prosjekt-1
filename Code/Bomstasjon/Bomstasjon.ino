@@ -1,3 +1,7 @@
+//Videre ideer: Sett opp en egen ID for sjåfør, slik at bil og sjåfør ikke har samme ID.
+//Videre arbeid: Få servo til å fungere. Nesten i mål
+
+
 //Libraries that are needed for this code
 #include <ESP32PWM.h>
 #include <ESP32Servo.h>
@@ -47,6 +51,10 @@ const int bluePin = 14;
 const int greenPin = 27;
 
 //Definitions for servo motor
+const int freq = 50;
+const int channel = 0;
+const int resolution = 16;
+const int servoPin = 35;
 
 //Definitions for pricing and reputation
 int electricPrice = 0; // These prices will be pulled from the database
@@ -73,6 +81,9 @@ void setup(){
     display.setCursor(0, 0);
     display.print("Loading...");
     display.display();
+    //Servo setup
+    ledcSetup(channel, freq, resolution);
+    ledcAttachPin(servoPin, channel);
     //WiFi setup
     WiFiReconnectTimer=500;
     WiFi.begin(ssid, password);
