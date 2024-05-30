@@ -142,7 +142,7 @@ void loop(){
         digitalWrite(redPin, HIGH);
         digitalWrite(bluePin, LOW);
         digitalWrite(greenPin, LOW);
-        irsend.sendNEC(0xFD906F, 32);
+        //irsend.sendNEC(0xFD906F, 32);
     }
     else{
         digitalWrite(redPin, LOW);
