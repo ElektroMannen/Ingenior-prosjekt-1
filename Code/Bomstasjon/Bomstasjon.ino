@@ -1,5 +1,6 @@
 //Videre ideer: Sett opp en egen ID for sjåfør, slik at bil og sjåfør ikke har samme ID.
 //Videre arbeid: Få servo til å fungere. Nesten i mål
+//For å sette servo til 0 må vi skrive 75
 
 
 //Libraries that are needed for this code
@@ -53,7 +54,7 @@ const int greenPin = 27;
 //Definitions for servo motor
 const int freq = 50;
 const int channel = 0;
-const int resolution = 16;
+const int resolution = 10;
 const int servoPin = 35;
 
 //Definitions for pricing and reputation
@@ -62,7 +63,6 @@ int nonElectricPrice = 0; // These prices will be pulled from the database
 int truckPrice = 0; // These prices will be pulled from the database
 int carReputation = 0; // These reputations will be pulled from the database
 
-elapsedMillis WiFiReconnectTimer;
 elapsedMillis MQTTReconnectTimer;
 
 void setup(){
@@ -85,7 +85,6 @@ void setup(){
     ledcSetup(channel, freq, resolution);
     ledcAttachPin(servoPin, channel);
     //WiFi setup
-    WiFiReconnectTimer=500;
     WiFi.begin(ssid, password);
     while (WiFi.status() != WL_CONNECTED){
         delay(500);
@@ -135,6 +134,7 @@ elapsedMicros offTimer;
 elapsedMicros onTimer;
 
 void loop(){
+    ledcWrite(channel, 130);
     client.loop();
     digitalWrite(trigPin, LOW);
     if (offTimer >= 2){
