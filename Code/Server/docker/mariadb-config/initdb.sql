@@ -77,7 +77,7 @@ CREATE TABLE toll (
 CREATE TABLE powerprices (
 	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	price FLOAT
+	NOK_per_kWh FLOAT
 ) ENGINE=InnoDB;
 
 CREATE TABLE coupling (
@@ -97,15 +97,16 @@ CREATE TABLE coupling (
 
 
 INSERT INTO users (name, email, address) VALUES
-	('Arne Midjo', 'arne.midjo@mail.no', 'ntnubakken 12C'),
-	('Mrne Aidjo', 'mrne@gmail.com', 'utnudalen 18C');
+	('Erlend Ferkingstad', 'erlend@mail.no', 'Fjellheimen 12C'),
+	('Artur Jakobsen', 'artur@gmail.com', 'Sjøbakken 15'),
+	('Solveig Karimi', 'solveig@gmail.com', 'Grønnhagen 42');
 
-INSERT INTO drivescores (score, user_id) VALUES 
+INSERT INTO drivescores (score, user_id) VALUES
 	(134.82, 1),
 	(111.82, 1);
 
-INSERT INTO vehicles (class) VALUES ('Garbage collector');
-INSERT INTO vehicles (class, owner_id) VALUES ('Personal',1);
+INSERT INTO vehicles (class) VALUES ('Gasoline');
+INSERT INTO vehicles (class, owner_id) VALUES ('Electric',1);
 INSERT INTO vehicles (class) VALUES ('Street sweeper');
 
 
@@ -128,14 +129,23 @@ SELECT * FROM toll t;
 
 INSERT INTO toll (info, car_id) VALUES ("it went good", 1);
 
-INSERT INTO powerprices (price) VALUES (193.33);
+INSERT INTO powerprices (NOK_per_kWh) VALUES (193.33);
 
-SELECT * FROM powerprices p LEFT JOIN coupling c ON p.id = c.pcost_id;
-
-INSERT INTO coupling (tr_id, toll_id, pcost_id) VALUES 
+INSERT INTO coupling (tr_id, toll_id, pcost_id) VALUES
 	(1, NULL, 1),
 	(1, 1, NULL),
 	(1, NULL, NULL);
 
 
-SELECT * FROM coupling c;
+SELECT * FROM powerprices p;
+
+
+START TRANSACTION;
+INSERT INTO toll (info, car_id)
+  VALUES ('ask for price', 1);
+SET @toll_id = LAST_INSERT_ID();
+INSERT INTO powerprices (NOK_per_kWh)
+  VALUES (0.211);
+INSERT INTO tcoupling (t_id, toll_id, pcost_id)
+SELECT NULL, @toll_id, MAX(id) FROM powerprices;
+COMMIT;
