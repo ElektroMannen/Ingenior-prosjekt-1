@@ -48,14 +48,13 @@
             "e4f62c1015b6a187",
             "e5c5cf0d6bb917c5",
             "b7af9e519ca5b9d7",
-            "a2dec35c0fe9842d",
             "308f248214133e70",
             "8955a8be5e602442"
         ],
-        "x": 34,
+        "x": 74,
         "y": 59,
-        "w": 672,
-        "h": 302
+        "w": 612,
+        "h": 242
     },
     {
         "id": "0591b57e8f20d00d",
@@ -70,7 +69,7 @@
             "dc1d7aadb5cf6f36",
             "b23d2583cd712fdc"
         ],
-        "x": 34,
+        "x": 54,
         "y": 19,
         "w": 412,
         "h": 82
@@ -91,8 +90,8 @@
             "fbb060fd70043410",
             "8f11c965debd450e"
         ],
-        "x": 44,
-        "y": 719,
+        "x": 34,
+        "y": 539,
         "w": 312,
         "h": 202
     },
@@ -158,8 +157,8 @@
         ],
         "x": 48,
         "y": 1353,
-        "w": 1204,
-        "h": 474
+        "w": 1164,
+        "h": 434
     },
     {
         "id": "8ceaad14f6929143",
@@ -171,12 +170,13 @@
         },
         "nodes": [
             "fa423b6c44026824",
-            "7c5378ce3d8e1fab"
+            "7c5378ce3d8e1fab",
+            "1060263491f37862"
         ],
         "x": 38,
-        "y": 953,
-        "w": 1184,
-        "h": 514
+        "y": 813,
+        "w": 1144,
+        "h": 574
     },
     {
         "id": "fa423b6c44026824",
@@ -192,17 +192,17 @@
             "2fa7fa16.df7d36",
             "8c41d7d6d675747c",
             "6deff2c3917ab08e",
-            "c255e9fac127380c",
             "20fc10f82e1fbb3c",
-            "86b977f88d28dd31",
             "f5f52c154dc1c527",
             "465b90c9e7577fdd",
-            "b8b5793024a68019"
+            "b8b5793024a68019",
+            "bd2be327c3068176",
+            "6c75f5e6b0bae9ef"
         ],
-        "x": 64,
-        "y": 979,
-        "w": 1132,
-        "h": 202
+        "x": 74,
+        "y": 839,
+        "w": 1082,
+        "h": 162
     },
     {
         "id": "21275fd3a4c7913e",
@@ -221,7 +221,7 @@
             "6d866f700464c477"
         ],
         "x": 74,
-        "y": 1659,
+        "y": 1619,
         "w": 592,
         "h": 142
     },
@@ -244,12 +244,13 @@
             "11e643123ec5b919",
             "5447f1d107d07b4d",
             "216a5b5f33c20201",
-            "37f366920074a58d"
+            "6583d5f44e957ce0",
+            "93a705171c063e17"
         ],
         "x": 74,
         "y": 1379,
-        "w": 1152,
-        "h": 222
+        "w": 1112,
+        "h": 182
     },
     {
         "id": "7c5378ce3d8e1fab",
@@ -263,19 +264,18 @@
         "nodes": [
             "f1c8edc3f112fcf2",
             "06dc7761e9b36e06",
-            "53c9477e6ec4d517",
             "8a79294f8c9e1bda",
             "2492751851d4ab57",
             "6578372151a0df87",
             "bd683dfaf575d92b",
-            "b8a9c66769c3fe5d",
-            "2af38b9c334ca4af",
-            "8ff91e6586ddbeb6"
+            "8ff91e6586ddbeb6",
+            "70ea88b87505faaa",
+            "2311204e8aeb792a"
         ],
         "x": 64,
-        "y": 1239,
-        "w": 1132,
-        "h": 202
+        "y": 1039,
+        "w": 1082,
+        "h": 142
     },
     {
         "id": "1343424fbbdc4b4e",
@@ -294,7 +294,7 @@
             "33998569dd15990e"
         ],
         "x": 54,
-        "y": 619,
+        "y": 799,
         "w": 632,
         "h": 162
     },
@@ -302,6 +302,7 @@
         "id": "116ddb3989f7865c",
         "type": "group",
         "z": "9c23ead5f4cd17b6",
+        "g": "0829e4ce132f4920",
         "name": "set_toll_prices",
         "style": {
             "label": true
@@ -309,19 +310,108 @@
         "nodes": [
             "728bcfee316180c5",
             "9695c47a09c4d657",
-            "04613cd67e7bd8bd",
             "fd21801d95c179a1",
             "6a8d7251a99d269b",
             "49ab5c9eef18e2fe",
             "d3bb702bcdf691a1",
             "2636e9073bae688d",
             "d5bb29401cd9c2f9",
-            "d2c115aaae325b40"
+            "d2c115aaae325b40",
+            "ddefcb191dc9d43a"
         ],
-        "x": 54,
+        "x": 74,
+        "y": 539,
+        "w": 1072,
+        "h": 202
+    },
+    {
+        "id": "1060263491f37862",
+        "type": "group",
+        "z": "d974087eb4410441",
+        "g": "8ceaad14f6929143",
+        "name": "get_most_recent_toll_prices",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "f6d3906734b58c4b",
+            "2d95327a837381a2",
+            "e8c5ccf60952c2be",
+            "0f60eb9b92962992",
+            "a501c4b70711fc78",
+            "e1c49e9771213b10",
+            "f82bd2713bd5bea4"
+        ],
+        "x": 74,
+        "y": 1219,
+        "w": 1012,
+        "h": 142
+    },
+    {
+        "id": "8d23dc769da0d07f",
+        "type": "group",
+        "z": "d974087eb4410441",
+        "name": "users_handler",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "77ef07ddbc346c22",
+            "22308172980d6de6",
+            "a5837349ffd6fca1",
+            "2bd950a05a93757a"
+        ],
+        "x": 34,
         "y": 379,
-        "w": 1112,
-        "h": 222
+        "w": 482,
+        "h": 82
+    },
+    {
+        "id": "69f933624170a8db",
+        "type": "group",
+        "z": "9c23ead5f4cd17b6",
+        "g": "0829e4ce132f4920",
+        "name": "refresh_toll_prices_page",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "04613cd67e7bd8bd",
+            "d9f5b4ebe6ceadec",
+            "6f2b6412d3243be9",
+            "32bba6d6bdb66cee",
+            "7d834a69f9cfe8eb",
+            "da204c00005594c9",
+            "38573d34b841eb61",
+            "9ae509c0229a4605",
+            "9dca2e760e12e3df",
+            "ef9316e3662e77af",
+            "b3df72d8dcb2bc3a",
+            "2d68d6a1aa9ef244",
+            "2848dc9c2586b927",
+            "438180f8e7ed266d"
+        ],
+        "x": 74,
+        "y": 219,
+        "w": 912,
+        "h": 282
+    },
+    {
+        "id": "0829e4ce132f4920",
+        "type": "group",
+        "z": "9c23ead5f4cd17b6",
+        "name": "toll_prices_edit",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "116ddb3989f7865c",
+            "69f933624170a8db"
+        ],
+        "x": 48,
+        "y": 193,
+        "w": 1124,
+        "h": 574
     },
     {
         "id": "f2952bbb2ad433e2",
@@ -429,7 +519,7 @@
         "ui": "ed3a4854fa1b4db8",
         "path": "/contact",
         "icon": "information",
-        "layout": "grid",
+        "layout": "notebook",
         "theme": "91be7011842be941",
         "order": 4,
         "className": "",
@@ -470,7 +560,7 @@
         "ui": "ed3a4854fa1b4db8",
         "path": "/overview",
         "icon": "view-dashboard",
-        "layout": "grid",
+        "layout": "notebook",
         "theme": "91be7011842be941",
         "order": 2,
         "className": "",
@@ -493,7 +583,7 @@
     {
         "id": "f4b408f314ea8fb3",
         "type": "ui-group",
-        "name": "My Group",
+        "name": "Toll Prices",
         "page": "8e8e755dd05b63ae",
         "width": "6",
         "height": "1",
@@ -519,7 +609,7 @@
         "z": "c7015bd55ac9c57d",
         "g": "dff9176621056133",
         "name": "Keypress",
-        "func": "var txt = flow.get(\"text\") || \"\";\ntxt = msg.payload\nmsg.payload = txt\nflow.set(\"text\", txt)\nreturn msg;",
+        "func": "msg.payload = \"hallo\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -569,7 +659,7 @@
         "correl": "",
         "expiry": "",
         "broker": "dc20097875203fb9",
-        "x": 630,
+        "x": 570,
         "y": 160,
         "wires": []
     },
@@ -639,18 +729,7 @@
         "name": "",
         "info": "<script>\n\n    \n    (function($scope) {\n    \n \n    console.log('Hello');\n\n    let keys = {};\n\n    document.addEventListener('keydown', (event) => {\n    if (event.repeat) return;\n    \n    if (event.key != \"CapsLock\") {\n        keys[event.key] = true;\n        let msg = {\"payload\": keys, \"topic\": \"keydown\"};\n        $scope.send(msg);\n    }\n    });\n\n    document.addEventListener('keyup', (event) => {\n    var keyName = event.key;\n    var keyCode = event.code;\n    delete keys[event.key];\n    let msg = {\"payload\": keys, \"topic\": \"keyup\"};\n    $scope.send(msg);\n\n    },{capture: true});\n    })(scope);\n</script>",
         "x": 160,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "a2dec35c0fe9842d",
-        "type": "comment",
-        "z": "c7015bd55ac9c57d",
-        "g": "dff9176621056133",
-        "name": "",
-        "info": "display here with \n\n{{msg.payload}}\n\nui_text",
-        "x": 340,
-        "y": 100,
+        "y": 260,
         "wires": []
     },
     {
@@ -666,13 +745,13 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n    <div>\n        <h2>Counter - loaded: {{ loaded }}</h2>\n        <p>Current Count: {{ count }}</p>\n        <p class=\"my-class\">Formatted Count: {{ formattedCount }}</p>\n        <!-- <v-btn @click=\"increase()\">Increment</v-btn> -->\n        <!-- <input @keyup.enter=\"increase\" /> -->\n    </div>\n</template>\n\n<script>\n    export default {\n        data() {\n            // define variables available component-wide\n            // (in <template> and component functions)\n            return {\n                loaded: false,\n                count: 0\n            }\n        },\n        watch: {\n            // watch for any changes of \"count\"\n            count: function () {\n                if (this.count % 5 === 0) {\n                    this.send({payload: 'Multiple of 5'})\n                }\n            }\n        },\n        computed: {\n            // automatically compute this variable\n            // whenever VueJS deems appropriate\n            formattedCount: function () {\n                return `${this.count} Apples`\n            }\n        },\n        methods: {\n            // expose a method to our <template> and Vue Application\n            increase: function () {\n                this.count++\n            },\n\n            onKeydown( event ) {\n                if (event.key === \"Escape\") {       \n                    console.log('hello esc ')\n                    this.increase()\n                }\n                if (event.key === \"w\") {\n                    console.log(\"w\")\n                    this.count++\n                }\n            }\n        },\n        mounted() {\n            // code here when the component is first loaded\n            document.addEventListener( \"keydown\", this.onKeydown );\n            this.loaded = true\n        },\n        unmounted() {\n            // code here when the component is removed from the Dashboard\n            // i.e. when the user navigates away from the page\n        }\n    }\n</script>\n<style>\n    /* define any styles here - supports raw CSS */\n    .my-class {\n        color: red;\n    }\n</style>",
+        "format": "<template>\n    <div>\n        <h2>Pageload: {{ loaded }}</h2>\n        <p>Current Count: {{ key }}</p>\n        <p class=\"my-class\">Formatted Count: {{ formattedCount }}</p>\n        <!-- <v-btn @click=\"increase()\">Increment</v-btn> -->\n        <!-- <input @keyup.enter=\"increase\" /> -->\n    </div>\n</template>\n\n<script>\n    export default {\n        data() {\n            // define variables available component-wide\n            // (in <template> and component functions)\n            return {\n                loaded: false,\n                count: 0,\n                key: \"\"\n            }\n        },\n        watch: {\n            // watch for any changes of \"count\"\n            count: function () {\n                if (this.count % 5 === 0) {\n                    this.send({payload: 'Multiple of 5'})\n                }\n            }\n        },\n        computed: {\n            // automatically compute this variable\n            // whenever VueJS deems appropriate\n            formattedCount: function () {\n                return `${this.count}`\n            }\n        },\n        methods: {\n            // expose a method to our <template> and Vue Application\n            increase: function (key) {\n                this.key = key\n            },\n\n            onKeydown( event ) {\n                if (event.key === \"Escape\") {       \n                    console.log('hello esc ')\n                    this.increase(event.key)\n                }\n                if (event.key === \"w\") {\n                    console.log(\"w\")\n                    this.count++\n                    \n                }\n                this.increase(event.key)\n            }\n        },\n        mounted() {\n            // code here when the component is first loaded\n            document.addEventListener( \"keydown\", this.onKeydown );\n            this.loaded = true\n        },\n        unmounted() {\n            // code here when the component is removed from the Dashboard\n            // i.e. when the user navigates away from the page\n        }\n    }\n</script>\n<style>\n    /* define any styles here - supports raw CSS */\n    .my-class {\n            width:200px;\n            height:20px;\n            background-color: blue;\n            top: 10%;\n            left: 50%;\n            margin-top: 100px;\n            margin-left: 100px;\n    }\n</style>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 130,
+        "x": 170,
         "y": 160,
         "wires": [
             [
@@ -690,15 +769,15 @@
         "width": 0,
         "height": 0,
         "name": "show_input",
-        "label": "",
+        "label": "what this",
         "format": "{{msg.payload}}",
-        "layout": "row-spread",
+        "layout": "row-center",
         "style": false,
         "font": "",
         "fontSize": 16,
         "color": "#717171",
         "className": "{{msg.payload}}",
-        "x": 530,
+        "x": 590,
         "y": 100,
         "wires": []
     },
@@ -1122,7 +1201,7 @@
         "senderr": false,
         "headers": [],
         "x": 590,
-        "y": 1460,
+        "y": 1420,
         "wires": [
             [
                 "270c46f9ca7fe345"
@@ -1149,10 +1228,10 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "Car ID: 1, driver ID: 1",
+        "payload": "Toll ID: 1, Car ID: 1, driver ID: 1",
         "payloadType": "str",
         "x": 210,
-        "y": 1460,
+        "y": 1420,
         "wires": [
             [
                 "0c28e72814e9bbae"
@@ -1165,7 +1244,7 @@
         "z": "c7015bd55ac9c57d",
         "g": "5454094dd1d0958e",
         "name": "get_now",
-        "func": "//let date2 = new Date(Date.UTC(2012, 3, 0, 3, 0, 0)).toLocaleDateString(\"no-NO\", {day: \"2-digit\"}).slice(0,2)\nlet date = new Date();\n\nlet received_string = msg.payload;\n\n//\"Car ID: 3, driver ID: 3\"\nconst re = new RegExp(\"\\d\");\n\nconst res = /Car ID: ([0-9]+), driver ID: ([0-9]+)/;\n\n\nlet regex_find = received_string.match(res);\n\nflow.set(\"car_id\", parseInt(regex_find[1], 10));\nflow.set(\"user_id\",parseInt(regex_find[2], 10));\n\n//let day = date.getDay().toLocaleString(\"no_NO\", options);\nlet day = date.toLocaleDateString(\"no-NO\", {day: \"2-digit\"}).slice(0,2);\nlet month = date.toLocaleDateString(\"no-NO\", {month: \"2-digit\"}).slice(0,2);\nlet year = date.getFullYear();\n\n\n\nmsg.topic = `${year}/${month}-${day}_NO5`;\n\n//msg.payload = day\n//msg.topic = \"/2024/05-30_NO5\";\nreturn msg;",
+        "func": "//let date2 = new Date(Date.UTC(2012, 3, 0, 3, 0, 0)).toLocaleDateString(\"no-NO\", {day: \"2-digit\"}).slice(0,2)\nlet date = new Date();\n\nlet received_string = msg.payload;\n\n//\"Toll ID: 1, Car ID: 3, driver ID: 3\"\n\nconst res = /Toll ID: ([0-9]+), Car ID: ([0-9]+), driver ID: ([0-9]+)/;\n\n\nlet regex_find = received_string.match(res);\n\nflow.set(\"toll_id\", parseInt(regex_find[1], 10));\nflow.set(\"car_id\", parseInt(regex_find[2], 10));\nflow.set(\"user_id\",parseInt(regex_find[3], 10));\n\n//let day = date.getDay().toLocaleString(\"no_NO\", options);\nlet day = date.toLocaleDateString(\"no-NO\", {day: \"2-digit\"}).slice(0,2);\nlet month = date.toLocaleDateString(\"no-NO\", {month: \"2-digit\"}).slice(0,2);\nlet year = date.getFullYear();\n\nmsg.topic = `${year}/${month}-${day}_NO5`;\n\n//msg.payload = day\n//msg.topic = \"/2024/05-30_NO5\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1173,11 +1252,11 @@
         "finalize": "",
         "libs": [],
         "x": 400,
-        "y": 1460,
+        "y": 1420,
         "wires": [
             [
-                "37f366920074a58d",
-                "b4fe374a9bd7e327"
+                "b4fe374a9bd7e327",
+                "93a705171c063e17"
             ]
         ]
     },
@@ -1191,7 +1270,7 @@
         "action": "obj",
         "pretty": false,
         "x": 750,
-        "y": 1460,
+        "y": 1420,
         "wires": [
             [
                 "75db24836ef699f2"
@@ -1204,7 +1283,7 @@
         "z": "c7015bd55ac9c57d",
         "g": "5454094dd1d0958e",
         "name": "get_current_price",
-        "func": "let hour = new Date().getHours();\n\nlet prices = msg.payload;\n\nlet toll_info = {\n    price: prices[hour]['NOK_per_kWh'],\n    car_id: flow.get(\"car_id\")\n}\nmsg.topic = \"\"\nmsg.payload = toll_info;\n\nreturn msg;\n",
+        "func": "let hour = new Date().getHours();\n\nlet prices = msg.payload;\n\nlet toll_info = {\n    price: prices[hour]['NOK_per_kWh'],\n    car_id: flow.get(\"car_id\"),\n    toll_id: flow.get(\"toll_id\")\n}\nmsg.topic = \"\"\nmsg.payload = toll_info;\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1212,7 +1291,7 @@
         "finalize": "",
         "libs": [],
         "x": 930,
-        "y": 1460,
+        "y": 1420,
         "wires": [
             [
                 "7047c6b94e2edca3",
@@ -1226,15 +1305,15 @@
         "z": "c7015bd55ac9c57d",
         "g": "5454094dd1d0958e",
         "name": "debug 30",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1120,
-        "y": 1500,
+        "x": 1080,
+        "y": 1520,
         "wires": []
     },
     {
@@ -1252,7 +1331,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 180,
-        "y": 1560,
+        "y": 1520,
         "wires": [
             [
                 "216a5b5f33c20201",
@@ -1266,7 +1345,7 @@
         "z": "c7015bd55ac9c57d",
         "g": "5454094dd1d0958e",
         "name": "debug 31",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1274,7 +1353,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 360,
-        "y": 1560,
+        "y": 1520,
         "wires": []
     },
     {
@@ -1287,7 +1366,7 @@
             "8a79294f8c9e1bda"
         ],
         "x": 115,
-        "y": 1700,
+        "y": 1660,
         "wires": [
             [
                 "892664ccd686b134"
@@ -1300,7 +1379,7 @@
         "z": "c7015bd55ac9c57d",
         "g": "21275fd3a4c7913e",
         "name": "decide_price",
-        "func": "if (msg.payload !== null) {\n    let c_class = msg.payload[0];\n    let dsc = msg.payload[1];\n    let nok_kWh = msg.payload[2];\n    \n    // reward electric drivers on days with low electric prices\n    if (c_class == \"Electric\") {\n        msg.payload = nok_kWh * dsc;\n    } else {\n        msg.payload = 0;\n    }\n} else {\n    msg.payload = \"No such user/vehicle registered\";\n}\n\nreturn msg;",
+        "func": "if (msg.payload !== null) {\n    let vehicle_class = msg.payload[0];\n    let dsc = msg.payload[1];\n    let nok_kWh = msg.payload[2];\n    \n    // reward electric drivers on days with low electric prices\n    if (vehicle_class == \"Electric\") {\n        msg.payload = global.get(\"toll_electric\") * Math.E ** (100 * nok_kWh / dsc);\n    } else if (vehicle_class = \"Gasoline\") {\n        msg.payload = global.get(\"toll_gasoline\") * Math.E ** (100 * nok_kWh / dsc);\n    } else if (vehicle_class = \"Service\") {\n        msg.payload = global.get(\"toll_service\") * Math.E ** (100 * nok_kWh / dsc);\n    }\n} else {\n    msg.payload = \"No such user/vehicle registered\";\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1308,7 +1387,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 1700,
+        "y": 1660,
         "wires": [
             [
                 "a8858f8a4c84de28",
@@ -1332,7 +1411,7 @@
         "expiry": "",
         "broker": "dc20097875203fb9",
         "x": 560,
-        "y": 1760,
+        "y": 1720,
         "wires": []
     },
     {
@@ -1358,7 +1437,7 @@
         "payload": "73",
         "payloadType": "num",
         "x": 190,
-        "y": 1760,
+        "y": 1720,
         "wires": [
             [
                 "3eb8a7513cd893f0"
@@ -1380,7 +1459,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 560,
-        "y": 1700,
+        "y": 1660,
         "wires": []
     },
     {
@@ -1391,28 +1470,47 @@
         "name": "get-price.output",
         "mode": "link",
         "links": [
-            "b3c8efd25d693eb7"
+            "b3c8efd25d693eb7",
+            "0f60eb9b92962992"
         ],
         "x": 1075,
         "y": 1420,
         "wires": []
     },
     {
-        "id": "37f366920074a58d",
-        "type": "debug",
+        "id": "6583d5f44e957ce0",
+        "type": "link out",
         "z": "c7015bd55ac9c57d",
         "g": "5454094dd1d0958e",
-        "name": "debug 41",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 570,
-        "y": 1560,
+        "name": "send_u_id_and_v_id",
+        "mode": "link",
+        "links": [
+            "70ea88b87505faaa"
+        ],
+        "x": 755,
+        "y": 1520,
         "wires": []
+    },
+    {
+        "id": "93a705171c063e17",
+        "type": "function",
+        "z": "c7015bd55ac9c57d",
+        "g": "5454094dd1d0958e",
+        "name": "send_ids",
+        "func": "msg.payload = {\n    u_id: flow.get(\"user_id\"),\n    t_id: flow.get(\"toll_id\"),\n    v_id: flow.get(\"car_id\") \n};\n\nmsg.topic = \"id\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 1520,
+        "wires": [
+            [
+                "6583d5f44e957ce0"
+            ]
+        ]
     },
     {
         "id": "f02207af4cfba9b8",
@@ -1476,7 +1574,7 @@
         "expiry": "",
         "broker": "dc20097875203fb9",
         "x": 360,
-        "y": 120,
+        "y": 140,
         "wires": []
     },
     {
@@ -1487,8 +1585,8 @@
         "links": [
             "414f9ce98347a63b"
         ],
-        "x": 75,
-        "y": 200,
+        "x": 55,
+        "y": 280,
         "wires": [
             [
                 "0b3e6df4fe188922"
@@ -1508,8 +1606,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 600,
-        "y": 200,
+        "x": 580,
+        "y": 280,
         "wires": []
     },
     {
@@ -1518,8 +1616,8 @@
         "z": "d974087eb4410441",
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
-        "x": 440,
-        "y": 200,
+        "x": 420,
+        "y": 280,
         "wires": [
             [
                 "cb643570aee91a84"
@@ -1538,8 +1636,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 230,
-        "y": 200,
+        "x": 210,
+        "y": 280,
         "wires": [
             [
                 "cbc77b34d7b89224"
@@ -1550,10 +1648,11 @@
         "id": "77ef07ddbc346c22",
         "type": "mysql",
         "z": "d974087eb4410441",
+        "g": "8d23dc769da0d07f",
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
         "x": 360,
-        "y": 280,
+        "y": 420,
         "wires": [
             [
                 "a5837349ffd6fca1"
@@ -1564,8 +1663,9 @@
         "id": "22308172980d6de6",
         "type": "function",
         "z": "d974087eb4410441",
+        "g": "8d23dc769da0d07f",
         "name": "getUsers",
-        "func": "msg.topic = \"SELECT u.id, u.name, u.email, u.address, u.tlf, e.total_impact_score FROM users u LEFT JOIN ecoscore e ON u.id = e.user_id;\"\n\nreturn msg;",
+        "func": "msg.topic = \"SELECT u.id, u.name, u.email, u.address, u.tlf, AVG(e.score) AS score FROM users u LEFT JOIN ecoscore e ON u.id = e.user_id;\"\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1573,7 +1673,7 @@
         "finalize": "",
         "libs": [],
         "x": 200,
-        "y": 280,
+        "y": 420,
         "wires": [
             [
                 "77ef07ddbc346c22"
@@ -1584,25 +1684,27 @@
         "id": "a5837349ffd6fca1",
         "type": "link out",
         "z": "d974087eb4410441",
+        "g": "8d23dc769da0d07f",
         "name": "db.output.getusers",
         "mode": "link",
         "links": [
             "33998569dd15990e"
         ],
         "x": 475,
-        "y": 280,
+        "y": 420,
         "wires": []
     },
     {
         "id": "2bd950a05a93757a",
         "type": "link in",
         "z": "d974087eb4410441",
+        "g": "8d23dc769da0d07f",
         "name": "db.input.getusers",
         "links": [
             "f088635e3f42d421"
         ],
         "x": 75,
-        "y": 280,
+        "y": 420,
         "wires": [
             [
                 "22308172980d6de6"
@@ -1619,8 +1721,8 @@
         "links": [
             "038b288f4ba869de"
         ],
-        "x": 85,
-        "y": 760,
+        "x": 75,
+        "y": 580,
         "wires": [
             [
                 "6f161c9edf33ba3d"
@@ -1637,8 +1739,8 @@
         "links": [
             "2f4b2f43ca14af61"
         ],
-        "x": 85,
-        "y": 820,
+        "x": 75,
+        "y": 640,
         "wires": [
             [
                 "fbb060fd70043410"
@@ -1655,8 +1757,8 @@
         "links": [
             "b27aeb6f7cd37378"
         ],
-        "x": 85,
-        "y": 880,
+        "x": 75,
+        "y": 700,
         "wires": [
             [
                 "8f11c965debd450e"
@@ -1678,8 +1780,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 250,
-        "y": 760,
+        "x": 240,
+        "y": 580,
         "wires": []
     },
     {
@@ -1697,8 +1799,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 240,
-        "y": 820,
+        "x": 230,
+        "y": 640,
         "wires": []
     },
     {
@@ -1716,8 +1818,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 240,
-        "y": 880,
+        "x": 230,
+        "y": 700,
         "wires": []
     },
     {
@@ -1727,11 +1829,10 @@
         "g": "7c5378ce3d8e1fab",
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
-        "x": 440,
-        "y": 1320,
+        "x": 400,
+        "y": 1080,
         "wires": [
             [
-                "53c9477e6ec4d517",
                 "6578372151a0df87"
             ]
         ]
@@ -1742,7 +1843,7 @@
         "z": "d974087eb4410441",
         "g": "7c5378ce3d8e1fab",
         "name": "get_driving_score",
-        "func": "let user_id = flow.get(\"vehicle_id\");\nlet car_id = 1;\n\n\n\n//msg.topic = `SELECT v.class, e.total_impact_score FROM vehicles v \n//LEFT JOIN users u ON v.owner_id = u.id\n//LEFT JOIN ecoscore e ON e.user_id = u.id\n//WHERE u.id = ${user_id};`\n\nmsg.topic = `\nSELECT p.id, p.NOK_per_kWh, t.car_id  FROM coupling c \nLEFT JOIN powerprices p ON c.pcost_id = p.id\nLEFT JOIN toll t ON t.id = c.toll_id\nWHERE t.car_id = ${user_id}\nORDER BY p.id DESC\nLIMIT 1;\n`;\n\n\nreturn msg;",
+        "func": "let user_id = flow.get(\"user_id\");\nlet toll_id = flow.get(\"toll_id\");\n\n\nmsg.topic = `\nSELECT t.id, p.id, p.NOK_per_kWh FROM relations r \nLEFT JOIN powerprices p ON r.pcost_id = p.id\nLEFT JOIN tollstation t ON r.toll_id = t.id\nWHERE t.id = ${toll_id}\nORDER BY p.id DESC\nLIMIT 1;\n`;\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1750,29 +1851,12 @@
         "finalize": "",
         "libs": [],
         "x": 230,
-        "y": 1320,
+        "y": 1080,
         "wires": [
             [
                 "f1c8edc3f112fcf2"
             ]
         ]
-    },
-    {
-        "id": "53c9477e6ec4d517",
-        "type": "debug",
-        "z": "d974087eb4410441",
-        "g": "7c5378ce3d8e1fab",
-        "name": "debug 33",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 620,
-        "y": 1280,
-        "wires": []
     },
     {
         "id": "8a79294f8c9e1bda",
@@ -1784,8 +1868,8 @@
         "links": [
             "56faac02af1e3921"
         ],
-        "x": 1155,
-        "y": 1340,
+        "x": 1105,
+        "y": 1080,
         "wires": []
     },
     {
@@ -1797,12 +1881,13 @@
         "links": [
             "11e643123ec5b919"
         ],
-        "x": 105,
-        "y": 1060,
+        "x": 115,
+        "y": 920,
         "wires": [
             [
                 "2fa7fa16.df7d36",
-                "6deff2c3917ab08e"
+                "6deff2c3917ab08e",
+                "6c75f5e6b0bae9ef"
             ]
         ]
     },
@@ -1810,6 +1895,7 @@
         "id": "2fa7fa16.df7d36",
         "type": "function",
         "z": "d974087eb4410441",
+        "d": true,
         "g": "fa423b6c44026824",
         "name": "insert_toll",
         "func": "let car_id = msg.payload.car_id;\n\nflow.set(\"vehicle_id\", car_id);\n\nmsg.payload=[\"good day\", car_id];\nmsg.topic=\"INSERT INTO toll (`info`, `car_id`) VALUES (?, ?);\";\nreturn msg;\n\n",
@@ -1819,8 +1905,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 300,
-        "y": 1020,
+        "x": 310,
+        "y": 880,
         "wires": [
             [
                 "8c41d7d6d675747c"
@@ -1834,12 +1920,12 @@
         "g": "fa423b6c44026824",
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
-        "x": 500,
-        "y": 1060,
+        "x": 450,
+        "y": 920,
         "wires": [
             [
-                "c255e9fac127380c",
-                "20fc10f82e1fbb3c"
+                "20fc10f82e1fbb3c",
+                "bd2be327c3068176"
             ]
         ]
     },
@@ -1856,8 +1942,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
-        "y": 1100,
+        "x": 300,
+        "y": 920,
         "wires": [
             [
                 "8c41d7d6d675747c"
@@ -1865,27 +1951,10 @@
         ]
     },
     {
-        "id": "c255e9fac127380c",
-        "type": "debug",
-        "z": "d974087eb4410441",
-        "g": "fa423b6c44026824",
-        "name": "debug 38",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 660,
-        "y": 1020,
-        "wires": []
-    },
-    {
         "id": "20fc10f82e1fbb3c",
         "type": "function",
         "z": "d974087eb4410441",
+        "d": true,
         "g": "fa423b6c44026824",
         "name": "insert_coupling_table",
         "func": "let toll_id = null;\nlet price_id = null;\n\nif (/INSERT INTO toll/i.test(msg.topic)) {\n    flow.set(\"toll_id\", msg.payload.insertId);   \n}\n\nif (/INSERT INTO powerprices/i.test(msg.topic)) {\n    flow.set(\"price_id\", msg.payload.insertId);\n}\n\ntoll_id = flow.get(\"toll_id\");\nprice_id = flow.get(\"price_id\");\n\nif (toll_id && price_id) {\n    msg.payload = [toll_id, price_id];\n    msg.topic = msg.topic = \"INSERT INTO coupling (`tr_id`, `toll_id`, `pcost_id`) VALUES (NULL, ?, ?);\";\n\n    flow.set(\"toll_id\", null);\n    flow.set(\"price_id\", null);\n\n    return msg;\n} else {\n    return null;\n}",
@@ -1895,32 +1964,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 700,
-        "y": 1100,
+        "x": 670,
+        "y": 920,
         "wires": [
             [
-                "86b977f88d28dd31",
                 "465b90c9e7577fdd"
             ]
         ]
-    },
-    {
-        "id": "86b977f88d28dd31",
-        "type": "debug",
-        "z": "d974087eb4410441",
-        "g": "fa423b6c44026824",
-        "name": "debug 39",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 920,
-        "y": 1140,
-        "wires": []
     },
     {
         "id": "f5f52c154dc1c527",
@@ -1928,15 +1978,15 @@
         "z": "d974087eb4410441",
         "g": "fa423b6c44026824",
         "name": "debug 40",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1090,
-        "y": 1100,
+        "x": 1050,
+        "y": 920,
         "wires": []
     },
     {
@@ -1946,8 +1996,8 @@
         "g": "fa423b6c44026824",
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
-        "x": 920,
-        "y": 1060,
+        "x": 870,
+        "y": 920,
         "wires": [
             [
                 "f5f52c154dc1c527",
@@ -1965,8 +2015,8 @@
         "links": [
             "2492751851d4ab57"
         ],
-        "x": 1045,
-        "y": 1020,
+        "x": 1005,
+        "y": 960,
         "wires": []
     },
     {
@@ -1979,7 +2029,7 @@
             "b8b5793024a68019"
         ],
         "x": 105,
-        "y": 1320,
+        "y": 1080,
         "wires": [
             [
                 "06dc7761e9b36e06"
@@ -1993,11 +2043,10 @@
         "g": "7c5378ce3d8e1fab",
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
-        "x": 860,
-        "y": 1340,
+        "x": 760,
+        "y": 1080,
         "wires": [
             [
-                "b8a9c66769c3fe5d",
                 "8ff91e6586ddbeb6"
             ]
         ]
@@ -2007,56 +2056,22 @@
         "type": "function",
         "z": "d974087eb4410441",
         "g": "7c5378ce3d8e1fab",
-        "name": "get_driving_score",
-        "func": "let price = msg.payload[0]['NOK_per_kWh'];\n\n\n\nflow.set(\"NOK_kWh\", price);\n\nlet c_id = msg.payload[0]['car_id'];\n\nmsg.payload = [c_id];\n\nmsg.topic = `SELECT v.class, e.total_impact_score FROM vehicles v \nLEFT JOIN users u ON v.owner_id = u.id\nLEFT JOIN ecoscore e ON e.user_id = u.id\nWHERE u.id = ?`\n\n\nreturn msg;",
+        "name": "get_based_on_uid",
+        "func": "let c_id;\nlet u_id;\n\n\nif (msg.topic == \"id\"){\n    flow.set(\"user_id\", msg.payload.u_id);\n    flow.set(\"car_id\", msg.payload.v_id);\n    return null;\n} else {\n    c_id = flow.get(\"car_id\");\n    u_id = flow.get(\"user_id\");    \n\n    let price = msg.payload[0]['NOK_per_kWh'];\n    flow.set(\"NOK_kWh\", price);\n    msg.payload = [u_id, c_id];\n\n    msg.topic = `\n    SELECT v.id, v.vehicle_type, AVG(e.score) AS score FROM vehicles v \n    LEFT JOIN users u ON v.owner_id = u.id\n    LEFT JOIN ecoscore e ON e.user_id = u.id\n    WHERE u.id = ? AND v.id = ?;\n    `;\n\n} \n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 650,
-        "y": 1340,
+        "x": 590,
+        "y": 1080,
         "wires": [
             [
-                "bd683dfaf575d92b",
-                "2af38b9c334ca4af"
+                "2311204e8aeb792a",
+                "bd683dfaf575d92b"
             ]
         ]
-    },
-    {
-        "id": "b8a9c66769c3fe5d",
-        "type": "debug",
-        "z": "d974087eb4410441",
-        "g": "7c5378ce3d8e1fab",
-        "name": "debug 42",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1020,
-        "y": 1400,
-        "wires": []
-    },
-    {
-        "id": "2af38b9c334ca4af",
-        "type": "debug",
-        "z": "d974087eb4410441",
-        "g": "7c5378ce3d8e1fab",
-        "name": "debug 43",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 860,
-        "y": 1280,
-        "wires": []
     },
     {
         "id": "8ff91e6586ddbeb6",
@@ -2064,15 +2079,15 @@
         "z": "d974087eb4410441",
         "g": "7c5378ce3d8e1fab",
         "name": "sort_variables",
-        "func": "let type = msg.payload[0]['class'];\nlet eco_score = msg.payload[0]['total_impact_score'];\nlet p = flow.get(\"NOK_kWh\");\n\n\nmsg.payload = [type, eco_score, p]\n\nreturn msg;",
+        "func": "let type = msg.payload[0]['vehicle_type'];\nlet eco_score = msg.payload[0]['score'];\nlet p = flow.get(\"NOK_kWh\");\n\n\nmsg.payload = [type, eco_score, p]\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1040,
-        "y": 1340,
+        "x": 940,
+        "y": 1080,
         "wires": [
             [
                 "8a79294f8c9e1bda"
@@ -2080,39 +2095,203 @@
         ]
     },
     {
-        "id": "164294998b95d982",
-        "type": "link in",
-        "z": "9c23ead5f4cd17b6",
-        "d": true,
-        "name": "link in 1",
-        "links": [
-            "715a363715462c6f",
-            "63f2e4252ad05190"
-        ],
-        "x": 555,
-        "y": 60,
+        "id": "f6d3906734b58c4b",
+        "type": "function",
+        "z": "d974087eb4410441",
+        "g": "1060263491f37862",
+        "name": "get_toll_prices",
+        "func": "let station_id = null;\n\n\nif (msg.topic == \"request_from_toll_prices\") {\n    station_id = global.get(\"selected_toll_station\");\n} else {\n    station_id = flow.get(\"toll_id\");\n}\n\nmsg.payload=[station_id];\n\nmsg.topic = `SELECT id, location, electric_price, gasoline_price, service_price FROM tollstation t\nWHERE id = ?;`\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 1260,
         "wires": [
             [
-                "befb8d61f627e759"
+                "e8c5ccf60952c2be"
             ]
         ]
     },
     {
-        "id": "befb8d61f627e759",
+        "id": "2d95327a837381a2",
         "type": "debug",
-        "z": "9c23ead5f4cd17b6",
-        "d": true,
-        "name": "debug 7",
+        "z": "d974087eb4410441",
+        "g": "1060263491f37862",
+        "name": "debug 49",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "e8c5ccf60952c2be",
+        "type": "mysql",
+        "z": "d974087eb4410441",
+        "g": "1060263491f37862",
+        "mydb": "f2952bbb2ad433e2",
+        "name": "mdb-test",
+        "x": 580,
+        "y": 1260,
+        "wires": [
+            [
+                "a501c4b70711fc78"
+            ]
+        ]
+    },
+    {
+        "id": "0f60eb9b92962992",
+        "type": "link in",
+        "z": "d974087eb4410441",
+        "g": "1060263491f37862",
+        "name": "db.input.get_toll_prices",
+        "links": [
+            "11e643123ec5b919"
+        ],
+        "x": 115,
+        "y": 1260,
+        "wires": [
+            [
+                "f6d3906734b58c4b"
+            ]
+        ]
+    },
+    {
+        "id": "a501c4b70711fc78",
+        "type": "function",
+        "z": "d974087eb4410441",
+        "g": "1060263491f37862",
+        "name": "set_global",
+        "func": "if (msg.payload.length === 0) {\n    msg.payload = \"No such station exist\";\n    msg.topic = \"id_error\";\n} else {\n    let toll_electric_price = msg.payload[0]['electric_price'];\n    let toll_gasoline_price = msg.payload[0]['gasoline_price'];\n    let toll_service_price = msg.payload[0]['service_price'];\n\n    global.set(\"toll_electric\", toll_electric_price);\n    global.set(\"toll_gasoline\", toll_gasoline_price);\n    global.set(\"toll_service\", toll_service_price);\n    \n    let station_info = {\n        id : msg.payload[0]['id'],\n        location: msg.payload[0]['location']\n    };\n\n    msg.payload = msg.payload[0]['location'];\n    \n    msg.topic = \"ok\";\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 1260,
+        "wires": [
+            [
+                "2d95327a837381a2",
+                "f82bd2713bd5bea4"
+            ]
+        ]
+    },
+    {
+        "id": "e1c49e9771213b10",
+        "type": "link in",
+        "z": "d974087eb4410441",
+        "g": "1060263491f37862",
+        "name": "db.input.get_toll_prices",
+        "links": [
+            "d9f5b4ebe6ceadec"
+        ],
+        "x": 115,
+        "y": 1320,
+        "wires": [
+            [
+                "f6d3906734b58c4b"
+            ]
+        ]
+    },
+    {
+        "id": "f82bd2713bd5bea4",
+        "type": "link out",
+        "z": "d974087eb4410441",
+        "g": "1060263491f37862",
+        "name": "db.prices.updated",
+        "mode": "link",
+        "links": [
+            "b3df72d8dcb2bc3a"
+        ],
+        "x": 935,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "bd2be327c3068176",
+        "type": "function",
+        "z": "d974087eb4410441",
+        "g": "fa423b6c44026824",
+        "name": "insert_relations_table",
+        "func": "let station_id = flow.get(\"toll_id\");\nlet price_id = null;\n\nif (/INSERT INTO powerprices/i.test(msg.topic)) {\n    flow.set(\"price_id\", msg.payload.insertId);\n}\n\nprice_id = flow.get(\"price_id\");\nmsg.payload = station_id;\nif (station_id && price_id) {\n    msg.payload = [station_id, price_id];\n    msg.topic = msg.topic = \"INSERT INTO relations (`tr_id`, `toll_id`, `pcost_id`) VALUES (NULL, ?, ?);\";\n\n    //flow.set(\"toll_id\", null);\n    flow.set(\"price_id\", null);\n\n    return msg;\n} else {\n    return null;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 960,
+        "wires": [
+            [
+                "465b90c9e7577fdd"
+            ]
+        ]
+    },
+    {
+        "id": "6c75f5e6b0bae9ef",
+        "type": "function",
+        "z": "d974087eb4410441",
+        "g": "fa423b6c44026824",
+        "name": "get_toll_id",
+        "func": "let id = msg.payload.toll_id;\nflow.set(\"toll_id\", id);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 960,
+        "wires": [
+            [
+                "bd2be327c3068176"
+            ]
+        ]
+    },
+    {
+        "id": "70ea88b87505faaa",
+        "type": "link in",
+        "z": "d974087eb4410441",
+        "g": "7c5378ce3d8e1fab",
+        "name": "link in 11",
+        "links": [
+            "6583d5f44e957ce0"
+        ],
+        "x": 445,
+        "y": 1140,
+        "wires": [
+            [
+                "6578372151a0df87"
+            ]
+        ]
+    },
+    {
+        "id": "2311204e8aeb792a",
+        "type": "debug",
+        "z": "d974087eb4410441",
+        "g": "7c5378ce3d8e1fab",
+        "name": "debug 54",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 700,
-        "y": 60,
+        "x": 760,
+        "y": 1140,
         "wires": []
     },
     {
@@ -2128,14 +2307,14 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n    <v-text-field v-model=\"search\" label=\"Search\" prepend-inner-icon=\"mdi-magnify\" single-line variant=\"outlined\"\n    hide-details></v-text-field>\n    <v-data-table v-model:search=\"search\" :items=\"msg?.payload\">\n\n      <template v-slot:header.total_impact_score>\n        <div class=\"text-center\">Score</div>\n      </template>\n\n      <template v-slot:item.name=\"{ item }\">\n        {{ item.name }}°C\n      </template>\n\n      <template v-slot:item.total_impact_score=\"{ item }\">\n        <v-progress-linear v-model=\"item.total_impact_score\" min=\"15\" max=\"200000\" height=\"25\" :color=\"getColor(item)\">\n          <template v-slot:default=\"{ value }\">\n            <strong>{{ item.total_impact_score }}</strong>\n          </template>\n        </v-progress-linear>\n      </template>\n\n    </v-data-table>\n</template>\n\n<script>\n    export default {\n    data () {\n      return {\n        search: ''\n      }\n    },\n    methods: {\n      getColor: function (item) {\n        if (item.total_impact_score > 50) {\n          return 'red'\n        } else {\n          return 'green'\n        }\n      }\n    }\n  }\n</script>",
+        "format": "<template>\n    <v-text-field v-model=\"search\" label=\"Search\" prepend-inner-icon=\"mdi-magnify\" single-line variant=\"outlined\"\n    hide-details></v-text-field>\n    <v-data-table v-model:search=\"search\" :items=\"msg?.payload\">\n\n      <template v-slot:header.total_impact_score>\n        <div class=\"text-center\">Score</div>\n      </template>\n\n      <template v-slot:item.name=\"{ item }\">\n        {{ item.name }}°C\n      </template>\n\n      <template v-slot:item.score=\"{ item }\">\n        <v-progress-linear v-model=\"item.score\" min=\"0\" max=\"100\" height=\"25\" :color=\"getColor(item)\">\n          <template v-slot:default=\"{ value }\">\n            <strong>{{ item.score }}</strong>\n          </template>\n        </v-progress-linear>\n      </template>\n\n    </v-data-table>\n</template>\n\n<script>\n    export default {\n    data () {\n      return {\n        search: ''\n      }\n    },\n    methods: {\n      getColor: function (item) {\n        if (item.score < 70) {\n          return 'red'\n        } else {\n          return 'green'\n        }\n      }\n    }\n  }\n</script>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
         "x": 580,
-        "y": 660,
+        "y": 840,
         "wires": [
             []
         ]
@@ -2159,7 +2338,7 @@
         "resendOnRefresh": true,
         "templateScope": "site:style",
         "className": "",
-        "x": 140,
+        "x": 160,
         "y": 60,
         "wires": [
             [
@@ -2181,7 +2360,7 @@
         "finalize": "",
         "libs": [],
         "x": 300,
-        "y": 740,
+        "y": 920,
         "wires": [
             [
                 "070400a13d344993",
@@ -2203,7 +2382,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 560,
-        "y": 740,
+        "y": 920,
         "wires": []
     },
     {
@@ -2288,7 +2467,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 160,
-        "y": 1300,
+        "y": 1320,
         "wires": [
             [
                 "ec77049af9dae0ab"
@@ -2315,7 +2494,7 @@
         "templateScope": "local",
         "className": "",
         "x": 160,
-        "y": 660,
+        "y": 840,
         "wires": [
             [
                 "f088635e3f42d421"
@@ -2333,7 +2512,7 @@
             "2bd950a05a93757a"
         ],
         "x": 315,
-        "y": 660,
+        "y": 840,
         "wires": []
     },
     {
@@ -2346,7 +2525,7 @@
             "a5837349ffd6fca1"
         ],
         "x": 95,
-        "y": 740,
+        "y": 920,
         "wires": [
             [
                 "723dda3faa263f6c"
@@ -2372,7 +2551,7 @@
         "templateScope": "local",
         "className": "",
         "x": 130,
-        "y": 220,
+        "y": 1040,
         "wires": [
             [
                 "7bb2d1e517ee8d24"
@@ -2392,63 +2571,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 350,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "0e0a3f5722b248de",
-        "type": "ui-form",
-        "z": "9c23ead5f4cd17b6",
-        "name": "Decide TOLL PRICES",
-        "group": "f4b408f314ea8fb3",
-        "label": "",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "options": [
-            {
-                "label": "Decide Price",
-                "key": "Price",
-                "type": "number",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "Price": ""
-        },
-        "payload": "",
-        "submit": "submit",
-        "cancel": "clear",
-        "resetOnSubmit": true,
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": "",
-        "className": "",
-        "x": 160,
-        "y": 300,
-        "wires": [
-            [
-                "c3aa9876bcb6f42e"
-            ]
-        ]
-    },
-    {
-        "id": "c3aa9876bcb6f42e",
-        "type": "debug",
-        "z": "9c23ead5f4cd17b6",
-        "name": "debug 45",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 360,
-        "y": 300,
+        "x": 370,
+        "y": 1040,
         "wires": []
     },
     {
@@ -2459,9 +2583,9 @@
         "group": "f4b408f314ea8fb3",
         "name": "electric_car",
         "label": "Electric",
-        "order": 0,
-        "width": 0,
-        "height": 0,
+        "order": 4,
+        "width": "1",
+        "height": "1",
         "topic": "topic",
         "topicType": "msg",
         "mode": "number",
@@ -2471,8 +2595,8 @@
         "sendOnBlur": true,
         "sendOnEnter": true,
         "className": "",
-        "x": 710,
-        "y": 420,
+        "x": 670,
+        "y": 580,
         "wires": [
             [
                 "d3bb702bcdf691a1"
@@ -2485,15 +2609,15 @@
         "z": "9c23ead5f4cd17b6",
         "g": "116ddb3989f7865c",
         "name": "prices",
-        "func": "let e = 10;\n\nlet updated_electric_price = global.get(\"updated_el_price\");\n\nif (updated_electric_price){\n    e = updated_electric_price;\n}\n\n\n\n\nlet s = 5;\nlet g = 25;\n\n\nlet current_prices = {\n    electric: e,\n    service: s,\n    gasoline: g\n};\n\nlet a = {topic: \"electric\"};\n\nmsg.payload = current_prices;\n\nreturn msg;",
+        "func": "\n\nlet e_price = global.get(\"toll_electric\");\nlet s_price = global.get(\"toll_service\");\nlet g_price = global.get(\"toll_gasoline\");\n\n\nlet s = 5;\nlet g = 25;\n\n\nlet current_prices = {\n    electric: e_price,\n    service: s_price,\n    gasoline: g_price\n};\n\nmsg.payload = current_prices;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 330,
-        "y": 460,
+        "x": 230,
+        "y": 620,
         "wires": [
             [
                 "d5bb29401cd9c2f9"
@@ -2504,7 +2628,7 @@
         "id": "04613cd67e7bd8bd",
         "type": "ui-template",
         "z": "9c23ead5f4cd17b6",
-        "g": "116ddb3989f7865c",
+        "g": "69f933624170a8db",
         "group": "f4b408f314ea8fb3",
         "page": "",
         "ui": "",
@@ -2519,11 +2643,12 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 170,
-        "y": 460,
+        "x": 190,
+        "y": 300,
         "wires": [
             [
-                "9695c47a09c4d657"
+                "6f2b6412d3243be9",
+                "da204c00005594c9"
             ]
         ]
     },
@@ -2535,9 +2660,9 @@
         "group": "f4b408f314ea8fb3",
         "name": "service_car",
         "label": "Service",
-        "order": 0,
-        "width": 0,
-        "height": 0,
+        "order": 5,
+        "width": "1",
+        "height": "1",
         "topic": "topic",
         "topicType": "msg",
         "mode": "number",
@@ -2547,8 +2672,8 @@
         "sendOnBlur": true,
         "sendOnEnter": true,
         "className": "",
-        "x": 710,
-        "y": 460,
+        "x": 670,
+        "y": 620,
         "wires": [
             [
                 "d3bb702bcdf691a1"
@@ -2563,9 +2688,9 @@
         "group": "f4b408f314ea8fb3",
         "name": "gasoline_car",
         "label": "Gasoline",
-        "order": 0,
-        "width": 0,
-        "height": 0,
+        "order": 6,
+        "width": "1",
+        "height": "1",
         "topic": "topic",
         "topicType": "msg",
         "mode": "number",
@@ -2575,8 +2700,8 @@
         "sendOnBlur": true,
         "sendOnEnter": true,
         "className": "",
-        "x": 710,
-        "y": 500,
+        "x": 670,
+        "y": 660,
         "wires": [
             [
                 "d3bb702bcdf691a1"
@@ -2597,8 +2722,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1060,
-        "y": 460,
+        "x": 1040,
+        "y": 620,
         "wires": []
     },
     {
@@ -2607,15 +2732,15 @@
         "z": "9c23ead5f4cd17b6",
         "g": "116ddb3989f7865c",
         "name": "update_service",
-        "func": "if (msg.parts.key == \"electric\"){\n    global.set(\"updated_el_price\", msg.payload);\n}\n\n\n\nreturn msg;",
+        "func": "if (msg.parts.key == \"electric\"){\n    //global.set(\"toll_electric\", msg.payload);\n    msg.payload = msg.payload;\n}\n\n\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 900,
-        "y": 460,
+        "x": 880,
+        "y": 620,
         "wires": [
             [
                 "49ab5c9eef18e2fe"
@@ -2650,8 +2775,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 570,
-        "y": 460,
+        "x": 490,
+        "y": 620,
         "wires": [
             [
                 "728bcfee316180c5"
@@ -2676,8 +2801,8 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 450,
-        "y": 460,
+        "x": 370,
+        "y": 620,
         "wires": [
             [
                 "2636e9073bae688d"
@@ -2691,8 +2816,8 @@
         "g": "116ddb3989f7865c",
         "name": "make db-implementation",
         "info": "",
-        "x": 750,
-        "y": 560,
+        "x": 950,
+        "y": 700,
         "wires": []
     },
     {
@@ -2708,8 +2833,298 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 340,
+        "x": 360,
         "y": 60,
+        "wires": []
+    },
+    {
+        "id": "d9f5b4ebe6ceadec",
+        "type": "link out",
+        "z": "9c23ead5f4cd17b6",
+        "g": "69f933624170a8db",
+        "name": "dashboard.output.refresh_true",
+        "mode": "link",
+        "links": [
+            "e1c49e9771213b10"
+        ],
+        "x": 765,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "ddefcb191dc9d43a",
+        "type": "link in",
+        "z": "9c23ead5f4cd17b6",
+        "g": "116ddb3989f7865c",
+        "name": "dashboard.input.update_prices",
+        "links": [
+            "438180f8e7ed266d",
+            "7d834a69f9cfe8eb"
+        ],
+        "x": 115,
+        "y": 620,
+        "wires": [
+            [
+                "9695c47a09c4d657"
+            ]
+        ]
+    },
+    {
+        "id": "6f2b6412d3243be9",
+        "type": "function",
+        "z": "9c23ead5f4cd17b6",
+        "g": "69f933624170a8db",
+        "name": "decide_if_refresh",
+        "func": "let action = false;\n\nif (!global.get(\"toll_electric\") || !global.get(\"toll_gasoline\") || !global.get(\"toll_service\")) {\n    action = true;\n}\n\nmsg.payload = action;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 420,
+        "wires": [
+            [
+                "32bba6d6bdb66cee"
+            ]
+        ]
+    },
+    {
+        "id": "32bba6d6bdb66cee",
+        "type": "switch",
+        "z": "9c23ead5f4cd17b6",
+        "g": "69f933624170a8db",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 630,
+        "y": 420,
+        "wires": [
+            [
+                "d9f5b4ebe6ceadec"
+            ],
+            [
+                "7d834a69f9cfe8eb"
+            ]
+        ]
+    },
+    {
+        "id": "7d834a69f9cfe8eb",
+        "type": "link out",
+        "z": "9c23ead5f4cd17b6",
+        "g": "69f933624170a8db",
+        "name": "dashboard.output.refresh_false",
+        "mode": "link",
+        "links": [
+            "ddefcb191dc9d43a"
+        ],
+        "x": 765,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "da204c00005594c9",
+        "type": "function",
+        "z": "9c23ead5f4cd17b6",
+        "g": "69f933624170a8db",
+        "name": "function 5",
+        "func": "let a = global.get(\"toll_electric\");\n\nmsg.payload = a;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 460,
+        "wires": [
+            [
+                "38573d34b841eb61"
+            ]
+        ]
+    },
+    {
+        "id": "38573d34b841eb61",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "g": "69f933624170a8db",
+        "name": "debug 51",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "9ae509c0229a4605",
+        "type": "ui-text",
+        "z": "9c23ead5f4cd17b6",
+        "g": "69f933624170a8db",
+        "group": "f4b408f314ea8fb3",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "name": "",
+        "label": "Selected station",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Helvetica, sans-serif",
+        "fontSize": 16,
+        "color": "#1c1c1c",
+        "className": "",
+        "x": 780,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "9dca2e760e12e3df",
+        "type": "ui-text-input",
+        "z": "9c23ead5f4cd17b6",
+        "g": "69f933624170a8db",
+        "group": "f4b408f314ea8fb3",
+        "name": "input_station",
+        "label": "station_id",
+        "order": 3,
+        "width": "1",
+        "height": "1",
+        "topic": "topic",
+        "topicType": "msg",
+        "mode": "number",
+        "delay": 300,
+        "passthru": true,
+        "sendOnDelay": false,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "x": 770,
+        "y": 300,
+        "wires": [
+            [
+                "ef9316e3662e77af"
+            ]
+        ]
+    },
+    {
+        "id": "ef9316e3662e77af",
+        "type": "function",
+        "z": "9c23ead5f4cd17b6",
+        "g": "69f933624170a8db",
+        "name": "clamp",
+        "func": "if (msg.payload <= 1) {\n    msg.payload = 1;\n}\n\n\n\n\nglobal.set(\"selected_toll_station\", msg.payload);\n\nmsg.topic = \"request_from_toll_prices\"\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 300,
+        "wires": [
+            [
+                "d9f5b4ebe6ceadec"
+            ]
+        ]
+    },
+    {
+        "id": "b3df72d8dcb2bc3a",
+        "type": "link in",
+        "z": "9c23ead5f4cd17b6",
+        "g": "69f933624170a8db",
+        "name": "link in 12",
+        "links": [
+            "f82bd2713bd5bea4"
+        ],
+        "x": 495,
+        "y": 380,
+        "wires": [
+            [
+                "2d68d6a1aa9ef244"
+            ]
+        ]
+    },
+    {
+        "id": "2d68d6a1aa9ef244",
+        "type": "switch",
+        "z": "9c23ead5f4cd17b6",
+        "g": "69f933624170a8db",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "id_error",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ok",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 630,
+        "y": 380,
+        "wires": [
+            [
+                "9ae509c0229a4605"
+            ],
+            [
+                "2848dc9c2586b927",
+                "438180f8e7ed266d",
+                "9ae509c0229a4605"
+            ]
+        ]
+    },
+    {
+        "id": "2848dc9c2586b927",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "g": "69f933624170a8db",
+        "name": "debug 55",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "438180f8e7ed266d",
+        "type": "link out",
+        "z": "9c23ead5f4cd17b6",
+        "g": "69f933624170a8db",
+        "name": "communication.output.refresh_after_change",
+        "mode": "link",
+        "links": [
+            "ddefcb191dc9d43a"
+        ],
+        "x": 765,
+        "y": 400,
         "wires": []
     }
 ]
