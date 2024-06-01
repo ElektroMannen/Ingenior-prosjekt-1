@@ -53,7 +53,7 @@
             "8955a8be5e602442"
         ],
         "x": 34,
-        "y": 79,
+        "y": 59,
         "w": 672,
         "h": 302
     },
@@ -67,11 +67,12 @@
             "stroke": "#a4a4a4"
         },
         "nodes": [
-            "dc1d7aadb5cf6f36"
+            "dc1d7aadb5cf6f36",
+            "b23d2583cd712fdc"
         ],
         "x": 34,
         "y": 19,
-        "w": 212,
+        "w": 412,
         "h": 82
     },
     {
@@ -90,8 +91,8 @@
             "fbb060fd70043410",
             "8f11c965debd450e"
         ],
-        "x": 94,
-        "y": 1259,
+        "x": 44,
+        "y": 719,
         "w": 312,
         "h": 202
     },
@@ -139,7 +140,7 @@
             "b27aeb6f7cd37378"
         ],
         "x": 54,
-        "y": 1119,
+        "y": 1099,
         "w": 292,
         "h": 202
     },
@@ -147,7 +148,89 @@
         "id": "9e784f1479b1ecc4",
         "type": "group",
         "z": "c7015bd55ac9c57d",
-        "name": "Get power prices",
+        "name": "toll_station",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "21275fd3a4c7913e",
+            "5454094dd1d0958e"
+        ],
+        "x": 48,
+        "y": 1353,
+        "w": 1204,
+        "h": 474
+    },
+    {
+        "id": "8ceaad14f6929143",
+        "type": "group",
+        "z": "d974087eb4410441",
+        "name": "db tollstation",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "fa423b6c44026824",
+            "7c5378ce3d8e1fab"
+        ],
+        "x": 38,
+        "y": 953,
+        "w": 1184,
+        "h": 514
+    },
+    {
+        "id": "fa423b6c44026824",
+        "type": "group",
+        "z": "d974087eb4410441",
+        "g": "8ceaad14f6929143",
+        "name": "insert_powerprice",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "b3c8efd25d693eb7",
+            "2fa7fa16.df7d36",
+            "8c41d7d6d675747c",
+            "6deff2c3917ab08e",
+            "c255e9fac127380c",
+            "20fc10f82e1fbb3c",
+            "86b977f88d28dd31",
+            "f5f52c154dc1c527",
+            "465b90c9e7577fdd",
+            "b8b5793024a68019"
+        ],
+        "x": 64,
+        "y": 979,
+        "w": 1132,
+        "h": 202
+    },
+    {
+        "id": "21275fd3a4c7913e",
+        "type": "group",
+        "z": "c7015bd55ac9c57d",
+        "g": "9e784f1479b1ecc4",
+        "name": "return to toll station",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "56faac02af1e3921",
+            "892664ccd686b134",
+            "a8858f8a4c84de28",
+            "3eb8a7513cd893f0",
+            "6d866f700464c477"
+        ],
+        "x": 74,
+        "y": 1659,
+        "w": 592,
+        "h": 142
+    },
+    {
+        "id": "5454094dd1d0958e",
+        "type": "group",
+        "z": "c7015bd55ac9c57d",
+        "g": "9e784f1479b1ecc4",
+        "name": "get_power_prices",
         "style": {
             "label": true
         },
@@ -158,36 +241,87 @@
             "270c46f9ca7fe345",
             "75db24836ef699f2",
             "7047c6b94e2edca3",
+            "11e643123ec5b919",
             "5447f1d107d07b4d",
             "216a5b5f33c20201",
-            "56faac02af1e3921",
-            "892664ccd686b134",
-            "65fb29d2b155b8e1",
-            "a8858f8a4c84de28",
-            "11e643123ec5b919"
+            "37f366920074a58d"
         ],
-        "x": 34,
+        "x": 74,
         "y": 1379,
-        "w": 798,
-        "h": 528
+        "w": 1152,
+        "h": 222
     },
     {
-        "id": "65fb29d2b155b8e1",
+        "id": "7c5378ce3d8e1fab",
         "type": "group",
-        "z": "c7015bd55ac9c57d",
-        "g": "9e784f1479b1ecc4",
-        "name": "Toll station",
+        "z": "d974087eb4410441",
+        "g": "8ceaad14f6929143",
+        "name": "get_userscore_and_price",
         "style": {
             "label": true
         },
         "nodes": [
-            "3eb8a7513cd893f0",
-            "6d866f700464c477"
+            "f1c8edc3f112fcf2",
+            "06dc7761e9b36e06",
+            "53c9477e6ec4d517",
+            "8a79294f8c9e1bda",
+            "2492751851d4ab57",
+            "6578372151a0df87",
+            "bd683dfaf575d92b",
+            "b8a9c66769c3fe5d",
+            "2af38b9c334ca4af",
+            "8ff91e6586ddbeb6"
         ],
-        "x": 454,
-        "y": 1779,
-        "w": 352,
-        "h": 102
+        "x": 64,
+        "y": 1239,
+        "w": 1132,
+        "h": 202
+    },
+    {
+        "id": "1343424fbbdc4b4e",
+        "type": "group",
+        "z": "9c23ead5f4cd17b6",
+        "name": "users_overview_page",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ea5ff2cd0cdfe128",
+            "723dda3faa263f6c",
+            "070400a13d344993",
+            "856de6d3ce3eff89",
+            "f088635e3f42d421",
+            "33998569dd15990e"
+        ],
+        "x": 54,
+        "y": 619,
+        "w": 632,
+        "h": 162
+    },
+    {
+        "id": "116ddb3989f7865c",
+        "type": "group",
+        "z": "9c23ead5f4cd17b6",
+        "name": "set_toll_prices",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "728bcfee316180c5",
+            "9695c47a09c4d657",
+            "04613cd67e7bd8bd",
+            "fd21801d95c179a1",
+            "6a8d7251a99d269b",
+            "49ab5c9eef18e2fe",
+            "d3bb702bcdf691a1",
+            "2636e9073bae688d",
+            "d5bb29401cd9c2f9",
+            "d2c115aaae325b40"
+        ],
+        "x": 54,
+        "y": 379,
+        "w": 1112,
+        "h": 222
     },
     {
         "id": "f2952bbb2ad433e2",
@@ -370,6 +504,16 @@
         "disabled": "false"
     },
     {
+        "id": "2236dfd1.c909e",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "test",
+        "tz": "",
+        "charset": ""
+    },
+    {
         "id": "bb8e501cbe7d5d9d",
         "type": "function",
         "z": "c7015bd55ac9c57d",
@@ -383,7 +527,7 @@
         "finalize": "",
         "libs": [],
         "x": 360,
-        "y": 180,
+        "y": 160,
         "wires": [
             [
                 "e4f62c1015b6a187",
@@ -407,7 +551,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 580,
-        "y": 260,
+        "y": 240,
         "wires": []
     },
     {
@@ -426,7 +570,7 @@
         "expiry": "",
         "broker": "dc20097875203fb9",
         "x": 630,
-        "y": 180,
+        "y": 160,
         "wires": []
     },
     {
@@ -466,8 +610,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": true,
-        "x": 230,
-        "y": 500,
+        "x": 410,
+        "y": 440,
         "wires": [
             [
                 "414f9ce98347a63b"
@@ -483,7 +627,7 @@
         "links": [
             "34ea1d322de1ddc2"
         ],
-        "x": 315,
+        "x": 615,
         "y": 440,
         "wires": []
     },
@@ -495,7 +639,7 @@
         "name": "",
         "info": "<script>\n\n    \n    (function($scope) {\n    \n \n    console.log('Hello');\n\n    let keys = {};\n\n    document.addEventListener('keydown', (event) => {\n    if (event.repeat) return;\n    \n    if (event.key != \"CapsLock\") {\n        keys[event.key] = true;\n        let msg = {\"payload\": keys, \"topic\": \"keydown\"};\n        $scope.send(msg);\n    }\n    });\n\n    document.addEventListener('keyup', (event) => {\n    var keyName = event.key;\n    var keyCode = event.code;\n    delete keys[event.key];\n    let msg = {\"payload\": keys, \"topic\": \"keyup\"};\n    $scope.send(msg);\n\n    },{capture: true});\n    })(scope);\n</script>",
         "x": 160,
-        "y": 340,
+        "y": 320,
         "wires": []
     },
     {
@@ -506,7 +650,7 @@
         "name": "",
         "info": "display here with \n\n{{msg.payload}}\n\nui_text",
         "x": 340,
-        "y": 120,
+        "y": 100,
         "wires": []
     },
     {
@@ -529,7 +673,7 @@
         "templateScope": "local",
         "className": "",
         "x": 130,
-        "y": 180,
+        "y": 160,
         "wires": [
             [
                 "bb8e501cbe7d5d9d"
@@ -555,7 +699,7 @@
         "color": "#717171",
         "className": "{{msg.payload}}",
         "x": 530,
-        "y": 120,
+        "y": 100,
         "wires": []
     },
     {
@@ -573,7 +717,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 150,
-        "y": 1160,
+        "y": 1140,
         "wires": [
             [
                 "038b288f4ba869de"
@@ -595,7 +739,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 140,
-        "y": 1220,
+        "y": 1200,
         "wires": [
             [
                 "2f4b2f43ca14af61"
@@ -617,7 +761,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 140,
-        "y": 1280,
+        "y": 1260,
         "wires": [
             [
                 "b27aeb6f7cd37378"
@@ -635,7 +779,7 @@
             "1236e3bf163b4142"
         ],
         "x": 305,
-        "y": 1160,
+        "y": 1140,
         "wires": []
     },
     {
@@ -649,7 +793,7 @@
             "eb6d2cad886648e8"
         ],
         "x": 305,
-        "y": 1220,
+        "y": 1200,
         "wires": []
     },
     {
@@ -663,7 +807,7 @@
             "e893b7685905402d"
         ],
         "x": 305,
-        "y": 1280,
+        "y": 1260,
         "wires": []
     },
     {
@@ -964,7 +1108,7 @@
         "id": "b4fe374a9bd7e327",
         "type": "http request",
         "z": "c7015bd55ac9c57d",
-        "g": "9e784f1479b1ecc4",
+        "g": "5454094dd1d0958e",
         "name": "get_power_prices",
         "method": "GET",
         "ret": "txt",
@@ -977,8 +1121,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 370,
-        "y": 1420,
+        "x": 590,
+        "y": 1460,
         "wires": [
             [
                 "270c46f9ca7fe345"
@@ -989,8 +1133,8 @@
         "id": "1924828f1dadb641",
         "type": "inject",
         "z": "c7015bd55ac9c57d",
-        "g": "9e784f1479b1ecc4",
-        "name": "",
+        "g": "5454094dd1d0958e",
+        "name": "emulate_toll_station",
         "props": [
             {
                 "p": "payload"
@@ -1005,10 +1149,10 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "0",
-        "payloadType": "num",
-        "x": 130,
-        "y": 1440,
+        "payload": "Car ID: 1, driver ID: 1",
+        "payloadType": "str",
+        "x": 210,
+        "y": 1460,
         "wires": [
             [
                 "0c28e72814e9bbae"
@@ -1019,19 +1163,20 @@
         "id": "0c28e72814e9bbae",
         "type": "function",
         "z": "c7015bd55ac9c57d",
-        "g": "9e784f1479b1ecc4",
+        "g": "5454094dd1d0958e",
         "name": "get_now",
-        "func": "//let date2 = new Date(Date.UTC(2012, 3, 0, 3, 0, 0)).toLocaleDateString(\"no-NO\", {day: \"2-digit\"}).slice(0,2)\nlet date = new Date();\n\n\n\n//let day = date.getDay().toLocaleString(\"no_NO\", options);\nlet day = date.toLocaleDateString(\"no-NO\", {day: \"2-digit\"}).slice(0,2);\nlet month = date.toLocaleDateString(\"no-NO\", {month: \"2-digit\"}).slice(0,2);\nlet year = date.getFullYear();\n\n\n\nmsg.topic = `${year}/${month}-${day}_NO5`;\n\n//msg.payload = day\n//msg.topic = \"/2024/05-30_NO5\";\nreturn msg;",
+        "func": "//let date2 = new Date(Date.UTC(2012, 3, 0, 3, 0, 0)).toLocaleDateString(\"no-NO\", {day: \"2-digit\"}).slice(0,2)\nlet date = new Date();\n\nlet received_string = msg.payload;\n\n//\"Car ID: 3, driver ID: 3\"\nconst re = new RegExp(\"\\d\");\n\nconst res = /Car ID: ([0-9]+), driver ID: ([0-9]+)/;\n\n\nlet regex_find = received_string.match(res);\n\nflow.set(\"car_id\", parseInt(regex_find[1], 10));\nflow.set(\"user_id\",parseInt(regex_find[2], 10));\n\n//let day = date.getDay().toLocaleString(\"no_NO\", options);\nlet day = date.toLocaleDateString(\"no-NO\", {day: \"2-digit\"}).slice(0,2);\nlet month = date.toLocaleDateString(\"no-NO\", {month: \"2-digit\"}).slice(0,2);\nlet year = date.getFullYear();\n\n\n\nmsg.topic = `${year}/${month}-${day}_NO5`;\n\n//msg.payload = day\n//msg.topic = \"/2024/05-30_NO5\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 220,
-        "y": 1520,
+        "x": 400,
+        "y": 1460,
         "wires": [
             [
+                "37f366920074a58d",
                 "b4fe374a9bd7e327"
             ]
         ]
@@ -1040,13 +1185,13 @@
         "id": "270c46f9ca7fe345",
         "type": "json",
         "z": "c7015bd55ac9c57d",
-        "g": "9e784f1479b1ecc4",
+        "g": "5454094dd1d0958e",
         "name": "",
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 550,
-        "y": 1420,
+        "x": 750,
+        "y": 1460,
         "wires": [
             [
                 "75db24836ef699f2"
@@ -1057,17 +1202,17 @@
         "id": "75db24836ef699f2",
         "type": "function",
         "z": "c7015bd55ac9c57d",
-        "g": "9e784f1479b1ecc4",
+        "g": "5454094dd1d0958e",
         "name": "get_current_price",
-        "func": "let hour = new Date().getHours();\n\nlet prices = msg.payload;\n\nmsg.payload = prices[hour]['NOK_per_kWh'];\n\nreturn msg;\n",
+        "func": "let hour = new Date().getHours();\n\nlet prices = msg.payload;\n\nlet toll_info = {\n    price: prices[hour]['NOK_per_kWh'],\n    car_id: flow.get(\"car_id\")\n}\nmsg.topic = \"\"\nmsg.payload = toll_info;\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 470,
-        "y": 1520,
+        "x": 930,
+        "y": 1460,
         "wires": [
             [
                 "7047c6b94e2edca3",
@@ -1079,7 +1224,7 @@
         "id": "7047c6b94e2edca3",
         "type": "debug",
         "z": "c7015bd55ac9c57d",
-        "g": "9e784f1479b1ecc4",
+        "g": "5454094dd1d0958e",
         "name": "debug 30",
         "active": true,
         "tosidebar": true,
@@ -1088,15 +1233,15 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 700,
-        "y": 1580,
+        "x": 1120,
+        "y": 1500,
         "wires": []
     },
     {
         "id": "5447f1d107d07b4d",
         "type": "mqtt in",
         "z": "c7015bd55ac9c57d",
-        "g": "9e784f1479b1ecc4",
+        "g": "5454094dd1d0958e",
         "name": "",
         "topic": "Toll-station",
         "qos": "2",
@@ -1106,11 +1251,12 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 120,
-        "y": 1780,
+        "x": 180,
+        "y": 1560,
         "wires": [
             [
-                "216a5b5f33c20201"
+                "216a5b5f33c20201",
+                "0c28e72814e9bbae"
             ]
         ]
     },
@@ -1118,7 +1264,7 @@
         "id": "216a5b5f33c20201",
         "type": "debug",
         "z": "c7015bd55ac9c57d",
-        "g": "9e784f1479b1ecc4",
+        "g": "5454094dd1d0958e",
         "name": "debug 31",
         "active": true,
         "tosidebar": true,
@@ -1127,22 +1273,21 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 280,
-        "y": 1840,
+        "x": 360,
+        "y": 1560,
         "wires": []
     },
     {
         "id": "56faac02af1e3921",
         "type": "link in",
         "z": "c7015bd55ac9c57d",
-        "g": "9e784f1479b1ecc4",
-        "name": "link in 8",
+        "g": "21275fd3a4c7913e",
+        "name": "comms.input.return_to_toll",
         "links": [
-            "8a79294f8c9e1bda",
-            "679215817a5baefd"
+            "8a79294f8c9e1bda"
         ],
-        "x": 85,
-        "y": 1600,
+        "x": 115,
+        "y": 1700,
         "wires": [
             [
                 "892664ccd686b134"
@@ -1153,20 +1298,21 @@
         "id": "892664ccd686b134",
         "type": "function",
         "z": "c7015bd55ac9c57d",
-        "g": "9e784f1479b1ecc4",
-        "name": "function 5",
-        "func": "let c_class = msg.payload[0]['class'];\nlet drive_score = msg.payload[0]['total_impact_score'];\n\n\nif (c_class == \"Electric\") {\n    \n} else {\n    msg.payload = 0;\n}\n\nreturn msg;",
+        "g": "21275fd3a4c7913e",
+        "name": "decide_price",
+        "func": "if (msg.payload !== null) {\n    let c_class = msg.payload[0];\n    let dsc = msg.payload[1];\n    let nok_kWh = msg.payload[2];\n    \n    // reward electric drivers on days with low electric prices\n    if (c_class == \"Electric\") {\n        msg.payload = nok_kWh * dsc;\n    } else {\n        msg.payload = 0;\n    }\n} else {\n    msg.payload = \"No such user/vehicle registered\";\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 220,
-        "y": 1640,
+        "x": 270,
+        "y": 1700,
         "wires": [
             [
-                "a8858f8a4c84de28"
+                "a8858f8a4c84de28",
+                "3eb8a7513cd893f0"
             ]
         ]
     },
@@ -1174,7 +1320,7 @@
         "id": "3eb8a7513cd893f0",
         "type": "mqtt out",
         "z": "c7015bd55ac9c57d",
-        "g": "65fb29d2b155b8e1",
+        "g": "21275fd3a4c7913e",
         "name": "",
         "topic": "carPrice",
         "qos": "2",
@@ -1185,16 +1331,16 @@
         "correl": "",
         "expiry": "",
         "broker": "dc20097875203fb9",
-        "x": 720,
-        "y": 1820,
+        "x": 560,
+        "y": 1760,
         "wires": []
     },
     {
         "id": "6d866f700464c477",
         "type": "inject",
         "z": "c7015bd55ac9c57d",
-        "g": "65fb29d2b155b8e1",
-        "name": "",
+        "g": "21275fd3a4c7913e",
+        "name": "resend_test",
         "props": [
             {
                 "p": "payload"
@@ -1211,8 +1357,8 @@
         "topic": "",
         "payload": "73",
         "payloadType": "num",
-        "x": 550,
-        "y": 1840,
+        "x": 190,
+        "y": 1760,
         "wires": [
             [
                 "3eb8a7513cd893f0"
@@ -1223,87 +1369,40 @@
         "id": "a8858f8a4c84de28",
         "type": "debug",
         "z": "c7015bd55ac9c57d",
-        "g": "9e784f1479b1ecc4",
+        "g": "21275fd3a4c7913e",
         "name": "debug 35",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 440,
-        "y": 1660,
+        "x": 560,
+        "y": 1700,
         "wires": []
     },
     {
         "id": "11e643123ec5b919",
         "type": "link out",
         "z": "c7015bd55ac9c57d",
-        "g": "9e784f1479b1ecc4",
+        "g": "5454094dd1d0958e",
         "name": "get-price.output",
         "mode": "link",
         "links": [
             "b3c8efd25d693eb7"
         ],
-        "x": 655,
-        "y": 1500,
+        "x": 1075,
+        "y": 1420,
         "wires": []
     },
     {
-        "id": "362c8eb1df4a411b",
-        "type": "inject",
-        "z": "d974087eb4410441",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 60,
-        "wires": [
-            [
-                "a61369b962f8c714"
-            ]
-        ]
-    },
-    {
-        "id": "a61369b962f8c714",
-        "type": "function",
-        "z": "d974087eb4410441",
-        "name": "function 1",
-        "func": "\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 340,
-        "y": 100,
-        "wires": [
-            [
-                "25d0fcd267a2c8ef"
-            ]
-        ]
-    },
-    {
-        "id": "25d0fcd267a2c8ef",
+        "id": "37f366920074a58d",
         "type": "debug",
-        "z": "d974087eb4410441",
-        "name": "debug 1",
+        "z": "c7015bd55ac9c57d",
+        "g": "5454094dd1d0958e",
+        "name": "debug 41",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -1311,311 +1410,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 500,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "1ff7ed1fec796744",
-        "type": "inject",
-        "z": "d974087eb4410441",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 180,
-        "wires": [
-            [
-                "e96428d3c05b83ed"
-            ]
-        ]
-    },
-    {
-        "id": "e96428d3c05b83ed",
-        "type": "debug",
-        "z": "d974087eb4410441",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 340,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "0870987945a5e4cb",
-        "type": "inject",
-        "z": "d974087eb4410441",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 340,
-        "wires": [
-            [
-                "d8d3a27b729e9783"
-            ]
-        ]
-    },
-    {
-        "id": "d8d3a27b729e9783",
-        "type": "function",
-        "z": "d974087eb4410441",
-        "name": "function 2",
-        "func": "\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 300,
-        "y": 400,
-        "wires": [
-            [
-                "c42c7b32ce0235f1"
-            ]
-        ]
-    },
-    {
-        "id": "c42c7b32ce0235f1",
-        "type": "debug",
-        "z": "d974087eb4410441",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 580,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "7990dc354a738d5b",
-        "type": "mysql",
-        "z": "d974087eb4410441",
-        "mydb": "f2952bbb2ad433e2",
-        "name": "mdb-test",
-        "x": 500,
-        "y": 440,
-        "wires": [
-            [
-                "dbf573f1be114c43"
-            ]
-        ]
-    },
-    {
-        "id": "fad8b9ec333779f3",
-        "type": "inject",
-        "z": "d974087eb4410441",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 440,
-        "wires": [
-            [
-                "41f66b13af6e1ee2"
-            ]
-        ]
-    },
-    {
-        "id": "41f66b13af6e1ee2",
-        "type": "function",
-        "z": "d974087eb4410441",
-        "name": "GET_USERS",
-        "func": "msg.topic = \"SELECT * FROM users;\"\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 310,
-        "y": 440,
-        "wires": [
-            [
-                "7990dc354a738d5b"
-            ]
-        ]
-    },
-    {
-        "id": "dbf573f1be114c43",
-        "type": "debug",
-        "z": "d974087eb4410441",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 640,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "d5b808832e3458f5",
-        "type": "mysql",
-        "z": "d974087eb4410441",
-        "mydb": "f2952bbb2ad433e2",
-        "name": "mdb-test",
-        "x": 480,
-        "y": 540,
-        "wires": [
-            [
-                "715a363715462c6f"
-            ]
-        ]
-    },
-    {
-        "id": "49ac945123b5fd9f",
-        "type": "function",
-        "z": "d974087eb4410441",
-        "name": "GET_USERS",
-        "func": "msg.topic = \"SELECT * FROM users;\"\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 310,
-        "y": 480,
-        "wires": [
-            [
-                "d5b808832e3458f5"
-            ]
-        ]
-    },
-    {
-        "id": "a8962c15f7d4c160",
-        "type": "inject",
-        "z": "d974087eb4410441",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 520,
-        "wires": [
-            [
-                "49ac945123b5fd9f"
-            ]
-        ]
-    },
-    {
-        "id": "715a363715462c6f",
-        "type": "link out",
-        "z": "d974087eb4410441",
-        "name": "link out 1",
-        "mode": "link",
-        "links": [
-            "164294998b95d982"
-        ],
-        "x": 595,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "32ae6f909bb2a803",
-        "type": "mqtt in",
-        "z": "d974087eb4410441",
-        "name": "",
-        "topic": "info/test",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "dc20097875203fb9",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 180,
-        "y": 680,
-        "wires": [
-            [
-                "bb93e4ee023dabaa"
-            ]
-        ]
-    },
-    {
-        "id": "bb93e4ee023dabaa",
-        "type": "debug",
-        "z": "d974087eb4410441",
-        "name": "debug 13",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 360,
-        "y": 680,
+        "x": 570,
+        "y": 1560,
         "wires": []
     },
     {
@@ -1639,8 +1435,8 @@
         "topic": "",
         "payload": "hello from nodered",
         "payloadType": "str",
-        "x": 500,
-        "y": 800,
+        "x": 160,
+        "y": 100,
         "wires": [
             [
                 "396957e4591a092c",
@@ -1657,11 +1453,12 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 700,
-        "y": 780,
+        "x": 360,
+        "y": 80,
         "wires": []
     },
     {
@@ -1678,8 +1475,8 @@
         "correl": "",
         "expiry": "",
         "broker": "dc20097875203fb9",
-        "x": 700,
-        "y": 820,
+        "x": 360,
+        "y": 120,
         "wires": []
     },
     {
@@ -1690,8 +1487,8 @@
         "links": [
             "414f9ce98347a63b"
         ],
-        "x": 115,
-        "y": 940,
+        "x": 75,
+        "y": 200,
         "wires": [
             [
                 "0b3e6df4fe188922"
@@ -1711,8 +1508,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 640,
-        "y": 940,
+        "x": 600,
+        "y": 200,
         "wires": []
     },
     {
@@ -1721,8 +1518,8 @@
         "z": "d974087eb4410441",
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
-        "x": 480,
-        "y": 940,
+        "x": 440,
+        "y": 200,
         "wires": [
             [
                 "cb643570aee91a84"
@@ -1741,8 +1538,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 270,
-        "y": 940,
+        "x": 230,
+        "y": 200,
         "wires": [
             [
                 "cbc77b34d7b89224"
@@ -1755,8 +1552,8 @@
         "z": "d974087eb4410441",
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
-        "x": 400,
-        "y": 1020,
+        "x": 360,
+        "y": 280,
         "wires": [
             [
                 "a5837349ffd6fca1"
@@ -1775,8 +1572,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 240,
-        "y": 1020,
+        "x": 200,
+        "y": 280,
         "wires": [
             [
                 "77ef07ddbc346c22"
@@ -1792,8 +1589,8 @@
         "links": [
             "33998569dd15990e"
         ],
-        "x": 515,
-        "y": 1020,
+        "x": 475,
+        "y": 280,
         "wires": []
     },
     {
@@ -1804,8 +1601,8 @@
         "links": [
             "f088635e3f42d421"
         ],
-        "x": 115,
-        "y": 1020,
+        "x": 75,
+        "y": 280,
         "wires": [
             [
                 "22308172980d6de6"
@@ -1822,8 +1619,8 @@
         "links": [
             "038b288f4ba869de"
         ],
-        "x": 135,
-        "y": 1300,
+        "x": 85,
+        "y": 760,
         "wires": [
             [
                 "6f161c9edf33ba3d"
@@ -1840,8 +1637,8 @@
         "links": [
             "2f4b2f43ca14af61"
         ],
-        "x": 135,
-        "y": 1360,
+        "x": 85,
+        "y": 820,
         "wires": [
             [
                 "fbb060fd70043410"
@@ -1858,8 +1655,8 @@
         "links": [
             "b27aeb6f7cd37378"
         ],
-        "x": 135,
-        "y": 1420,
+        "x": 85,
+        "y": 880,
         "wires": [
             [
                 "8f11c965debd450e"
@@ -1881,8 +1678,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 300,
-        "y": 1300,
+        "x": 250,
+        "y": 760,
         "wires": []
     },
     {
@@ -1900,8 +1697,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 290,
-        "y": 1360,
+        "x": 240,
+        "y": 820,
         "wires": []
     },
     {
@@ -1919,22 +1716,23 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 290,
-        "y": 1420,
+        "x": 240,
+        "y": 880,
         "wires": []
     },
     {
         "id": "f1c8edc3f112fcf2",
         "type": "mysql",
         "z": "d974087eb4410441",
+        "g": "7c5378ce3d8e1fab",
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
-        "x": 480,
-        "y": 1540,
+        "x": 440,
+        "y": 1320,
         "wires": [
             [
                 "53c9477e6ec4d517",
-                "8a79294f8c9e1bda"
+                "6578372151a0df87"
             ]
         ]
     },
@@ -1942,16 +1740,17 @@
         "id": "06dc7761e9b36e06",
         "type": "function",
         "z": "d974087eb4410441",
+        "g": "7c5378ce3d8e1fab",
         "name": "get_driving_score",
-        "func": "let user_id = 1;\nlet car_id = 1;\n\n\n\nmsg.topic = `SELECT v.class, e.total_impact_score FROM vehicles v \nLEFT JOIN users u ON v.owner_id = u.id\nLEFT JOIN ecoscore e ON e.user_id = u.id\nWHERE u.id = ${user_id};`\n\nreturn msg;",
+        "func": "let user_id = flow.get(\"vehicle_id\");\nlet car_id = 1;\n\n\n\n//msg.topic = `SELECT v.class, e.total_impact_score FROM vehicles v \n//LEFT JOIN users u ON v.owner_id = u.id\n//LEFT JOIN ecoscore e ON e.user_id = u.id\n//WHERE u.id = ${user_id};`\n\nmsg.topic = `\nSELECT p.id, p.NOK_per_kWh, t.car_id  FROM coupling c \nLEFT JOIN powerprices p ON c.pcost_id = p.id\nLEFT JOIN toll t ON t.id = c.toll_id\nWHERE t.car_id = ${user_id}\nORDER BY p.id DESC\nLIMIT 1;\n`;\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
-        "y": 1580,
+        "x": 230,
+        "y": 1320,
         "wires": [
             [
                 "f1c8edc3f112fcf2"
@@ -1959,104 +1758,12 @@
         ]
     },
     {
-        "id": "bd9852f5497c0e8c",
-        "type": "inject",
-        "z": "d974087eb4410441",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 120,
-        "y": 1540,
-        "wires": [
-            [
-                "06dc7761e9b36e06"
-            ]
-        ]
-    },
-    {
         "id": "53c9477e6ec4d517",
         "type": "debug",
         "z": "d974087eb4410441",
+        "g": "7c5378ce3d8e1fab",
         "name": "debug 33",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 640,
-        "y": 1500,
-        "wires": []
-    },
-    {
-        "id": "8a79294f8c9e1bda",
-        "type": "link out",
-        "z": "d974087eb4410441",
-        "name": "db.toll-station.output",
-        "mode": "link",
-        "links": [
-            "56faac02af1e3921"
-        ],
-        "x": 605,
-        "y": 1580,
-        "wires": []
-    },
-    {
-        "id": "8a874e8061603284",
-        "type": "mysql",
-        "z": "d974087eb4410441",
-        "mydb": "f2952bbb2ad433e2",
-        "name": "mdb-test",
-        "x": 420,
-        "y": 1700,
-        "wires": [
-            [
-                "c973974b15c1dc19",
-                "679215817a5baefd"
-            ]
-        ]
-    },
-    {
-        "id": "520ffc468711bae4",
-        "type": "function",
-        "z": "d974087eb4410441",
-        "name": "insert_power_price",
-        "func": "let price = msg.payload;\n\n\n\nmsg.payload.p = price;\n\nmsg.topic = `INSERT INTO powerprices (NOK_per_kWh) VALUES (${price});`;\n\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 210,
-        "y": 1660,
-        "wires": [
-            [
-                "8a874e8061603284"
-            ]
-        ]
-    },
-    {
-        "id": "c973974b15c1dc19",
-        "type": "debug",
-        "z": "d974087eb4410441",
-        "name": "debug 36",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2064,35 +1771,311 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 620,
-        "y": 1660,
+        "y": 1280,
         "wires": []
     },
     {
-        "id": "679215817a5baefd",
+        "id": "8a79294f8c9e1bda",
         "type": "link out",
         "z": "d974087eb4410441",
+        "g": "7c5378ce3d8e1fab",
         "name": "db.toll-station.output",
         "mode": "link",
         "links": [
             "56faac02af1e3921"
         ],
-        "x": 585,
-        "y": 1740,
+        "x": 1155,
+        "y": 1340,
         "wires": []
     },
     {
         "id": "b3c8efd25d693eb7",
         "type": "link in",
         "z": "d974087eb4410441",
+        "g": "fa423b6c44026824",
         "name": "link in 9",
         "links": [
             "11e643123ec5b919"
         ],
-        "x": 85,
-        "y": 1660,
+        "x": 105,
+        "y": 1060,
         "wires": [
             [
-                "520ffc468711bae4"
+                "2fa7fa16.df7d36",
+                "6deff2c3917ab08e"
+            ]
+        ]
+    },
+    {
+        "id": "2fa7fa16.df7d36",
+        "type": "function",
+        "z": "d974087eb4410441",
+        "g": "fa423b6c44026824",
+        "name": "insert_toll",
+        "func": "let car_id = msg.payload.car_id;\n\nflow.set(\"vehicle_id\", car_id);\n\nmsg.payload=[\"good day\", car_id];\nmsg.topic=\"INSERT INTO toll (`info`, `car_id`) VALUES (?, ?);\";\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 1020,
+        "wires": [
+            [
+                "8c41d7d6d675747c"
+            ]
+        ]
+    },
+    {
+        "id": "8c41d7d6d675747c",
+        "type": "mysql",
+        "z": "d974087eb4410441",
+        "g": "fa423b6c44026824",
+        "mydb": "f2952bbb2ad433e2",
+        "name": "mdb-test",
+        "x": 500,
+        "y": 1060,
+        "wires": [
+            [
+                "c255e9fac127380c",
+                "20fc10f82e1fbb3c"
+            ]
+        ]
+    },
+    {
+        "id": "6deff2c3917ab08e",
+        "type": "function",
+        "z": "d974087eb4410441",
+        "g": "fa423b6c44026824",
+        "name": "insert_price",
+        "func": "let price = msg.payload.price;\n\nmsg.payload = [price];\nmsg.topic = \"INSERT INTO powerprices (`NOK_per_kWh`) VALUES (?);\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 1100,
+        "wires": [
+            [
+                "8c41d7d6d675747c"
+            ]
+        ]
+    },
+    {
+        "id": "c255e9fac127380c",
+        "type": "debug",
+        "z": "d974087eb4410441",
+        "g": "fa423b6c44026824",
+        "name": "debug 38",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "20fc10f82e1fbb3c",
+        "type": "function",
+        "z": "d974087eb4410441",
+        "g": "fa423b6c44026824",
+        "name": "insert_coupling_table",
+        "func": "let toll_id = null;\nlet price_id = null;\n\nif (/INSERT INTO toll/i.test(msg.topic)) {\n    flow.set(\"toll_id\", msg.payload.insertId);   \n}\n\nif (/INSERT INTO powerprices/i.test(msg.topic)) {\n    flow.set(\"price_id\", msg.payload.insertId);\n}\n\ntoll_id = flow.get(\"toll_id\");\nprice_id = flow.get(\"price_id\");\n\nif (toll_id && price_id) {\n    msg.payload = [toll_id, price_id];\n    msg.topic = msg.topic = \"INSERT INTO coupling (`tr_id`, `toll_id`, `pcost_id`) VALUES (NULL, ?, ?);\";\n\n    flow.set(\"toll_id\", null);\n    flow.set(\"price_id\", null);\n\n    return msg;\n} else {\n    return null;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 1100,
+        "wires": [
+            [
+                "86b977f88d28dd31",
+                "465b90c9e7577fdd"
+            ]
+        ]
+    },
+    {
+        "id": "86b977f88d28dd31",
+        "type": "debug",
+        "z": "d974087eb4410441",
+        "g": "fa423b6c44026824",
+        "name": "debug 39",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "f5f52c154dc1c527",
+        "type": "debug",
+        "z": "d974087eb4410441",
+        "g": "fa423b6c44026824",
+        "name": "debug 40",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "465b90c9e7577fdd",
+        "type": "mysql",
+        "z": "d974087eb4410441",
+        "g": "fa423b6c44026824",
+        "mydb": "f2952bbb2ad433e2",
+        "name": "mdb-test",
+        "x": 920,
+        "y": 1060,
+        "wires": [
+            [
+                "f5f52c154dc1c527",
+                "b8b5793024a68019"
+            ]
+        ]
+    },
+    {
+        "id": "b8b5793024a68019",
+        "type": "link out",
+        "z": "d974087eb4410441",
+        "g": "fa423b6c44026824",
+        "name": "db.output.completed_insert_prices",
+        "mode": "link",
+        "links": [
+            "2492751851d4ab57"
+        ],
+        "x": 1045,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "2492751851d4ab57",
+        "type": "link in",
+        "z": "d974087eb4410441",
+        "g": "7c5378ce3d8e1fab",
+        "name": "link in 10",
+        "links": [
+            "b8b5793024a68019"
+        ],
+        "x": 105,
+        "y": 1320,
+        "wires": [
+            [
+                "06dc7761e9b36e06"
+            ]
+        ]
+    },
+    {
+        "id": "bd683dfaf575d92b",
+        "type": "mysql",
+        "z": "d974087eb4410441",
+        "g": "7c5378ce3d8e1fab",
+        "mydb": "f2952bbb2ad433e2",
+        "name": "mdb-test",
+        "x": 860,
+        "y": 1340,
+        "wires": [
+            [
+                "b8a9c66769c3fe5d",
+                "8ff91e6586ddbeb6"
+            ]
+        ]
+    },
+    {
+        "id": "6578372151a0df87",
+        "type": "function",
+        "z": "d974087eb4410441",
+        "g": "7c5378ce3d8e1fab",
+        "name": "get_driving_score",
+        "func": "let price = msg.payload[0]['NOK_per_kWh'];\n\n\n\nflow.set(\"NOK_kWh\", price);\n\nlet c_id = msg.payload[0]['car_id'];\n\nmsg.payload = [c_id];\n\nmsg.topic = `SELECT v.class, e.total_impact_score FROM vehicles v \nLEFT JOIN users u ON v.owner_id = u.id\nLEFT JOIN ecoscore e ON e.user_id = u.id\nWHERE u.id = ?`\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 1340,
+        "wires": [
+            [
+                "bd683dfaf575d92b",
+                "2af38b9c334ca4af"
+            ]
+        ]
+    },
+    {
+        "id": "b8a9c66769c3fe5d",
+        "type": "debug",
+        "z": "d974087eb4410441",
+        "g": "7c5378ce3d8e1fab",
+        "name": "debug 42",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "2af38b9c334ca4af",
+        "type": "debug",
+        "z": "d974087eb4410441",
+        "g": "7c5378ce3d8e1fab",
+        "name": "debug 43",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "8ff91e6586ddbeb6",
+        "type": "function",
+        "z": "d974087eb4410441",
+        "g": "7c5378ce3d8e1fab",
+        "name": "sort_variables",
+        "func": "let type = msg.payload[0]['class'];\nlet eco_score = msg.payload[0]['total_impact_score'];\nlet p = flow.get(\"NOK_kWh\");\n\n\nmsg.payload = [type, eco_score, p]\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 1340,
+        "wires": [
+            [
+                "8a79294f8c9e1bda"
             ]
         ]
     },
@@ -2133,126 +2116,10 @@
         "wires": []
     },
     {
-        "id": "34c826ae05784e1f",
-        "type": "link in",
-        "z": "9c23ead5f4cd17b6",
-        "d": true,
-        "name": "display_users",
-        "links": [],
-        "x": 185,
-        "y": 200,
-        "wires": [
-            [
-                "a53bc7abb7f5b15f"
-            ]
-        ]
-    },
-    {
-        "id": "a53bc7abb7f5b15f",
-        "type": "function",
-        "z": "9c23ead5f4cd17b6",
-        "d": true,
-        "name": "maybeUseless",
-        "func": "let min = Math.round(Math.random()*1000);\nlet max = Math.round((Math.random()*10000)+1000);\n\nlet a = msg.payload\n\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 420,
-        "y": 240,
-        "wires": [
-            [
-                "4eac0e0794c4133c"
-            ]
-        ]
-    },
-    {
-        "id": "a294cf43e56ed1f8",
-        "type": "inject",
-        "z": "9c23ead5f4cd17b6",
-        "d": true,
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 200,
-        "y": 280,
-        "wires": [
-            [
-                "a53bc7abb7f5b15f"
-            ]
-        ]
-    },
-    {
-        "id": "624afad07d47625d",
-        "type": "link out",
-        "z": "9c23ead5f4cd17b6",
-        "d": true,
-        "name": "update_button",
-        "mode": "link",
-        "links": [],
-        "x": 595,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "4eac0e0794c4133c",
-        "type": "debug",
-        "z": "9c23ead5f4cd17b6",
-        "d": true,
-        "name": "debug 18",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 640,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "fd31fef1e40bc24f",
-        "type": "function",
-        "z": "9c23ead5f4cd17b6",
-        "d": true,
-        "name": "update_button",
-        "func": "\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 440,
-        "y": 320,
-        "wires": [
-            [
-                "624afad07d47625d"
-            ]
-        ]
-    },
-    {
         "id": "ea5ff2cd0cdfe128",
         "type": "ui-template",
         "z": "9c23ead5f4cd17b6",
+        "g": "1343424fbbdc4b4e",
         "group": "e6a3eaaef97c58a0",
         "page": "",
         "ui": "",
@@ -2261,14 +2128,14 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n    <!-- Provide an input text box to search the content -->\n    <v-text-field v-model=\"search\" label=\"Search\" prepend-inner-icon=\"mdi-magnify\" single-line variant=\"outlined\"\n    hide-details></v-text-field>\n    <v-data-table v-model:search=\"search\" :items=\"msg?.payload\">\n\n      <template v-slot:header.total_impact_score>\n        <!-- Override how we render the header for the \"current\" column -->\n        <div class=\"text-center\">Score</div>\n      </template>\n\n      <template v-slot:item.name=\"{ item }\">\n        <!-- Add a custom suffix to the value for the \"target\" column -->\n        {{ item.name }}°C\n      </template>\n\n      <template v-slot:item.total_impact_score=\"{ item }\">\n        <!-- Render a Linear Progress Bar for the \"current\" column -->\n        <v-progress-linear v-model=\"item.total_impact_score\" min=\"15\" max=\"200000\" height=\"25\" :color=\"getColor(item)\">\n          <template v-slot:default=\"{ value }\">\n            <strong>{{ item.total_impact_score }}</strong>\n          </template>\n        </v-progress-linear>\n      </template>\n\n    </v-data-table>\n</template>\n\n<script>\n    export default {\n    data () {\n      return {\n        search: ''\n      }\n    },\n    methods: {\n      getColor: function (item) {\n        if (item.total_impact_score > 50) {\n          return 'red'\n        } else {\n          return 'green'\n        }\n      }\n        // add a function to determine the color of the progress bar given the row's item\n    }\n  }\n</script>",
+        "format": "<template>\n    <v-text-field v-model=\"search\" label=\"Search\" prepend-inner-icon=\"mdi-magnify\" single-line variant=\"outlined\"\n    hide-details></v-text-field>\n    <v-data-table v-model:search=\"search\" :items=\"msg?.payload\">\n\n      <template v-slot:header.total_impact_score>\n        <div class=\"text-center\">Score</div>\n      </template>\n\n      <template v-slot:item.name=\"{ item }\">\n        {{ item.name }}°C\n      </template>\n\n      <template v-slot:item.total_impact_score=\"{ item }\">\n        <v-progress-linear v-model=\"item.total_impact_score\" min=\"15\" max=\"200000\" height=\"25\" :color=\"getColor(item)\">\n          <template v-slot:default=\"{ value }\">\n            <strong>{{ item.total_impact_score }}</strong>\n          </template>\n        </v-progress-linear>\n      </template>\n\n    </v-data-table>\n</template>\n\n<script>\n    export default {\n    data () {\n      return {\n        search: ''\n      }\n    },\n    methods: {\n      getColor: function (item) {\n        if (item.total_impact_score > 50) {\n          return 'red'\n        } else {\n          return 'green'\n        }\n      }\n    }\n  }\n</script>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
         "x": 580,
-        "y": 680,
+        "y": 660,
         "wires": [
             []
         ]
@@ -2295,13 +2162,16 @@
         "x": 140,
         "y": 60,
         "wires": [
-            []
+            [
+                "b23d2583cd712fdc"
+            ]
         ]
     },
     {
         "id": "723dda3faa263f6c",
         "type": "function",
         "z": "9c23ead5f4cd17b6",
+        "g": "1343424fbbdc4b4e",
         "name": "function 4",
         "func": "//if (msg.payload == \"Loaded\") {\n//    msg.payload = [{ \"room\": \"Living Room\", \"id\": \"1234\", \"target\": 18.1, \"current\": 20 }, { \"room\": \"Bathroom Room\", \"id\": \"5678\", \"target\": 19.5, \"current\": 18 }, { \"room\": \"Kitchen Room\", \"id\": \"9101\", \"target\": 18.1, \"current\": 17.6 }]\n//    msg.topic = \"input\"\n//} else {\n//    msg.payload = \"in home folder\"\n//    msg.topic = \"input\"\n//}\nreturn msg;",
         "outputs": 1,
@@ -2311,7 +2181,7 @@
         "finalize": "",
         "libs": [],
         "x": 300,
-        "y": 760,
+        "y": 740,
         "wires": [
             [
                 "070400a13d344993",
@@ -2323,6 +2193,7 @@
         "id": "070400a13d344993",
         "type": "debug",
         "z": "9c23ead5f4cd17b6",
+        "g": "1343424fbbdc4b4e",
         "name": "debug 24",
         "active": true,
         "tosidebar": true,
@@ -2332,7 +2203,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 560,
-        "y": 760,
+        "y": 740,
         "wires": []
     },
     {
@@ -2428,6 +2299,7 @@
         "id": "856de6d3ce3eff89",
         "type": "ui-template",
         "z": "9c23ead5f4cd17b6",
+        "g": "1343424fbbdc4b4e",
         "group": "e6a3eaaef97c58a0",
         "page": "",
         "ui": "",
@@ -2436,14 +2308,14 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<!--<template></template>-->\n\n<script>\n    export default {\n    data () {\n\n    },\n    methods: {\n        // add a function\n    },\n    mounted() {\n      // code here when the component is first loaded\n      this.loaded = true\n      this.send(\"Loaded\")\n    },\n    unmounted() {\n      this.loaded = false\n      // code here when the component is removed from the Dashboard\n      // i.e. when the user navigates away from the page\n    }\n  }\n</script>",
+        "format": "<script>\n    export default {\n    data () {\n\n    },\n    methods: {\n    },\n    mounted() {\n      this.loaded = true\n      this.send(\"Loaded\")\n    },\n    unmounted() {\n      this.loaded = false\n    }\n  }\n</script>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
         "x": 160,
-        "y": 680,
+        "y": 660,
         "wires": [
             [
                 "f088635e3f42d421"
@@ -2454,25 +2326,27 @@
         "id": "f088635e3f42d421",
         "type": "link out",
         "z": "9c23ead5f4cd17b6",
+        "g": "1343424fbbdc4b4e",
         "name": "dashbaord.output.getusers",
         "mode": "link",
         "links": [
             "2bd950a05a93757a"
         ],
         "x": 315,
-        "y": 680,
+        "y": 660,
         "wires": []
     },
     {
         "id": "33998569dd15990e",
         "type": "link in",
         "z": "9c23ead5f4cd17b6",
+        "g": "1343424fbbdc4b4e",
         "name": "dashboard.input.getusers",
         "links": [
             "a5837349ffd6fca1"
         ],
         "x": 95,
-        "y": 760,
+        "y": 740,
         "wires": [
             [
                 "723dda3faa263f6c"
@@ -2497,8 +2371,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 150,
-        "y": 620,
+        "x": 130,
+        "y": 220,
         "wires": [
             [
                 "7bb2d1e517ee8d24"
@@ -2510,7 +2384,7 @@
         "type": "debug",
         "z": "9c23ead5f4cd17b6",
         "name": "debugstar",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2518,8 +2392,324 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 370,
-        "y": 620,
+        "x": 350,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "0e0a3f5722b248de",
+        "type": "ui-form",
+        "z": "9c23ead5f4cd17b6",
+        "name": "Decide TOLL PRICES",
+        "group": "f4b408f314ea8fb3",
+        "label": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Decide Price",
+                "key": "Price",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "Price": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "clear",
+        "resetOnSubmit": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 160,
+        "y": 300,
+        "wires": [
+            [
+                "c3aa9876bcb6f42e"
+            ]
+        ]
+    },
+    {
+        "id": "c3aa9876bcb6f42e",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "name": "debug 45",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "728bcfee316180c5",
+        "type": "ui-text-input",
+        "z": "9c23ead5f4cd17b6",
+        "g": "116ddb3989f7865c",
+        "group": "f4b408f314ea8fb3",
+        "name": "electric_car",
+        "label": "Electric",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "topic": "topic",
+        "topicType": "msg",
+        "mode": "number",
+        "delay": 300,
+        "passthru": true,
+        "sendOnDelay": false,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "x": 710,
+        "y": 420,
+        "wires": [
+            [
+                "d3bb702bcdf691a1"
+            ]
+        ]
+    },
+    {
+        "id": "9695c47a09c4d657",
+        "type": "function",
+        "z": "9c23ead5f4cd17b6",
+        "g": "116ddb3989f7865c",
+        "name": "prices",
+        "func": "let e = 10;\n\nlet updated_electric_price = global.get(\"updated_el_price\");\n\nif (updated_electric_price){\n    e = updated_electric_price;\n}\n\n\n\n\nlet s = 5;\nlet g = 25;\n\n\nlet current_prices = {\n    electric: e,\n    service: s,\n    gasoline: g\n};\n\nlet a = {topic: \"electric\"};\n\nmsg.payload = current_prices;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 460,
+        "wires": [
+            [
+                "d5bb29401cd9c2f9"
+            ]
+        ]
+    },
+    {
+        "id": "04613cd67e7bd8bd",
+        "type": "ui-template",
+        "z": "9c23ead5f4cd17b6",
+        "g": "116ddb3989f7865c",
+        "group": "f4b408f314ea8fb3",
+        "page": "",
+        "ui": "",
+        "name": "overview.pageload",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "\n<script>\n    export default {\n    data () {\n    },\n    methods: {\n    },\n    mounted() {\n      this.loaded = true\n      this.send(\"Loaded\")\n    },\n    unmounted() {\n      this.loaded = false\n    }\n  }\n</script>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 170,
+        "y": 460,
+        "wires": [
+            [
+                "9695c47a09c4d657"
+            ]
+        ]
+    },
+    {
+        "id": "fd21801d95c179a1",
+        "type": "ui-text-input",
+        "z": "9c23ead5f4cd17b6",
+        "g": "116ddb3989f7865c",
+        "group": "f4b408f314ea8fb3",
+        "name": "service_car",
+        "label": "Service",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "topic": "topic",
+        "topicType": "msg",
+        "mode": "number",
+        "delay": 300,
+        "passthru": true,
+        "sendOnDelay": false,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "x": 710,
+        "y": 460,
+        "wires": [
+            [
+                "d3bb702bcdf691a1"
+            ]
+        ]
+    },
+    {
+        "id": "6a8d7251a99d269b",
+        "type": "ui-text-input",
+        "z": "9c23ead5f4cd17b6",
+        "g": "116ddb3989f7865c",
+        "group": "f4b408f314ea8fb3",
+        "name": "gasoline_car",
+        "label": "Gasoline",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "topic": "topic",
+        "topicType": "msg",
+        "mode": "number",
+        "delay": 300,
+        "passthru": true,
+        "sendOnDelay": false,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "x": 710,
+        "y": 500,
+        "wires": [
+            [
+                "d3bb702bcdf691a1"
+            ]
+        ]
+    },
+    {
+        "id": "49ab5c9eef18e2fe",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "g": "116ddb3989f7865c",
+        "name": "debug 47",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "d3bb702bcdf691a1",
+        "type": "function",
+        "z": "9c23ead5f4cd17b6",
+        "g": "116ddb3989f7865c",
+        "name": "update_service",
+        "func": "if (msg.parts.key == \"electric\"){\n    global.set(\"updated_el_price\", msg.payload);\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 460,
+        "wires": [
+            [
+                "49ab5c9eef18e2fe"
+            ]
+        ]
+    },
+    {
+        "id": "2636e9073bae688d",
+        "type": "switch",
+        "z": "9c23ead5f4cd17b6",
+        "g": "116ddb3989f7865c",
+        "name": "",
+        "property": "parts.key",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "electric",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "service",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "gasoline",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 570,
+        "y": 460,
+        "wires": [
+            [
+                "728bcfee316180c5"
+            ],
+            [
+                "fd21801d95c179a1"
+            ],
+            [
+                "6a8d7251a99d269b"
+            ]
+        ]
+    },
+    {
+        "id": "d5bb29401cd9c2f9",
+        "type": "split",
+        "z": "9c23ead5f4cd17b6",
+        "g": "116ddb3989f7865c",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 450,
+        "y": 460,
+        "wires": [
+            [
+                "2636e9073bae688d"
+            ]
+        ]
+    },
+    {
+        "id": "d2c115aaae325b40",
+        "type": "comment",
+        "z": "9c23ead5f4cd17b6",
+        "g": "116ddb3989f7865c",
+        "name": "make db-implementation",
+        "info": "",
+        "x": 750,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "b23d2583cd712fdc",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "g": "0591b57e8f20d00d",
+        "name": "debug 48",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 60,
         "wires": []
     }
 ]
