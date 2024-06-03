@@ -90,8 +90,8 @@
             "fbb060fd70043410",
             "8f11c965debd450e"
         ],
-        "x": 34,
-        "y": 539,
+        "x": 64,
+        "y": 1639,
         "w": 312,
         "h": 202
     },
@@ -173,8 +173,8 @@
             "7c5378ce3d8e1fab",
             "1060263491f37862"
         ],
-        "x": 48,
-        "y": 813,
+        "x": 58,
+        "y": 373,
         "w": 1144,
         "h": 574
     },
@@ -213,8 +213,8 @@
             "a5837349ffd6fca1",
             "2bd950a05a93757a"
         ],
-        "x": 34,
-        "y": 379,
+        "x": 54,
+        "y": 259,
         "w": 482,
         "h": 82
     },
@@ -236,61 +236,30 @@
         "h": 574
     },
     {
-        "id": "6a95e8aa54c858ac",
+        "id": "9939226cfed744ae",
         "type": "group",
-        "z": "c7015bd55ac9c57d",
-        "name": "charge_station",
+        "z": "d974087eb4410441",
+        "g": "025c3a8da95b8f7a",
+        "name": "initiate_charging",
         "style": {
             "label": true
         },
         "nodes": [
-            "f584a4b68256cfb5",
-            "4ecb82d421e1e537",
-            "5a8e251b3584b916",
-            "6f5a50d2464f8b9d",
-            "83455dfa39324952",
-            "6867b32ed421a65b",
-            "fe453aeef45b1417",
-            "51a9f59e2ff22e1d",
-            "294141438e9d3d04",
-            "7c5fc2a9159033fa",
-            "4a243c07d4bb3d89",
-            "238096ea929842a9",
-            "3e6aaa8a256b8c8f",
-            "fcc679d18dbe9066",
-            "c68b481eba496971",
-            "c3f2f4e76030dc50",
-            "6189af6423612e47",
-            "11ef4db61dfdb80e",
-            "315962c9942aab3a",
-            "23f5fdbd7fa84225",
-            "3da3db495b46e423",
-            "23b4e448863048a3",
-            "02b7c48b5e854a1a",
-            "9c13ce0ea3ea12b4",
-            "251a0a65d7069398",
-            "bd1541638d4772dc",
-            "a7ef2574578de56d",
-            "92aca90c4405a617",
-            "f0a06994da576122",
-            "016a2b18e70ce667",
-            "ed2ad7e7d6998b33",
-            "259641d5ce583eb5",
-            "b68accdce12ce7eb",
-            "1bfb51ebb430b759",
-            "8909798ad584083f",
-            "678ef6e30af00481",
-            "9715f242360c1c97",
-            "60256e9b498b8dd5",
-            "48a4a3c3dd98820c",
-            "d37374ec32398ba1",
-            "89b42281cdae4137",
-            "1e6243a71c3975d4"
+            "681cc84e5c74f62f",
+            "4d138347c7b68093",
+            "48b7e43ac0572c19",
+            "0b961f7bd67c5a6d",
+            "339c8a7199811e95",
+            "5adf0c52630de6c2",
+            "1c1f1601857b064c",
+            "36f3a52d4639e8b9",
+            "a86da9f0852228de",
+            "d87ad496b027c132"
         ],
-        "x": 54,
-        "y": 1079,
-        "w": 1652,
-        "h": 1062
+        "x": 84,
+        "y": 1019,
+        "w": 1082,
+        "h": 162
     },
     {
         "id": "fa423b6c44026824",
@@ -313,9 +282,9 @@
             "bd2be327c3068176",
             "6c75f5e6b0bae9ef"
         ],
-        "x": 74,
-        "y": 839,
-        "w": 1082,
+        "x": 84,
+        "y": 399,
+        "w": 1092,
         "h": 162
     },
     {
@@ -386,8 +355,8 @@
             "70ea88b87505faaa",
             "2311204e8aeb792a"
         ],
-        "x": 84,
-        "y": 1039,
+        "x": 94,
+        "y": 599,
         "w": 1082,
         "h": 142
     },
@@ -435,9 +404,9 @@
             "e1c49e9771213b10",
             "f82bd2713bd5bea4"
         ],
-        "x": 74,
-        "y": 1219,
-        "w": 1012,
+        "x": 84,
+        "y": 779,
+        "w": 1092,
         "h": 142
     },
     {
@@ -463,37 +432,142 @@
             "b3df72d8dcb2bc3a",
             "2d68d6a1aa9ef244",
             "2848dc9c2586b927",
-            "438180f8e7ed266d"
+            "438180f8e7ed266d",
+            "f66c10cd59cbac6e"
         ],
         "x": 74,
         "y": 319,
-        "w": 912,
+        "w": 1052,
         "h": 282
     },
     {
-        "id": "9939226cfed744ae",
+        "id": "f869eda640303ea9",
         "type": "group",
         "z": "d974087eb4410441",
-        "name": "initiate_charging",
+        "g": "025c3a8da95b8f7a",
+        "name": "finish_charging",
         "style": {
             "label": true
         },
         "nodes": [
-            "681cc84e5c74f62f",
-            "4d138347c7b68093",
-            "48b7e43ac0572c19",
-            "0b961f7bd67c5a6d",
-            "339c8a7199811e95",
-            "5adf0c52630de6c2",
-            "1c1f1601857b064c",
-            "36f3a52d4639e8b9",
-            "a86da9f0852228de",
-            "d87ad496b027c132"
+            "684afc80e9bd7aa7",
+            "f33f70cd07956bd8",
+            "f8490ccc66c6627f",
+            "8c7190358fbefe98",
+            "e1ddf0cb76206c25",
+            "e4955c44e4805be0",
+            "4a53b9a4fd55590d",
+            "a496dfbf1a877790",
+            "795507a12a4eb874",
+            "59b278d15e2d929b",
+            "be19f84d4420d31b",
+            "74c045ed69fa92a5"
         ],
-        "x": 64,
-        "y": 1499,
-        "w": 1142,
-        "h": 202
+        "x": 84,
+        "y": 1219,
+        "w": 1082,
+        "h": 242
+    },
+    {
+        "id": "025c3a8da95b8f7a",
+        "type": "group",
+        "z": "d974087eb4410441",
+        "name": "charge_station",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "9939226cfed744ae",
+            "f869eda640303ea9",
+            "1eb5338ba054f538",
+            "f389868ad80b10d3",
+            "f676c8b0e33e3933",
+            "94a3aa3a2d9fab70"
+        ],
+        "x": 58,
+        "y": 993,
+        "w": 1134,
+        "h": 588
+    },
+    {
+        "id": "716618853d781b35",
+        "type": "group",
+        "z": "9c23ead5f4cd17b6",
+        "name": "charge_station_ui",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "d02bfa02ad7249ef",
+            "4f73999c3ec0b730",
+            "02ae78a50512873e",
+            "851722563ece208c",
+            "8c702c77dd36bdca",
+            "a2f162b9d394a186",
+            "5763ca455449785b",
+            "534a1b47f4d8f647",
+            "98166c48d39ce2bd",
+            "5c642316acf14a1a",
+            "df1a6337d2b7930f",
+            "28982104b2fdba96",
+            "3e228f6c26bdbf05"
+        ],
+        "x": 74,
+        "y": 939,
+        "w": 632,
+        "h": 542
+    },
+    {
+        "id": "6a95e8aa54c858ac",
+        "type": "group",
+        "z": "c7015bd55ac9c57d",
+        "name": "charge_station",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "f584a4b68256cfb5",
+            "4ecb82d421e1e537",
+            "5a8e251b3584b916",
+            "6f5a50d2464f8b9d",
+            "83455dfa39324952",
+            "6867b32ed421a65b",
+            "fe453aeef45b1417",
+            "51a9f59e2ff22e1d",
+            "294141438e9d3d04",
+            "7c5fc2a9159033fa",
+            "4a243c07d4bb3d89",
+            "238096ea929842a9",
+            "3e6aaa8a256b8c8f",
+            "fcc679d18dbe9066",
+            "23f5fdbd7fa84225",
+            "3da3db495b46e423",
+            "23b4e448863048a3",
+            "02b7c48b5e854a1a",
+            "9c13ce0ea3ea12b4",
+            "251a0a65d7069398",
+            "bd1541638d4772dc",
+            "a7ef2574578de56d",
+            "92aca90c4405a617",
+            "f0a06994da576122",
+            "ed2ad7e7d6998b33",
+            "259641d5ce583eb5",
+            "b68accdce12ce7eb",
+            "1bfb51ebb430b759",
+            "8909798ad584083f",
+            "678ef6e30af00481",
+            "9715f242360c1c97",
+            "60256e9b498b8dd5",
+            "48a4a3c3dd98820c",
+            "d37374ec32398ba1",
+            "89b42281cdae4137",
+            "1e6243a71c3975d4",
+            "20e026677c68bd7b"
+        ],
+        "x": 74,
+        "y": 1079,
+        "w": 1652,
+        "h": 1062
     },
     {
         "id": "f2952bbb2ad433e2",
@@ -1608,11 +1682,12 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 220,
+        "x": 240,
         "y": 1440,
         "wires": [
             [
-                "3da3db495b46e423"
+                "3da3db495b46e423",
+                "20e026677c68bd7b"
             ]
         ]
     },
@@ -1630,11 +1705,12 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 220,
+        "x": 240,
         "y": 1500,
         "wires": [
             [
-                "3da3db495b46e423"
+                "3da3db495b46e423",
+                "20e026677c68bd7b"
             ]
         ]
     },
@@ -1652,11 +1728,12 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 220,
+        "x": 240,
         "y": 1560,
         "wires": [
             [
-                "3da3db495b46e423"
+                "3da3db495b46e423",
+                "20e026677c68bd7b"
             ]
         ]
     },
@@ -1674,7 +1751,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 180,
+        "x": 200,
         "y": 1980,
         "wires": [
             [
@@ -1696,10 +1773,12 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 180,
+        "x": 200,
         "y": 2040,
         "wires": [
-            []
+            [
+                "1e6243a71c3975d4"
+            ]
         ]
     },
     {
@@ -1716,10 +1795,12 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 180,
+        "x": 200,
         "y": 2100,
         "wires": [
-            []
+            [
+                "1e6243a71c3975d4"
+            ]
         ]
     },
     {
@@ -1736,10 +1817,12 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 230,
+        "x": 250,
         "y": 1120,
         "wires": [
-            []
+            [
+                "02b7c48b5e854a1a"
+            ]
         ]
     },
     {
@@ -1756,10 +1839,12 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 230,
+        "x": 250,
         "y": 1180,
         "wires": [
-            []
+            [
+                "02b7c48b5e854a1a"
+            ]
         ]
     },
     {
@@ -1776,10 +1861,12 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 230,
+        "x": 250,
         "y": 1240,
         "wires": [
-            []
+            [
+                "02b7c48b5e854a1a"
+            ]
         ]
     },
     {
@@ -1802,7 +1889,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "esp32/led/value2",
-        "payload": "Opptatt, User ID: 2, Station ID: 1",
+        "payload": "Opptatt, User ID: 1, Station ID: 1",
         "payloadType": "str",
         "x": 260,
         "y": 1760,
@@ -1825,7 +1912,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1370,
+        "x": 1390,
         "y": 1120,
         "wires": [
             [
@@ -1847,7 +1934,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1540,
+        "x": 1560,
         "y": 1120,
         "wires": []
     },
@@ -1908,110 +1995,13 @@
         "topic": "",
         "payload": "0, User ID: 2, Station ID: 1\"",
         "payloadType": "str",
-        "x": 240,
+        "x": 260,
         "y": 1300,
         "wires": [
             [
                 "02b7c48b5e854a1a"
             ]
         ]
-    },
-    {
-        "id": "c68b481eba496971",
-        "type": "debug",
-        "z": "c7015bd55ac9c57d",
-        "g": "6a95e8aa54c858ac",
-        "name": "debug 58",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1500,
-        "y": 1200,
-        "wires": []
-    },
-    {
-        "id": "c3f2f4e76030dc50",
-        "type": "batch",
-        "z": "c7015bd55ac9c57d",
-        "g": "6a95e8aa54c858ac",
-        "name": "",
-        "mode": "count",
-        "count": 10,
-        "overlap": 0,
-        "interval": 10,
-        "allowEmptySequence": false,
-        "topics": [],
-        "x": 1340,
-        "y": 1200,
-        "wires": [
-            [
-                "c68b481eba496971"
-            ]
-        ]
-    },
-    {
-        "id": "6189af6423612e47",
-        "type": "function",
-        "z": "c7015bd55ac9c57d",
-        "g": "6a95e8aa54c858ac",
-        "name": "parseInt",
-        "func": "if (msg.payload != \"Lading ikke tilgjengelig\") {\n}\n\nmsg.payload = parseFloat(msg.payload);\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1200,
-        "y": 1200,
-        "wires": [
-            [
-                "c3f2f4e76030dc50"
-            ]
-        ]
-    },
-    {
-        "id": "11ef4db61dfdb80e",
-        "type": "function",
-        "z": "c7015bd55ac9c57d",
-        "g": "6a95e8aa54c858ac",
-        "name": "function 6",
-        "func": "if (global.get(\"counter\") === undefined) {\n    global.set(\"counter\", 1);\n}\n\nlet i = global.get(\"counter\")\n\nif (i % 5 == 0) {\n    msg.payload = \"Lading ikke tilgjengelig\";\n} else {\n    msg.payload = i;\n}\n\n\nglobal.set(\"counter\", i+1);\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1020,
-        "y": 1200,
-        "wires": [
-            [
-                "6189af6423612e47",
-                "315962c9942aab3a"
-            ]
-        ]
-    },
-    {
-        "id": "315962c9942aab3a",
-        "type": "debug",
-        "z": "c7015bd55ac9c57d",
-        "g": "6a95e8aa54c858ac",
-        "name": "debug 59",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1180,
-        "y": 1120,
-        "wires": []
     },
     {
         "id": "23f5fdbd7fa84225",
@@ -2035,11 +2025,12 @@
         "topic": "esp32/led/value1",
         "payload": "Ledig, User ID: 1, Station ID: 1",
         "payloadType": "str",
-        "x": 240,
+        "x": 260,
         "y": 1720,
         "wires": [
             [
-                "3da3db495b46e423"
+                "3da3db495b46e423",
+                "20e026677c68bd7b"
             ]
         ]
     },
@@ -2056,7 +2047,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 560,
+        "x": 580,
         "y": 1700,
         "wires": [
             [
@@ -2078,7 +2069,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 960,
+        "x": 980,
         "y": 1700,
         "wires": []
     },
@@ -2095,7 +2086,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 590,
+        "x": 610,
         "y": 1320,
         "wires": [
             [
@@ -2118,7 +2109,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1140,
+        "x": 800,
         "y": 1320,
         "wires": []
     },
@@ -2146,7 +2137,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 1210,
+        "x": 1230,
         "y": 1640,
         "wires": [
             [
@@ -2179,7 +2170,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1000,
+        "x": 1020,
         "y": 1580,
         "wires": [
             [
@@ -2201,7 +2192,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1440,
+        "x": 1460,
         "y": 1600,
         "wires": []
     },
@@ -2218,7 +2209,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1380,
+        "x": 1440,
         "y": 1520,
         "wires": [
             [
@@ -2237,26 +2228,8 @@
         "links": [
             "4d138347c7b68093"
         ],
-        "x": 1445,
+        "x": 1465,
         "y": 1640,
-        "wires": []
-    },
-    {
-        "id": "016a2b18e70ce667",
-        "type": "debug",
-        "z": "c7015bd55ac9c57d",
-        "g": "6a95e8aa54c858ac",
-        "name": "debug 67",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1200,
-        "y": 1700,
         "wires": []
     },
     {
@@ -2272,7 +2245,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1400,
+        "x": 1420,
         "y": 1680,
         "wires": [
             []
@@ -2286,7 +2259,7 @@
         "name": "",
         "scope": "group",
         "uncaught": false,
-        "x": 710,
+        "x": 730,
         "y": 1640,
         "wires": [
             [
@@ -2316,7 +2289,7 @@
         "topic": "esp32/powersupply/value2",
         "payload": "598.498, User ID: 1, Station ID: 1\"",
         "payloadType": "str",
-        "x": 250,
+        "x": 270,
         "y": 1360,
         "wires": [
             [
@@ -2337,12 +2310,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1020,
+        "x": 1040,
         "y": 1640,
         "wires": [
             [
-                "251a0a65d7069398",
-                "016a2b18e70ce667"
+                "251a0a65d7069398"
             ]
         ]
     },
@@ -2360,7 +2332,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1600,
+        "x": 1620,
         "y": 1520,
         "wires": []
     },
@@ -2378,7 +2350,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1200,
+        "x": 1220,
         "y": 1580,
         "wires": []
     },
@@ -2395,7 +2367,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 990,
+        "x": 1010,
         "y": 1780,
         "wires": [
             [
@@ -2414,7 +2386,7 @@
         "links": [
             "f33f70cd07956bd8"
         ],
-        "x": 1145,
+        "x": 1165,
         "y": 1780,
         "wires": []
     },
@@ -2432,7 +2404,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1200,
+        "x": 1220,
         "y": 1820,
         "wires": []
     },
@@ -2446,7 +2418,7 @@
         "links": [
             "02ae78a50512873e"
         ],
-        "x": 565,
+        "x": 585,
         "y": 1960,
         "wires": []
     },
@@ -2472,7 +2444,7 @@
         "topic": "esp32/weather1",
         "payload": "Delvis skyet",
         "payloadType": "str",
-        "x": 180,
+        "x": 200,
         "y": 1880,
         "wires": [
             [
@@ -2485,7 +2457,7 @@
         "type": "function",
         "z": "c7015bd55ac9c57d",
         "g": "6a95e8aa54c858ac",
-        "name": "function 11",
+        "name": "split",
         "func": "\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -2529,6 +2501,20 @@
         ]
     },
     {
+        "id": "20e026677c68bd7b",
+        "type": "link out",
+        "z": "c7015bd55ac9c57d",
+        "g": "6a95e8aa54c858ac",
+        "name": "communication.output.display_charge_status",
+        "mode": "link",
+        "links": [
+            "534a1b47f4d8f647"
+        ],
+        "x": 535,
+        "y": 1500,
+        "wires": []
+    },
+    {
         "id": "f02207af4cfba9b8",
         "type": "inject",
         "z": "d974087eb4410441",
@@ -2550,7 +2536,7 @@
         "payload": "hello from nodered",
         "payloadType": "str",
         "x": 160,
-        "y": 100,
+        "y": 80,
         "wires": [
             [
                 "396957e4591a092c",
@@ -2572,7 +2558,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 360,
-        "y": 80,
+        "y": 60,
         "wires": []
     },
     {
@@ -2590,7 +2576,7 @@
         "expiry": "",
         "broker": "dc20097875203fb9",
         "x": 360,
-        "y": 140,
+        "y": 120,
         "wires": []
     },
     {
@@ -2601,8 +2587,8 @@
         "links": [
             "414f9ce98347a63b"
         ],
-        "x": 55,
-        "y": 280,
+        "x": 75,
+        "y": 220,
         "wires": [
             [
                 "0b3e6df4fe188922"
@@ -2622,8 +2608,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 580,
-        "y": 280,
+        "x": 600,
+        "y": 200,
         "wires": []
     },
     {
@@ -2632,8 +2618,8 @@
         "z": "d974087eb4410441",
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
-        "x": 420,
-        "y": 280,
+        "x": 440,
+        "y": 200,
         "wires": [
             [
                 "cb643570aee91a84"
@@ -2652,8 +2638,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 210,
-        "y": 280,
+        "x": 230,
+        "y": 200,
         "wires": [
             [
                 "cbc77b34d7b89224"
@@ -2667,8 +2653,8 @@
         "g": "8d23dc769da0d07f",
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
-        "x": 360,
-        "y": 420,
+        "x": 380,
+        "y": 300,
         "wires": [
             [
                 "a5837349ffd6fca1"
@@ -2688,8 +2674,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 200,
-        "y": 420,
+        "x": 220,
+        "y": 300,
         "wires": [
             [
                 "77ef07ddbc346c22"
@@ -2706,8 +2692,8 @@
         "links": [
             "33998569dd15990e"
         ],
-        "x": 475,
-        "y": 420,
+        "x": 495,
+        "y": 300,
         "wires": []
     },
     {
@@ -2719,8 +2705,8 @@
         "links": [
             "f088635e3f42d421"
         ],
-        "x": 75,
-        "y": 420,
+        "x": 95,
+        "y": 300,
         "wires": [
             [
                 "22308172980d6de6"
@@ -2737,8 +2723,8 @@
         "links": [
             "038b288f4ba869de"
         ],
-        "x": 75,
-        "y": 580,
+        "x": 105,
+        "y": 1680,
         "wires": [
             [
                 "6f161c9edf33ba3d"
@@ -2755,8 +2741,8 @@
         "links": [
             "2f4b2f43ca14af61"
         ],
-        "x": 75,
-        "y": 640,
+        "x": 105,
+        "y": 1740,
         "wires": [
             [
                 "fbb060fd70043410"
@@ -2773,8 +2759,8 @@
         "links": [
             "b27aeb6f7cd37378"
         ],
-        "x": 75,
-        "y": 700,
+        "x": 105,
+        "y": 1800,
         "wires": [
             [
                 "8f11c965debd450e"
@@ -2796,8 +2782,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 240,
-        "y": 580,
+        "x": 270,
+        "y": 1680,
         "wires": []
     },
     {
@@ -2815,8 +2801,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 230,
-        "y": 640,
+        "x": 260,
+        "y": 1740,
         "wires": []
     },
     {
@@ -2834,8 +2820,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 230,
-        "y": 700,
+        "x": 260,
+        "y": 1800,
         "wires": []
     },
     {
@@ -2845,8 +2831,8 @@
         "g": "7c5378ce3d8e1fab",
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
-        "x": 420,
-        "y": 1080,
+        "x": 430,
+        "y": 640,
         "wires": [
             [
                 "6578372151a0df87"
@@ -2866,8 +2852,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 250,
-        "y": 1080,
+        "x": 260,
+        "y": 640,
         "wires": [
             [
                 "f1c8edc3f112fcf2"
@@ -2884,8 +2870,8 @@
         "links": [
             "56faac02af1e3921"
         ],
-        "x": 1125,
-        "y": 1080,
+        "x": 1135,
+        "y": 640,
         "wires": []
     },
     {
@@ -2897,8 +2883,8 @@
         "links": [
             "11e643123ec5b919"
         ],
-        "x": 115,
-        "y": 920,
+        "x": 125,
+        "y": 480,
         "wires": [
             [
                 "2fa7fa16.df7d36",
@@ -2921,8 +2907,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
-        "y": 880,
+        "x": 320,
+        "y": 440,
         "wires": [
             [
                 "8c41d7d6d675747c"
@@ -2936,8 +2922,8 @@
         "g": "fa423b6c44026824",
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
-        "x": 450,
-        "y": 920,
+        "x": 460,
+        "y": 480,
         "wires": [
             [
                 "20fc10f82e1fbb3c",
@@ -2958,8 +2944,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 300,
-        "y": 920,
+        "x": 310,
+        "y": 480,
         "wires": [
             [
                 "8c41d7d6d675747c"
@@ -2980,8 +2966,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
-        "y": 920,
+        "x": 680,
+        "y": 480,
         "wires": [
             [
                 "465b90c9e7577fdd"
@@ -3001,8 +2987,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1050,
-        "y": 920,
+        "x": 1070,
+        "y": 480,
         "wires": []
     },
     {
@@ -3012,8 +2998,8 @@
         "g": "fa423b6c44026824",
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
-        "x": 870,
-        "y": 920,
+        "x": 880,
+        "y": 480,
         "wires": [
             [
                 "f5f52c154dc1c527",
@@ -3031,8 +3017,8 @@
         "links": [
             "2492751851d4ab57"
         ],
-        "x": 1005,
-        "y": 960,
+        "x": 1015,
+        "y": 520,
         "wires": []
     },
     {
@@ -3044,8 +3030,8 @@
         "links": [
             "b8b5793024a68019"
         ],
-        "x": 125,
-        "y": 1080,
+        "x": 135,
+        "y": 640,
         "wires": [
             [
                 "06dc7761e9b36e06"
@@ -3059,8 +3045,8 @@
         "g": "7c5378ce3d8e1fab",
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
-        "x": 780,
-        "y": 1080,
+        "x": 790,
+        "y": 640,
         "wires": [
             [
                 "8ff91e6586ddbeb6"
@@ -3080,8 +3066,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
-        "y": 1080,
+        "x": 620,
+        "y": 640,
         "wires": [
             [
                 "2311204e8aeb792a",
@@ -3102,8 +3088,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 960,
-        "y": 1080,
+        "x": 970,
+        "y": 640,
         "wires": [
             [
                 "8a79294f8c9e1bda"
@@ -3123,8 +3109,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 340,
-        "y": 1260,
+        "x": 350,
+        "y": 820,
         "wires": [
             [
                 "e8c5ccf60952c2be"
@@ -3144,8 +3130,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 980,
-        "y": 1260,
+        "x": 1070,
+        "y": 820,
         "wires": []
     },
     {
@@ -3155,8 +3141,8 @@
         "g": "1060263491f37862",
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
-        "x": 540,
-        "y": 1260,
+        "x": 550,
+        "y": 820,
         "wires": [
             [
                 "a501c4b70711fc78"
@@ -3172,8 +3158,8 @@
         "links": [
             "11e643123ec5b919"
         ],
-        "x": 115,
-        "y": 1260,
+        "x": 125,
+        "y": 820,
         "wires": [
             [
                 "f6d3906734b58c4b"
@@ -3193,8 +3179,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 750,
-        "y": 1260,
+        "x": 760,
+        "y": 820,
         "wires": [
             [
                 "2d95327a837381a2",
@@ -3211,8 +3197,8 @@
         "links": [
             "d9f5b4ebe6ceadec"
         ],
-        "x": 115,
-        "y": 1320,
+        "x": 125,
+        "y": 880,
         "wires": [
             [
                 "f6d3906734b58c4b"
@@ -3229,8 +3215,8 @@
         "links": [
             "b3df72d8dcb2bc3a"
         ],
-        "x": 935,
-        "y": 1320,
+        "x": 945,
+        "y": 880,
         "wires": []
     },
     {
@@ -3246,8 +3232,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
-        "y": 960,
+        "x": 680,
+        "y": 520,
         "wires": [
             [
                 "465b90c9e7577fdd"
@@ -3267,8 +3253,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 300,
-        "y": 960,
+        "x": 310,
+        "y": 520,
         "wires": [
             [
                 "bd2be327c3068176"
@@ -3284,8 +3270,8 @@
         "links": [
             "6583d5f44e957ce0"
         ],
-        "x": 465,
-        "y": 1140,
+        "x": 475,
+        "y": 700,
         "wires": [
             [
                 "6578372151a0df87"
@@ -3306,8 +3292,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 780,
-        "y": 1140,
+        "x": 790,
+        "y": 700,
         "wires": []
     },
     {
@@ -3323,8 +3309,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 460,
-        "y": 1660,
+        "x": 440,
+        "y": 1100,
         "wires": [
             [
                 "0b961f7bd67c5a6d"
@@ -3340,8 +3326,8 @@
         "links": [
             "f0a06994da576122"
         ],
-        "x": 105,
-        "y": 1540,
+        "x": 125,
+        "y": 1060,
         "wires": [
             [
                 "36f3a52d4639e8b9"
@@ -3354,7 +3340,7 @@
         "z": "d974087eb4410441",
         "g": "9939226cfed744ae",
         "name": "debug 70",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3362,8 +3348,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1100,
-        "y": 1540,
+        "x": 1060,
+        "y": 1060,
         "wires": []
     },
     {
@@ -3373,8 +3359,8 @@
         "g": "9939226cfed744ae",
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
-        "x": 680,
-        "y": 1660,
+        "x": 640,
+        "y": 1100,
         "wires": [
             [
                 "339c8a7199811e95",
@@ -3387,7 +3373,7 @@
         "type": "function",
         "z": "d974087eb4410441",
         "g": "9939226cfed744ae",
-        "name": "function 10",
+        "name": "populate_relations_table",
         "func": "let prev_record = msg.payload.insertId;\n\nmsg.payload = [prev_record];\n\nmsg.topic = \"INSERT INTO relations (`tr_id`, `toll_id`, `pcost_id`, `cr_id`) VALUES (NULL, NULL, NULL, ?);\";\n\n\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -3395,8 +3381,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 750,
-        "y": 1540,
+        "x": 730,
+        "y": 1060,
         "wires": [
             [
                 "1c1f1601857b064c"
@@ -3409,7 +3395,7 @@
         "z": "d974087eb4410441",
         "g": "9939226cfed744ae",
         "name": "debug 71",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3417,8 +3403,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 900,
-        "y": 1600,
+        "x": 800,
+        "y": 1100,
         "wires": []
     },
     {
@@ -3428,8 +3414,8 @@
         "g": "9939226cfed744ae",
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
-        "x": 940,
-        "y": 1540,
+        "x": 920,
+        "y": 1060,
         "wires": [
             [
                 "48b7e43ac0572c19"
@@ -3449,8 +3435,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 270,
-        "y": 1540,
+        "x": 290,
+        "y": 1060,
         "wires": [
             [
                 "d87ad496b027c132"
@@ -3463,7 +3449,7 @@
         "z": "d974087eb4410441",
         "g": "9939226cfed744ae",
         "name": "debug 72",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3471,8 +3457,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 560,
-        "y": 1600,
+        "x": 400,
+        "y": 1140,
         "wires": []
     },
     {
@@ -3482,8 +3468,8 @@
         "g": "9939226cfed744ae",
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
-        "x": 360,
-        "y": 1600,
+        "x": 240,
+        "y": 1100,
         "wires": [
             [
                 "a86da9f0852228de",
@@ -3495,8 +3481,9 @@
         "id": "684afc80e9bd7aa7",
         "type": "function",
         "z": "d974087eb4410441",
+        "g": "f869eda640303ea9",
         "name": "update_charge_record",
-        "func": "let m = msg.payload;\n\nlet ch_val = flow.get(\"charge\");\n\n// 2024-06-05 09:00:00.000\n\n// 2024-06-03T19:43:27.477Z\n\nif (m.s_id === flow.get(\"s_id\")) {\n    msg.payload = [\n        new Date().toISOString().slice(0, 19).replace('T', ' '),\n        ch_val,\n        m.spot,\n        m.s_id\n    ];\n} else {\n    return null;\n}\n\n//msg.payload = [\n//    new Date().toISOString(),\n//    ch_val,\n//    m.spot,\n//    m.s_id\n//];\n\n\nmsg.topic = `\nUPDATE chargerecords \nSET to_time = ?, end_charge = ?\nWHERE parking_spot = ?\nAND station_id = ?\nAND to_time IS NULL;\n`;\n\n\nreturn msg;",
+        "func": "let m = msg.payload;\n\nflow.set(\"u_id\", msg.payload.u_id);\n\nlet ch_val = flow.get(\"charge\");\n\n// 2024-06-05 09:00:00.000\n\n// 2024-06-03T19:43:27.477Z\n\nif (m.s_id === flow.get(\"s_id\")) {\n    msg.payload = [\n        new Date().toISOString().slice(0, 19).replace('T', ' '),\n        ch_val,\n        m.spot,\n        m.s_id\n    ];\n} else {\n    return null;\n}\n\n//msg.payload = [\n//    new Date().toISOString(),\n//    ch_val,\n//    m.spot,\n//    m.s_id\n//];\n\n\nmsg.topic = `\nUPDATE chargerecords \nSET to_time = ?, end_charge = ?\nWHERE parking_spot = ?\nAND station_id = ?\nAND to_time IS NULL;\n`;\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3504,7 +3491,7 @@
         "finalize": "",
         "libs": [],
         "x": 300,
-        "y": 1820,
+        "y": 1260,
         "wires": [
             [
                 "8c7190358fbefe98"
@@ -3515,17 +3502,17 @@
         "id": "f33f70cd07956bd8",
         "type": "link in",
         "z": "d974087eb4410441",
+        "g": "f869eda640303ea9",
         "name": "link in 14",
         "links": [
             "60256e9b498b8dd5"
         ],
-        "x": 85,
-        "y": 1820,
+        "x": 125,
+        "y": 1260,
         "wires": [
             [
                 "684afc80e9bd7aa7",
-                "e1ddf0cb76206c25",
-                "e4955c44e4805be0"
+                "e1ddf0cb76206c25"
             ]
         ]
     },
@@ -3533,6 +3520,7 @@
         "id": "f8490ccc66c6627f",
         "type": "debug",
         "z": "d974087eb4410441",
+        "g": "f869eda640303ea9",
         "name": "debug 73",
         "active": true,
         "tosidebar": true,
@@ -3542,21 +3530,23 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 740,
-        "y": 1960,
+        "x": 560,
+        "y": 1300,
         "wires": []
     },
     {
         "id": "8c7190358fbefe98",
         "type": "mysql",
         "z": "d974087eb4410441",
+        "g": "f869eda640303ea9",
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
-        "x": 540,
-        "y": 1820,
+        "x": 400,
+        "y": 1300,
         "wires": [
             [
-                "f8490ccc66c6627f"
+                "f8490ccc66c6627f",
+                "e4955c44e4805be0"
             ]
         ]
     },
@@ -3564,6 +3554,7 @@
         "id": "e1ddf0cb76206c25",
         "type": "debug",
         "z": "d974087eb4410441",
+        "g": "f869eda640303ea9",
         "name": "debug 74",
         "active": true,
         "tosidebar": true,
@@ -3572,24 +3563,25 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 340,
-        "y": 1880,
+        "x": 240,
+        "y": 1340,
         "wires": []
     },
     {
         "id": "e4955c44e4805be0",
         "type": "function",
         "z": "d974087eb4410441",
+        "g": "f869eda640303ea9",
         "name": "calculate_cost",
-        "func": "msg.topic = `\nSELECT id, (start_charge - end_charge) AS total\nFROM chargerecords\nORDER BY id DESC\nLIMIT 1;\n`;\n\n\nreturn msg;",
+        "func": "\nmsg.topic = `\nSELECT id, (start_charge - end_charge) AS total\nFROM chargerecords\nORDER BY id DESC\nLIMIT 1;\n`;\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 420,
-        "y": 1760,
+        "x": 500,
+        "y": 1340,
         "wires": [
             [
                 "4a53b9a4fd55590d"
@@ -3597,10 +3589,83 @@
         ]
     },
     {
-        "id": "ad86ef111d5d9939",
+        "id": "4a53b9a4fd55590d",
+        "type": "mysql",
+        "z": "d974087eb4410441",
+        "g": "f869eda640303ea9",
+        "mydb": "f2952bbb2ad433e2",
+        "name": "mdb-test",
+        "x": 680,
+        "y": 1340,
+        "wires": [
+            [
+                "a496dfbf1a877790"
+            ]
+        ]
+    },
+    {
+        "id": "a496dfbf1a877790",
+        "type": "function",
+        "z": "d974087eb4410441",
+        "g": "f869eda640303ea9",
+        "name": "insert_transaction",
+        "func": "let pv = {\n    electric: 0.6,\n    service: 0.3,\n    price_in_nok: 0.014\n};\n\nlet user_id = flow.get(\"u_id\");\n\n\nlet total_charged = msg.payload[0].total;\nlet completed_charge_transaction_id = msg.payload[0].id;\n\nflow.set(\"charge_record_id\",completed_charge_transaction_id);\n\n\nlet total_price =  total_charged * pv.electric * pv.price_in_nok;\n\n\nmsg.payload = [total_charged, user_id];\n\nmsg.topic = `\nINSERT INTO transactions (amount, user_id) VALUES (?, ?);\n`;\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 1300,
+        "wires": [
+            [
+                "795507a12a4eb874"
+            ]
+        ]
+    },
+    {
+        "id": "795507a12a4eb874",
+        "type": "mysql",
+        "z": "d974087eb4410441",
+        "g": "f869eda640303ea9",
+        "mydb": "f2952bbb2ad433e2",
+        "name": "mdb-test",
+        "x": 880,
+        "y": 1340,
+        "wires": [
+            [
+                "59b278d15e2d929b"
+            ]
+        ]
+    },
+    {
+        "id": "59b278d15e2d929b",
+        "type": "function",
+        "z": "d974087eb4410441",
+        "g": "f869eda640303ea9",
+        "name": "update_relations_table",
+        "func": "let prev_record = msg.payload.insertId;\n\nlet cri = flow.get(\"charge_record_id\");\n\nmsg.payload = [prev_record, cri];\n\nmsg.topic = `\nUPDATE relations \nSET tr_id = ?\nWHERE\ncr_id = ?;\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 1420,
+        "wires": [
+            [
+                "74c045ed69fa92a5"
+            ]
+        ]
+    },
+    {
+        "id": "be19f84d4420d31b",
         "type": "debug",
         "z": "d974087eb4410441",
-        "name": "debug 76",
+        "g": "f869eda640303ea9",
+        "name": "debug 77",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -3609,23 +3674,91 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1120,
-        "y": 1820,
+        "x": 1060,
+        "y": 1420,
         "wires": []
     },
     {
-        "id": "4a53b9a4fd55590d",
+        "id": "74c045ed69fa92a5",
         "type": "mysql",
         "z": "d974087eb4410441",
+        "g": "f869eda640303ea9",
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
-        "x": 940,
-        "y": 1820,
+        "x": 920,
+        "y": 1420,
         "wires": [
             [
-                "ad86ef111d5d9939"
+                "be19f84d4420d31b"
             ]
         ]
+    },
+    {
+        "id": "1eb5338ba054f538",
+        "type": "link in",
+        "z": "d974087eb4410441",
+        "g": "025c3a8da95b8f7a",
+        "name": "db.input.charge_station.input",
+        "links": [
+            "4f73999c3ec0b730"
+        ],
+        "x": 105,
+        "y": 1540,
+        "wires": [
+            [
+                "f389868ad80b10d3"
+            ]
+        ]
+    },
+    {
+        "id": "f389868ad80b10d3",
+        "type": "function",
+        "z": "d974087eb4410441",
+        "g": "025c3a8da95b8f7a",
+        "name": "show_transactions",
+        "func": "msg.topic = `\nSELECT t.id, c.parking_spot AS spot, cs.location , t.amount, t.user_id AS user  FROM transactions t \nLEFT JOIN relations r ON t.id = r.tr_id \nLEFT JOIN chargerecords c ON c.id = r.cr_id\nRIGHT JOIN chargestation cs ON cs.id = c.station_id; \n`;\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 1540,
+        "wires": [
+            [
+                "f676c8b0e33e3933"
+            ]
+        ]
+    },
+    {
+        "id": "f676c8b0e33e3933",
+        "type": "mysql",
+        "z": "d974087eb4410441",
+        "g": "025c3a8da95b8f7a",
+        "mydb": "f2952bbb2ad433e2",
+        "name": "mdb-test",
+        "x": 510,
+        "y": 1540,
+        "wires": [
+            [
+                "94a3aa3a2d9fab70"
+            ]
+        ]
+    },
+    {
+        "id": "94a3aa3a2d9fab70",
+        "type": "link out",
+        "z": "d974087eb4410441",
+        "g": "025c3a8da95b8f7a",
+        "name": "db.output.charge_station.show_transactions",
+        "mode": "link",
+        "links": [
+            "a2f162b9d394a186"
+        ],
+        "x": 655,
+        "y": 1540,
+        "wires": []
     },
     {
         "id": "ea5ff2cd0cdfe128",
@@ -3725,8 +3858,8 @@
         "name": "",
         "ui": "ed3a4854fa1b4db8",
         "events": "all",
-        "x": 1040,
-        "y": 140,
+        "x": 1140,
+        "y": 160,
         "wires": [
             [
                 "1bf8e1c16c995ae6"
@@ -3745,8 +3878,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1200,
-        "y": 140,
+        "x": 1300,
+        "y": 160,
         "wires": []
     },
     {
@@ -3770,8 +3903,8 @@
         "topic": "",
         "payload": "Contact",
         "payloadType": "str",
-        "x": 830,
-        "y": 140,
+        "x": 930,
+        "y": 160,
         "wires": [
             [
                 "ec77049af9dae0ab"
@@ -3799,8 +3932,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 860,
-        "y": 200,
+        "x": 900,
+        "y": 220,
         "wires": [
             [
                 "ec77049af9dae0ab"
@@ -3883,8 +4016,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 850,
-        "y": 100,
+        "x": 890,
+        "y": 80,
         "wires": [
             [
                 "7bb2d1e517ee8d24"
@@ -3904,8 +4037,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1090,
-        "y": 100,
+        "x": 1130,
+        "y": 80,
         "wires": []
     },
     {
@@ -4368,11 +4501,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 910,
+        "x": 930,
         "y": 400,
         "wires": [
             [
-                "d9f5b4ebe6ceadec"
+                "d9f5b4ebe6ceadec",
+                "f66c10cd59cbac6e"
             ]
         ]
     },
@@ -4464,7 +4598,8 @@
         "id": "d02bfa02ad7249ef",
         "type": "ui-template",
         "z": "9c23ead5f4cd17b6",
-        "group": "f4b408f314ea8fb3",
+        "g": "716618853d781b35",
+        "group": "6294bb50f136aac5",
         "page": "",
         "ui": "",
         "name": "chargestation.pageload",
@@ -4479,21 +4614,24 @@
         "templateScope": "local",
         "className": "",
         "x": 210,
-        "y": 1000,
+        "y": 980,
         "wires": [
-            []
+            [
+                "4f73999c3ec0b730"
+            ]
         ]
     },
     {
         "id": "02ae78a50512873e",
         "type": "link in",
         "z": "9c23ead5f4cd17b6",
+        "g": "716618853d781b35",
         "name": "link in 15",
         "links": [
             "d37374ec32398ba1"
         ],
-        "x": 155,
-        "y": 1200,
+        "x": 135,
+        "y": 1280,
         "wires": [
             [
                 "851722563ece208c"
@@ -4504,6 +4642,7 @@
         "id": "851722563ece208c",
         "type": "ui-text",
         "z": "9c23ead5f4cd17b6",
+        "g": "716618853d781b35",
         "group": "6294bb50f136aac5",
         "order": 0,
         "width": 0,
@@ -4517,8 +4656,246 @@
         "fontSize": 16,
         "color": "#717171",
         "className": "",
-        "x": 430,
+        "x": 330,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "4f73999c3ec0b730",
+        "type": "link out",
+        "z": "9c23ead5f4cd17b6",
+        "g": "716618853d781b35",
+        "name": "ui.output.pageload.charge_station",
+        "mode": "link",
+        "links": [
+            "1eb5338ba054f538"
+        ],
+        "x": 395,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "8c702c77dd36bdca",
+        "type": "ui-template",
+        "z": "9c23ead5f4cd17b6",
+        "g": "716618853d781b35",
+        "group": "6294bb50f136aac5",
+        "page": "",
+        "ui": "",
+        "name": "Display charge transactions",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n    <v-text-field v-model=\"search\" label=\"Search\" prepend-inner-icon=\"mdi-magnify\" single-line variant=\"outlined\"\n    hide-details></v-text-field>\n    <v-data-table v-model:search=\"search\" :items=\"msg?.payload\">\n\n\n\n    </v-data-table>\n</template>\n\n<script>\n    export default {\n    data () {\n      return {\n        search: ''\n      }\n    },\n    methods: {\n      getColor: function (item) {\n        if (item.score < 70) {\n          return 'red'\n        } else {\n          return 'green'\n        }\n      }\n    }\n  }\n</script>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 380,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a2f162b9d394a186",
+        "type": "link in",
+        "z": "9c23ead5f4cd17b6",
+        "g": "716618853d781b35",
+        "name": "dashboard.input.charge_station.show_transactions",
+        "links": [
+            "94a3aa3a2d9fab70"
+        ],
+        "x": 125,
+        "y": 1140,
+        "wires": [
+            [
+                "8c702c77dd36bdca",
+                "5763ca455449785b"
+            ]
+        ]
+    },
+    {
+        "id": "5763ca455449785b",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "g": "716618853d781b35",
+        "name": "debug 78",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
         "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "f66c10cd59cbac6e",
+        "type": "debug",
+        "z": "9c23ead5f4cd17b6",
+        "g": "69f933624170a8db",
+        "name": "debug 79",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "534a1b47f4d8f647",
+        "type": "link in",
+        "z": "9c23ead5f4cd17b6",
+        "g": "716618853d781b35",
+        "name": "link in 16",
+        "links": [
+            "20e026677c68bd7b"
+        ],
+        "x": 135,
+        "y": 1380,
+        "wires": [
+            [
+                "98166c48d39ce2bd"
+            ]
+        ]
+    },
+    {
+        "id": "98166c48d39ce2bd",
+        "type": "switch",
+        "z": "9c23ead5f4cd17b6",
+        "g": "716618853d781b35",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "esp32/led/value1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "esp32/led/value2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "esp32/led/value3",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 250,
+        "y": 1380,
+        "wires": [
+            [
+                "5c642316acf14a1a"
+            ],
+            [
+                "28982104b2fdba96"
+            ],
+            [
+                "3e228f6c26bdbf05"
+            ]
+        ]
+    },
+    {
+        "id": "5c642316acf14a1a",
+        "type": "function",
+        "z": "9c23ead5f4cd17b6",
+        "g": "716618853d781b35",
+        "name": "function 10",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1340,
+        "wires": [
+            [
+                "df1a6337d2b7930f"
+            ]
+        ]
+    },
+    {
+        "id": "df1a6337d2b7930f",
+        "type": "ui-text",
+        "z": "9c23ead5f4cd17b6",
+        "g": "716618853d781b35",
+        "group": "6294bb50f136aac5",
+        "order": 0,
+        "width": "2",
+        "height": "1",
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-right",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "className": "",
+        "x": 630,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "28982104b2fdba96",
+        "type": "ui-text",
+        "z": "9c23ead5f4cd17b6",
+        "g": "716618853d781b35",
+        "group": "6294bb50f136aac5",
+        "order": 0,
+        "width": "2",
+        "height": "1",
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "className": "",
+        "x": 580,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "3e228f6c26bdbf05",
+        "type": "ui-text",
+        "z": "9c23ead5f4cd17b6",
+        "g": "716618853d781b35",
+        "group": "e6a3eaaef97c58a0",
+        "order": 0,
+        "width": "2",
+        "height": "1",
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "className": "",
+        "x": 540,
+        "y": 1440,
         "wires": []
     }
 ]
