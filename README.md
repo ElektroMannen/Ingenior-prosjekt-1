@@ -23,6 +23,7 @@ De ønsker også å redusert last på strømnettet, løsningen på dette er opp 
 - **Design:**
 - **Ideer** [Diskusjons forum i github](https://github.com/ElektroMannen/Ingenior-prosjekt-1/discussions)
 - **Oppgave text:** [ Oppgave_text.md](https://github.com/ElektroMannen/Ingenior-prosjekt-1/blob/main/Prosjekt%20informasjon/Oppgave_text.md)
+- **Bærekraftig refleksjonsnotat** .(https://www.overleaf.com/read/rvmsfgkrqmgk#0c7c72).
 
 ------------------
 
