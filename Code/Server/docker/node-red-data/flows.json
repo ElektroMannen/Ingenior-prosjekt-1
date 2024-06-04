@@ -91,7 +91,7 @@
             "8f11c965debd450e"
         ],
         "x": 64,
-        "y": 1639,
+        "y": 1719,
         "w": 312,
         "h": 202
     },
@@ -153,30 +153,13 @@
         },
         "nodes": [
             "21275fd3a4c7913e",
-            "5454094dd1d0958e"
+            "5454094dd1d0958e",
+            "c7906ff188775303"
         ],
         "x": 68,
         "y": 593,
         "w": 1164,
-        "h": 434
-    },
-    {
-        "id": "8ceaad14f6929143",
-        "type": "group",
-        "z": "d974087eb4410441",
-        "name": "db tollstation",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "fa423b6c44026824",
-            "7c5378ce3d8e1fab",
-            "1060263491f37862"
-        ],
-        "x": 58,
-        "y": 373,
-        "w": 1144,
-        "h": 574
+        "h": 814
     },
     {
         "id": "1343424fbbdc4b4e",
@@ -228,245 +211,14 @@
         },
         "nodes": [
             "116ddb3989f7865c",
-            "69f933624170a8db"
+            "69f933624170a8db",
+            "5d464c9e479cc761",
+            "13ca023302f0f7c1"
         ],
         "x": 48,
-        "y": 293,
+        "y": 313,
         "w": 1124,
-        "h": 574
-    },
-    {
-        "id": "9939226cfed744ae",
-        "type": "group",
-        "z": "d974087eb4410441",
-        "g": "025c3a8da95b8f7a",
-        "name": "initiate_charging",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "681cc84e5c74f62f",
-            "4d138347c7b68093",
-            "48b7e43ac0572c19",
-            "0b961f7bd67c5a6d",
-            "339c8a7199811e95",
-            "5adf0c52630de6c2",
-            "1c1f1601857b064c",
-            "36f3a52d4639e8b9",
-            "a86da9f0852228de",
-            "d87ad496b027c132"
-        ],
-        "x": 84,
-        "y": 1019,
-        "w": 1082,
-        "h": 162
-    },
-    {
-        "id": "fa423b6c44026824",
-        "type": "group",
-        "z": "d974087eb4410441",
-        "g": "8ceaad14f6929143",
-        "name": "insert_powerprice",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "b3c8efd25d693eb7",
-            "2fa7fa16.df7d36",
-            "8c41d7d6d675747c",
-            "6deff2c3917ab08e",
-            "20fc10f82e1fbb3c",
-            "f5f52c154dc1c527",
-            "465b90c9e7577fdd",
-            "b8b5793024a68019",
-            "bd2be327c3068176",
-            "6c75f5e6b0bae9ef"
-        ],
-        "x": 84,
-        "y": 399,
-        "w": 1092,
-        "h": 162
-    },
-    {
-        "id": "21275fd3a4c7913e",
-        "type": "group",
-        "z": "c7015bd55ac9c57d",
-        "g": "9e784f1479b1ecc4",
-        "name": "return to toll station",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "56faac02af1e3921",
-            "892664ccd686b134",
-            "a8858f8a4c84de28",
-            "3eb8a7513cd893f0",
-            "6d866f700464c477"
-        ],
-        "x": 94,
-        "y": 859,
-        "w": 592,
-        "h": 142
-    },
-    {
-        "id": "5454094dd1d0958e",
-        "type": "group",
-        "z": "c7015bd55ac9c57d",
-        "g": "9e784f1479b1ecc4",
-        "name": "get_power_prices",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "b4fe374a9bd7e327",
-            "1924828f1dadb641",
-            "0c28e72814e9bbae",
-            "270c46f9ca7fe345",
-            "75db24836ef699f2",
-            "7047c6b94e2edca3",
-            "11e643123ec5b919",
-            "5447f1d107d07b4d",
-            "216a5b5f33c20201",
-            "6583d5f44e957ce0",
-            "93a705171c063e17"
-        ],
-        "x": 94,
-        "y": 619,
-        "w": 1112,
-        "h": 182
-    },
-    {
-        "id": "7c5378ce3d8e1fab",
-        "type": "group",
-        "z": "d974087eb4410441",
-        "g": "8ceaad14f6929143",
-        "name": "get_userscore_and_price",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "f1c8edc3f112fcf2",
-            "06dc7761e9b36e06",
-            "8a79294f8c9e1bda",
-            "2492751851d4ab57",
-            "6578372151a0df87",
-            "bd683dfaf575d92b",
-            "8ff91e6586ddbeb6",
-            "70ea88b87505faaa",
-            "2311204e8aeb792a"
-        ],
-        "x": 94,
-        "y": 599,
-        "w": 1082,
-        "h": 142
-    },
-    {
-        "id": "116ddb3989f7865c",
-        "type": "group",
-        "z": "9c23ead5f4cd17b6",
-        "g": "0829e4ce132f4920",
-        "name": "set_toll_prices",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "728bcfee316180c5",
-            "9695c47a09c4d657",
-            "fd21801d95c179a1",
-            "6a8d7251a99d269b",
-            "49ab5c9eef18e2fe",
-            "d3bb702bcdf691a1",
-            "2636e9073bae688d",
-            "d5bb29401cd9c2f9",
-            "d2c115aaae325b40",
-            "ddefcb191dc9d43a"
-        ],
-        "x": 74,
-        "y": 639,
-        "w": 1072,
-        "h": 202
-    },
-    {
-        "id": "1060263491f37862",
-        "type": "group",
-        "z": "d974087eb4410441",
-        "g": "8ceaad14f6929143",
-        "name": "get_most_recent_toll_prices",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "f6d3906734b58c4b",
-            "2d95327a837381a2",
-            "e8c5ccf60952c2be",
-            "0f60eb9b92962992",
-            "a501c4b70711fc78",
-            "e1c49e9771213b10",
-            "f82bd2713bd5bea4"
-        ],
-        "x": 84,
-        "y": 779,
-        "w": 1092,
-        "h": 142
-    },
-    {
-        "id": "69f933624170a8db",
-        "type": "group",
-        "z": "9c23ead5f4cd17b6",
-        "g": "0829e4ce132f4920",
-        "name": "refresh_toll_prices_page",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "04613cd67e7bd8bd",
-            "d9f5b4ebe6ceadec",
-            "6f2b6412d3243be9",
-            "32bba6d6bdb66cee",
-            "7d834a69f9cfe8eb",
-            "da204c00005594c9",
-            "38573d34b841eb61",
-            "9ae509c0229a4605",
-            "9dca2e760e12e3df",
-            "ef9316e3662e77af",
-            "b3df72d8dcb2bc3a",
-            "2d68d6a1aa9ef244",
-            "2848dc9c2586b927",
-            "438180f8e7ed266d",
-            "f66c10cd59cbac6e"
-        ],
-        "x": 74,
-        "y": 319,
-        "w": 1052,
-        "h": 282
-    },
-    {
-        "id": "f869eda640303ea9",
-        "type": "group",
-        "z": "d974087eb4410441",
-        "g": "025c3a8da95b8f7a",
-        "name": "finish_charging",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "684afc80e9bd7aa7",
-            "f33f70cd07956bd8",
-            "f8490ccc66c6627f",
-            "8c7190358fbefe98",
-            "e1ddf0cb76206c25",
-            "e4955c44e4805be0",
-            "4a53b9a4fd55590d",
-            "a496dfbf1a877790",
-            "795507a12a4eb874",
-            "59b278d15e2d929b",
-            "be19f84d4420d31b",
-            "74c045ed69fa92a5"
-        ],
-        "x": 84,
-        "y": 1219,
-        "w": 1082,
-        "h": 242
+        "h": 628
     },
     {
         "id": "025c3a8da95b8f7a",
@@ -485,7 +237,7 @@
             "94a3aa3a2d9fab70"
         ],
         "x": 58,
-        "y": 993,
+        "y": 1073,
         "w": 1134,
         "h": 588
     },
@@ -512,10 +264,10 @@
             "28982104b2fdba96",
             "3e228f6c26bdbf05"
         ],
-        "x": 74,
-        "y": 939,
-        "w": 632,
-        "h": 542
+        "x": 54,
+        "y": 999,
+        "w": 612,
+        "h": 562
     },
     {
         "id": "6a95e8aa54c858ac",
@@ -565,9 +317,299 @@
             "20e026677c68bd7b"
         ],
         "x": 74,
-        "y": 1079,
+        "y": 1519,
         "w": 1652,
         "h": 1062
+    },
+    {
+        "id": "9939226cfed744ae",
+        "type": "group",
+        "z": "d974087eb4410441",
+        "g": "025c3a8da95b8f7a",
+        "name": "initiate_charging",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "681cc84e5c74f62f",
+            "4d138347c7b68093",
+            "48b7e43ac0572c19",
+            "0b961f7bd67c5a6d",
+            "339c8a7199811e95",
+            "5adf0c52630de6c2",
+            "1c1f1601857b064c",
+            "36f3a52d4639e8b9",
+            "a86da9f0852228de",
+            "d87ad496b027c132"
+        ],
+        "x": 84,
+        "y": 1099,
+        "w": 1082,
+        "h": 162
+    },
+    {
+        "id": "21275fd3a4c7913e",
+        "type": "group",
+        "z": "c7015bd55ac9c57d",
+        "g": "9e784f1479b1ecc4",
+        "name": "return_toll_price",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "56faac02af1e3921",
+            "892664ccd686b134",
+            "a8858f8a4c84de28",
+            "3eb8a7513cd893f0",
+            "6d866f700464c477"
+        ],
+        "x": 94,
+        "y": 1239,
+        "w": 592,
+        "h": 142
+    },
+    {
+        "id": "5454094dd1d0958e",
+        "type": "group",
+        "z": "c7015bd55ac9c57d",
+        "g": "9e784f1479b1ecc4",
+        "name": "get_power_prices",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "b4fe374a9bd7e327",
+            "1924828f1dadb641",
+            "0c28e72814e9bbae",
+            "270c46f9ca7fe345",
+            "75db24836ef699f2",
+            "7047c6b94e2edca3",
+            "11e643123ec5b919",
+            "5447f1d107d07b4d",
+            "216a5b5f33c20201",
+            "6583d5f44e957ce0",
+            "93a705171c063e17",
+            "4622aa7b0261ee14",
+            "166b5d3744c86f25",
+            "a6ad1c1bf0c2f9b0"
+        ],
+        "x": 94,
+        "y": 619,
+        "w": 1112,
+        "h": 242
+    },
+    {
+        "id": "116ddb3989f7865c",
+        "type": "group",
+        "z": "9c23ead5f4cd17b6",
+        "g": "0829e4ce132f4920",
+        "name": "set_toll_prices",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "728bcfee316180c5",
+            "9695c47a09c4d657",
+            "fd21801d95c179a1",
+            "6a8d7251a99d269b",
+            "49ab5c9eef18e2fe",
+            "d3bb702bcdf691a1",
+            "2636e9073bae688d",
+            "d5bb29401cd9c2f9",
+            "d2c115aaae325b40",
+            "ddefcb191dc9d43a"
+        ],
+        "x": 74,
+        "y": 659,
+        "w": 1072,
+        "h": 202
+    },
+    {
+        "id": "69f933624170a8db",
+        "type": "group",
+        "z": "9c23ead5f4cd17b6",
+        "g": "0829e4ce132f4920",
+        "name": "refresh_toll_prices_page",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "04613cd67e7bd8bd",
+            "d9f5b4ebe6ceadec",
+            "6f2b6412d3243be9",
+            "32bba6d6bdb66cee",
+            "7d834a69f9cfe8eb",
+            "da204c00005594c9",
+            "38573d34b841eb61",
+            "9ae509c0229a4605",
+            "9dca2e760e12e3df",
+            "ef9316e3662e77af",
+            "b3df72d8dcb2bc3a",
+            "2d68d6a1aa9ef244",
+            "2848dc9c2586b927",
+            "438180f8e7ed266d",
+            "f66c10cd59cbac6e",
+            "0ef456bd120be2eb"
+        ],
+        "x": 74,
+        "y": 339,
+        "w": 1052,
+        "h": 282
+    },
+    {
+        "id": "f869eda640303ea9",
+        "type": "group",
+        "z": "d974087eb4410441",
+        "g": "025c3a8da95b8f7a",
+        "name": "finish_charging",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "684afc80e9bd7aa7",
+            "f33f70cd07956bd8",
+            "f8490ccc66c6627f",
+            "8c7190358fbefe98",
+            "e1ddf0cb76206c25",
+            "e4955c44e4805be0",
+            "4a53b9a4fd55590d",
+            "a496dfbf1a877790",
+            "795507a12a4eb874",
+            "59b278d15e2d929b",
+            "be19f84d4420d31b",
+            "74c045ed69fa92a5"
+        ],
+        "x": 84,
+        "y": 1299,
+        "w": 1082,
+        "h": 242
+    },
+    {
+        "id": "c7906ff188775303",
+        "type": "group",
+        "z": "c7015bd55ac9c57d",
+        "g": "9e784f1479b1ecc4",
+        "name": "return_power_price",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ed9b01e046d144e7",
+            "2a6ceb40d703222b",
+            "c299a20498ef6157",
+            "c5625aae3982120b",
+            "32873f28166a99e3",
+            "53a77b9dde206ea2",
+            "50b307eb95867622",
+            "660a1d8987b9b7bb",
+            "83478248c9afeea4",
+            "f9013a522c1abdd8",
+            "50366ad6532503c4",
+            "c6e4d7cfcfad47e1",
+            "b4907d24f57876bb",
+            "c6b56c5e4cf401b5"
+        ],
+        "x": 94,
+        "y": 879,
+        "w": 1042,
+        "h": 342
+    },
+    {
+        "id": "8ceaad14f6929143",
+        "type": "group",
+        "z": "d974087eb4410441",
+        "name": "db tollstation",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ebb5eb51d6d86baa",
+            "d5b6cd3abd938e5d",
+            "0a9dc2d0d62b6741",
+            "fa423b6c44026824",
+            "7c5378ce3d8e1fab",
+            "1060263491f37862",
+            "753dc434ae2fe719",
+            "efe6947ea88a29ce"
+        ],
+        "x": 58,
+        "y": 373,
+        "w": 1144,
+        "h": 668
+    },
+    {
+        "id": "fa423b6c44026824",
+        "type": "group",
+        "z": "d974087eb4410441",
+        "g": "8ceaad14f6929143",
+        "name": "insert_powerprice",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "b3c8efd25d693eb7",
+            "2fa7fa16.df7d36",
+            "8c41d7d6d675747c",
+            "6deff2c3917ab08e",
+            "20fc10f82e1fbb3c",
+            "f5f52c154dc1c527",
+            "465b90c9e7577fdd",
+            "b8b5793024a68019",
+            "bd2be327c3068176",
+            "6c75f5e6b0bae9ef"
+        ],
+        "x": 84,
+        "y": 399,
+        "w": 1092,
+        "h": 162
+    },
+    {
+        "id": "7c5378ce3d8e1fab",
+        "type": "group",
+        "z": "d974087eb4410441",
+        "g": "8ceaad14f6929143",
+        "name": "get_userscore_and_price",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "f1c8edc3f112fcf2",
+            "06dc7761e9b36e06",
+            "8a79294f8c9e1bda",
+            "2492751851d4ab57",
+            "6578372151a0df87",
+            "bd683dfaf575d92b",
+            "8ff91e6586ddbeb6",
+            "70ea88b87505faaa",
+            "2311204e8aeb792a"
+        ],
+        "x": 94,
+        "y": 599,
+        "w": 1082,
+        "h": 142
+    },
+    {
+        "id": "1060263491f37862",
+        "type": "group",
+        "z": "d974087eb4410441",
+        "g": "8ceaad14f6929143",
+        "name": "get_most_recent_toll_prices",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "f6d3906734b58c4b",
+            "2d95327a837381a2",
+            "e8c5ccf60952c2be",
+            "0f60eb9b92962992",
+            "a501c4b70711fc78",
+            "e1c49e9771213b10",
+            "f82bd2713bd5bea4"
+        ],
+        "x": 84,
+        "y": 779,
+        "w": 1092,
+        "h": 142
     },
     {
         "id": "f2952bbb2ad433e2",
@@ -787,6 +829,19 @@
         "disabled": "false"
     },
     {
+        "id": "b2e2400c7d47390e",
+        "type": "ui-group",
+        "name": "Transactions",
+        "page": "8e8e755dd05b63ae",
+        "width": "6",
+        "height": "1",
+        "order": -1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
         "id": "bb8e501cbe7d5d9d",
         "type": "function",
         "z": "c7015bd55ac9c57d",
@@ -815,7 +870,7 @@
         "z": "c7015bd55ac9c57d",
         "g": "dff9176621056133",
         "name": "debug 15",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -925,9 +980,9 @@
         "width": 0,
         "height": 0,
         "name": "show_input",
-        "label": "what this",
+        "label": "Output",
         "format": "{{msg.payload}}",
-        "layout": "row-center",
+        "layout": "row-left",
         "style": false,
         "font": "",
         "fontSize": 16,
@@ -1356,7 +1411,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 610,
+        "x": 670,
         "y": 660,
         "wires": [
             [
@@ -1384,7 +1439,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "Toll ID: 1, Car ID: 1, driver ID: 1",
+        "payload": "Tollstation ID: 1, Car ID: 1, Driver ID: 1",
         "payloadType": "str",
         "x": 230,
         "y": 660,
@@ -1400,7 +1455,7 @@
         "z": "c7015bd55ac9c57d",
         "g": "5454094dd1d0958e",
         "name": "get_now",
-        "func": "//let date2 = new Date(Date.UTC(2012, 3, 0, 3, 0, 0)).toLocaleDateString(\"no-NO\", {day: \"2-digit\"}).slice(0,2)\nlet date = new Date();\n\nlet received_string = msg.payload;\n\n//\"Toll ID: 1, Car ID: 3, driver ID: 3\"\n\nconst res = /Toll ID: ([0-9]+), Car ID: ([0-9]+), driver ID: ([0-9]+)/;\n\n\nlet regex_find = received_string.match(res);\n\nflow.set(\"toll_id\", parseInt(regex_find[1], 10));\nflow.set(\"car_id\", parseInt(regex_find[2], 10));\nflow.set(\"user_id\",parseInt(regex_find[3], 10));\n\n//let day = date.getDay().toLocaleString(\"no_NO\", options);\nlet day = date.toLocaleDateString(\"no-NO\", {day: \"2-digit\"}).slice(0,2);\nlet month = date.toLocaleDateString(\"no-NO\", {month: \"2-digit\"}).slice(0,2);\nlet year = date.getFullYear();\n\nmsg.topic = `${year}/${month}-${day}_NO5`;\n\n//msg.payload = day\n//msg.topic = \"/2024/05-30_NO5\";\nreturn msg;",
+        "func": "//let date2 = new Date(Date.UTC(2012, 3, 0, 3, 0, 0)).toLocaleDateString(\"no-NO\", {day: \"2-digit\"}).slice(0,2)\nlet date = new Date();\n\nlet received_string = msg.payload;\n\nif (/Car 2 paid:/i.test(received_string)) {\n    return null;\n}\n\n//\"Toll ID: 1, Car ID: 3, driver ID: 3\"\n\nconst res = /Tollstation ID: ([0-9]+),Car ID: ([0-9]+),Driver ID: ([0-9]+)/;\n\n\nlet regex_find = received_string.match(res);\n\nflow.set(\"toll_id\", parseInt(regex_find[1], 10));\nflow.set(\"car_id\", parseInt(regex_find[2], 10));\nflow.set(\"user_id\",parseInt(regex_find[3], 10));\n\n//let day = date.getDay().toLocaleString(\"no_NO\", options);\nlet day = date.toLocaleDateString(\"no-NO\", {day: \"2-digit\"}).slice(0,2);\nlet month = date.toLocaleDateString(\"no-NO\", {month: \"2-digit\"}).slice(0,2);\nlet year = date.getFullYear();\n\nmsg.topic = `${year}/${month}-${day}_NO5`;\n\n//msg.payload = day\n//msg.topic = \"/2024/05-30_NO5\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1411,8 +1466,9 @@
         "y": 660,
         "wires": [
             [
+                "93a705171c063e17",
                 "b4fe374a9bd7e327",
-                "93a705171c063e17"
+                "a6ad1c1bf0c2f9b0"
             ]
         ]
     },
@@ -1425,7 +1481,7 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 770,
+        "x": 830,
         "y": 660,
         "wires": [
             [
@@ -1446,7 +1502,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 950,
+        "x": 1010,
         "y": 660,
         "wires": [
             [
@@ -1479,15 +1535,15 @@
         "g": "5454094dd1d0958e",
         "name": "",
         "topic": "Toll-station",
-        "qos": "2",
+        "qos": "1",
         "datatype": "auto-detect",
         "broker": "dc20097875203fb9",
         "nl": false,
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 200,
-        "y": 760,
+        "x": 180,
+        "y": 740,
         "wires": [
             [
                 "216a5b5f33c20201",
@@ -1501,15 +1557,15 @@
         "z": "c7015bd55ac9c57d",
         "g": "5454094dd1d0958e",
         "name": "debug 31",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 380,
-        "y": 760,
+        "x": 360,
+        "y": 820,
         "wires": []
     },
     {
@@ -1522,7 +1578,7 @@
             "8a79294f8c9e1bda"
         ],
         "x": 135,
-        "y": 900,
+        "y": 1280,
         "wires": [
             [
                 "892664ccd686b134"
@@ -1543,7 +1599,7 @@
         "finalize": "",
         "libs": [],
         "x": 290,
-        "y": 900,
+        "y": 1280,
         "wires": [
             [
                 "a8858f8a4c84de28",
@@ -1567,7 +1623,7 @@
         "expiry": "",
         "broker": "dc20097875203fb9",
         "x": 580,
-        "y": 960,
+        "y": 1340,
         "wires": []
     },
     {
@@ -1590,10 +1646,10 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "73",
+        "payload": "73.8272",
         "payloadType": "num",
         "x": 210,
-        "y": 960,
+        "y": 1340,
         "wires": [
             [
                 "3eb8a7513cd893f0"
@@ -1615,7 +1671,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 580,
-        "y": 900,
+        "y": 1280,
         "wires": []
     },
     {
@@ -1627,9 +1683,10 @@
         "mode": "link",
         "links": [
             "b3c8efd25d693eb7",
-            "0f60eb9b92962992"
+            "0f60eb9b92962992",
+            "53a77b9dde206ea2"
         ],
-        "x": 1095,
+        "x": 1155,
         "y": 660,
         "wires": []
     },
@@ -1643,8 +1700,8 @@
         "links": [
             "70ea88b87505faaa"
         ],
-        "x": 775,
-        "y": 760,
+        "x": 875,
+        "y": 720,
         "wires": []
     },
     {
@@ -1660,8 +1717,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 590,
-        "y": 760,
+        "x": 740,
+        "y": 720,
         "wires": [
             [
                 "6583d5f44e957ce0"
@@ -1683,7 +1740,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 240,
-        "y": 1440,
+        "y": 1880,
         "wires": [
             [
                 "3da3db495b46e423",
@@ -1706,7 +1763,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 240,
-        "y": 1500,
+        "y": 1940,
         "wires": [
             [
                 "3da3db495b46e423",
@@ -1729,7 +1786,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 240,
-        "y": 1560,
+        "y": 2000,
         "wires": [
             [
                 "3da3db495b46e423",
@@ -1752,7 +1809,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 200,
-        "y": 1980,
+        "y": 2420,
         "wires": [
             [
                 "1e6243a71c3975d4"
@@ -1774,7 +1831,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 200,
-        "y": 2040,
+        "y": 2480,
         "wires": [
             [
                 "1e6243a71c3975d4"
@@ -1796,7 +1853,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 200,
-        "y": 2100,
+        "y": 2540,
         "wires": [
             [
                 "1e6243a71c3975d4"
@@ -1818,7 +1875,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 250,
-        "y": 1120,
+        "y": 1560,
         "wires": [
             [
                 "02b7c48b5e854a1a"
@@ -1840,7 +1897,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 250,
-        "y": 1180,
+        "y": 1620,
         "wires": [
             [
                 "02b7c48b5e854a1a"
@@ -1862,7 +1919,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 250,
-        "y": 1240,
+        "y": 1680,
         "wires": [
             [
                 "02b7c48b5e854a1a"
@@ -1892,7 +1949,7 @@
         "payload": "Opptatt, User ID: 1, Station ID: 1",
         "payloadType": "str",
         "x": 260,
-        "y": 1760,
+        "y": 2200,
         "wires": [
             [
                 "3da3db495b46e423"
@@ -1913,7 +1970,7 @@
         "finalize": "",
         "libs": [],
         "x": 1390,
-        "y": 1120,
+        "y": 1560,
         "wires": [
             [
                 "238096ea929842a9"
@@ -1935,7 +1992,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1560,
-        "y": 1120,
+        "y": 1560,
         "wires": []
     },
     {
@@ -1962,7 +2019,7 @@
         "repair": false,
         "outputs": 2,
         "x": 750,
-        "y": 1700,
+        "y": 2140,
         "wires": [
             [
                 "1bfb51ebb430b759"
@@ -1996,7 +2053,7 @@
         "payload": "0, User ID: 2, Station ID: 1\"",
         "payloadType": "str",
         "x": 260,
-        "y": 1300,
+        "y": 1740,
         "wires": [
             [
                 "02b7c48b5e854a1a"
@@ -2026,7 +2083,7 @@
         "payload": "Ledig, User ID: 1, Station ID: 1",
         "payloadType": "str",
         "x": 260,
-        "y": 1720,
+        "y": 2160,
         "wires": [
             [
                 "3da3db495b46e423",
@@ -2048,7 +2105,7 @@
         "finalize": "",
         "libs": [],
         "x": 580,
-        "y": 1700,
+        "y": 2140,
         "wires": [
             [
                 "3e6aaa8a256b8c8f"
@@ -2070,7 +2127,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 980,
-        "y": 1700,
+        "y": 2140,
         "wires": []
     },
     {
@@ -2087,7 +2144,7 @@
         "finalize": "",
         "libs": [],
         "x": 610,
-        "y": 1320,
+        "y": 1760,
         "wires": [
             [
                 "9c13ce0ea3ea12b4",
@@ -2110,7 +2167,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 800,
-        "y": 1320,
+        "y": 1760,
         "wires": []
     },
     {
@@ -2138,7 +2195,7 @@
         "repair": false,
         "outputs": 3,
         "x": 1230,
-        "y": 1640,
+        "y": 2080,
         "wires": [
             [
                 "92aca90c4405a617"
@@ -2171,7 +2228,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1020,
-        "y": 1580,
+        "y": 2020,
         "wires": [
             [
                 "1bfb51ebb430b759",
@@ -2193,7 +2250,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1460,
-        "y": 1600,
+        "y": 2040,
         "wires": []
     },
     {
@@ -2210,7 +2267,7 @@
         "finalize": "",
         "libs": [],
         "x": 1440,
-        "y": 1520,
+        "y": 1960,
         "wires": [
             [
                 "8909798ad584083f",
@@ -2229,7 +2286,7 @@
             "4d138347c7b68093"
         ],
         "x": 1465,
-        "y": 1640,
+        "y": 2080,
         "wires": []
     },
     {
@@ -2246,7 +2303,7 @@
         "finalize": "",
         "libs": [],
         "x": 1420,
-        "y": 1680,
+        "y": 2120,
         "wires": [
             []
         ]
@@ -2260,7 +2317,7 @@
         "scope": "group",
         "uncaught": false,
         "x": 730,
-        "y": 1640,
+        "y": 2080,
         "wires": [
             [
                 "1bfb51ebb430b759"
@@ -2290,7 +2347,7 @@
         "payload": "598.498, User ID: 1, Station ID: 1\"",
         "payloadType": "str",
         "x": 270,
-        "y": 1360,
+        "y": 1800,
         "wires": [
             [
                 "02b7c48b5e854a1a"
@@ -2311,7 +2368,7 @@
         "finalize": "",
         "libs": [],
         "x": 1040,
-        "y": 1640,
+        "y": 2080,
         "wires": [
             [
                 "251a0a65d7069398"
@@ -2333,7 +2390,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1620,
-        "y": 1520,
+        "y": 1960,
         "wires": []
     },
     {
@@ -2351,7 +2408,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1220,
-        "y": 1580,
+        "y": 2020,
         "wires": []
     },
     {
@@ -2368,7 +2425,7 @@
         "finalize": "",
         "libs": [],
         "x": 1010,
-        "y": 1780,
+        "y": 2220,
         "wires": [
             [
                 "60256e9b498b8dd5",
@@ -2387,7 +2444,7 @@
             "f33f70cd07956bd8"
         ],
         "x": 1165,
-        "y": 1780,
+        "y": 2220,
         "wires": []
     },
     {
@@ -2405,7 +2462,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1220,
-        "y": 1820,
+        "y": 2260,
         "wires": []
     },
     {
@@ -2419,7 +2476,7 @@
             "02ae78a50512873e"
         ],
         "x": 585,
-        "y": 1960,
+        "y": 2400,
         "wires": []
     },
     {
@@ -2445,7 +2502,7 @@
         "payload": "Delvis skyet",
         "payloadType": "str",
         "x": 200,
-        "y": 1880,
+        "y": 2320,
         "wires": [
             [
                 "1e6243a71c3975d4"
@@ -2466,7 +2523,7 @@
         "finalize": "",
         "libs": [],
         "x": 430,
-        "y": 1960,
+        "y": 2400,
         "wires": [
             [
                 "d37374ec32398ba1"
@@ -2511,7 +2568,344 @@
             "534a1b47f4d8f647"
         ],
         "x": 535,
-        "y": 1500,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "c5625aae3982120b",
+        "type": "mqtt out",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "",
+        "topic": "NOK_per_kWh",
+        "qos": "2",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "dc20097875203fb9",
+        "x": 1020,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "ed9b01e046d144e7",
+        "type": "mqtt in",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "",
+        "topic": "pricePing",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "dc20097875203fb9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 920,
+        "wires": [
+            [
+                "2a6ceb40d703222b",
+                "32873f28166a99e3"
+            ]
+        ]
+    },
+    {
+        "id": "2a6ceb40d703222b",
+        "type": "debug",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "debug 80",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "c299a20498ef6157",
+        "type": "inject",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0.13282",
+        "payloadType": "num",
+        "x": 800,
+        "y": 920,
+        "wires": [
+            [
+                "c5625aae3982120b"
+            ]
+        ]
+    },
+    {
+        "id": "4622aa7b0261ee14",
+        "type": "link in",
+        "z": "c7015bd55ac9c57d",
+        "g": "5454094dd1d0958e",
+        "name": "communication.input.toll_station.get_power_price",
+        "links": [
+            "32873f28166a99e3"
+        ],
+        "x": 355,
+        "y": 760,
+        "wires": [
+            [
+                "166b5d3744c86f25"
+            ]
+        ]
+    },
+    {
+        "id": "32873f28166a99e3",
+        "type": "link out",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "communication.output.get_price",
+        "mode": "link",
+        "links": [
+            "4622aa7b0261ee14"
+        ],
+        "x": 335,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "53a77b9dde206ea2",
+        "type": "link in",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "communication.input.return_power_price",
+        "links": [
+            "11e643123ec5b919"
+        ],
+        "x": 555,
+        "y": 980,
+        "wires": [
+            [
+                "660a1d8987b9b7bb",
+                "c6e4d7cfcfad47e1",
+                "b4907d24f57876bb",
+                "c6b56c5e4cf401b5"
+            ]
+        ]
+    },
+    {
+        "id": "50b307eb95867622",
+        "type": "debug",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "debug 81",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "166b5d3744c86f25",
+        "type": "function",
+        "z": "c7015bd55ac9c57d",
+        "g": "5454094dd1d0958e",
+        "name": "simple_get_price",
+        "func": "let date = new Date();\n\n//let day = date.getDay().toLocaleString(\"no_NO\", options);\nlet day = date.toLocaleDateString(\"no-NO\", { day: \"2-digit\" }).slice(0, 2);\nlet month = date.toLocaleDateString(\"no-NO\", { month: \"2-digit\" }).slice(0, 2);\nlet year = date.getFullYear();\n\nmsg.topic = `${year}/${month}-${day}_NO5`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 760,
+        "wires": [
+            [
+                "b4fe374a9bd7e327"
+            ]
+        ]
+    },
+    {
+        "id": "660a1d8987b9b7bb",
+        "type": "function",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "filter_price_to_toll_station",
+        "func": "msg.payload = msg.payload.price;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 980,
+        "wires": [
+            [
+                "c5625aae3982120b",
+                "50b307eb95867622"
+            ]
+        ]
+    },
+    {
+        "id": "83478248c9afeea4",
+        "type": "mqtt out",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "",
+        "topic": "electricPrice",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "dc20097875203fb9",
+        "x": 1010,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "f9013a522c1abdd8",
+        "type": "mqtt out",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "",
+        "topic": "gasolinePrice",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "dc20097875203fb9",
+        "x": 1020,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "50366ad6532503c4",
+        "type": "mqtt out",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "",
+        "topic": "servicePrice",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "dc20097875203fb9",
+        "x": 1010,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "c6e4d7cfcfad47e1",
+        "type": "function",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "return_service_price",
+        "func": "msg.payload = global.get(\"toll_service\")\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 1060,
+        "wires": [
+            [
+                "50366ad6532503c4"
+            ]
+        ]
+    },
+    {
+        "id": "b4907d24f57876bb",
+        "type": "function",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "return_electric_price",
+        "func": "msg.payload = global.get(\"toll_electric\")\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 1120,
+        "wires": [
+            [
+                "83478248c9afeea4"
+            ]
+        ]
+    },
+    {
+        "id": "c6b56c5e4cf401b5",
+        "type": "function",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "return_gasoline_price",
+        "func": "msg.payload = global.get(\"toll_gasoline\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 1180,
+        "wires": [
+            [
+                "f9013a522c1abdd8"
+            ]
+        ]
+    },
+    {
+        "id": "a6ad1c1bf0c2f9b0",
+        "type": "debug",
+        "z": "c7015bd55ac9c57d",
+        "g": "5454094dd1d0958e",
+        "name": "debug 83",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 760,
         "wires": []
     },
     {
@@ -2588,7 +2982,7 @@
             "414f9ce98347a63b"
         ],
         "x": 75,
-        "y": 220,
+        "y": 200,
         "wires": [
             [
                 "0b3e6df4fe188922"
@@ -2667,7 +3061,7 @@
         "z": "d974087eb4410441",
         "g": "8d23dc769da0d07f",
         "name": "getUsers",
-        "func": "msg.topic = \"SELECT u.id, u.name, u.email, u.address, u.tlf, AVG(e.score) AS score FROM users u LEFT JOIN ecoscore e ON u.id = e.user_id;\"\n\nreturn msg;",
+        "func": "msg.topic = `\nSELECT u.id, u.name, u.email, u.address, u.tlf, AVG(e.score) AS score \nFROM ecoscore e LEFT JOIN users u ON user_id = u.id\nGROUP BY u.id;\n`;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2724,7 +3118,7 @@
             "038b288f4ba869de"
         ],
         "x": 105,
-        "y": 1680,
+        "y": 1760,
         "wires": [
             [
                 "6f161c9edf33ba3d"
@@ -2742,7 +3136,7 @@
             "2f4b2f43ca14af61"
         ],
         "x": 105,
-        "y": 1740,
+        "y": 1820,
         "wires": [
             [
                 "fbb060fd70043410"
@@ -2760,7 +3154,7 @@
             "b27aeb6f7cd37378"
         ],
         "x": 105,
-        "y": 1800,
+        "y": 1880,
         "wires": [
             [
                 "8f11c965debd450e"
@@ -2783,7 +3177,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 270,
-        "y": 1680,
+        "y": 1760,
         "wires": []
     },
     {
@@ -2802,7 +3196,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 260,
-        "y": 1740,
+        "y": 1820,
         "wires": []
     },
     {
@@ -2821,7 +3215,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 260,
-        "y": 1800,
+        "y": 1880,
         "wires": []
     },
     {
@@ -2980,7 +3374,7 @@
         "z": "d974087eb4410441",
         "g": "fa423b6c44026824",
         "name": "debug 40",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3284,7 +3678,7 @@
         "z": "d974087eb4410441",
         "g": "7c5378ce3d8e1fab",
         "name": "debug 54",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3310,7 +3704,7 @@
         "finalize": "",
         "libs": [],
         "x": 440,
-        "y": 1100,
+        "y": 1180,
         "wires": [
             [
                 "0b961f7bd67c5a6d"
@@ -3327,7 +3721,7 @@
             "f0a06994da576122"
         ],
         "x": 125,
-        "y": 1060,
+        "y": 1140,
         "wires": [
             [
                 "36f3a52d4639e8b9"
@@ -3349,7 +3743,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1060,
-        "y": 1060,
+        "y": 1140,
         "wires": []
     },
     {
@@ -3360,7 +3754,7 @@
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
         "x": 640,
-        "y": 1100,
+        "y": 1180,
         "wires": [
             [
                 "339c8a7199811e95",
@@ -3382,7 +3776,7 @@
         "finalize": "",
         "libs": [],
         "x": 730,
-        "y": 1060,
+        "y": 1140,
         "wires": [
             [
                 "1c1f1601857b064c"
@@ -3404,7 +3798,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 800,
-        "y": 1100,
+        "y": 1180,
         "wires": []
     },
     {
@@ -3415,7 +3809,7 @@
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
         "x": 920,
-        "y": 1060,
+        "y": 1140,
         "wires": [
             [
                 "48b7e43ac0572c19"
@@ -3436,7 +3830,7 @@
         "finalize": "",
         "libs": [],
         "x": 290,
-        "y": 1060,
+        "y": 1140,
         "wires": [
             [
                 "d87ad496b027c132"
@@ -3458,7 +3852,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 400,
-        "y": 1140,
+        "y": 1220,
         "wires": []
     },
     {
@@ -3469,7 +3863,7 @@
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
         "x": 240,
-        "y": 1100,
+        "y": 1180,
         "wires": [
             [
                 "a86da9f0852228de",
@@ -3491,7 +3885,7 @@
         "finalize": "",
         "libs": [],
         "x": 300,
-        "y": 1260,
+        "y": 1340,
         "wires": [
             [
                 "8c7190358fbefe98"
@@ -3508,7 +3902,7 @@
             "60256e9b498b8dd5"
         ],
         "x": 125,
-        "y": 1260,
+        "y": 1340,
         "wires": [
             [
                 "684afc80e9bd7aa7",
@@ -3531,7 +3925,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 560,
-        "y": 1300,
+        "y": 1380,
         "wires": []
     },
     {
@@ -3542,7 +3936,7 @@
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
         "x": 400,
-        "y": 1300,
+        "y": 1380,
         "wires": [
             [
                 "f8490ccc66c6627f",
@@ -3564,7 +3958,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 240,
-        "y": 1340,
+        "y": 1420,
         "wires": []
     },
     {
@@ -3581,7 +3975,7 @@
         "finalize": "",
         "libs": [],
         "x": 500,
-        "y": 1340,
+        "y": 1420,
         "wires": [
             [
                 "4a53b9a4fd55590d"
@@ -3596,7 +3990,7 @@
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
         "x": 680,
-        "y": 1340,
+        "y": 1420,
         "wires": [
             [
                 "a496dfbf1a877790"
@@ -3617,7 +4011,7 @@
         "finalize": "",
         "libs": [],
         "x": 770,
-        "y": 1300,
+        "y": 1380,
         "wires": [
             [
                 "795507a12a4eb874"
@@ -3632,7 +4026,7 @@
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
         "x": 880,
-        "y": 1340,
+        "y": 1420,
         "wires": [
             [
                 "59b278d15e2d929b"
@@ -3653,7 +4047,7 @@
         "finalize": "",
         "libs": [],
         "x": 740,
-        "y": 1420,
+        "y": 1500,
         "wires": [
             [
                 "74c045ed69fa92a5"
@@ -3675,7 +4069,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1060,
-        "y": 1420,
+        "y": 1500,
         "wires": []
     },
     {
@@ -3686,7 +4080,7 @@
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
         "x": 920,
-        "y": 1420,
+        "y": 1500,
         "wires": [
             [
                 "be19f84d4420d31b"
@@ -3703,7 +4097,7 @@
             "4f73999c3ec0b730"
         ],
         "x": 105,
-        "y": 1540,
+        "y": 1620,
         "wires": [
             [
                 "f389868ad80b10d3"
@@ -3724,7 +4118,7 @@
         "finalize": "",
         "libs": [],
         "x": 300,
-        "y": 1540,
+        "y": 1620,
         "wires": [
             [
                 "f676c8b0e33e3933"
@@ -3739,7 +4133,7 @@
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
         "x": 510,
-        "y": 1540,
+        "y": 1620,
         "wires": [
             [
                 "94a3aa3a2d9fab70"
@@ -3757,7 +4151,92 @@
             "a2f162b9d394a186"
         ],
         "x": 655,
-        "y": 1540,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "ebb5eb51d6d86baa",
+        "type": "function",
+        "z": "d974087eb4410441",
+        "g": "8ceaad14f6929143",
+        "name": "show_transactions_toll_station",
+        "func": "msg.topic = `\nSELECT t.id, ts.location, t.amount, t.user_id AS user  FROM transactions t \nLEFT JOIN relations r ON t.id = r.tr_id \nLEFT JOIN tollstation ts ON ts.id = r.toll_id\nWHERE ts.location IS NOT NULL; \n`;\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 1000,
+        "wires": [
+            [
+                "d5b6cd3abd938e5d",
+                "efe6947ea88a29ce"
+            ]
+        ]
+    },
+    {
+        "id": "d5b6cd3abd938e5d",
+        "type": "mysql",
+        "z": "d974087eb4410441",
+        "g": "8ceaad14f6929143",
+        "mydb": "f2952bbb2ad433e2",
+        "name": "mdb-test",
+        "x": 700,
+        "y": 1000,
+        "wires": [
+            [
+                "753dc434ae2fe719"
+            ]
+        ]
+    },
+    {
+        "id": "0a9dc2d0d62b6741",
+        "type": "link in",
+        "z": "d974087eb4410441",
+        "g": "8ceaad14f6929143",
+        "name": "db.input.get_all_toll_transactions",
+        "links": [
+            "0ef456bd120be2eb"
+        ],
+        "x": 145,
+        "y": 1000,
+        "wires": [
+            [
+                "ebb5eb51d6d86baa"
+            ]
+        ]
+    },
+    {
+        "id": "753dc434ae2fe719",
+        "type": "link out",
+        "z": "d974087eb4410441",
+        "g": "8ceaad14f6929143",
+        "name": "db.output.return_toll_transactions",
+        "mode": "link",
+        "links": [
+            "13ca023302f0f7c1"
+        ],
+        "x": 925,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "efe6947ea88a29ce",
+        "type": "debug",
+        "z": "d974087eb4410441",
+        "g": "8ceaad14f6929143",
+        "name": "debug 82",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 960,
         "wires": []
     },
     {
@@ -3773,7 +4252,7 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n    <v-text-field v-model=\"search\" label=\"Search\" prepend-inner-icon=\"mdi-magnify\" single-line variant=\"outlined\"\n    hide-details></v-text-field>\n    <v-data-table v-model:search=\"search\" :items=\"msg?.payload\">\n\n      <template v-slot:header.total_impact_score>\n        <div class=\"text-center\">Score</div>\n      </template>\n\n      <template v-slot:item.name=\"{ item }\">\n        {{ item.name }}°C\n      </template>\n\n      <template v-slot:item.score=\"{ item }\">\n        <v-progress-linear v-model=\"item.score\" min=\"0\" max=\"100\" height=\"25\" :color=\"getColor(item)\">\n          <template v-slot:default=\"{ value }\">\n            <strong>{{ item.score }}</strong>\n          </template>\n        </v-progress-linear>\n      </template>\n\n    </v-data-table>\n</template>\n\n<script>\n    export default {\n    data () {\n      return {\n        search: ''\n      }\n    },\n    methods: {\n      getColor: function (item) {\n        if (item.score < 70) {\n          return 'red'\n        } else {\n          return 'green'\n        }\n      }\n    }\n  }\n</script>",
+        "format": "<template>\n    <v-text-field v-model=\"search\" label=\"Search\" prepend-inner-icon=\"mdi-magnify\" single-line variant=\"outlined\"\n    hide-details></v-text-field>\n    <v-data-table v-model:search=\"search\" :items=\"msg?.payload\">\n\n      <template v-slot:header.total_impact_score>\n        <div class=\"text-center\">Score</div>\n      </template>\n\n      <template v-slot:item.name=\"{ item }\">\n        {{ item.name }}\n      </template>\n\n      <template v-slot:item.score=\"{ item }\">\n        <v-progress-linear v-model=\"item.score\" min=\"0\" max=\"100\" height=\"25\" :color=\"getColor(item)\">\n          <template v-slot:default=\"{ value }\">\n            <strong>{{ Math.round(item.score * 100) / 100 }}</strong>\n          </template>\n        </v-progress-linear>\n      </template>\n\n    </v-data-table>\n</template>\n\n<script>\n    export default {\n    data () {\n      return {\n        search: ''\n      }\n    },\n    methods: {\n      getColor: function (item) {\n        if (item.score < 70) {\n          return 'red'\n        } else {\n          return 'green'\n        }\n      }\n    }\n  }\n</script>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
@@ -3840,7 +4319,7 @@
         "z": "9c23ead5f4cd17b6",
         "g": "1343424fbbdc4b4e",
         "name": "debug 24",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4062,7 +4541,7 @@
         "sendOnEnter": true,
         "className": "",
         "x": 670,
-        "y": 680,
+        "y": 700,
         "wires": [
             [
                 "d3bb702bcdf691a1"
@@ -4083,7 +4562,7 @@
         "finalize": "",
         "libs": [],
         "x": 230,
-        "y": 720,
+        "y": 740,
         "wires": [
             [
                 "d5bb29401cd9c2f9"
@@ -4110,11 +4589,12 @@
         "templateScope": "local",
         "className": "",
         "x": 190,
-        "y": 400,
+        "y": 420,
         "wires": [
             [
                 "6f2b6412d3243be9",
-                "da204c00005594c9"
+                "da204c00005594c9",
+                "0ef456bd120be2eb"
             ]
         ]
     },
@@ -4139,7 +4619,7 @@
         "sendOnEnter": true,
         "className": "",
         "x": 670,
-        "y": 720,
+        "y": 740,
         "wires": [
             [
                 "d3bb702bcdf691a1"
@@ -4167,7 +4647,7 @@
         "sendOnEnter": true,
         "className": "",
         "x": 670,
-        "y": 760,
+        "y": 780,
         "wires": [
             [
                 "d3bb702bcdf691a1"
@@ -4189,7 +4669,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1040,
-        "y": 720,
+        "y": 740,
         "wires": []
     },
     {
@@ -4206,7 +4686,7 @@
         "finalize": "",
         "libs": [],
         "x": 880,
-        "y": 720,
+        "y": 740,
         "wires": [
             [
                 "49ab5c9eef18e2fe"
@@ -4242,7 +4722,7 @@
         "repair": false,
         "outputs": 3,
         "x": 490,
-        "y": 720,
+        "y": 740,
         "wires": [
             [
                 "728bcfee316180c5"
@@ -4268,7 +4748,7 @@
         "stream": false,
         "addname": "",
         "x": 370,
-        "y": 720,
+        "y": 740,
         "wires": [
             [
                 "2636e9073bae688d"
@@ -4283,7 +4763,7 @@
         "name": "make db-implementation",
         "info": "",
         "x": 950,
-        "y": 800,
+        "y": 820,
         "wires": []
     },
     {
@@ -4314,7 +4794,7 @@
             "e1c49e9771213b10"
         ],
         "x": 765,
-        "y": 460,
+        "y": 480,
         "wires": []
     },
     {
@@ -4328,7 +4808,7 @@
             "7d834a69f9cfe8eb"
         ],
         "x": 115,
-        "y": 720,
+        "y": 740,
         "wires": [
             [
                 "9695c47a09c4d657"
@@ -4349,7 +4829,7 @@
         "finalize": "",
         "libs": [],
         "x": 450,
-        "y": 520,
+        "y": 540,
         "wires": [
             [
                 "32bba6d6bdb66cee"
@@ -4376,7 +4856,7 @@
         "repair": false,
         "outputs": 2,
         "x": 630,
-        "y": 520,
+        "y": 540,
         "wires": [
             [
                 "d9f5b4ebe6ceadec"
@@ -4397,7 +4877,7 @@
             "ddefcb191dc9d43a"
         ],
         "x": 765,
-        "y": 540,
+        "y": 560,
         "wires": []
     },
     {
@@ -4414,7 +4894,7 @@
         "finalize": "",
         "libs": [],
         "x": 420,
-        "y": 560,
+        "y": 580,
         "wires": [
             [
                 "38573d34b841eb61"
@@ -4434,8 +4914,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 580,
-        "y": 560,
+        "x": 620,
+        "y": 580,
         "wires": []
     },
     {
@@ -4457,7 +4937,7 @@
         "color": "#1c1c1c",
         "className": "",
         "x": 780,
-        "y": 360,
+        "y": 380,
         "wires": []
     },
     {
@@ -4481,7 +4961,7 @@
         "sendOnEnter": true,
         "className": "",
         "x": 770,
-        "y": 400,
+        "y": 420,
         "wires": [
             [
                 "ef9316e3662e77af"
@@ -4502,7 +4982,7 @@
         "finalize": "",
         "libs": [],
         "x": 930,
-        "y": 400,
+        "y": 420,
         "wires": [
             [
                 "d9f5b4ebe6ceadec",
@@ -4520,7 +5000,7 @@
             "f82bd2713bd5bea4"
         ],
         "x": 495,
-        "y": 480,
+        "y": 500,
         "wires": [
             [
                 "2d68d6a1aa9ef244"
@@ -4551,7 +5031,7 @@
         "repair": false,
         "outputs": 2,
         "x": 630,
-        "y": 480,
+        "y": 500,
         "wires": [
             [
                 "9ae509c0229a4605"
@@ -4569,7 +5049,7 @@
         "z": "9c23ead5f4cd17b6",
         "g": "69f933624170a8db",
         "name": "debug 55",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4577,7 +5057,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 580,
-        "y": 420,
+        "y": 440,
         "wires": []
     },
     {
@@ -4591,7 +5071,7 @@
             "ddefcb191dc9d43a"
         ],
         "x": 765,
-        "y": 500,
+        "y": 520,
         "wires": []
     },
     {
@@ -4613,8 +5093,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 210,
-        "y": 980,
+        "x": 190,
+        "y": 1040,
         "wires": [
             [
                 "4f73999c3ec0b730"
@@ -4630,8 +5110,8 @@
         "links": [
             "d37374ec32398ba1"
         ],
-        "x": 135,
-        "y": 1280,
+        "x": 115,
+        "y": 1340,
         "wires": [
             [
                 "851722563ece208c"
@@ -4656,8 +5136,8 @@
         "fontSize": 16,
         "color": "#717171",
         "className": "",
-        "x": 330,
-        "y": 1280,
+        "x": 570,
+        "y": 1340,
         "wires": []
     },
     {
@@ -4670,8 +5150,8 @@
         "links": [
             "1eb5338ba054f538"
         ],
-        "x": 395,
-        "y": 980,
+        "x": 375,
+        "y": 1040,
         "wires": []
     },
     {
@@ -4687,14 +5167,14 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n    <v-text-field v-model=\"search\" label=\"Search\" prepend-inner-icon=\"mdi-magnify\" single-line variant=\"outlined\"\n    hide-details></v-text-field>\n    <v-data-table v-model:search=\"search\" :items=\"msg?.payload\">\n\n\n\n    </v-data-table>\n</template>\n\n<script>\n    export default {\n    data () {\n      return {\n        search: ''\n      }\n    },\n    methods: {\n      getColor: function (item) {\n        if (item.score < 70) {\n          return 'red'\n        } else {\n          return 'green'\n        }\n      }\n    }\n  }\n</script>",
+        "format": "<template>\n    <v-text-field v-model=\"search\" label=\"Search\" prepend-inner-icon=\"mdi-magnify\" single-line variant=\"outlined\"\n    hide-details></v-text-field>\n    <v-data-table v-model:search=\"search\" :items=\"msg?.payload\">\n    </v-data-table>\n</template>\n\n<script>\n    export default {\n    data () {\n      return {\n        search: ''\n      }\n    },\n    methods: {\n    }\n  }\n</script>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 380,
-        "y": 1140,
+        "x": 520,
+        "y": 1200,
         "wires": [
             []
         ]
@@ -4708,8 +5188,8 @@
         "links": [
             "94a3aa3a2d9fab70"
         ],
-        "x": 125,
-        "y": 1140,
+        "x": 105,
+        "y": 1200,
         "wires": [
             [
                 "8c702c77dd36bdca",
@@ -4731,8 +5211,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 320,
-        "y": 1200,
+        "x": 560,
+        "y": 1260,
         "wires": []
     },
     {
@@ -4749,7 +5229,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1020,
-        "y": 360,
+        "y": 380,
         "wires": []
     },
     {
@@ -4761,8 +5241,8 @@
         "links": [
             "20e026677c68bd7b"
         ],
-        "x": 135,
-        "y": 1380,
+        "x": 115,
+        "y": 1440,
         "wires": [
             [
                 "98166c48d39ce2bd"
@@ -4797,8 +5277,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 250,
-        "y": 1380,
+        "x": 230,
+        "y": 1440,
         "wires": [
             [
                 "5c642316acf14a1a"
@@ -4824,8 +5304,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 470,
-        "y": 1340,
+        "x": 450,
+        "y": 1400,
         "wires": [
             [
                 "df1a6337d2b7930f"
@@ -4841,7 +5321,7 @@
         "order": 0,
         "width": "2",
         "height": "1",
-        "name": "",
+        "name": "spot_1",
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "row-right",
@@ -4850,8 +5330,8 @@
         "fontSize": 16,
         "color": "#717171",
         "className": "",
-        "x": 630,
-        "y": 1340,
+        "x": 590,
+        "y": 1400,
         "wires": []
     },
     {
@@ -4863,7 +5343,7 @@
         "order": 0,
         "width": "2",
         "height": "1",
-        "name": "",
+        "name": "spot_2",
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
@@ -4872,8 +5352,8 @@
         "fontSize": 16,
         "color": "#717171",
         "className": "",
-        "x": 580,
-        "y": 1400,
+        "x": 590,
+        "y": 1460,
         "wires": []
     },
     {
@@ -4885,7 +5365,7 @@
         "order": 0,
         "width": "2",
         "height": "1",
-        "name": "",
+        "name": "spot_3",
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
@@ -4894,8 +5374,64 @@
         "fontSize": 16,
         "color": "#717171",
         "className": "",
-        "x": 540,
-        "y": 1440,
+        "x": 590,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "5d464c9e479cc761",
+        "type": "ui-template",
+        "z": "9c23ead5f4cd17b6",
+        "g": "0829e4ce132f4920",
+        "group": "",
+        "page": "8e8e755dd05b63ae",
+        "ui": "",
+        "name": "display_toll_transactions",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n    <v-text-field v-model=\"search\" label=\"Search\" prepend-inner-icon=\"mdi-magnify\" single-line variant=\"outlined\"\n    hide-details></v-text-field>\n    <v-data-table v-model:search=\"search\" :items=\"msg?.payload\">\n    </v-data-table>\n</template>\n\n<script>\n    export default {\n    data () {\n      return {\n        search: ''\n      }\n    },\n    methods: {\n    }\n  }\n</script>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "widget:page",
+        "className": "",
+        "x": 370,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "13ca023302f0f7c1",
+        "type": "link in",
+        "z": "9c23ead5f4cd17b6",
+        "g": "0829e4ce132f4920",
+        "name": "ui.input.toll.get_all_transactions",
+        "links": [
+            "753dc434ae2fe719"
+        ],
+        "x": 105,
+        "y": 900,
+        "wires": [
+            [
+                "5d464c9e479cc761"
+            ]
+        ]
+    },
+    {
+        "id": "0ef456bd120be2eb",
+        "type": "link out",
+        "z": "9c23ead5f4cd17b6",
+        "g": "69f933624170a8db",
+        "name": "ui.output.pageload_toll_station",
+        "mode": "link",
+        "links": [
+            "0a9dc2d0d62b6741"
+        ],
+        "x": 365,
+        "y": 420,
         "wires": []
     }
 ]
