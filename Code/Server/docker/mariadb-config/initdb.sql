@@ -91,21 +91,45 @@ CREATE TABLE powerprices (
 ) ENGINE=InnoDB;
 
 
+CREATE TABLE chargestation (
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	weather VARCHAR(255),
+	location VARCHAR(255),
+	electric_price FLOAT,
+	service_price FLOAT
+) ENGINE=InnoDB;
+
+
+CREATE TABLE chargerecords (
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	parking_spot INT UNSIGNED NOT NULL,
+	from_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	to_time TIMESTAMP NULL,
+	station_id INT UNSIGNED,
+	start_charge FLOAT,
+	end_charge FLOAT,
+	CONSTRAINT FOREIGN KEY (station_id) REFERENCES chargestation(id)
+) ENGINE=InnoDB;
+
+
 CREATE TABLE relations (
 	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	tr_id INT UNSIGNED,
 	toll_id INT UNSIGNED,
 	pcost_id INT UNSIGNED,
+	cr_id INT UNSIGNED,
 	CONSTRAINT FOREIGN KEY (tr_id) REFERENCES transactions(id)
 	  ON DELETE SET NULL
       ON UPDATE CASCADE,
     CONSTRAINT FOREIGN KEY (toll_id) REFERENCES tollstation(id)
       ON DELETE SET NULL
       ON UPDATE CASCADE,
-    CONSTRAINT FOREIGN KEY (pcost_id) REFERENCES powerprices(id)
+    CONSTRAINT FOREIGN KEY (pcost_id) REFERENCES powerprices(id),
+    CONSTRAINT FOREIGN KEY (cr_id) REFERENCES chargerecords(id)
 ) ENGINE=InnoDB;
 
 
+-- Setup test-database.
 
 INSERT INTO users (name, email, address) VALUES
 	('Staten', "stat@mail.no", "Gate 23"),
@@ -114,10 +138,10 @@ INSERT INTO users (name, email, address) VALUES
 	('Solveig Karimi', 'solveig@gmail.com', 'Grønnhagen 42');
 
 
-
 INSERT INTO vehicles (vehicle_type, owner_id, user_id) VALUES ('Gasoline',1,1);
 INSERT INTO vehicles (vehicle_type, owner_id, user_id) VALUES ('Electric',1,1);
-INSERT INTO vehicles (vehicle_type) VALUES ('Street sweeper');
+INSERT INTO vehicles (vehicle_type, owner_id, user_id) VALUES ('Service',1,1);
+
 
 INSERT INTO drivescores (score, car_id) VALUES
 	(85.4, 1),
@@ -131,13 +155,11 @@ SELECT '2024-03-21', AVG(score), 1
 FROM drivescores
 WHERE car_id = 1;
 
-
 INSERT INTO ecoscore (score, user_id)
 SELECT AVG(score), 1
 FROM drivescores d
 LEFT JOIN vehicles v ON d.car_id = v.id
 WHERE user_id = 1;
-
 
 INSERT INTO ecoscore (score, user_id) VALUES (97.1, 1);
 
@@ -149,10 +171,19 @@ INSERT INTO tollstation (info, location, electric_price, gasoline_price, service
 
 INSERT INTO powerprices (NOK_per_kWh) VALUES (0.0134);
 
-INSERT INTO relations (tr_id, toll_id, pcost_id) VALUES
-	(1, NULL, 1),
-	(1, 1, NULL),
-	(1, NULL, NULL);
+INSERT INTO chargestation (location, electric_price, service_price, weather) VALUES
+("Lade", 5.41, 3.15, "cloudy"),
+("Byåsen", 5.21, 2.12, "sunny");
+
+INSERT INTO chargerecords (parking_spot, from_time, to_time, station_id, start_charge, end_charge) VALUES
+(1, '2024-06-03 12:34:56', '2024-06-03 14:34:56', 1, 240, 10),
+(3, '2024-06-04 10:00:00', '2024-06-04 12:00:00', 2, 198, 62),
+(2, '2024-06-05 09:00:00', '2024-06-05 11:00:00', 1, 1205, 499);
+
+INSERT INTO relations (tr_id, toll_id, pcost_id, cr_id) VALUES
+	(1, NULL, 1, 1),
+	(NULL, 1, NULL, NULL),
+	(1, NULL, NULL, 2);
 
 
 
