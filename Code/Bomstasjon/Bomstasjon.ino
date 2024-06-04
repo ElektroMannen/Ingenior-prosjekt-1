@@ -27,12 +27,13 @@ const char MQTT_PASSWORD[] = "";
 const char MQTT_TOPIC[] = "Toll-station"; // CHANGE IT AS YOU DESIRE
 WiFiClient espClient;
 PubSubClient client(espClient);
-int carID = random(10, 100); // generates a random number between 10 and 99
-long driverID = random(100000, 1000000); // generates a random number between 100000 and 999999
+const int stationID = 1; // CHANGE IT AS YOU DESIRE
+int carID = 2; // generates a random number between 10 and 99
+long driverID = 1; // generates a random number between 100000 and 999999
 bool isCar = true;
 bool infoSent = false;
 bool infoReceived = false;
-int Price=0;
+float Price=0;
 String message;
 
 //Definitions for IR
@@ -65,9 +66,9 @@ const int resolution = 10;
 const int servoPin = 25;
 
 //Definitions for pricing and reputation
-int electricPrice = 0; // These prices will be pulled from the database
-int nonElectricPrice = 0; // These prices will be pulled from the database
-int truckPrice = 0; // These prices will be pulled from the database
+String electricPrice = ""; // These prices will be pulled from the database
+float nonElectricPrice = 0; // These prices will be pulled from the database
+float truckPrice = 0; // These prices will be pulled from the database
 int carReputation = 0; // These reputations will be pulled from the database
 
 elapsedMillis MQTTReconnectTimer;
@@ -122,6 +123,8 @@ void setup(){
     client.publish(MQTT_TOPIC, "Toll-station is online!");
     client.subscribe(MQTT_TOPIC);
     client.subscribe("carPrice");
+    client.subscribe("NOK_per_kWh");
+    client.publish("pricePing", "ping");
 }
 
 //Callback function for MQTT, to receive messages
@@ -138,17 +141,26 @@ void callback(char *topic, byte *payload, unsigned int length) {
     Serial.println("-----------------------");
     if (strcmp(topic, "carPrice") == 0 && infoReceived==false && infoSent==true){
         infoReceived = true;
-        Price = message.toInt();
+        Price = message.toFloat();
+    }
+    if (strcmp(topic, "NOK_per_kWh") == 0){
+        electricPrice = message;
     }
 }
 
 //Timers
 elapsedMicros offTimer;
 elapsedMicros onTimer;
+elapsedMillis pingTimer;
 
 void loop(){
-    ledcWrite(channel, 130);
+    ledcWrite(channel, 75);
     client.loop();
+    //Pings the price every 45 minutes
+    if (pingTimer >= 2700000){
+        pingTimer = 0;
+        client.publish("pricePing", "ping");
+    }
     digitalWrite(trigPin, LOW);
     if (offTimer >= 2){
         offTimer = 0;
@@ -166,6 +178,7 @@ void loop(){
         digitalWrite(redPin, HIGH);
         digitalWrite(bluePin, LOW);
         digitalWrite(greenPin, LOW);
+        //isCar=true;
         //irsend.sendNEC(0xFD906F, 32);
     }
     else{
@@ -178,11 +191,10 @@ void loop(){
     display.setTextSize(1);
     display.setTextColor(SH110X_WHITE);
     display.setCursor(0, 0);
-    display.print("Distance: ");
-    display.print(distance);
+    display.print("Price: " + String(electricPrice) + " NOK");
     display.display();
     if (isCar==true && infoSent==false){
-        client.publish(MQTT_TOPIC, ("Car ID: " + String(carID) + ", driver ID: " + String(driverID)).c_str());
+        client.publish(MQTT_TOPIC, ("Tollstation ID: " +String(stationID) + ",Car ID: " + String(carID) + ",Driver ID: " + String(driverID)).c_str());
         infoSent = true;
         infoReceived = false;
     }
@@ -191,11 +203,13 @@ void loop(){
             client.publish(MQTT_TOPIC, ("Car " + String(carID) + " has not been let through").c_str());
             infoSent = false;
             infoReceived = false;
+            isCar = false;
         }
         else{
             client.publish(MQTT_TOPIC, ("Car " + String(carID) + " paid: " + String(Price) + " NOK").c_str());
             infoSent = false;
             infoReceived = false;
+            isCar = false;
             //remember to set isCar to false when gate has opened.
         }
     }
