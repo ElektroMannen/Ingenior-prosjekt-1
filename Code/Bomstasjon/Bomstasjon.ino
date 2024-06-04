@@ -28,9 +28,10 @@ const char MQTT_TOPIC[] = "Toll-station"; // CHANGE IT AS YOU DESIRE
 WiFiClient espClient;
 PubSubClient client(espClient);
 const int stationID = 1; // CHANGE IT AS YOU DESIRE
+const String stationName = "Nardo bomstasjon"; // CHANGE IT AS YOU DESIRE
 int carID = 2; // generates a random number between 10 and 99
 long driverID = 1; // generates a random number between 100000 and 999999
-bool isCar = true;
+bool isCar = false;
 bool infoSent = false;
 bool infoReceived = false;
 float Price=0;
@@ -67,8 +68,9 @@ const int servoPin = 25;
 
 //Definitions for pricing and reputation
 String electricPrice = ""; // These prices will be pulled from the database
-float nonElectricPrice = 0; // These prices will be pulled from the database
-float truckPrice = 0; // These prices will be pulled from the database
+String gasolinePrice = ""; // These prices will be pulled from the database
+String servicePrice = ""; // These prices will be pulled from the database
+String kWhPrice = ""; // These prices will be pulled from the database
 int carReputation = 0; // These reputations will be pulled from the database
 
 elapsedMillis MQTTReconnectTimer;
@@ -123,6 +125,9 @@ void setup(){
     client.publish(MQTT_TOPIC, "Toll-station is online!");
     client.subscribe(MQTT_TOPIC);
     client.subscribe("carPrice");
+    client.subscribe("electricPrice");
+    client.subscribe("gasolinePrice");
+    client.subscribe("servicePrice");
     client.subscribe("NOK_per_kWh");
     client.publish("pricePing", "ping");
 }
@@ -139,11 +144,21 @@ void callback(char *topic, byte *payload, unsigned int length) {
     }
     Serial.println();
     Serial.println("-----------------------");
+    //This part will check which topic was received, and update the respective variables
     if (strcmp(topic, "carPrice") == 0 && infoReceived==false && infoSent==true){
         infoReceived = true;
         Price = message.toFloat();
     }
     if (strcmp(topic, "NOK_per_kWh") == 0){
+        kWhPrice = message;
+    }
+    if (strcmp(topic, "gasolinePrice") == 0){
+        gasolinePrice = message;
+    }
+    if (strcmp(topic, "servicePrice") == 0){
+        servicePrice = message;
+    }
+    if (strcmp(topic, "electricPrice") == 0){
         electricPrice = message;
     }
 }
@@ -152,6 +167,7 @@ void callback(char *topic, byte *payload, unsigned int length) {
 elapsedMicros offTimer;
 elapsedMicros onTimer;
 elapsedMillis pingTimer;
+elapsedMillis servoTimer;
 
 void loop(){
     ledcWrite(channel, 75);
@@ -178,10 +194,10 @@ void loop(){
         digitalWrite(redPin, HIGH);
         digitalWrite(bluePin, LOW);
         digitalWrite(greenPin, LOW);
-        //isCar=true;
+        isCar=true;
         //irsend.sendNEC(0xFD906F, 32);
     }
-    else{
+    if (distance > 10 && isCar==false){
         digitalWrite(redPin, LOW);
         digitalWrite(bluePin, LOW);
         digitalWrite(greenPin, HIGH);
@@ -191,7 +207,14 @@ void loop(){
     display.setTextSize(1);
     display.setTextColor(SH110X_WHITE);
     display.setCursor(0, 0);
-    display.print("Price: " + String(electricPrice) + " NOK");
+    display.println(stationName);
+    display.println("");
+    display.println("El: " + electricPrice + " NOK");
+    display.println("Gas: " + gasolinePrice + " NOK");
+    display.println("Service: " + servicePrice + " NOK");
+    display.println("");
+    display.println("");
+    display.println("KWh: " + String(kWhPrice) + " NOK");
     display.display();
     if (isCar==true && infoSent==false){
         client.publish(MQTT_TOPIC, ("Tollstation ID: " +String(stationID) + ",Car ID: " + String(carID) + ",Driver ID: " + String(driverID)).c_str());
@@ -209,8 +232,15 @@ void loop(){
             client.publish(MQTT_TOPIC, ("Car " + String(carID) + " paid: " + String(Price) + " NOK").c_str());
             infoSent = false;
             infoReceived = false;
+            servoTimer = 0;
+            ledcWrite(channel, 130);
+            digitalWrite(redPin, LOW);
+            digitalWrite(bluePin, LOW);
+            digitalWrite(greenPin, HIGH);
+            while (servoTimer < 5000){
+            }
+            ledcWrite(channel, 75);
             isCar = false;
-            //remember to set isCar to false when gate has opened.
         }
     }
 }
