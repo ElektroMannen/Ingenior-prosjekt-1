@@ -91,7 +91,9 @@ RIGHT JOIN chargestation cs ON cs.id = c.station_id;
 SELECT t.id, ts.location, DATE_FORMAT(t.recorded_date, "%T %d.%M.%y") AS recorded, t.amount, t.user_id AS userID  FROM transactions t 
 LEFT JOIN relations r ON t.id = r.tr_id 
 LEFT JOIN tollstation ts ON ts.id = r.toll_id
-WHERE ts.location IS NOT NULL; 
+WHERE ts.location IS NOT NULL;
+
+
 
 SELECT DATE_FORMAT(recorded_date, "%T %d.%M.%y") AS recorded FROM transactions t ;
 
@@ -106,6 +108,8 @@ SELECT * FROM vehicles v CROSS JOIN drivescores d ON d.car_id = v.id ;
 SELECT * FROM vehicles v ;
 
 SELECT * FROM drivescores d;
+
+
 
 
 -- get users and their respective ecoscore
