@@ -17,7 +17,7 @@ WiFiClient espClient;
 PubSubClient client(espClient);
 const int stationID = 1; // CHANGE IT AS YOU DESIRE
 const String stationName = "Nardo bomstasjon"; // CHANGE IT AS YOU DESIRE
-int carID = 2; // generates a random number between 10 and 99
+int carID = 1; // generates a random number between 10 and 99
 long driverID = 1; // generates a random number between 100000 and 999999
 bool isCar = false;
 bool infoSent = false;
@@ -156,6 +156,7 @@ elapsedMicros offTimer;
 elapsedMicros onTimer;
 elapsedMillis pingTimer;
 elapsedMillis servoTimer;
+elapsedMillis closeTimer;
 
 void loop(){
     ledcWrite(channel, 75);
@@ -214,6 +215,21 @@ void loop(){
             client.publish(MQTT_TOPIC, ("Car " + String(carID) + " has not been let through").c_str());
             infoSent = false;
             infoReceived = false;
+            closeTimer = 0;
+            display.clearDisplay();
+            display.setRotation(2); //This is to flip the rotation of the display, delete if needed
+            display.setTextSize(1);
+            display.setTextColor(SH110X_WHITE);
+            display.setCursor(0, 0);
+            display.println(stationName);
+            display.println("");
+            display.println("");
+            display.println("STOP");
+            display.println("");
+            display.print("Contact service");
+            display.display();
+            while (closeTimer < 5000){
+            }
             isCar = false;
         }
         else{
@@ -225,6 +241,18 @@ void loop(){
             digitalWrite(redPin, LOW);
             digitalWrite(bluePin, LOW);
             digitalWrite(greenPin, HIGH);
+            display.clearDisplay();
+            display.setRotation(2); //This is to flip the rotation of the display, delete if needed
+            display.setTextSize(1);
+            display.setTextColor(SH110X_WHITE);
+            display.setCursor(0, 0);
+            display.println(stationName);
+            display.println("");
+            display.println("");
+            display.println("OPEN");
+            display.println("");
+            display.print("Drive through");
+            display.display();
             while (servoTimer < 5000){
             }
             ledcWrite(channel, 75);
