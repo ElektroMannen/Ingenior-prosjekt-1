@@ -41,6 +41,25 @@ WHERE id = 1;
 
 SELECT * FROM relations r ;
 
+SELECT e.id, e.score, u.id FROM ecoscore e 
+RIGHT JOIN users u ON u.id = e.user_id ;
+
+SELECT AVG(score, user_id) FROM drivescores d
+LEFT JOIN 
+ 
+SELECT v.id, v.vehicle_type, AVG(e.score) AS score FROM vehicles v 
+    LEFT JOIN users u ON v.owner_id = u.id
+    LEFT JOIN ecoscore e ON e.user_id = u.id
+    WHERE u.id = 1 AND v.id = 2;
+
+SELECT * FROM ecoscore e;
+
+SELECT * FROM drivescores d;
+
+SELECT * FROM users u ;
+
+SELECT * FROM vehicles v ;
+
 SELECT * FROM powerprices p;
 
 SELECT * FROM transactions t;
@@ -69,9 +88,50 @@ LEFT JOIN chargerecords c ON c.id = r.cr_id
 RIGHT JOIN chargestation cs ON cs.id = c.station_id; 
 
 
+SELECT t.id, ts.location, DATE_FORMAT(t.recorded_date, "%T %d.%M.%y") AS recorded, t.amount, t.user_id AS userID  FROM transactions t 
+LEFT JOIN relations r ON t.id = r.tr_id 
+LEFT JOIN tollstation ts ON ts.id = r.toll_id
+WHERE ts.location IS NOT NULL; 
+
+SELECT DATE_FORMAT(recorded_date, "%T %d.%M.%y") AS recorded FROM transactions t ;
+
+SELECT * FROM relations r ;
+
+SELECT * FROM transactions t;
+
+SELECT * FROM tollstation t ;
+
+SELECT * FROM vehicles v CROSS JOIN drivescores d ON d.car_id = v.id ;
 
 SELECT * FROM vehicles v ;
 
+SELECT * FROM drivescores d;
+
+
+-- get users and their respective ecoscore
+SELECT u.id, u.name, u.email, u.address, u.tlf, AVG(e.score) AS score 
+FROM ecoscore e LEFT JOIN users u ON user_id = u.id
+GROUP BY u.id;
+
+
+SELECT u.id, AVG(score) FROM users u 
+LEFT JOIN vehicles v ON v.user_id = u.id
+LEFT JOIN drivescores d ON d.id = v.user_id
+GROUP BY u.id;
+
+SELECT t.id, ts.location, t.amount, t.user_id AS userID  FROM transactions t 
+LEFT JOIN relations r ON t.id = r.tr_id 
+LEFT JOIN tollstation ts ON ts.id = r.toll_id
+WHERE ts.location IS NOT NULL; 
+
+
+SELECT * FROM ecoscore e ;
+
+SELECT * FROM drivescores d 
+LEFT JOIN vehicles v ON d.car_id = v.id
+WHERE v.user_id = 2;
+
+SELECT * FROM ecoscore e ;
 
 UPDATE chargerecords 
 SET parking_spot = 1

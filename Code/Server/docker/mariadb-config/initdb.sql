@@ -138,14 +138,24 @@ INSERT INTO users (name, email, address) VALUES
 	('Solveig Karimi', 'solveig@gmail.com', 'Grønnhagen 42');
 
 
-INSERT INTO vehicles (vehicle_type, owner_id, user_id) VALUES ('Gasoline',1,1);
-INSERT INTO vehicles (vehicle_type, owner_id, user_id) VALUES ('Electric',1,1);
-INSERT INTO vehicles (vehicle_type, owner_id, user_id) VALUES ('Service',1,1);
+
+INSERT INTO vehicles (vehicle_type, owner_id, user_id) VALUES
+('Gasoline',1,1),
+('Electric',1,1),
+('Service',1,1),
+('Electric',2,1),
+('Service',2,2),
+('Gasoline',3,3),
+('Electric',1,4);
 
 
 INSERT INTO drivescores (score, car_id) VALUES
 	(85.4, 1),
-	(75.9, 1);
+	(75.9, 1),
+	(57.9, 2),
+	(89.9, 3),
+	(64.31, 2),
+	(91.3, 4);
 
 /* eksempel på å finne alle scores knyttett 
  * til en bruker og lagre gjennomsnittet */
@@ -156,10 +166,23 @@ FROM drivescores
 WHERE car_id = 1;
 
 INSERT INTO ecoscore (score, user_id)
-SELECT AVG(score), 1
-FROM drivescores d
-LEFT JOIN vehicles v ON d.car_id = v.id
-WHERE user_id = 1;
+SELECT AVG(score), 1 FROM users u 
+LEFT JOIN vehicles v ON v.user_id = u.id
+LEFT JOIN drivescores d ON d.id = v.user_id
+WHERE u.id = 1;
+
+INSERT INTO ecoscore (score, user_id)
+SELECT AVG(score), 2 FROM users u 
+LEFT JOIN vehicles v ON v.user_id = u.id
+LEFT JOIN drivescores d ON d.id = v.user_id
+WHERE u.id = 2;
+
+INSERT INTO ecoscore (score, user_id)
+SELECT AVG(score), 3 FROM users u 
+LEFT JOIN vehicles v ON v.user_id = u.id
+LEFT JOIN drivescores d ON d.id = v.user_id
+WHERE u.id = 3;
+
 
 INSERT INTO ecoscore (score, user_id) VALUES (97.1, 1);
 
@@ -167,7 +190,8 @@ INSERT INTO transactions (amount, user_id) VALUES (165, 1);
 
 INSERT INTO tollstation (info, location, electric_price, gasoline_price, service_price) VALUES 
 ("operation normal", "Nardo", 12.1, 21.41, 2.14),
-("operation normal", "Angeltrøa", 10.1, 24.41, 4.14);
+("operation normal", "Angeltrøa", 10.1, 24.41, 4.14),
+("operation normal", "Melhus", 9.1, 21.41, 2.14);
 
 INSERT INTO powerprices (NOK_per_kWh) VALUES (0.0134);
 
@@ -183,6 +207,7 @@ INSERT INTO chargerecords (parking_spot, from_time, to_time, station_id, start_c
 INSERT INTO relations (tr_id, toll_id, pcost_id, cr_id) VALUES
 	(1, NULL, 1, 1),
 	(NULL, 1, NULL, NULL),
+	(1, 1, NULL, NULL),
 	(1, NULL, NULL, 2);
 
 
