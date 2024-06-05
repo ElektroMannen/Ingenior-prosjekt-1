@@ -39,22 +39,20 @@
         "id": "dff9176621056133",
         "type": "group",
         "z": "c7015bd55ac9c57d",
-        "name": "Control Cat",
+        "name": "remote_control_car",
         "style": {
             "label": true
         },
         "nodes": [
-            "bb8e501cbe7d5d9d",
             "e4f62c1015b6a187",
             "e5c5cf0d6bb917c5",
-            "b7af9e519ca5b9d7",
             "8955a8be5e602442",
             "308f248214133e70"
         ],
         "x": 74,
         "y": 39,
         "w": 612,
-        "h": 242
+        "h": 202
     },
     {
         "id": "0591b57e8f20d00d",
@@ -118,7 +116,7 @@
             "899bd7a9f2ce31ab"
         ],
         "x": 74,
-        "y": 2739,
+        "y": 2939,
         "w": 642,
         "h": 482
     },
@@ -158,9 +156,9 @@
             "0e2e50fab3fb368c"
         ],
         "x": 68,
-        "y": 593,
-        "w": 1164,
-        "h": 1014
+        "y": 613,
+        "w": 1174,
+        "h": 1054
     },
     {
         "id": "1343424fbbdc4b4e",
@@ -214,12 +212,13 @@
         "nodes": [
             "116ddb3989f7865c",
             "69f933624170a8db",
-            "1d2d15338a8c5623"
+            "1d2d15338a8c5623",
+            "074b02fb1e104e89"
         ],
         "x": 48,
         "y": 313,
-        "w": 1124,
-        "h": 754
+        "w": 1144,
+        "h": 934
     },
     {
         "id": "025c3a8da95b8f7a",
@@ -263,9 +262,29 @@
             "3e228f6c26bdbf05"
         ],
         "x": 54,
-        "y": 1119,
+        "y": 1319,
         "w": 612,
         "h": 562
+    },
+    {
+        "id": "8ceaad14f6929143",
+        "type": "group",
+        "z": "d974087eb4410441",
+        "name": "db tollstation",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "fa423b6c44026824",
+            "7c5378ce3d8e1fab",
+            "1060263491f37862",
+            "24a0ae6f8db3a12a",
+            "8a632c5013bf1898"
+        ],
+        "x": 88,
+        "y": 153,
+        "w": 1154,
+        "h": 894
     },
     {
         "id": "6a95e8aa54c858ac",
@@ -312,32 +331,21 @@
             "d37374ec32398ba1",
             "89b42281cdae4137",
             "1e6243a71c3975d4",
-            "20e026677c68bd7b"
+            "20e026677c68bd7b",
+            "39399d0e48774684",
+            "8ea8dd53a495a2bf",
+            "e029ce6434ae6809",
+            "aef2d89cedb36727",
+            "2c8d18f302ac3197",
+            "fd8b447bf519396b",
+            "e80bf7ba3e2dd6c3",
+            "5cda82b0547e3d5f",
+            "3356be1c031e3e84"
         ],
         "x": 74,
-        "y": 1639,
+        "y": 1839,
         "w": 1652,
         "h": 1062
-    },
-    {
-        "id": "8ceaad14f6929143",
-        "type": "group",
-        "z": "d974087eb4410441",
-        "name": "db tollstation",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "fa423b6c44026824",
-            "7c5378ce3d8e1fab",
-            "1060263491f37862",
-            "24a0ae6f8db3a12a",
-            "8a632c5013bf1898"
-        ],
-        "x": 88,
-        "y": 153,
-        "w": 1154,
-        "h": 894
     },
     {
         "id": "9939226cfed744ae",
@@ -382,7 +390,7 @@
             "6d866f700464c477"
         ],
         "x": 104,
-        "y": 1439,
+        "y": 1499,
         "w": 592,
         "h": 142
     },
@@ -407,14 +415,12 @@
             "216a5b5f33c20201",
             "6583d5f44e957ce0",
             "93a705171c063e17",
-            "4622aa7b0261ee14",
-            "166b5d3744c86f25",
             "a6ad1c1bf0c2f9b0",
             "249134f2a57f31e6"
         ],
         "x": 94,
-        "y": 619,
-        "w": 1112,
+        "y": 639,
+        "w": 1122,
         "h": 242
     },
     {
@@ -439,7 +445,7 @@
             "ddefcb191dc9d43a"
         ],
         "x": 74,
-        "y": 659,
+        "y": 679,
         "w": 1072,
         "h": 202
     },
@@ -471,7 +477,7 @@
             "0ef456bd120be2eb",
             "1d92a8088d77f436"
         ],
-        "x": 74,
+        "x": 94,
         "y": 339,
         "w": 1072,
         "h": 282
@@ -515,11 +521,8 @@
         },
         "nodes": [
             "ed9b01e046d144e7",
-            "2a6ceb40d703222b",
             "c299a20498ef6157",
             "c5625aae3982120b",
-            "32873f28166a99e3",
-            "53a77b9dde206ea2",
             "50b307eb95867622",
             "660a1d8987b9b7bb",
             "83478248c9afeea4",
@@ -527,10 +530,14 @@
             "50366ad6532503c4",
             "c6e4d7cfcfad47e1",
             "b4907d24f57876bb",
-            "c6b56c5e4cf401b5"
+            "c6b56c5e4cf401b5",
+            "53730560459116ec",
+            "1c71198eb632d947",
+            "957a6922777db625",
+            "46acc0101d9a3012"
         ],
         "x": 94,
-        "y": 879,
+        "y": 919,
         "w": 1042,
         "h": 342
     },
@@ -624,7 +631,7 @@
             "972d5d3d6cd4f34a"
         ],
         "x": 84,
-        "y": 899,
+        "y": 1079,
         "w": 582,
         "h": 142
     },
@@ -662,26 +669,25 @@
             "6e8bd7cd38c95929",
             "3930943413a6acb5",
             "0ff79d5862a3a192",
-            "54eb79583afd2a77"
+            "54eb79583afd2a77",
+            "2fdb2fe082259b37",
+            "9125513fcaa2699c",
+            "9de20b94d51e8a81",
+            "4c286d0a4cbe55d2"
         ],
         "x": 104,
-        "y": 1279,
-        "w": 562,
-        "h": 122
+        "y": 1299,
+        "w": 822,
+        "h": 182
     },
     {
         "id": "8a632c5013bf1898",
         "type": "group",
         "z": "d974087eb4410441",
         "g": "8ceaad14f6929143",
+        "name": "",
         "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
+            "label": true
         },
         "nodes": [
             "be6997b1779be1cb",
@@ -691,7 +697,9 @@
             "3da54f0627ca6745",
             "499684e2335af520",
             "f8943814e6c6be7b",
-            "32aa47b877961343"
+            "32aa47b877961343",
+            "e3c1bd84176d0d68",
+            "57b455cfb704e63e"
         ],
         "x": 114,
         "y": 719,
@@ -717,6 +725,31 @@
         "y": 1639,
         "w": 632,
         "h": 82
+    },
+    {
+        "id": "074b02fb1e104e89",
+        "type": "group",
+        "z": "9c23ead5f4cd17b6",
+        "g": "0829e4ce132f4920",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "caea40b5a9e7fce1",
+            "c7142d427ef14ae9",
+            "2aef9186218d7693",
+            "84adb6cc5526036c"
+        ],
+        "x": 84,
+        "y": 919,
+        "w": 642,
+        "h": 122
     },
     {
         "id": "f2952bbb2ad433e2",
@@ -892,7 +925,7 @@
         "page": "8e8e755dd05b63ae",
         "width": "6",
         "height": "1",
-        "order": -1,
+        "order": 2,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -942,7 +975,7 @@
         "page": "8e8e755dd05b63ae",
         "width": "6",
         "height": "1",
-        "order": -1,
+        "order": 3,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -962,27 +995,17 @@
         "disabled": "false"
     },
     {
-        "id": "bb8e501cbe7d5d9d",
-        "type": "function",
-        "z": "c7015bd55ac9c57d",
-        "g": "dff9176621056133",
-        "name": "Keypress",
-        "func": "\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 360,
-        "y": 140,
-        "wires": [
-            [
-                "e4f62c1015b6a187",
-                "e5c5cf0d6bb917c5",
-                "8955a8be5e602442"
-            ]
-        ]
+        "id": "d6abd85606225eb0",
+        "type": "ui-group",
+        "name": "Status",
+        "page": "8e8e755dd05b63ae",
+        "width": "6",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
     },
     {
         "id": "e4f62c1015b6a187",
@@ -999,7 +1022,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 580,
-        "y": 220,
+        "y": 200,
         "wires": []
     },
     {
@@ -1080,20 +1103,10 @@
         "wires": []
     },
     {
-        "id": "b7af9e519ca5b9d7",
-        "type": "comment",
-        "z": "c7015bd55ac9c57d",
-        "g": "dff9176621056133",
-        "name": "",
-        "info": "<script>\n\n    \n    (function($scope) {\n    \n \n    console.log('Hello');\n\n    let keys = {};\n\n    document.addEventListener('keydown', (event) => {\n    if (event.repeat) return;\n    \n    if (event.key != \"CapsLock\") {\n        keys[event.key] = true;\n        let msg = {\"payload\": keys, \"topic\": \"keydown\"};\n        $scope.send(msg);\n    }\n    });\n\n    document.addEventListener('keyup', (event) => {\n    var keyName = event.key;\n    var keyCode = event.code;\n    delete keys[event.key];\n    let msg = {\"payload\": keys, \"topic\": \"keyup\"};\n    $scope.send(msg);\n\n    },{capture: true});\n    })(scope);\n</script>",
-        "x": 160,
-        "y": 240,
-        "wires": []
-    },
-    {
         "id": "8955a8be5e602442",
         "type": "ui-text",
         "z": "c7015bd55ac9c57d",
+        "d": true,
         "g": "dff9176621056133",
         "group": "78b509623ddc3923",
         "order": 0,
@@ -1241,7 +1254,7 @@
         "templateScope": "local",
         "className": "",
         "x": 260,
-        "y": 2780,
+        "y": 2980,
         "wires": [
             [
                 "0817f2202b3f46a9"
@@ -1263,7 +1276,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 560,
-        "y": 2780,
+        "y": 2980,
         "wires": []
     },
     {
@@ -1287,7 +1300,7 @@
         "templateScope": "local",
         "className": "",
         "x": 410,
-        "y": 2880,
+        "y": 3080,
         "wires": [
             [
                 "f7f0e15a2aa36350"
@@ -1309,7 +1322,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 610,
-        "y": 2900,
+        "y": 3100,
         "wires": []
     },
     {
@@ -1336,7 +1349,7 @@
         "payload": "{\"d_score\":194}",
         "payloadType": "json",
         "x": 180,
-        "y": 2940,
+        "y": 3140,
         "wires": [
             [
                 "4485a75d1a0f656c"
@@ -1364,7 +1377,7 @@
         "templateScope": "local",
         "className": "",
         "x": 400,
-        "y": 3060,
+        "y": 3260,
         "wires": [
             [
                 "d56752421e229ef8"
@@ -1386,7 +1399,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
-        "y": 3000,
+        "y": 3200,
         "wires": []
     },
     {
@@ -1410,7 +1423,7 @@
         "templateScope": "local",
         "className": "",
         "x": 390,
-        "y": 3180,
+        "y": 3380,
         "wires": [
             [
                 "d64de82239fb1bbd"
@@ -1432,7 +1445,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 580,
-        "y": 3120,
+        "y": 3320,
         "wires": []
     },
     {
@@ -1456,7 +1469,7 @@
         "templateScope": "widget:page",
         "className": "",
         "x": 360,
-        "y": 2960,
+        "y": 3160,
         "wires": [
             []
         ]
@@ -1485,7 +1498,7 @@
         "payload": "{\"d_score\":194}",
         "payloadType": "json",
         "x": 200,
-        "y": 3120,
+        "y": 3320,
         "wires": [
             [
                 "1d9c3b808be68e07"
@@ -1507,7 +1520,7 @@
         "finalize": "",
         "libs": [],
         "x": 160,
-        "y": 3020,
+        "y": 3220,
         "wires": [
             [
                 "32d91f45c0238651"
@@ -1532,7 +1545,7 @@
         "senderr": false,
         "headers": [],
         "x": 670,
-        "y": 660,
+        "y": 680,
         "wires": [
             [
                 "270c46f9ca7fe345"
@@ -1562,7 +1575,7 @@
         "payload": "Tollstation ID: 1, Car ID: 1, Driver ID: 1",
         "payloadType": "str",
         "x": 230,
-        "y": 660,
+        "y": 680,
         "wires": [
             [
                 "0c28e72814e9bbae"
@@ -1575,7 +1588,7 @@
         "z": "c7015bd55ac9c57d",
         "g": "5454094dd1d0958e",
         "name": "get_now",
-        "func": "//let date2 = new Date(Date.UTC(2012, 3, 0, 3, 0, 0)).toLocaleDateString(\"no-NO\", {day: \"2-digit\"}).slice(0,2)\nlet date = new Date();\n\nlet received_string = msg.payload;\n\nif (/Car 2 paid:/i.test(received_string)) {\n    return null;\n}\n\n//\"Toll ID: 1, Car ID: 3, driver ID: 3\"\n\nconst res = /Tollstation ID: ([0-9]+),Car ID: ([0-9]+),Driver ID: ([0-9]+)/;\n\n\nlet regex_find = received_string.match(res);\n\nflow.set(\"toll_id\", parseInt(regex_find[1], 10));\nflow.set(\"car_id\", parseInt(regex_find[2], 10));\nflow.set(\"user_id\",parseInt(regex_find[3], 10));\n\n//let day = date.getDay().toLocaleString(\"no_NO\", options);\nlet day = date.toLocaleDateString(\"no-NO\", {day: \"2-digit\"}).slice(0,2);\nlet month = date.toLocaleDateString(\"no-NO\", {month: \"2-digit\"}).slice(0,2);\nlet year = date.getFullYear();\n\nmsg.topic = `${year}/${month}-${day}_NO5`;\n\n//msg.payload = day\n//msg.topic = \"/2024/05-30_NO5\";\nreturn msg;",
+        "func": "//let date2 = new Date(Date.UTC(2012, 3, 0, 3, 0, 0)).toLocaleDateString(\"no-NO\", {day: \"2-digit\"}).slice(0,2)\nlet date = new Date();\n\nlet received_string = msg.payload;\n\nif (/Car 2 paid:/i.test(received_string)) {\n    return null;\n} else if (/Car 1 has not been let through/i.test(received_string)) {\n    return null;\n}\n\n//\"Toll ID: 1, Car ID: 3, driver ID: 3\"\n\nconst res = /Tollstation ID: ([0-9]+),Car ID: ([0-9]+),Driver ID: ([0-9]+)/;\n\nlet regex_find = received_string.match(res);\n\nflow.set(\"toll_id\", parseInt(regex_find[1], 10));\nflow.set(\"car_id\", parseInt(regex_find[2], 10));\nflow.set(\"user_id\",parseInt(regex_find[3], 10));\n\n//let day = date.getDay().toLocaleString(\"no_NO\", options);\nlet day = date.toLocaleDateString(\"no-NO\", {day: \"2-digit\"}).slice(0,2);\nlet month = date.toLocaleDateString(\"no-NO\", {month: \"2-digit\"}).slice(0,2);\nlet year = date.getFullYear();\n\nmsg.topic = `${year}/${month}-${day}_NO5`;\n\n//msg.payload = day\n//msg.topic = \"/2024/05-30_NO5\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1583,7 +1596,7 @@
         "finalize": "",
         "libs": [],
         "x": 420,
-        "y": 660,
+        "y": 680,
         "wires": [
             [
                 "93a705171c063e17",
@@ -1602,7 +1615,7 @@
         "action": "obj",
         "pretty": false,
         "x": 830,
-        "y": 660,
+        "y": 680,
         "wires": [
             [
                 "75db24836ef699f2"
@@ -1615,15 +1628,15 @@
         "z": "c7015bd55ac9c57d",
         "g": "5454094dd1d0958e",
         "name": "get_current_price",
-        "func": "let hour = new Date().getHours();\n\nlet prices = msg.payload;\n\nlet toll_info = {\n    price: prices[hour]['NOK_per_kWh'],\n    car_id: flow.get(\"car_id\"),\n    toll_id: flow.get(\"toll_id\")\n}\nmsg.topic = \"\"\nmsg.payload = toll_info;\n\nreturn msg;\n",
+        "func": "\n\nlet hour = new Date().getHours();\n\n\n\nlet prices = msg.payload;\n\nlet toll_info = {\n    price: prices[hour]['NOK_per_kWh'],\n    car_id: flow.get(\"car_id\"),\n    toll_id: flow.get(\"toll_id\")\n}\nmsg.topic = \"\"\nmsg.payload = toll_info;\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1010,
-        "y": 660,
+        "x": 990,
+        "y": 680,
         "wires": [
             [
                 "7047c6b94e2edca3",
@@ -1645,7 +1658,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1100,
-        "y": 760,
+        "y": 780,
         "wires": []
     },
     {
@@ -1663,7 +1676,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 180,
-        "y": 740,
+        "y": 760,
         "wires": [
             [
                 "216a5b5f33c20201",
@@ -1685,8 +1698,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 480,
-        "y": 800,
+        "x": 400,
+        "y": 760,
         "wires": []
     },
     {
@@ -1699,7 +1712,7 @@
             "8a79294f8c9e1bda"
         ],
         "x": 145,
-        "y": 1480,
+        "y": 1540,
         "wires": [
             [
                 "892664ccd686b134"
@@ -1712,7 +1725,7 @@
         "z": "c7015bd55ac9c57d",
         "g": "21275fd3a4c7913e",
         "name": "decide_price",
-        "func": "if (msg.payload !== null) {\n    let vehicle_class = msg.payload[0];\n    let dsc = msg.payload[1];\n    let nok_kWh = msg.payload[2];\n    \n    // reward electric drivers on days with low electric prices\n    if (vehicle_class == \"Electric\") {\n        msg.payload = global.get(\"toll_electric\") * Math.E ** (100 * nok_kWh / dsc);\n    } else if (vehicle_class = \"Gasoline\") {\n        msg.payload = global.get(\"toll_gasoline\") * Math.E ** (100 * nok_kWh / dsc);\n    } else if (vehicle_class = \"Service\") {\n        msg.payload = global.get(\"toll_service\") * Math.E ** (100 * nok_kWh / dsc);\n    }\n} else {\n    msg.payload = \"No such user/vehicle registered\";\n}\n\nreturn msg;",
+        "func": "if (msg.payload !== null) {\n    let vehicle_class = msg.payload[0];\n    let dsc = msg.payload[1];\n    let nok_kWh = msg.payload[2];\n    \n    // reward electric drivers on days with low electric prices\n    if (vehicle_class == \"Electric\") {\n        msg.payload = global.get(\"toll_electric\") * Math.E ** (100 * nok_kWh / dsc);\n    } else if (vehicle_class = \"Gasoline\") {\n        //msg.payload = global.get(\"toll_gasoline\") * Math.E ** (100 * nok_kWh / dsc);\n        msg.payload = 0;\n    } else if (vehicle_class = \"Service\") {\n        msg.payload = global.get(\"toll_service\") * Math.E ** (100 * nok_kWh / dsc);\n    }\n} else {\n    msg.payload = \"No such user/vehicle registered\";\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1720,7 +1733,7 @@
         "finalize": "",
         "libs": [],
         "x": 300,
-        "y": 1480,
+        "y": 1540,
         "wires": [
             [
                 "a8858f8a4c84de28",
@@ -1744,7 +1757,7 @@
         "expiry": "",
         "broker": "dc20097875203fb9",
         "x": 590,
-        "y": 1540,
+        "y": 1600,
         "wires": []
     },
     {
@@ -1770,7 +1783,7 @@
         "payload": "73.8272",
         "payloadType": "num",
         "x": 220,
-        "y": 1540,
+        "y": 1600,
         "wires": [
             [
                 "3eb8a7513cd893f0"
@@ -1792,7 +1805,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 590,
-        "y": 1480,
+        "y": 1540,
         "wires": []
     },
     {
@@ -1807,8 +1820,8 @@
             "0f60eb9b92962992",
             "53a77b9dde206ea2"
         ],
-        "x": 1155,
-        "y": 660,
+        "x": 1175,
+        "y": 680,
         "wires": []
     },
     {
@@ -1822,7 +1835,7 @@
             "70ea88b87505faaa"
         ],
         "x": 875,
-        "y": 720,
+        "y": 740,
         "wires": []
     },
     {
@@ -1839,10 +1852,537 @@
         "finalize": "",
         "libs": [],
         "x": 740,
-        "y": 720,
+        "y": 740,
         "wires": [
             [
                 "6583d5f44e957ce0"
+            ]
+        ]
+    },
+    {
+        "id": "308f248214133e70",
+        "type": "ui-template",
+        "z": "c7015bd55ac9c57d",
+        "g": "dff9176621056133",
+        "group": "78b509623ddc3923",
+        "page": "",
+        "ui": "",
+        "name": "get_events",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n    <div>\n        <h2>{{ message }}</h2>\n        <p>Current Pressed Keys: {{ keys.join(', ') }}</p>\n    </div>\n</template>\n\n\n<script>\n    export default {\n        data() {\n            return {\n                loaded: false,\n                message: \"Remote control not operational.\",\n                keys: []\n            }\n        },\n        watch: {\n            loaded: function () {\n                if (this.loaded) {\n                    this.message = \"Remote control operational\";\n                }\n\n            }\n        },\n        \n        methods: {\n            onKeydown(event) {\n                if (event.repeat) {\n                    return;\n                } else if (!this.keys.includes(event.key)) {\n                    this.keys.push(event.key);\n                    this.sendKeys();\n                    console.log('Key down:', event.key);\n                }\n            },\n\n            onKeyUp(event) {\n                const index = this.keys.indexOf(event.key);\n                if (index > -1) {\n                    this.keys.splice(index, 1);\n                    this.sendKeys();\n                    console.log('Key up:', event.key);\n                } else {\n                    console.log('Key not found in array:', event.key);\n                }\n            },\n\n            sendKeys() {\n                this.send({ payload: this.keys });\n            }\n\n\n        },\n        mounted() {\n            document.addEventListener(\"keydown\", this.onKeydown);\n            document.addEventListener(\"keyup\", this.onKeyUp);\n            this.loaded = true;\n        },\n        unmounted() {\n            document.removeEventListener(\"keydown\", this.onKeydown);\n            document.removeEventListener(\"keyup\", this.onKeyUp);\n        }\n    }\n</script>\n<style>\n    .my-class {\n            width:200px;\n            height:20px;\n            background-color: blue;\n            top: 10%;\n            left: 50%;\n            margin-top: 100px;\n            margin-left: 100px;\n    }\n</style>\n\n\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 170,
+        "y": 140,
+        "wires": [
+            [
+                "e5c5cf0d6bb917c5",
+                "e4f62c1015b6a187",
+                "8955a8be5e602442"
+            ]
+        ]
+    },
+    {
+        "id": "c5625aae3982120b",
+        "type": "mqtt out",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "",
+        "topic": "NOK_per_kWh",
+        "qos": "2",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "dc20097875203fb9",
+        "x": 1020,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "ed9b01e046d144e7",
+        "type": "mqtt in",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "",
+        "topic": "pricePing",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "dc20097875203fb9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 960,
+        "wires": [
+            [
+                "46acc0101d9a3012"
+            ]
+        ]
+    },
+    {
+        "id": "c299a20498ef6157",
+        "type": "inject",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0.13282",
+        "payloadType": "num",
+        "x": 800,
+        "y": 960,
+        "wires": [
+            [
+                "c5625aae3982120b"
+            ]
+        ]
+    },
+    {
+        "id": "50b307eb95867622",
+        "type": "debug",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "debug 81",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "660a1d8987b9b7bb",
+        "type": "function",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "filter_price_to_toll_station",
+        "func": "msg.payload = msg.payload.price;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 1040,
+        "wires": [
+            [
+                "c5625aae3982120b",
+                "50b307eb95867622"
+            ]
+        ]
+    },
+    {
+        "id": "83478248c9afeea4",
+        "type": "mqtt out",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "",
+        "topic": "electricPrice",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "dc20097875203fb9",
+        "x": 1010,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "f9013a522c1abdd8",
+        "type": "mqtt out",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "",
+        "topic": "gasolinePrice",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "dc20097875203fb9",
+        "x": 1020,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "50366ad6532503c4",
+        "type": "mqtt out",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "",
+        "topic": "servicePrice",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "dc20097875203fb9",
+        "x": 1010,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "c6e4d7cfcfad47e1",
+        "type": "function",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "return_service_price",
+        "func": "msg.payload = global.get(\"toll_service\")\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 1100,
+        "wires": [
+            [
+                "50366ad6532503c4"
+            ]
+        ]
+    },
+    {
+        "id": "b4907d24f57876bb",
+        "type": "function",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "return_electric_price",
+        "func": "msg.payload = global.get(\"toll_electric\")\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 1140,
+        "wires": [
+            [
+                "83478248c9afeea4"
+            ]
+        ]
+    },
+    {
+        "id": "c6b56c5e4cf401b5",
+        "type": "function",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "return_gasoline_price",
+        "func": "msg.payload = global.get(\"toll_gasoline\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 1180,
+        "wires": [
+            [
+                "f9013a522c1abdd8"
+            ]
+        ]
+    },
+    {
+        "id": "a6ad1c1bf0c2f9b0",
+        "type": "debug",
+        "z": "c7015bd55ac9c57d",
+        "g": "5454094dd1d0958e",
+        "name": "debug 83",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "249134f2a57f31e6",
+        "type": "link out",
+        "z": "c7015bd55ac9c57d",
+        "g": "5454094dd1d0958e",
+        "name": "communication.output.from_toll_station",
+        "mode": "link",
+        "links": [
+            "6e8bd7cd38c95929"
+        ],
+        "x": 365,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "6e8bd7cd38c95929",
+        "type": "link in",
+        "z": "c7015bd55ac9c57d",
+        "g": "0e2e50fab3fb368c",
+        "name": "communication.input.insert_transaction",
+        "links": [
+            "249134f2a57f31e6"
+        ],
+        "x": 145,
+        "y": 1380,
+        "wires": [
+            [
+                "3930943413a6acb5",
+                "9125513fcaa2699c"
+            ]
+        ]
+    },
+    {
+        "id": "3930943413a6acb5",
+        "type": "function",
+        "z": "c7015bd55ac9c57d",
+        "g": "0e2e50fab3fb368c",
+        "name": "filter_message",
+        "func": "let received_string = msg.payload;\n\nif (/Car 2 paid:/i.test(received_string)) {\n    msg.topic = \"cleared\";\n\n    //\"Toll ID: 1, Car ID: 3, driver ID: 3\"\n    // Car 2 paid: 19.22 NOK\n\n    const res = /Car ([0-9]+) paid: ([0-9]*\\.?[0-9]+) NOK/;\n\n\n    let regex_find = received_string.match(res);\n\n    let car_id = parseInt(regex_find[1], 10);\n    let amount = parseFloat(regex_find[2]);\n\n    msg.payload = {\n        user_id: car_id,\n        amount: amount\n    }\n\n} else if (/Car 1 has not been let/i.test(received_string)) {\n    msg.topic = \"not_allowed\";\n    msg.payload = \"\";\n    node.warn(\"Current vehicle not allowed through toll station\");\n} \n\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 1380,
+        "wires": [
+            [
+                "54eb79583afd2a77",
+                "2fdb2fe082259b37",
+                "0ff79d5862a3a192"
+            ]
+        ]
+    },
+    {
+        "id": "0ff79d5862a3a192",
+        "type": "link out",
+        "z": "c7015bd55ac9c57d",
+        "g": "0e2e50fab3fb368c",
+        "name": "communication.output.insert_transaction_on_user",
+        "mode": "link",
+        "links": [
+            "be6997b1779be1cb"
+        ],
+        "x": 875,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "54eb79583afd2a77",
+        "type": "debug",
+        "z": "c7015bd55ac9c57d",
+        "g": "0e2e50fab3fb368c",
+        "name": "debug 90",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "2fdb2fe082259b37",
+        "type": "link out",
+        "z": "c7015bd55ac9c57d",
+        "g": "0e2e50fab3fb368c",
+        "name": "communication.output.car_not_allowed",
+        "mode": "link",
+        "links": [
+            "c7142d427ef14ae9"
+        ],
+        "x": 875,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "53730560459116ec",
+        "type": "http request",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "get_power_prices",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://www.hvakosterstrommen.no/api/v1/prices/{{{topic}}}.json ",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 390,
+        "y": 1000,
+        "wires": [
+            [
+                "1c71198eb632d947"
+            ]
+        ]
+    },
+    {
+        "id": "1c71198eb632d947",
+        "type": "json",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 530,
+        "y": 1040,
+        "wires": [
+            [
+                "957a6922777db625"
+            ]
+        ]
+    },
+    {
+        "id": "957a6922777db625",
+        "type": "function",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "get_current_price",
+        "func": "\n\nlet hour = new Date().getHours();\n\n\n\nlet prices = msg.payload;\n\nlet toll_info = {\n    price: prices[hour]['NOK_per_kWh'],\n    car_id: flow.get(\"car_id\"),\n    toll_id: flow.get(\"toll_id\")\n}\nmsg.topic = \"\"\nmsg.payload = toll_info;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1080,
+        "wires": [
+            [
+                "660a1d8987b9b7bb",
+                "c6e4d7cfcfad47e1",
+                "b4907d24f57876bb",
+                "c6b56c5e4cf401b5"
+            ]
+        ]
+    },
+    {
+        "id": "46acc0101d9a3012",
+        "type": "function",
+        "z": "c7015bd55ac9c57d",
+        "g": "c7906ff188775303",
+        "name": "simple_get_price",
+        "func": "let date = new Date();\n\nflow.set(\"from_price_ping\", true);\n\n//let day = date.getDay().toLocaleString(\"no_NO\", options);\nlet day = date.toLocaleDateString(\"no-NO\", { day: \"2-digit\" }).slice(0, 2);\nlet month = date.toLocaleDateString(\"no-NO\", { month: \"2-digit\" }).slice(0, 2);\nlet year = date.getFullYear();\n\nmsg.topic = `${year}/${month}-${day}_NO5`;\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 1040,
+        "wires": [
+            [
+                "53730560459116ec"
+            ]
+        ]
+    },
+    {
+        "id": "9125513fcaa2699c",
+        "type": "debug",
+        "z": "c7015bd55ac9c57d",
+        "g": "0e2e50fab3fb368c",
+        "name": "debug 100",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "9de20b94d51e8a81",
+        "type": "inject",
+        "z": "c7015bd55ac9c57d",
+        "g": "0e2e50fab3fb368c",
+        "name": "carw1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Car 1 has not been let through",
+        "payloadType": "str",
+        "x": 340,
+        "y": 1360,
+        "wires": [
+            [
+                "3930943413a6acb5"
+            ]
+        ]
+    },
+    {
+        "id": "4c286d0a4cbe55d2",
+        "type": "catch",
+        "z": "c7015bd55ac9c57d",
+        "g": "0e2e50fab3fb368c",
+        "name": "",
+        "scope": "group",
+        "uncaught": false,
+        "x": 390,
+        "y": 1400,
+        "wires": [
+            [
+                "3930943413a6acb5"
             ]
         ]
     },
@@ -1861,11 +2401,12 @@
         "rh": 0,
         "inputs": 0,
         "x": 240,
-        "y": 2000,
+        "y": 2200,
         "wires": [
             [
                 "3da3db495b46e423",
-                "20e026677c68bd7b"
+                "20e026677c68bd7b",
+                "fd8b447bf519396b"
             ]
         ]
     },
@@ -1884,11 +2425,12 @@
         "rh": 0,
         "inputs": 0,
         "x": 240,
-        "y": 2060,
+        "y": 2260,
         "wires": [
             [
                 "3da3db495b46e423",
-                "20e026677c68bd7b"
+                "20e026677c68bd7b",
+                "e80bf7ba3e2dd6c3"
             ]
         ]
     },
@@ -1907,11 +2449,12 @@
         "rh": 0,
         "inputs": 0,
         "x": 240,
-        "y": 2120,
+        "y": 2320,
         "wires": [
             [
                 "3da3db495b46e423",
-                "20e026677c68bd7b"
+                "20e026677c68bd7b",
+                "5cda82b0547e3d5f"
             ]
         ]
     },
@@ -1930,10 +2473,11 @@
         "rh": 0,
         "inputs": 0,
         "x": 200,
-        "y": 2540,
+        "y": 2740,
         "wires": [
             [
-                "1e6243a71c3975d4"
+                "1e6243a71c3975d4",
+                "aef2d89cedb36727"
             ]
         ]
     },
@@ -1952,10 +2496,11 @@
         "rh": 0,
         "inputs": 0,
         "x": 200,
-        "y": 2600,
+        "y": 2800,
         "wires": [
             [
-                "1e6243a71c3975d4"
+                "1e6243a71c3975d4",
+                "2c8d18f302ac3197"
             ]
         ]
     },
@@ -1974,10 +2519,11 @@
         "rh": 0,
         "inputs": 0,
         "x": 200,
-        "y": 2660,
+        "y": 2860,
         "wires": [
             [
-                "1e6243a71c3975d4"
+                "1e6243a71c3975d4",
+                "3356be1c031e3e84"
             ]
         ]
     },
@@ -1996,10 +2542,11 @@
         "rh": 0,
         "inputs": 0,
         "x": 250,
-        "y": 1680,
+        "y": 1880,
         "wires": [
             [
-                "02b7c48b5e854a1a"
+                "02b7c48b5e854a1a",
+                "39399d0e48774684"
             ]
         ]
     },
@@ -2018,10 +2565,11 @@
         "rh": 0,
         "inputs": 0,
         "x": 250,
-        "y": 1740,
+        "y": 1940,
         "wires": [
             [
-                "02b7c48b5e854a1a"
+                "02b7c48b5e854a1a",
+                "8ea8dd53a495a2bf"
             ]
         ]
     },
@@ -2040,10 +2588,11 @@
         "rh": 0,
         "inputs": 0,
         "x": 250,
-        "y": 1800,
+        "y": 2000,
         "wires": [
             [
-                "02b7c48b5e854a1a"
+                "02b7c48b5e854a1a",
+                "e029ce6434ae6809"
             ]
         ]
     },
@@ -2070,7 +2619,7 @@
         "payload": "Opptatt, User ID: 1, Station ID: 1",
         "payloadType": "str",
         "x": 260,
-        "y": 2320,
+        "y": 2520,
         "wires": [
             [
                 "3da3db495b46e423"
@@ -2081,6 +2630,7 @@
         "id": "4a243c07d4bb3d89",
         "type": "function",
         "z": "c7015bd55ac9c57d",
+        "d": true,
         "g": "6a95e8aa54c858ac",
         "name": "regex_match",
         "func": "\n// \"Opptatt, User ID: 1, Station ID: 1\"\n\n\nlet received_msg = msg.payload;\n\nconst reg = /(\\w+), User ID: ([0-9]+), Station ID: ([0-9]+)/;\n\nlet regex_find = received_msg.match(reg);\n\nlet availability = regex_find[1];\nlet user_id = parseInt(regex_find[2],10);\nlet station_id = parseInt(regex_find[3],10);\n\nif (availability === \"Opptatt\") {\n    msg.topic = \"begin_charing\";\n} else {\n    msg.topic = \"end_charging\";\n}\n\nlet msg_obj = {\n    avl: availability,\n    u_id: user_id,\n    s_id: station_id\n};\n\nmsg.payload = msg_obj;\n\n\nreturn msg;",
@@ -2091,7 +2641,7 @@
         "finalize": "",
         "libs": [],
         "x": 1390,
-        "y": 1680,
+        "y": 1880,
         "wires": [
             [
                 "238096ea929842a9"
@@ -2102,6 +2652,7 @@
         "id": "238096ea929842a9",
         "type": "debug",
         "z": "c7015bd55ac9c57d",
+        "d": true,
         "g": "6a95e8aa54c858ac",
         "name": "debug 57",
         "active": true,
@@ -2113,7 +2664,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1560,
-        "y": 1680,
+        "y": 1880,
         "wires": []
     },
     {
@@ -2140,7 +2691,7 @@
         "repair": false,
         "outputs": 2,
         "x": 750,
-        "y": 2260,
+        "y": 2460,
         "wires": [
             [
                 "1bfb51ebb430b759"
@@ -2174,7 +2725,7 @@
         "payload": "0, User ID: 2, Station ID: 1\"",
         "payloadType": "str",
         "x": 260,
-        "y": 1860,
+        "y": 2060,
         "wires": [
             [
                 "02b7c48b5e854a1a"
@@ -2204,7 +2755,7 @@
         "payload": "Ledig, User ID: 1, Station ID: 1",
         "payloadType": "str",
         "x": 260,
-        "y": 2280,
+        "y": 2480,
         "wires": [
             [
                 "3da3db495b46e423",
@@ -2218,7 +2769,7 @@
         "z": "c7015bd55ac9c57d",
         "g": "6a95e8aa54c858ac",
         "name": "filter_incoming_msg",
-        "func": "let spot = null;\n\nif (msg.topic === \"esp32/led/value1\") {\n    spot = 1;\n} \nswitch (msg.topic) {\n    case \"esp32/led/value1\":\n        spot = 1;\n        break;\n    case \"esp32/led/value2\":\n        spot = 2;\n        break;\n    default:\n    spot = 0;\n} \n\n// \"Opptatt, User ID: 1, Station ID: 1\"\nlet received_msg = msg.payload;\n\nconst reg = /(\\w+), User ID: ([0-9]+), Station ID: ([0-9]+)/;\n\nlet regex_find = received_msg.match(reg);\n\nlet availability = regex_find[1];\nlet user_id = parseInt(regex_find[2], 10);\nlet station_id = parseInt(regex_find[3], 10);\n\nif (availability === \"Opptatt\") {\n    msg.topic = \"begin_charing\";\n} else {\n    msg.topic = \"end_charging\";\n}\n\nlet msg_obj = {\n    available: availability,\n    u_id: user_id,\n    s_id: station_id,\n    spot: spot\n};\n\nmsg.payload = msg_obj;\n\n\nreturn msg;\n",
+        "func": "let spot = null;\n\nif (msg.topic === \"esp32/led/value1\") {\n    spot = 1;\n} \nswitch (msg.topic) {\n    case \"esp32/led/value1\":\n        spot = 1;\n        break;\n    case \"esp32/led/value2\":\n        spot = 2;\n        break;\n    case \"esp32/led/value3\":\n        spot = 3;\n        break;\n    default:\n    spot = 0;\n} \n\n// \"Opptatt, User ID: 1, Station ID: 1\"\nlet received_msg = msg.payload;\n\nconst reg = /(\\w+), User ID: ([0-9]+), Station ID: ([0-9]+)/;\n\nlet regex_find = received_msg.match(reg);\n\nlet availability = regex_find[1];\nlet user_id = parseInt(regex_find[2], 10);\nlet station_id = parseInt(regex_find[3], 10);\n\nif (availability === \"Opptatt\") {\n    msg.topic = \"begin_charing\";\n} else {\n    msg.topic = \"end_charging\";\n}\n\nlet msg_obj = {\n    available: availability,\n    u_id: user_id,\n    s_id: station_id,\n    spot: spot\n};\n\nmsg.payload = msg_obj;\n\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2226,10 +2777,13 @@
         "finalize": "",
         "libs": [],
         "x": 580,
-        "y": 2260,
+        "y": 2460,
         "wires": [
             [
-                "3e6aaa8a256b8c8f"
+                "3e6aaa8a256b8c8f",
+                "1bfb51ebb430b759",
+                "23b4e448863048a3",
+                "9715f242360c1c97"
             ]
         ]
     },
@@ -2248,7 +2802,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 980,
-        "y": 2260,
+        "y": 2460,
         "wires": []
     },
     {
@@ -2265,7 +2819,7 @@
         "finalize": "",
         "libs": [],
         "x": 610,
-        "y": 1880,
+        "y": 2080,
         "wires": [
             [
                 "9c13ce0ea3ea12b4",
@@ -2288,7 +2842,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 800,
-        "y": 1880,
+        "y": 2080,
         "wires": []
     },
     {
@@ -2316,7 +2870,7 @@
         "repair": false,
         "outputs": 3,
         "x": 1230,
-        "y": 2200,
+        "y": 2400,
         "wires": [
             [
                 "92aca90c4405a617"
@@ -2349,7 +2903,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1020,
-        "y": 2140,
+        "y": 2340,
         "wires": [
             [
                 "1bfb51ebb430b759",
@@ -2371,7 +2925,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1460,
-        "y": 2160,
+        "y": 2360,
         "wires": []
     },
     {
@@ -2388,11 +2942,13 @@
         "finalize": "",
         "libs": [],
         "x": 1440,
-        "y": 2080,
+        "y": 2280,
         "wires": [
             [
+                "bd1541638d4772dc",
                 "8909798ad584083f",
-                "bd1541638d4772dc"
+                "1bfb51ebb430b759",
+                "678ef6e30af00481"
             ]
         ]
     },
@@ -2407,7 +2963,7 @@
             "4d138347c7b68093"
         ],
         "x": 1465,
-        "y": 2200,
+        "y": 2400,
         "wires": []
     },
     {
@@ -2424,7 +2980,7 @@
         "finalize": "",
         "libs": [],
         "x": 1420,
-        "y": 2240,
+        "y": 2440,
         "wires": [
             []
         ]
@@ -2438,7 +2994,7 @@
         "scope": "group",
         "uncaught": false,
         "x": 730,
-        "y": 2180,
+        "y": 2380,
         "wires": [
             [
                 "1bfb51ebb430b759"
@@ -2468,10 +3024,13 @@
         "payload": "598.498, User ID: 1, Station ID: 1\"",
         "payloadType": "str",
         "x": 270,
-        "y": 1920,
+        "y": 2120,
         "wires": [
             [
-                "02b7c48b5e854a1a"
+                "02b7c48b5e854a1a",
+                "9c13ce0ea3ea12b4",
+                "1bfb51ebb430b759",
+                "9715f242360c1c97"
             ]
         ]
     },
@@ -2489,10 +3048,14 @@
         "finalize": "",
         "libs": [],
         "x": 1040,
-        "y": 2200,
+        "y": 2400,
         "wires": [
             [
-                "251a0a65d7069398"
+                "251a0a65d7069398",
+                "a7ef2574578de56d",
+                "92aca90c4405a617",
+                "f0a06994da576122",
+                "ed2ad7e7d6998b33"
             ]
         ]
     },
@@ -2511,13 +3074,14 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1620,
-        "y": 2080,
+        "y": 2280,
         "wires": []
     },
     {
         "id": "678ef6e30af00481",
         "type": "debug",
         "z": "c7015bd55ac9c57d",
+        "d": true,
         "g": "6a95e8aa54c858ac",
         "name": "debug 69",
         "active": false,
@@ -2529,7 +3093,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1220,
-        "y": 2140,
+        "y": 2340,
         "wires": []
     },
     {
@@ -2546,7 +3110,7 @@
         "finalize": "",
         "libs": [],
         "x": 1010,
-        "y": 2340,
+        "y": 2540,
         "wires": [
             [
                 "60256e9b498b8dd5",
@@ -2558,6 +3122,7 @@
         "id": "60256e9b498b8dd5",
         "type": "link out",
         "z": "c7015bd55ac9c57d",
+        "d": true,
         "g": "6a95e8aa54c858ac",
         "name": "communication.output.stop_charging",
         "mode": "link",
@@ -2565,13 +3130,14 @@
             "f33f70cd07956bd8"
         ],
         "x": 1165,
-        "y": 2340,
+        "y": 2540,
         "wires": []
     },
     {
         "id": "48a4a3c3dd98820c",
         "type": "debug",
         "z": "c7015bd55ac9c57d",
+        "d": true,
         "g": "6a95e8aa54c858ac",
         "name": "debug 75",
         "active": true,
@@ -2583,7 +3149,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1220,
-        "y": 2380,
+        "y": 2580,
         "wires": []
     },
     {
@@ -2596,8 +3162,8 @@
         "links": [
             "02ae78a50512873e"
         ],
-        "x": 585,
-        "y": 2520,
+        "x": 645,
+        "y": 2720,
         "wires": []
     },
     {
@@ -2623,7 +3189,7 @@
         "payload": "Delvis skyet",
         "payloadType": "str",
         "x": 200,
-        "y": 2440,
+        "y": 2640,
         "wires": [
             [
                 "1e6243a71c3975d4"
@@ -2643,38 +3209,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
-        "y": 2520,
+        "x": 530,
+        "y": 2720,
         "wires": [
             [
                 "d37374ec32398ba1"
-            ]
-        ]
-    },
-    {
-        "id": "308f248214133e70",
-        "type": "ui-template",
-        "z": "c7015bd55ac9c57d",
-        "g": "dff9176621056133",
-        "group": "78b509623ddc3923",
-        "page": "",
-        "ui": "",
-        "name": "get_events",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "head": "",
-        "format": "<template>\n    <div>\n        <h2>Pageload: {{ loaded }}</h2>\n        <p>Current Pressed Keys: {{ keys.join(', ') }}</p>\n    </div>\n</template>\n\n<script>\n    export default {\n        data() {\n            return {\n                loaded: false,\n                keys: []\n            }\n        },\n        methods: {\n            onKeydown(event) {\n                if (event.repeat) {\n                    return;\n                } else if (!this.keys.includes(event.key)) {\n                    this.keys.push(event.key);\n                    this.sendKeys();\n                    console.log('Key down:', event.key);\n                }\n            },\n\n            onKeyUp(event) {\n                const index = this.keys.indexOf(event.key);\n                if (index > -1) {\n                    this.keys.splice(index, 1);\n                    this.sendKeys();\n                    console.log('Key up:', event.key);\n                } else {\n                    console.log('Key not found in array:', event.key);\n                }\n            },\n\n            sendKeys() {\n                this.send({ payload: this.keys });\n            }\n        },\n        mounted() {\n            document.addEventListener(\"keydown\", this.onKeydown);\n            document.addEventListener(\"keyup\", this.onKeyUp);\n            this.loaded = true;\n        },\n        unmounted() {\n            document.removeEventListener(\"keydown\", this.onKeydown);\n            document.removeEventListener(\"keyup\", this.onKeyUp);\n        }\n    }\n</script>\n<style>\n    .my-class {\n            width:200px;\n            height:20px;\n            background-color: blue;\n            top: 10%;\n            left: 50%;\n            margin-top: 100px;\n            margin-left: 100px;\n    }\n</style>\n\n\n",
-        "storeOutMessages": true,
-        "passthru": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 170,
-        "y": 140,
-        "wires": [
-            [
-                "bb8e501cbe7d5d9d"
             ]
         ]
     },
@@ -2688,58 +3227,16 @@
         "links": [
             "534a1b47f4d8f647"
         ],
-        "x": 535,
-        "y": 2060,
+        "x": 575,
+        "y": 2260,
         "wires": []
     },
     {
-        "id": "c5625aae3982120b",
-        "type": "mqtt out",
-        "z": "c7015bd55ac9c57d",
-        "g": "c7906ff188775303",
-        "name": "",
-        "topic": "NOK_per_kWh",
-        "qos": "2",
-        "retain": "true",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "dc20097875203fb9",
-        "x": 1020,
-        "y": 920,
-        "wires": []
-    },
-    {
-        "id": "ed9b01e046d144e7",
-        "type": "mqtt in",
-        "z": "c7015bd55ac9c57d",
-        "g": "c7906ff188775303",
-        "name": "",
-        "topic": "pricePing",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "dc20097875203fb9",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 180,
-        "y": 920,
-        "wires": [
-            [
-                "2a6ceb40d703222b",
-                "32873f28166a99e3"
-            ]
-        ]
-    },
-    {
-        "id": "2a6ceb40d703222b",
+        "id": "39399d0e48774684",
         "type": "debug",
         "z": "c7015bd55ac9c57d",
-        "g": "c7906ff188775303",
-        "name": "debug 80",
+        "g": "6a95e8aa54c858ac",
+        "name": "debug 91",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -2747,361 +3244,16 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 480,
-        "y": 920,
+        "x": 580,
+        "y": 1880,
         "wires": []
     },
     {
-        "id": "c299a20498ef6157",
-        "type": "inject",
-        "z": "c7015bd55ac9c57d",
-        "g": "c7906ff188775303",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "0.13282",
-        "payloadType": "num",
-        "x": 800,
-        "y": 920,
-        "wires": [
-            [
-                "c5625aae3982120b"
-            ]
-        ]
-    },
-    {
-        "id": "4622aa7b0261ee14",
-        "type": "link in",
-        "z": "c7015bd55ac9c57d",
-        "g": "5454094dd1d0958e",
-        "name": "communication.input.toll_station.get_power_price",
-        "links": [
-            "32873f28166a99e3"
-        ],
-        "x": 355,
-        "y": 760,
-        "wires": [
-            [
-                "166b5d3744c86f25"
-            ]
-        ]
-    },
-    {
-        "id": "32873f28166a99e3",
-        "type": "link out",
-        "z": "c7015bd55ac9c57d",
-        "g": "c7906ff188775303",
-        "name": "communication.output.get_price",
-        "mode": "link",
-        "links": [
-            "4622aa7b0261ee14"
-        ],
-        "x": 335,
-        "y": 980,
-        "wires": []
-    },
-    {
-        "id": "53a77b9dde206ea2",
-        "type": "link in",
-        "z": "c7015bd55ac9c57d",
-        "g": "c7906ff188775303",
-        "name": "communication.input.return_power_price",
-        "links": [
-            "11e643123ec5b919"
-        ],
-        "x": 555,
-        "y": 980,
-        "wires": [
-            [
-                "660a1d8987b9b7bb",
-                "c6e4d7cfcfad47e1",
-                "b4907d24f57876bb",
-                "c6b56c5e4cf401b5"
-            ]
-        ]
-    },
-    {
-        "id": "50b307eb95867622",
+        "id": "8ea8dd53a495a2bf",
         "type": "debug",
         "z": "c7015bd55ac9c57d",
-        "g": "c7906ff188775303",
-        "name": "debug 81",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1030,
-        "y": 980,
-        "wires": []
-    },
-    {
-        "id": "166b5d3744c86f25",
-        "type": "function",
-        "z": "c7015bd55ac9c57d",
-        "g": "5454094dd1d0958e",
-        "name": "simple_get_price",
-        "func": "let date = new Date();\n\n//let day = date.getDay().toLocaleString(\"no_NO\", options);\nlet day = date.toLocaleDateString(\"no-NO\", { day: \"2-digit\" }).slice(0, 2);\nlet month = date.toLocaleDateString(\"no-NO\", { month: \"2-digit\" }).slice(0, 2);\nlet year = date.getFullYear();\n\nmsg.topic = `${year}/${month}-${day}_NO5`;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 510,
-        "y": 760,
-        "wires": [
-            [
-                "b4fe374a9bd7e327"
-            ]
-        ]
-    },
-    {
-        "id": "660a1d8987b9b7bb",
-        "type": "function",
-        "z": "c7015bd55ac9c57d",
-        "g": "c7906ff188775303",
-        "name": "filter_price_to_toll_station",
-        "func": "msg.payload = msg.payload.price;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 790,
-        "y": 980,
-        "wires": [
-            [
-                "c5625aae3982120b",
-                "50b307eb95867622"
-            ]
-        ]
-    },
-    {
-        "id": "83478248c9afeea4",
-        "type": "mqtt out",
-        "z": "c7015bd55ac9c57d",
-        "g": "c7906ff188775303",
-        "name": "",
-        "topic": "electricPrice",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "dc20097875203fb9",
-        "x": 1010,
-        "y": 1120,
-        "wires": []
-    },
-    {
-        "id": "f9013a522c1abdd8",
-        "type": "mqtt out",
-        "z": "c7015bd55ac9c57d",
-        "g": "c7906ff188775303",
-        "name": "",
-        "topic": "gasolinePrice",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "dc20097875203fb9",
-        "x": 1020,
-        "y": 1180,
-        "wires": []
-    },
-    {
-        "id": "50366ad6532503c4",
-        "type": "mqtt out",
-        "z": "c7015bd55ac9c57d",
-        "g": "c7906ff188775303",
-        "name": "",
-        "topic": "servicePrice",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "dc20097875203fb9",
-        "x": 1010,
-        "y": 1060,
-        "wires": []
-    },
-    {
-        "id": "c6e4d7cfcfad47e1",
-        "type": "function",
-        "z": "c7015bd55ac9c57d",
-        "g": "c7906ff188775303",
-        "name": "return_service_price",
-        "func": "msg.payload = global.get(\"toll_service\")\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 780,
-        "y": 1060,
-        "wires": [
-            [
-                "50366ad6532503c4"
-            ]
-        ]
-    },
-    {
-        "id": "b4907d24f57876bb",
-        "type": "function",
-        "z": "c7015bd55ac9c57d",
-        "g": "c7906ff188775303",
-        "name": "return_electric_price",
-        "func": "msg.payload = global.get(\"toll_electric\")\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 780,
-        "y": 1120,
-        "wires": [
-            [
-                "83478248c9afeea4"
-            ]
-        ]
-    },
-    {
-        "id": "c6b56c5e4cf401b5",
-        "type": "function",
-        "z": "c7015bd55ac9c57d",
-        "g": "c7906ff188775303",
-        "name": "return_gasoline_price",
-        "func": "msg.payload = global.get(\"toll_gasoline\");\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 780,
-        "y": 1180,
-        "wires": [
-            [
-                "f9013a522c1abdd8"
-            ]
-        ]
-    },
-    {
-        "id": "a6ad1c1bf0c2f9b0",
-        "type": "debug",
-        "z": "c7015bd55ac9c57d",
-        "g": "5454094dd1d0958e",
-        "name": "debug 83",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 740,
-        "y": 760,
-        "wires": []
-    },
-    {
-        "id": "249134f2a57f31e6",
-        "type": "link out",
-        "z": "c7015bd55ac9c57d",
-        "g": "5454094dd1d0958e",
-        "name": "communication.output.from_toll_station",
-        "mode": "link",
-        "links": [
-            "6e8bd7cd38c95929"
-        ],
-        "x": 315,
-        "y": 820,
-        "wires": []
-    },
-    {
-        "id": "6e8bd7cd38c95929",
-        "type": "link in",
-        "z": "c7015bd55ac9c57d",
-        "g": "0e2e50fab3fb368c",
-        "name": "communication.input.insert_transaction",
-        "links": [
-            "249134f2a57f31e6"
-        ],
-        "x": 145,
-        "y": 1320,
-        "wires": [
-            [
-                "3930943413a6acb5"
-            ]
-        ]
-    },
-    {
-        "id": "3930943413a6acb5",
-        "type": "function",
-        "z": "c7015bd55ac9c57d",
-        "g": "0e2e50fab3fb368c",
-        "name": "filter_message",
-        "func": "let received_string = msg.payload;\n\nif (!/Car 2 paid:/i.test(received_string)) {\n    return null;\n}\n\n//\"Toll ID: 1, Car ID: 3, driver ID: 3\"\n// Car 2 paid: 19.22 NOK\n\nconst res = /Car ([0-9]+) paid: ([0-9]*\\.?[0-9]+) NOK/;\n\n\nlet regex_find = received_string.match(res);\n\nlet car_id = parseInt(regex_find[1], 10);\nlet amount = parseFloat(regex_find[2]);\n\nmsg.payload = {\n    user_id: car_id,\n    amount: amount\n}\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 300,
-        "y": 1320,
-        "wires": [
-            [
-                "0ff79d5862a3a192",
-                "54eb79583afd2a77"
-            ]
-        ]
-    },
-    {
-        "id": "0ff79d5862a3a192",
-        "type": "link out",
-        "z": "c7015bd55ac9c57d",
-        "g": "0e2e50fab3fb368c",
-        "name": "communication.output.insert_transaction_on_user",
-        "mode": "link",
-        "links": [
-            "be6997b1779be1cb"
-        ],
-        "x": 465,
-        "y": 1320,
-        "wires": []
-    },
-    {
-        "id": "54eb79583afd2a77",
-        "type": "debug",
-        "z": "c7015bd55ac9c57d",
-        "g": "0e2e50fab3fb368c",
-        "name": "debug 90",
+        "g": "6a95e8aa54c858ac",
+        "name": "debug 92",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -3110,7 +3262,126 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 560,
-        "y": 1360,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "e029ce6434ae6809",
+        "type": "debug",
+        "z": "c7015bd55ac9c57d",
+        "g": "6a95e8aa54c858ac",
+        "name": "debug 93",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "aef2d89cedb36727",
+        "type": "debug",
+        "z": "c7015bd55ac9c57d",
+        "g": "6a95e8aa54c858ac",
+        "name": "debug 94",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 2760,
+        "wires": []
+    },
+    {
+        "id": "2c8d18f302ac3197",
+        "type": "debug",
+        "z": "c7015bd55ac9c57d",
+        "g": "6a95e8aa54c858ac",
+        "name": "debug 95",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 2820,
+        "wires": []
+    },
+    {
+        "id": "fd8b447bf519396b",
+        "type": "debug",
+        "z": "c7015bd55ac9c57d",
+        "g": "6a95e8aa54c858ac",
+        "name": "debug 96",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 2180,
+        "wires": []
+    },
+    {
+        "id": "e80bf7ba3e2dd6c3",
+        "type": "debug",
+        "z": "c7015bd55ac9c57d",
+        "g": "6a95e8aa54c858ac",
+        "name": "debug 97",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 2320,
+        "wires": []
+    },
+    {
+        "id": "5cda82b0547e3d5f",
+        "type": "debug",
+        "z": "c7015bd55ac9c57d",
+        "g": "6a95e8aa54c858ac",
+        "name": "debug 98",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 2360,
+        "wires": []
+    },
+    {
+        "id": "3356be1c031e3e84",
+        "type": "debug",
+        "z": "c7015bd55ac9c57d",
+        "g": "6a95e8aa54c858ac",
+        "name": "debug 99",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 2860,
         "wires": []
     },
     {
@@ -4256,7 +4527,7 @@
         "g": "24a0ae6f8db3a12a",
         "mydb": "f2952bbb2ad433e2",
         "name": "mdb-test",
-        "x": 700,
+        "x": 760,
         "y": 980,
         "wires": [
             [
@@ -4327,7 +4598,8 @@
         "y": 780,
         "wires": [
             [
-                "7d512223b414436e"
+                "7d512223b414436e",
+                "e3c1bd84176d0d68"
             ]
         ]
     },
@@ -4337,7 +4609,7 @@
         "z": "d974087eb4410441",
         "g": "8a632c5013bf1898",
         "name": "insert_transaction",
-        "func": "let m = msg.payload;\n\nmsg.payload = [m.amount,m.user_id];\n//INSERT INTO transactions(amount, user_id) VALUES(165, 1);\n\nmsg.topic = `\nINSERT INTO transactions (amount, user_id) VALUES (?, ?);\n`;\nreturn msg;",
+        "func": "if (msg.topic === \"not_allowed\" || msg.payload === \"\") {\n    return null;\n} else {\n    let m = msg.payload;\n\n    msg.payload = [m.amount, m.user_id];\n    //INSERT INTO transactions(amount, user_id) VALUES(165, 1);\n\n    msg.topic = `\n    INSERT INTO transactions (amount, user_id) VALUES (?, ?);\n    `;\n}\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4348,7 +4620,8 @@
         "y": 780,
         "wires": [
             [
-                "f703b09e8d73837c"
+                "f703b09e8d73837c",
+                "57b455cfb704e63e"
             ]
         ]
     },
@@ -4470,6 +4743,42 @@
         ],
         "x": 1025,
         "y": 780,
+        "wires": []
+    },
+    {
+        "id": "e3c1bd84176d0d68",
+        "type": "debug",
+        "z": "d974087eb4410441",
+        "g": "8a632c5013bf1898",
+        "name": "debug 101",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 270,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "57b455cfb704e63e",
+        "type": "debug",
+        "z": "d974087eb4410441",
+        "g": "8a632c5013bf1898",
+        "name": "debug 102",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 840,
         "wires": []
     },
     {
@@ -4775,7 +5084,7 @@
         "sendOnEnter": true,
         "className": "",
         "x": 670,
-        "y": 700,
+        "y": 720,
         "wires": [
             [
                 "d3bb702bcdf691a1"
@@ -4796,7 +5105,7 @@
         "finalize": "",
         "libs": [],
         "x": 230,
-        "y": 740,
+        "y": 760,
         "wires": [
             [
                 "d5bb29401cd9c2f9"
@@ -4822,7 +5131,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 190,
+        "x": 210,
         "y": 420,
         "wires": [
             [
@@ -4854,7 +5163,7 @@
         "sendOnEnter": true,
         "className": "",
         "x": 670,
-        "y": 740,
+        "y": 760,
         "wires": [
             [
                 "d3bb702bcdf691a1"
@@ -4882,7 +5191,7 @@
         "sendOnEnter": true,
         "className": "",
         "x": 670,
-        "y": 780,
+        "y": 800,
         "wires": [
             [
                 "d3bb702bcdf691a1"
@@ -4904,7 +5213,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1040,
-        "y": 740,
+        "y": 760,
         "wires": []
     },
     {
@@ -4921,7 +5230,7 @@
         "finalize": "",
         "libs": [],
         "x": 880,
-        "y": 740,
+        "y": 760,
         "wires": [
             [
                 "49ab5c9eef18e2fe"
@@ -4957,7 +5266,7 @@
         "repair": false,
         "outputs": 3,
         "x": 490,
-        "y": 740,
+        "y": 820,
         "wires": [
             [
                 "728bcfee316180c5"
@@ -4983,7 +5292,7 @@
         "stream": false,
         "addname": "",
         "x": 370,
-        "y": 740,
+        "y": 760,
         "wires": [
             [
                 "2636e9073bae688d"
@@ -4998,7 +5307,7 @@
         "name": "make db-implementation",
         "info": "",
         "x": 950,
-        "y": 820,
+        "y": 840,
         "wires": []
     },
     {
@@ -5028,7 +5337,7 @@
         "links": [
             "e1c49e9771213b10"
         ],
-        "x": 815,
+        "x": 835,
         "y": 480,
         "wires": []
     },
@@ -5043,7 +5352,7 @@
             "7d834a69f9cfe8eb"
         ],
         "x": 115,
-        "y": 740,
+        "y": 760,
         "wires": [
             [
                 "9695c47a09c4d657"
@@ -5063,7 +5372,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 450,
+        "x": 470,
         "y": 540,
         "wires": [
             [
@@ -5090,7 +5399,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 630,
+        "x": 650,
         "y": 540,
         "wires": [
             [
@@ -5111,7 +5420,7 @@
         "links": [
             "ddefcb191dc9d43a"
         ],
-        "x": 815,
+        "x": 835,
         "y": 560,
         "wires": []
     },
@@ -5128,7 +5437,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 420,
+        "x": 440,
         "y": 580,
         "wires": [
             [
@@ -5171,7 +5480,7 @@
         "fontSize": 16,
         "color": "#1c1c1c",
         "className": "",
-        "x": 780,
+        "x": 800,
         "y": 380,
         "wires": []
     },
@@ -5195,7 +5504,7 @@
         "sendOnBlur": true,
         "sendOnEnter": true,
         "className": "",
-        "x": 770,
+        "x": 790,
         "y": 420,
         "wires": [
             [
@@ -5216,7 +5525,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 930,
+        "x": 950,
         "y": 420,
         "wires": [
             [
@@ -5234,7 +5543,7 @@
         "links": [
             "f82bd2713bd5bea4"
         ],
-        "x": 495,
+        "x": 515,
         "y": 500,
         "wires": [
             [
@@ -5265,7 +5574,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 630,
+        "x": 650,
         "y": 500,
         "wires": [
             [
@@ -5291,7 +5600,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 580,
+        "x": 600,
         "y": 440,
         "wires": []
     },
@@ -5305,7 +5614,7 @@
         "links": [
             "ddefcb191dc9d43a"
         ],
-        "x": 815,
+        "x": 835,
         "y": 520,
         "wires": []
     },
@@ -5329,7 +5638,7 @@
         "templateScope": "local",
         "className": "",
         "x": 190,
-        "y": 1160,
+        "y": 1360,
         "wires": [
             [
                 "4f73999c3ec0b730"
@@ -5346,7 +5655,7 @@
             "d37374ec32398ba1"
         ],
         "x": 115,
-        "y": 1460,
+        "y": 1660,
         "wires": [
             [
                 "851722563ece208c"
@@ -5372,7 +5681,7 @@
         "color": "#717171",
         "className": "",
         "x": 570,
-        "y": 1460,
+        "y": 1660,
         "wires": []
     },
     {
@@ -5386,7 +5695,7 @@
             "1eb5338ba054f538"
         ],
         "x": 375,
-        "y": 1160,
+        "y": 1360,
         "wires": []
     },
     {
@@ -5409,7 +5718,7 @@
         "templateScope": "local",
         "className": "",
         "x": 520,
-        "y": 1320,
+        "y": 1520,
         "wires": [
             []
         ]
@@ -5424,7 +5733,7 @@
             "94a3aa3a2d9fab70"
         ],
         "x": 105,
-        "y": 1320,
+        "y": 1520,
         "wires": [
             [
                 "8c702c77dd36bdca",
@@ -5447,7 +5756,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 560,
-        "y": 1380,
+        "y": 1580,
         "wires": []
     },
     {
@@ -5463,7 +5772,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1040,
+        "x": 1060,
         "y": 380,
         "wires": []
     },
@@ -5477,7 +5786,7 @@
             "20e026677c68bd7b"
         ],
         "x": 115,
-        "y": 1560,
+        "y": 1760,
         "wires": [
             [
                 "98166c48d39ce2bd"
@@ -5513,7 +5822,7 @@
         "repair": false,
         "outputs": 3,
         "x": 250,
-        "y": 1560,
+        "y": 1760,
         "wires": [
             [
                 "5c642316acf14a1a"
@@ -5540,7 +5849,7 @@
         "finalize": "",
         "libs": [],
         "x": 450,
-        "y": 1520,
+        "y": 1720,
         "wires": [
             [
                 "df1a6337d2b7930f"
@@ -5566,7 +5875,7 @@
         "color": "#717171",
         "className": "",
         "x": 590,
-        "y": 1520,
+        "y": 1720,
         "wires": []
     },
     {
@@ -5588,7 +5897,7 @@
         "color": "#717171",
         "className": "",
         "x": 590,
-        "y": 1580,
+        "y": 1780,
         "wires": []
     },
     {
@@ -5610,7 +5919,7 @@
         "color": "#717171",
         "className": "",
         "x": 590,
-        "y": 1640,
+        "y": 1840,
         "wires": []
     },
     {
@@ -5633,7 +5942,7 @@
         "templateScope": "local",
         "className": "",
         "x": 510,
-        "y": 940,
+        "y": 1120,
         "wires": [
             []
         ]
@@ -5648,7 +5957,7 @@
         "links": [
             "0a9dc2d0d62b6741"
         ],
-        "x": 365,
+        "x": 385,
         "y": 420,
         "wires": []
     },
@@ -5662,7 +5971,7 @@
             "753dc434ae2fe719"
         ],
         "x": 125,
-        "y": 940,
+        "y": 1120,
         "wires": [
             [
                 "5d464c9e479cc761",
@@ -5683,7 +5992,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 420,
+        "x": 440,
         "y": 380,
         "wires": []
     },
@@ -5720,7 +6029,97 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 560,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "caea40b5a9e7fce1",
+        "type": "ui-text",
+        "z": "9c23ead5f4cd17b6",
+        "g": "074b02fb1e104e89",
+        "group": "d6abd85606225eb0",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "statusmessage",
+        "label": "Message:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "Impact,Impact,Charcoal,sans-serif",
+        "fontSize": 16,
+        "color": "#b8393b",
+        "className": "",
+        "x": 620,
         "y": 1000,
         "wires": []
+    },
+    {
+        "id": "c7142d427ef14ae9",
+        "type": "link in",
+        "z": "9c23ead5f4cd17b6",
+        "g": "074b02fb1e104e89",
+        "name": "ui.input.show_message",
+        "links": [
+            "2fdb2fe082259b37"
+        ],
+        "x": 125,
+        "y": 1000,
+        "wires": [
+            [
+                "2aef9186218d7693"
+            ]
+        ]
+    },
+    {
+        "id": "2aef9186218d7693",
+        "type": "function",
+        "z": "9c23ead5f4cd17b6",
+        "g": "074b02fb1e104e89",
+        "name": "display_message",
+        "func": "if (msg.topic === \"not_allowed\") {\n    msg.payload = \"Current vehicle not allowed through toll station.\"\n} else if (msg.topic == \"restart\") {\n    msg.payload = \"All Ok.\"\n} else {\n    msg.payload = \"All Ok.\"\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 1000,
+        "wires": [
+            [
+                "caea40b5a9e7fce1"
+            ]
+        ]
+    },
+    {
+        "id": "84adb6cc5526036c",
+        "type": "inject",
+        "z": "9c23ead5f4cd17b6",
+        "g": "074b02fb1e104e89",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "all ok",
+        "payloadType": "str",
+        "x": 220,
+        "y": 960,
+        "wires": [
+            [
+                "2aef9186218d7693"
+            ]
+        ]
     }
 ]
